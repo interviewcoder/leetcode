@@ -1,4 +1,4 @@
-##Leetcode Solutions in Java (in progress)
+##Leetcode solutions in Java (in progress)
 ###Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/). 
 
 * Discussions and code review are more than welcome.

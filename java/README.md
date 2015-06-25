@@ -7,6 +7,6 @@
 * `SolutionTest.java` and `PracticeTest.java` provides basic unit tests to verify your solution.
 
 P.S.:
-1. Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 
-2. Solution that passed unit tests does not guarantee to pass Leetcode OJ.
+- Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
+- Solution that passed unit tests does not guarantee to pass Leetcode OJ.

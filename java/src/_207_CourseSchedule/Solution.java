@@ -54,30 +54,30 @@ public class Solution {
         int[] indegrees = new int[numCourses];
         for (int[] is : prerequisites) {
             if (graph.get(is[0]).add(is[1])) {
-                // !avoid duplicates. Alternatively, make graph List<List<Integer>>
+                // !avoid duplicates. Alternatively, make graph
+                // List<List<Integer>>
                 indegrees[is[1]]++;
             }
         }
         // push all 0 in-degree nodes into queue
-        int count = 0;
         Queue<Integer> zeros = new LinkedList<>();
         for (int i = 0; i < indegrees.length; i++) {
             if (indegrees[i] == 0) {
                 zeros.add(i);
-                count++;
             }
         }
 
         // BFS
+        int count = 0;
         while (!zeros.isEmpty()) {
             int course = zeros.poll();
+            count++;
             for (int request : graph.get(course)) {
                 // count down in-degree for this prerequisite by one
                 // and then if it is zero
                 indegrees[request]--;
                 if (indegrees[request] == 0) {
                     zeros.add(request);
-                    count++;
                 }
             }
         }

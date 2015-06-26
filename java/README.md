@@ -10,3 +10,8 @@ P.S.:
 
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
+
+Category
+1. Using two pointers to keep a sliding window
+    1. [209] Minimum Size Subarray Sum
+2. 

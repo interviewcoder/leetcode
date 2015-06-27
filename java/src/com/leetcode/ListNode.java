@@ -4,7 +4,7 @@ import java.util.List;
 
 /**
  * For problems:
- * <p>{@link SolutionDFS.Solution [019]Remove Nth Node From End of List}
+ * <p>{@link SolutionBasic.Solution [019]Remove Nth Node From End of List}
  * <p>{@link _021_MergeTwoSortedLists [021]Merge Two Sorted Lists}
  * <p>{@link _203_RemoveLinkedListElements [203]Remove Linked List Elements}
  */

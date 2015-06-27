@@ -12,6 +12,8 @@ P.S.:
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
 Category
-1. Using two pointers to keep a sliding window
-    1. [209] Minimum Size Subarray Sum
-2. 
+- Using two pointers to keep a sliding window
+    - [209] Minimum Size Subarray Sum
+- Both DFS and BFS do the job 
+    - [207] Course Schedule
+    - [103] Clone Graph

@@ -106,19 +106,19 @@ public class Solution {
     }
 
     private void dfs(List<List<String>> result,
-            Map<String, List<String>> fatherMap, List<String> res,
+            Map<String, List<String>> fatherMap, List<String> path,
             String start, String end) {
-        res.add(end);
+        path.add(end);
         if (end.equals(start)) {
-            result.add(new ArrayList<>(res));
+            result.add(new ArrayList<>(path));
             Collections.reverse(result.get(result.size() - 1));
         } else {
             List<String> que = fatherMap.get(end);
             for (String word : que) {
-                dfs(result, fatherMap, res, start, word);
+                dfs(result, fatherMap, path, start, word);
             }
         }
-        res.remove(res.size() - 1);
+        path.remove(path.size() - 1);
     }
 
 }

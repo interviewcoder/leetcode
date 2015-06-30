@@ -31,15 +31,14 @@ package _126_WordLadderII;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-/** see test {@link _126_WordLadderII.SolutionCopyTest } */
-public class SolutionCopy {
+/** see test {@link _126_WordLadderII.SolutionBottomUpTest } */
+public class SolutionBottomUp {
 
     public List<List<String>> findLadders(String start, String end,
             Set<String> dict) {
@@ -54,7 +53,7 @@ public class SolutionCopy {
         Set<String> visited = new HashSet<>();
         // <word, all direct fathers of this word in the path>
         Map<String, List<String>> fatherMap = new HashMap<>();
-        current.add(start);
+        current.add(end);
 
         boolean found = false;
         int wordLen = start.length();
@@ -67,11 +66,11 @@ public class SolutionCopy {
                     for (char ch = 'a'; ch <= 'z'; ch++) {
                         wordBuilder.setCharAt(i, ch);
                         String word = wordBuilder.toString();
-                        if (word.equals(end)) {
+                        if (word.equals(start)) {
                             found = true;
                         }
                         if (!found && dict.contains(word) && !visited.contains(word)
-                                || word.equals(end)) {
+                                || word.equals(start)) {
                             next.add(word);
                             // update father map
                             if (fatherMap.containsKey(word)) {
@@ -99,16 +98,16 @@ public class SolutionCopy {
     private void dfs(List<List<String>> result,
             Map<String, List<String>> fatherMap, List<String> path,
             String start, String end) {
-        path.add(end);
+        path.add(start);
         if (end.equals(start)) {
             // base case
             result.add(new ArrayList<>(path));
-            Collections.reverse(result.get(result.size() - 1));
+//            Collections.reverse(result.get(result.size() - 1));
         } else {
             // recursive case
-            List<String> fathers = fatherMap.get(end);
+            List<String> fathers = fatherMap.get(start);
             for (String father: fathers) {
-                dfs(result, fatherMap, path, start, father);
+                dfs(result, fatherMap, path, father, end);
             }
         }
         path.remove(path.size() - 1);

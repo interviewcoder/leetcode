@@ -47,7 +47,7 @@ public class SolutionMLE {
             Set<String> dict) {
         List<List<String>> result = new ArrayList<>();
 
-        if (start == end) {
+        if (start.equals(end)) {
             result.add(Arrays.asList(start, end));
             return result;
         }

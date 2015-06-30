@@ -51,7 +51,7 @@ public class Solution {
     public List<List<String>> findLadders(String start, String end,
             Set<String> dict) {
         List<List<String>> result = new ArrayList<>();
-        if (start == end) {
+        if (start.equals(end)) {
             result.add(Arrays.asList(start, end));
             return result;
         }

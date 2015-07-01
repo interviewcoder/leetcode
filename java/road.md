@@ -24,3 +24,15 @@
   int[] nums = {1, 2, 3, 4};
   List<Integer> list = new ArrayList<>(Arrays.asList(nums));
   ```
+  
+* watch out when converting 2D coordinates to 1D cooridinates for nearby position
+  ```java
+  int row = 5;
+  int col = 0;
+  int index = row * cols + col;
+  
+  int r = (row * cols + (col - 1)) / cols;  // 4
+  int c = (row * cols + (col - 1)) % cols;  // cols - 1
+  // however, in 2D matrix, (row, col - 1) = (5, -1) which is outside of boundary
+  ```
+  

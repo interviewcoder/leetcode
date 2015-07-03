@@ -33,7 +33,9 @@ package _010_RegularExpressionMatching;
 import java.util.HashMap;
 import java.util.Map;
 
-/** see test {@link _010_RegularExpressionMatching.SolutionTest } */
+/**
+ * see also bottom-up version {@link _010_RegularExpressionMatching.SolutionBottomUp} 
+ * see test {@link _010_RegularExpressionMatching.SolutionTest } */
 public class Solution {
 
     Map<Integer, Map<Integer, Boolean>> memo = new HashMap<>();

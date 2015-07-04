@@ -35,4 +35,10 @@
   int c = (row * cols + (col - 1)) % cols;  // cols - 1
   // however, in 2D matrix, (row, col - 1) = (5, -1) which is outside of boundary
   ```
+
+* str.split(reg) with escape
+  ```java
+  String[] strs = string.split("\\."); // use \\ as escape sigh to escape . 
+  ```
+  
   

@@ -22,8 +22,11 @@
  */
 package _059_SpiralMatrixII;
 
-/** see test {@link _059_SpiralMatrixII.SolutionTest } */
+/** 
+ * see also another solution {@link _059_SpiralMatrixII.SolutionDirection }
+ * see test {@link _059_SpiralMatrixII.SolutionTest } */
 public class Solution {
+
     public int[][] generateMatrix(int n) {
         int[][] result = new int[n][n];
         if (n <= 0) {

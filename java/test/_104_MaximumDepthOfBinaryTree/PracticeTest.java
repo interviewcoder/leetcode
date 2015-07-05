@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 
 import com.leetcode.TreeNode;
 
@@ -12,6 +14,9 @@ public class PracticeTest {
 
     /** Test method for {@link _104_MaximumDepthOfBinaryTree.Practice } */
     Practice solution;
+    
+    @Rule
+    public Timeout globalTimeout = new Timeout(20);
 
     @Before
     public void setUp() throws Exception {

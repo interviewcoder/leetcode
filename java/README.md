@@ -41,6 +41,9 @@ P.S.:
 | Both BFS and DFS can do |     |             |
 |                         | 207 | Course Schedule |
 | | 103 | Clone Graph |
+| pair matching using stack | | |
+| | 020 | Valid Parentheses | using stack to match parenthesis pair |
+| | 071 | Simplify Path | using stack to counteract the latest path for ".." |
 
 - Using two pointers to keep a sliding window
     - [209] Minimum Size Subarray Sum

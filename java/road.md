@@ -41,9 +41,16 @@
   String[] strs = string.split("\\."); // use \\ as escape sigh to escape . 
   ```
 * loop each digit of a number from back to beginning
+
   ```java
   while (x != 0) {
     int lastDigit = x % 10;
     x = x / 10;
   }
   ```
+* static import, use static method in non-static method way
+  ```java
+  import static org.junit.Assert.*;
+  ```
+  
+  

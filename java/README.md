@@ -7,7 +7,7 @@
 * `SolutionTest.java` and `PracticeTest.java` provides basic unit tests to verify your solution.
 
 P.S.:
-
+- Please use Java 8 to compile and run
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
@@ -44,10 +44,6 @@ P.S.:
 | pair matching using stack | | |
 | | 020 | Valid Parentheses | using stack to match parenthesis pair |
 | | 071 | Simplify Path | using stack to counteract the latest path for ".." |
-
-- Using two pointers to keep a sliding window
-    - [209] Minimum Size Subarray Sum
-- Both DFS and BFS do the job 
-    - [207] Course Schedule
-    - [103] Clone Graph
-    
+| use stack to keep indices of ascending element | | |
+| | 084 | Largest Rectangle In Histogram | |
+| |     | [Find Next Greater/Smaller Element]() | |

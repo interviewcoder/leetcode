@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(2N); Space : O(1)
  * @tag : String
  * @by  : Steven Cooks
  * @date: Jul 10, 2015
@@ -17,11 +17,15 @@ package _005_LongestPalindromicSubstring;
 
 /** see test {@link _005_LongestPalindromicSubstring.SolutionTest } */
 public class Solution {
-    
+
+    /**
+     * Choose center for a possible palindrome string, then span string towards
+     * left and right. At the same time, update global best result.
+     */
     public String longestPalindrome(String s) {
-        int longest = 0;
-        int left = -1;
-        int right = -1;
+        int longest = 0; // length of up-to-now longest palindrome substring
+        int left = -1;   // left index of longest P substring
+        int right = -1;  // right index of longest P substring
         int upper = 2 * s.length();
         int len = s.length();
         for (int i = 0; i < upper; i++) {
@@ -51,6 +55,5 @@ public class Solution {
         }
         return longest == 0 ? "" : s.substring(left, right + 1);
     }
-    
-}
 
+}

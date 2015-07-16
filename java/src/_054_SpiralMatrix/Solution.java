@@ -1,7 +1,8 @@
 /**
  * Time : O(); Space: O()
- * @Tag : Array
- * @Date: Jun 3, 2015
+ * @tag : Array
+ * @by  : Steven Cooks
+ * @date: Jun 3, 2015
  *************************************************************************
  * Description: 
  * 
@@ -28,7 +29,9 @@ package _054_SpiralMatrix;
 import java.util.ArrayList;
 import java.util.List;
 
+/** see test {@link _054_SpiralMatrix.SolutionTest } */
 public class Solution {
+
     public List<Integer> spiralOrder(int[][] matrix) {
         List<Integer> result = new ArrayList<Integer>();
         int rows = matrix.length;
@@ -67,4 +70,5 @@ public class Solution {
         }
         return result;
     }
+
 }

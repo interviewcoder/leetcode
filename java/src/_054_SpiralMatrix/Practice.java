@@ -1,7 +1,4 @@
 /**
- * Time : O(); Space: O()
- * @Tag : Array
- * @Date: Jun 3, 2015
  *************************************************************************
  * Description: 
  * 
@@ -19,18 +16,19 @@
  * You should return [1,2,3,6,9,8,7,4,5].
  *
  *************************************************************************
+ * @tag : Array
  * {@link https://leetcode.com/problems/spiral-matrix/ }
- * P.S. : how to terminate for half rows of matrix (including the middle row)
- * ! index of middle row  =  (rows - 1) / 2
  */
 package _054_SpiralMatrix;
 
 import java.util.List;
 
+/** see test {@link _054_SpiralMatrix.PracticeTest } */
 public class Practice {
 
     public List<Integer> spiralOrder(int[][] matrix) {
         // TODO Auto-generated method stub
         return null;
     }
+
 }

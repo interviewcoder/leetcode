@@ -1,13 +1,11 @@
 package _126_WordLadderII;
 
-import static org.junit.Assert.*;
-
+import static com.leetcode.Test.assertEqualsIgnoreOrder;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -35,14 +33,6 @@ public class SolutionMLETest {
         solution = null;
     }
 
-    private List<String> toStringList(List<List<String>> expected) {
-        List<String> result = new ArrayList<>();
-        for (List<String> list : expected) {
-            result.add(list.toString());
-        }
-        return result;
-    }
-
     @Test
     public void Test1() {
         String start = "hit";
@@ -57,11 +47,7 @@ public class SolutionMLETest {
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("hit", "hot", "dot", "dog", "cog"));
         expected.add(Arrays.asList("hit", "hot", "lot", "log", "cog"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -77,11 +63,7 @@ public class SolutionMLETest {
         List<List<String>> actual = solution.findLadders(start, end, dict);
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("hit", "hit"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -94,11 +76,7 @@ public class SolutionMLETest {
         List<List<String>> actual = solution.findLadders(start, end, dict);
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("a", "c"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -119,11 +97,7 @@ public class SolutionMLETest {
         expected.add(Arrays.asList("red", "ted", "tad", "tax"));
         expected.add(Arrays.asList("red", "ted", "tex", "tax"));
         expected.add(Arrays.asList("red", "rex", "tex", "tax"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -143,11 +117,7 @@ public class SolutionMLETest {
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("hot", "dot", "dog"));
         expected.add(Arrays.asList("hot", "hog", "dog"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -222,11 +192,7 @@ public class SolutionMLETest {
                 "mild"));
         expected.add(Arrays.asList("nape", "naps", "nips", "nils", "mils",
                 "mild"));
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -476,27 +442,8 @@ public class SolutionMLETest {
         List<List<String>> actual = solution.findLadders(beginWord, endWord,
                 dict);
         List<List<String>> expected = new ArrayList<>();
-        String pathname = "test/_126_WordLadderII/Test7Result";
-        try {
-            File file = new File(pathname);
-            BufferedReader br = new BufferedReader(new FileReader(file));
-            while (true) {
-                String line = br.readLine();
-                if (line == null) {
-                    break;
-                }
-                expected.add(Arrays.asList(line.substring(1, line.length() - 1)
-                        .split(", ")));
-            }
-            br.close();
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        readResultFromDist("test/_126_WordLadderII/Test7Result", expected);
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -864,30 +811,12 @@ public class SolutionMLETest {
                 "lame" };
         dict.addAll(Arrays.asList(words));
         List<List<String>> actual = solution.findLadders(start, end, dict);
-//        writeInputToDisk("test/_126_WordLadderII/Test8Result", actual);
+        // writeInputToDisk("test/_126_WordLadderII/Test8Result", actual);
         List<List<String>> expected = new ArrayList<>();
         readResultFromDist("test/_126_WordLadderII/Test8Result", expected);
-        List<String> exps = toStringList(expected);
-        List<String> acts = toStringList(actual);
-        Collections.sort(exps);
-        Collections.sort(acts);
-        assertEquals(exps, acts);
+        assertEqualsIgnoreOrder(expected, actual);
     }
-    
-//    private void writeInputToDisk(String output, List<List<String>> wordsList) {
-//        try {
-//        File file = new File(output);
-//        BufferedWriter bw = new BufferedWriter(new FileWriter(file));
-//        for (List<String> list : wordsList) {
-//            bw.write(list.toString());
-//            bw.newLine();
-//        }
-//        bw.close();
-//        } catch (Exception e) {
-//            System.err.println(e.getMessage());
-//        }
-//    }
-    
+
     private void readResultFromDist(String filename, List<List<String>> result) {
         String pathname = filename;
         try {
@@ -898,7 +827,8 @@ public class SolutionMLETest {
                 if (line == null) {
                     break;
                 }
-                result.add(Arrays.asList(line.substring(1, line.length()-1).split(", ")));
+                result.add(Arrays.asList(line.substring(1, line.length() - 1)
+                        .split(", ")));
             }
             br.close();
         } catch (Exception e) {

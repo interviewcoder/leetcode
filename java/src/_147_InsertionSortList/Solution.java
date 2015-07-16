@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(N); Space: O(1)
  * @tag : Linked List; Sort
  * @date: Jun 20, 2015
  * @by  : Steven Cooks

@@ -12,6 +12,7 @@ import com.leetcode.ListNode;
 
 public class PracticeTest {
     
+    /** Test method for {@link _206_ReverseLinkedList.Practice } */
     Practice solution;
 
     @Rule

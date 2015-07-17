@@ -12,6 +12,7 @@ import com.leetcode.ListNode;
 
 public class SolutionRecursiveTest {
     
+    /** Test method for {@link _206_ReverseLinkedList.SolutionRecursive } */
     SolutionRecursive solution;
 
     @Rule

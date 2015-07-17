@@ -1,4 +1,4 @@
-package _017_LetterCombinationsOfAPhoneNUmber;
+package _017_LetterCombinationsOfAPhoneNumber;
 
 import static com.leetcode.Test.*;
 
@@ -14,7 +14,7 @@ import org.junit.rules.Timeout;
 
 public class PracticeTest {
 
-    /** Test method for {@link _017_LetterCombinationsOfAPhoneNUmber.Practice } */
+    /** Test method for {@link _017_LetterCombinationsOfAPhoneNumber.Practice } */
     Practice solution;
 
     @Rule

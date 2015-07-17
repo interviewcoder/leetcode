@@ -21,11 +21,12 @@
  *************************************************************************
  * {@link https://leetcode.com/problems/3sum-closest/ }
  */
-package _017_LetterCombinationsOfAPhoneNUmber;
+package _017_LetterCombinationsOfAPhoneNumber;
 
 import java.util.ArrayList;
 import java.util.List;
 
+/** see test {@link _017_LetterCombinationsOfAPhoneNumber.SolutionTest } */
 public class Solution {
 
     public static final String[] mapping = { "", "", "abc", "def", "ghi",

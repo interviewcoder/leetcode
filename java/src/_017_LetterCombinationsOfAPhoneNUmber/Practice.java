@@ -18,10 +18,11 @@
  * @tag : Backtracking; String
  * {@link https://leetcode.com/problems/3sum-closest/ }
  */
-package _017_LetterCombinationsOfAPhoneNUmber;
+package _017_LetterCombinationsOfAPhoneNumber;
 
 import java.util.List;
 
+/** see test {@link _017_LetterCombinationsOfAPhoneNumber.PracticeTest } */
 public class Practice {
 
     public List<String> letterCombinations(String digits) {

@@ -16,7 +16,7 @@
 |14|[Longest Common Prefix](https://github.com/interviewcoder/leetcode/blob/master/java/src/_014_LongestCommonPrefix/Solution.java)|25.5%|Easy|
 |15|[3Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_015_3Sum/Solution.java)|16.9%|Medium|
 |16|[3Sum Closest](https://github.com/interviewcoder/leetcode/blob/master/java/src/_016_3SumClosest/Solution.java)|26.9%|Medium|
-|17|Letter Combinations of a Phone Number|25.7%|Medium|
+|17|[Letter Combinations of a Phone Number](https://github.com/interviewcoder/leetcode/blob/master/java/src/_017_LetterCombinationsOfAPhoneNumber/Solution.java)|25.7%|Medium|
 |18|[4Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_018_4Sum/Solution.java)|21.7%|Medium|
 |19|[Remove Nth Node From End of List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_019_RemoveNthNodeFromEndOfList/Solution.java)|27.0%|Easy|
 |20|[Valid Parentheses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_020_ValidParentheses/Solution.java)|26.5%|Easy|
@@ -90,15 +90,15 @@
 |88|[Merge Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_088_MergeSortedArray/Solution.java)|29.4%|Easy|
 |89|[Gray Code](https://github.com/interviewcoder/leetcode/blob/master/java/src/_089_GrayCode/Solution.java)|32.8%|Medium|
 |90|[Subsets II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_090_SubsetsII/Solution.java)|27.7%|Medium|
-|91|Decode Ways|16.3%|Medium|
-|92|Reverse Linked List II|26.1%|Medium|
+|91|[Decode Ways](https://github.com/interviewcoder/leetcode/blob/master/java/src/_091_DecodeWays/Solution.java)|16.3%|Medium|
+|92|[Reverse Linked List II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_092_ReverseLinkedListII/Solution.java)|26.1%|Medium|
 |93|[Restore IP Addresses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_093_RestoreIPAddresses/Solution.java)|21.0%|Medium|
-|94|Binary Tree Inorder Traversal|36.3%|Medium|
-|95|Unique Binary Search Trees II|28.0%|Medium|
-|96|Unique Binary Search Trees|35.8%|Medium|
+|94|[Binary Tree Inorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/java/src/_094_BinaryTreeInorderTraversal/Solution.java)|36.3%|Medium|
+|95|[Unique Binary Search Trees II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_095_UniqueBinarySearchTreesII/Solution.java)|28.0%|Medium|
+|96|[Unique Binary Search Trees](https://github.com/interviewcoder/leetcode/blob/master/java/src/_096_UniqueBinarySearchTrees/Solution.java)|35.8%|Medium|
 |97|[Interleaving String](https://github.com/interviewcoder/leetcode/blob/master/java/src/_097_InterleavingString/Solution.java)|20.8%|Hard|
-|98|Validate Binary Search Tree|20.4%|Medium|
-|99|Recover Binary Search Tree|24.3%|Hard|
+|98|[Validate Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_098_ValidateBinarySearchTree/Solution.java)|20.4%|Medium|
+|99|[Recover Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_099_RecoverBinarySearchTree/Solution.java)|24.3%|Hard|
 |100|[Same Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_100_SameTree/Solution.java)|41.5%|Easy|
 |101|Symmetric Tree|31.6%|Easy|
 |102|Binary Tree Level Order Traversal|29.3%|Easy|

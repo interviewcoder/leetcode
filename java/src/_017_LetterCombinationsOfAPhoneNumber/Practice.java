@@ -16,7 +16,7 @@
  * 
  *************************************************************************
  * @tag : Backtracking; String
- * {@link https://leetcode.com/problems/3sum-closest/ }
+ * {@link https://leetcode.com/problems/letter-combinations-of-a-phone-number/ }
  */
 package _017_LetterCombinationsOfAPhoneNumber;
 

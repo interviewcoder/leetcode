@@ -1,5 +1,28 @@
 ## something learnt in the road.
 
+01. [Eclipse] cmd + I: indent selected areas
+02. [Eclipse] cmd + 1: get suggestion 
+03. [Eclipse] cmd + .: go to next error
+04. [Eclipse] cmd + 1: quick fix
+05. [Eclipse] cmd + ,: open preference
+06. [Eclipse] cmd + E: editor cycle
+07. [Eclipse] ctrl + H: open search dialogue
+08. [Eclipse] cmd + shift + T: search for class
+              cmd + shift + R
+09. [Eclipse] cmd + w: close current editor tab              
+10. [Eclipse] cmd + F11 run last junit test
+11. [Eclipse] F3: go to definition
+12. [Eclipse] cmd + shift + F indent
+---------------------------------------------------
+- [vim]  H  go to heading line of current screen
+- [vim]  M  go to middle line of current screen
+- [vim]  L  go to last line of current screen
+- [vim]  ctrl + b  go backwards by one screen
+- [vim]  ctrl + f  go forwards by one screen
+- [vim]  ctrl + u  go upwards by half screen
+- [vim]  ctrl + d  go downwards by half screen
+- [vim]  W  go to next position delimiter is blank space
+
 * One way to loop over a String
   ```java
   String word = "abc";

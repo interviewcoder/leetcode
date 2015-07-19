@@ -34,7 +34,6 @@ public class Progress {
         add('\'');
     }};
     
-
     public static void main(String[] args) {
         new Progress().run();
     }

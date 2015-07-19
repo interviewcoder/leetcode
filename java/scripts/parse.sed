@@ -18,7 +18,9 @@
 /^$/d
 
 # Convert each &nbsp; to a space
+# Convert each &#39; to a '
 s/\&nbsp;/ /g
+s/\&#39;/\'/g
 
 # Remove all html tags
 s/<[^>]*>//g

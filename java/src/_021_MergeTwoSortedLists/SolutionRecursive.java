@@ -16,28 +16,24 @@ package _021_MergeTwoSortedLists;
 
 import com.leetcode.ListNode;
 
-/** 
- * Simulating merge sort algorithm on lists, and be careful of the 
- * remaining left. 
- * see test {@link _021_MergeTwoSortedLists.SolutionTest } */
-public class Solution {
+/** see test {@link _021_MergeTwoSortedLists.SolutionRecursiveTest} */
+public class SolutionRecursive {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode dummyHead = new ListNode(-1);
-        ListNode node = dummyHead;
-        while (l1 != null && l2 != null) {
-            if (l1.val <= l2.val) {
-                node.next = l1;
-                l1 = l1.next;
-            } else {
-                node.next = l2;
-                l2 = l2.next;
-            }
-            node = node.next;
+        // base case
+        if (l1 == null) {
+            return l2;
+        } else if (l2 == null) {
+            return l1;
         }
-        // append the remaining list
-        node.next = (l1 != null) ? l1 : l2;
-        return dummyHead.next;
+        // recursive case: consider the first step
+        if (l1.val < l2.val) {
+            l1.next = mergeTwoLists(l1.next, l2);
+            return l1;
+        } else {
+            l2.next = mergeTwoLists(l1, l2.next);
+            return l2;
+        }
     }
 
 }

@@ -23,26 +23,24 @@ import com.leetcode.ListNode;
 /** see test {@link _083_RemoveDuplicatesFromSortedList.SolutionTest } */
 public class Solution {
 
+    /**
+     * If a node has the same value as its next node, then connect this
+     * node with its next's next. Otherwise, move node to its next.
+     */
     public ListNode deleteDuplicates(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
-        ListNode dummy = new ListNode(-1);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
-        int duplicate = head.val;
-        ListNode pre = head;
-
-        while (pre.next != null) {
-            ListNode node = pre.next;
-            if (node.val == duplicate) {
-                // duplicate appears
-                pre.next = node.next;
+        ListNode node = head;
+        while (node != null) {
+            if (node.next != null && node.val == node.next.val) {
+                node.next = node.next.next;
             } else {
-                duplicate = node.val;
-                pre = pre.next;
+                node = node.next;
             }
         }
-
         return dummy.next;
     }
 

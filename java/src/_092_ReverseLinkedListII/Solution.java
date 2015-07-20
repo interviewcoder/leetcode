@@ -22,7 +22,9 @@ package _092_ReverseLinkedListII;
 
 import com.leetcode.ListNode;
 
-/** see test {@link _092_ReverseLinkedListII.SolutionTest } */
+/** 
+ * @reference {@link https://leetcode.com/discuss/25580/simple-java-solution-with-clear-explanation }
+ * see test {@link _092_ReverseLinkedListII.SolutionTest } */
 public class Solution {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {

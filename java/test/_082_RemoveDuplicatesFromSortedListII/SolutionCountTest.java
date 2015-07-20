@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.ListNode;
 
-public class SolutionTest {
+public class SolutionCountTest {
 
-    /** Test method for {@link _082_RemoveDuplicatesFromSortedListII.Solution } */
-    Solution solution;
+    /** Test method for {@link _082_RemoveDuplicatesFromSortedListII.SolutionCount } */
+    SolutionCount solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(50);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionCount();
     }
 
     @After
@@ -62,6 +62,7 @@ public class SolutionTest {
         int[] nums = {1, 2, 2, 2};
         ListNode head = ListNode.constructLinkedList(nums);
         ListNode actual = solution.deleteDuplicates(head);
+        System.out.println(actual);
         ListNode e1 = new ListNode(1);
         ListNode expected = e1;
         assertTrue(ListNode.isSameList(expected, actual));

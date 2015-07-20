@@ -20,42 +20,46 @@ package _082_RemoveDuplicatesFromSortedListII;
 
 import com.leetcode.ListNode;
 
-/** see test {@link _082_RemoveDuplicatesFromSortedListII.SolutionTest } */
+/**
+ * <p>
+ * A node is <em>unique</em> only when its has different value from its 
+ * previous node and its post node.
+ * <p>
+ * So for each node, we first find the last node has its value (which is 
+ * then has different value from it post node), and then compare with its
+ * previous node. (pre.next == node ?)
+ * <p>
+ *      <p>pre   node             last    post     </p>
+ *      <p> 0----> 1 ----> 1 ----> 1 ----> 2       </p>
+ * </p>      
+ * Another way to understand <em>unique</em> is that node is unique if it 
+ * shows up only once, so see {@link _082_RemoveDuplicatesFromSortedListII.SolutionCount }
+ * <p>see test {@link _082_RemoveDuplicatesFromSortedListII.SolutionTest } </p>
+ * @reference: {@link https://leetcode.com/discuss/12724/my-accepted-java-code }
+ */
 public class Solution {
 
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode dummy = new ListNode(-1);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode prePre = dummy;
-        ListNode pre = head;
-        boolean duplicated = false;
-        int duplicateVal = head.val;
-
-        while (pre.next != null) {
-            ListNode node = pre.next;
-            if (node.val == duplicateVal) {
-                // duplicate appears
-                duplicated = true;
-                pre.next = node.next;
-            } else {
-                duplicateVal = node.val;
-                if (duplicated == true) {
-                    // delete the very first duplicated node at position pre
-                    prePre.next = node;
-                    pre = prePre.next;
-                } else {
-                    pre = pre.next;
-                    prePre = prePre.next;
-                }
-                duplicated = false;
+        ListNode pre = dummy; // last unique node we found
+        ListNode node = pre.next;
+        while (node != null) {
+            // find the last node that has the same value as current node
+            while (node.next != null && node.next.val == node.val) {
+                node = node.next;
             }
-        }
-        if (duplicated) {
-            prePre.next = null;
-            pre = null;
+            // now, node has different value from its next node (if next
+            // node exists), we need to compare with previous node to
+            // see whether `node` has unique value
+            if (pre.next == node) {
+                // ! don't use (pre.val == node.val) unless you are sure
+                // dummy has different value from head node
+                pre = pre.next;
+            } else {
+                pre.next = node.next;
+            }
+            node = node.next;
         }
         return dummy.next;
     }

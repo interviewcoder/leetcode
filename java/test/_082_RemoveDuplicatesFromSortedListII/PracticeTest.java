@@ -30,7 +30,7 @@ public class PracticeTest {
 
     @Test
     public void Test1() {
-        int[] nums = {1, 2, 3, 3, 4, 4, 5};
+        int[] nums = {1, 2, 3, 3, 3, 4, 4, 4, 4, 5};
         ListNode head = ListNode.constructLinkedList(nums);
         ListNode actual = solution.deleteDuplicates(head);
         int[] exps = {1, 2, 5};
@@ -62,8 +62,18 @@ public class PracticeTest {
         int[] nums = {1, 2, 2, 2};
         ListNode head = ListNode.constructLinkedList(nums);
         ListNode actual = solution.deleteDuplicates(head);
+        System.out.println(actual);
         ListNode e1 = new ListNode(1);
         ListNode expected = e1;
+        assertTrue(ListNode.isSameList(expected, actual));
+    }
+
+    @Test
+    public void Test5() {
+        int[] nums = {1, 1, 1, 1, 2, 2, 2, 3, 3, 3, 3, 3};
+        ListNode head = ListNode.constructLinkedList(nums);
+        ListNode actual = solution.deleteDuplicates(head);
+        ListNode expected = null;
         assertTrue(ListNode.isSameList(expected, actual));
     }
 

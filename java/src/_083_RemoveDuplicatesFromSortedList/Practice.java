@@ -21,19 +21,8 @@ import com.leetcode.ListNode;
 public class Practice {
 
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode node = dummy.next;
-        while (node != null) {
-            // until we find the next node that has unique value
-            ListNode nextUnique = node.next;
-            while (nextUnique != null && nextUnique.val == node.val) {
-                nextUnique = nextUnique.next;
-            }
-            node.next = nextUnique;
-            node = node.next;
-        }
-        return dummy.next;
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

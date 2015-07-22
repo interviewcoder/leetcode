@@ -24,7 +24,7 @@ P.S.:
 | 008 | String to Integer (atoi) | Easy | `Math` `String`  |  | 
 | 009 | [Palindrome Number](https://github.com/interviewcoder/leetcode/blob/master/java/src/_009_PalindromeNumber/Solution.java) | Easy | `Math`  |  | 
 | 010 | [Regular Expression Matching](https://github.com/interviewcoder/leetcode/blob/master/java/src/_010_RegularExpressionMatching/Solution.java) | Hard | `Dynamic Programming` `Backtracking` `String`  |  | 
-| 011 | Container With Most Water | Medium | `Array` `Two Pointers`  |  | 
+| 011 | [Container With Most Water](https://github.com/interviewcoder/leetcode/blob/master/java/src/_011_ContainerWithMostWater/Solution.java)  | Medium | `Array` `Two Pointers`  | [**substring**] head-tail pointers | 
 | 012 | [Integer to Roman](https://github.com/interviewcoder/leetcode/blob/master/java/src/_012_IntegerToRoman/Solution.java) | Medium | `Math` `String`  |  | 
 | 013 | [Roman to Integer](https://github.com/interviewcoder/leetcode/blob/master/java/src/_013_RomanToInteger/Solution.java) | Easy | `Math` `String`  |  | 
 | 014 | [Longest Common Prefix](https://github.com/interviewcoder/leetcode/blob/master/java/src/_014_LongestCommonPrefix/Solution.java) | Easy | `String`  |  | 

@@ -11,11 +11,12 @@ P.S.:
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
+
 | # | Problem | Difficulty | Tags | Note |
 | :---: | ---- | ---- | ---- | ----- |
 | 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  |  | 
 | 002 | [Add Two Numbers](https://github.com/interviewcoder/leetcode/blob/master/java/src/_002_AddTwoNumbers/Solution.java) | Medium | `Linked List` `Math`  |  | 
-| 003 | Longest Substring Without Repeating Characters | Medium | `Hash Table` `Two Pointers` `String`  |  | 
+| 003 | [Longest Substring Without Repeating Characters](https://github.com/interviewcoder/leetcode/blob/master/java/src/_003_LongestSubstringWithoutRepeatingCharacters/Solution.java)  | Medium | `Hash Table` `Two Pointers` `String`  | [**substring**] hashing + two pointers -> O(N) | 
 | 004 | Median of Two Sorted Arrays | Hard | `Divide and Conquer` `Array` `Binary Search`  |  | 
 | 005 | [Longest Palindromic Substring](https://github.com/interviewcoder/leetcode/blob/master/java/src/_005_LongestPalindromicSubstring/Solution.java) | Medium | `String`  |  | 
 | 006 | [ZigZag Conversion](https://github.com/interviewcoder/leetcode/blob/master/java/src/_006_ZigZagConversion/Solution.java)  | Easy | `String`  |  | 

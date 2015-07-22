@@ -11,7 +11,6 @@ P.S.:
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
-#### Summary
 | # | Problem | Difficulty | Tags | Note |
 | :---: | ---- | ---- | ---- | ----- |
 | 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  |  | 
@@ -32,7 +31,7 @@ P.S.:
 | 016 | [3Sum Closest](https://github.com/interviewcoder/leetcode/blob/master/java/src/_016_3SumClosest/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
 | 017 | [Letter Combinations of a Phone Number](https://github.com/interviewcoder/leetcode/blob/master/java/src/_017_LetterCombinationsOfAPhoneNumber/Solution.java) | Medium | `Backtracking` `String`  |  | 
 | 018 | [4Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_018_4Sum/Solution.java) | Medium | `Array` `Hash Table` `Two Pointers`  |  | 
-| 019 | [Remove Nth Node From End of List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_019_RemoveNthNodeFromEndOfList/Solution.java) | Easy | `Linked List` `Two Pointers`  |  | 
+| 019 | [Remove Nth Node From End of List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_019_RemoveNthNodeFromEndOfList/Solution.java) | Easy | `Linked List` `Two Pointers`  | fast-slow two pointers068 | 
 | 020 | [Valid Parentheses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_020_ValidParentheses/Solution.java) | Easy | `Stack` `String`  |  | 
 | 021 | [Merge Two Sorted Lists](https://github.com/interviewcoder/leetcode/blob/master/java/src/_021_MergeTwoSortedLists/Solution.java) | Easy | `Linked List`  |  | 
 | 022 | [Generate Parentheses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_022_GenerateParentheses/Solution.java) | Medium | `Backtracking` `String`  |  | 
@@ -74,7 +73,7 @@ P.S.:
 | 058 | [Length of Last Word](https://github.com/interviewcoder/leetcode/blob/master/java/src/_058_LengthOfLastWord/Solution.java) | Easy | `String`  |  | 
 | 059 | [Spiral Matrix II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_059_SpiralMatrixII/Solution.java) | Medium | `Array`  |  | 
 | 060 | [Permutation Sequence](https://github.com/interviewcoder/leetcode/blob/master/java/src/_060_PermutationSequence/Solution.java) | Medium | `Backtracking` `Math`  |  | 
-| 061 | [Rotate List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_061_RotateList/Solution.java) | Medium | `Linked List` `Two Pointers`  |  | 
+| 061 | [Rotate List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_061_RotateList/Solution.java) | Medium | `Linked List` `Two Pointers`  | fast-slow pointers; [189] Rotate Array | 
 | 062 | [Unique Paths](https://github.com/interviewcoder/leetcode/blob/master/java/src/_062_UniquePaths/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
 | 063 | [Unique Paths II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_063_UniquePathsII/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
 | 064 | [Minimum Path Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_064_MinimumPathSum/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 

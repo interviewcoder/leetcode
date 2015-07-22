@@ -22,6 +22,24 @@
  ***************************************************************************
  * {@link https://leetcode.com/problems/binary-tree-right-side-view/ }
  */
+/**
+ * <p>
+ * <p>Given a binary tree, imagine yourself standing on the <i>right</i> 
+ * side of it, return the values of the nodes you can see ordered from top to bottom.</p> 
+ * <p> For example:<br /> Given the following binary tree,<br /> 
+ * <pre> 
+ *    1            <--- 
+ *  /   \ 
+ *  2     3         <--- 
+ *   \     \ 
+ *    5     4       <--- 
+ * </pre></p> 
+ * <p> You should return <code>[1, 3, 4]</code>. </p> 
+ * <p><b>Credits:</b><br />Special thanks to <a href="https://leetcode.com/discuss/user/amrsaqr">@amrsaqr</a> 
+ * for adding this problem and creating all test cases.</p>
+ * </p>
+ *
+ */
 package _199_BinaryTreeRightSideView;
 
 import java.util.ArrayList;

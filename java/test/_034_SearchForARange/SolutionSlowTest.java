@@ -10,17 +10,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionSlowTest {
 
-    /** Test method for {@link _034_SearchForARange.Practice } */
-    Practice solution;
+    /** Test method for {@link _034_SearchForARange.SolutionSlow } */
+    SolutionSlow solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(20);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionSlow();
     }
 
     @After
@@ -109,6 +109,7 @@ public class PracticeTest {
         assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
     }
 
+    // might fail because of TLE
     @Test
     public void Test10() {
         int size = 3000000;
@@ -119,7 +120,7 @@ public class PracticeTest {
         int target = 1;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = {0, size - 1};
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test

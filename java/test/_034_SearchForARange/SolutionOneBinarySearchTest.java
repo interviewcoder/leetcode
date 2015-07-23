@@ -10,17 +10,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionOneBinarySearchTest {
 
-    /** Test method for {@link _034_SearchForARange.Practice } */
-    Practice solution;
+    /** Test method for {@link _034_SearchForARange.SolutionOneBinarySearch } */
+    SolutionOneBinarySearch solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(20);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionOneBinarySearch();
     }
 
     @After
@@ -119,7 +119,7 @@ public class PracticeTest {
         int target = 1;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = {0, size - 1};
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test

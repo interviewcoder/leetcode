@@ -109,4 +109,35 @@ public class SolutionTest {
         assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
     }
 
+    @Test
+    public void Test10() {
+        int size = 3000000;
+        int[] nums = new int[size]; 
+        for (int i = 0; i < size; i++) {
+            nums[i] = 1;
+        }
+        int target = 1;
+        int[] actuals = solution.searchRange(nums, target);
+        int[] expecteds = {0, size - 1};
+        assertArrayEquals(expecteds, actuals);
+    }
+
+    @Test
+    public void Test11() {
+        int size = 100000;
+        int[] nums = new int[size]; 
+        int pos = (size - 1) / 2;
+        for (int i = 0; i < pos; i++) {
+            nums[i] = 2;
+        }
+        nums[pos] = 5;
+        for (int i = pos + 1; i < size; i++) {
+            nums[i] = 8;
+        }
+        int target = 5;
+        int[] actuals = solution.searchRange(nums, target);
+        int[] expecteds = {pos, pos};
+        assertArrayEquals(expecteds, actuals);
+    }
+
 }

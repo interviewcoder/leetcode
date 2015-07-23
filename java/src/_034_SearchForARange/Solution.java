@@ -20,43 +20,60 @@
  */
 package _034_SearchForARange;
 
-/** see test {@link _034_SearchForARange.SolutionTest } */
+/** 
+ * @reference {@link https://leetcode.com/discuss/18242/clean-iterative-solution-binary-searches-with-explanation }
+ * see test {@link _034_SearchForARange.SolutionTest } */
 public class Solution {
+
     public int[] searchRange(int[] nums, int target) {
-        int len = nums.length;
-
-        // {-1,-1} means not found
         int[] result = { -1, -1 };
-
+        int len = nums.length;
         if (len == 0) {
             return result;
         }
-
+        int start = -1;
+        // use binary search to find the left bound of range
         int left = 0;
-        int right = nums.length - 1;
+        int right = len - 1;
         while (left <= right) {
             int mid = (left + right) / 2;
-            if (nums[mid] == target) {
-                // target found!
-                // search towards left and right to find all duplicates
-                int head = mid;
-                while (head >= left && nums[head] == target) {
-                    head--;
-                }
-                int tail = mid;
-                while (tail <= right && nums[tail] == target) {
-                    tail++;
-                }
-                result[0] = head + 1;
-                result[1] = tail - 1;
+            int midVal = nums[mid];
+            if (midVal == target && (mid == 0 || nums[mid - 1] < target)) {
+                // left bound should have the same value as target and 
+                // the value to its left (if exists) is smaller than left bound's value
+                start = mid;
+                result[0] = start;
                 break;
-            } else if (nums[mid] < target) {
+            } else if (midVal < target) {
                 left = mid + 1;
             } else {
+                // (midVal > target || nums[mid - 1] == target)
                 right = mid - 1;
             }
         }
+        if (start == -1) {
+            return result;
+        }
 
+        // use binary search to find the right bound of range
+        left = start;
+        right = len - 1;
+        while (left <= right) {
+            int mid = (left + right) / 2;
+            int midVal = nums[mid];
+            if (midVal == target && (mid == len - 1 || nums[mid + 1] > target)) {
+                // mid + 1 is the right bound
+                result[1] = mid;
+                return result;
+            } else if (midVal > target) {
+                right = mid - 1;
+            } else {
+                // there are still elements on the right side that has
+                // target value
+                left = mid + 1;
+            }
+        }
         return result;
     }
+
 }

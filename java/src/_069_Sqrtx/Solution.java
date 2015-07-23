@@ -23,20 +23,19 @@ public class Solution {
         }
         int left = 1;
         int right = x;
-        while (true) {
-            int half = (left + right) / 2;
-            if (half == x / half) {
+        while (left <= right) {
+            // avoid potential Stack Overflow caused by (left + right) / 2;
+            int half = (right - left) / 2 + left;
+            if (half <= x / half && ((half + 1) > x / (half + 1))) {
                 return half;
             } else if (half > x / half) {
                 // instead of (half * half) > x to avoid stack overflow
                 right = half - 1;
             } else {
-                if ((half + 1) > x / (half + 1)) {
-                    return half;
-                }
                 left = half + 1;
             }
         }
+        return left;
     }
 
 }

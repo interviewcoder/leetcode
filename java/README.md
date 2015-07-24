@@ -11,7 +11,6 @@ P.S.:
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
-
 | # | Problem | Difficulty | Tags | Note |
 | :---: | ---- | ---- | ---- | ----- |
 | 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  |  | 
@@ -39,7 +38,7 @@ P.S.:
 | 023 | Merge k Sorted Lists | Hard | `Divide and Conquer` `Linked List` `Heap`  |  | 
 | 024 | [Swap Nodes in Pairs](https://github.com/interviewcoder/leetcode/blob/master/java/src/_024_SwapNodesInPairs/Solution.java) | Medium | `Linked List`  |  | 
 | 025 | Reverse Nodes in k-Group | Hard | `Linked List`  |  | 
-| 026 | [Remove Duplicates from Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_026_RemoveDuplicatesFromSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  |  | 
+| 026 | [Remove Duplicates from Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_026_RemoveDuplicatesFromSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  |  partition techinque on array | 
 | 027 | [Remove Element](https://github.com/interviewcoder/leetcode/blob/master/java/src/_027_RemoveElement/Solution.java) | Easy | `Array` `Two Pointers`  |  | 
 | 028 | [Implement strStr()](https://github.com/interviewcoder/leetcode/blob/master/java/src/_028_ImplementStrStr/Solution.java) | Easy | `Two Pointers` `String`  |  | 
 | 029 | [Divide Two Integers](https://github.com/interviewcoder/leetcode/blob/master/java/src/_029_DivideTwoIntegers/Solution.java) | Medium | `Math` `Binary Search`  |  | 
@@ -47,8 +46,8 @@ P.S.:
 | 031 | [Next Permutation](https://github.com/interviewcoder/leetcode/blob/master/java/src/_031_NextPermutation/Solution.java) | Medium | `Array`  |  | 
 | 032 | [Longest Valid Parentheses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_032_LongestValidParentheses/Solution.java) | Hard | `Dynamic Programming` `String`  |  | 
 | 033 | [Search in Rotated Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_033_SearchInRotatedSortedArray/Solution.java) | Hard | `Array` `Binary Search`  |  | 
-| 034 | [Search for a Range](https://github.com/interviewcoder/leetcode/blob/master/java/src/_034_SearchForARange/Solution.java) | Medium | `Array` `Binary Search`  |  | 
-| 035 | [Search Insert Position](https://github.com/interviewcoder/leetcode/blob/master/java/src/_035_SearchInsertPosition/Solution.java) | Medium | `Array` `Binary Search`  |  | 
+| 034 | [Search for a Range](https://github.com/interviewcoder/leetcode/blob/master/java/src/_034_SearchForARange/Solution.java) | Medium | `Array` `Binary Search`  | `!` one binary search to find start position, and another one find ending position | 
+| 035 | [Search Insert Position](https://github.com/interviewcoder/leetcode/blob/master/java/src/_035_SearchInsertPosition/Solution.java) | Medium | `Array` `Binary Search`  | standard binary search with minor modification | 
 | 036 | [Valid Sudoku](https://github.com/interviewcoder/leetcode/blob/master/java/src/_036_ValidSudoku/Solution.java) | Easy | `Hash Table`  |  | 
 | 037 | [Sudoku Solver](https://github.com/interviewcoder/leetcode/blob/master/java/src/_037_SudokuSolver/Solution.java) | Hard | `Backtracking` `Hash Table`  |  | 
 | 038 | [Count and Say](https://github.com/interviewcoder/leetcode/blob/master/java/src/_038_CountAndSay/Solution.java) | Easy | `String`  |  | 
@@ -82,12 +81,12 @@ P.S.:
 | 066 | [Plus One](https://github.com/interviewcoder/leetcode/blob/master/java/src/_066_PlusOne/Solution.java) | Easy | `Array` `Math`  |  | 
 | 067 | [Add Binary](https://github.com/interviewcoder/leetcode/blob/master/java/src/_067_AddBinary/Solution.java) | Easy | `Math` `String`  |  | 
 | 068 | [Text Justification](https://github.com/interviewcoder/leetcode/blob/master/java/src/_068_TextJustification/Solution.java) | Hard | `String`  |  | 
-| 069 | [Sqrt(x)](https://github.com/interviewcoder/leetcode/blob/master/java/src/_069_Sqrtx/Solution.java) | Medium | `Math` `Binary Search`  |  | 
+| 069 | [Sqrt(x)](https://github.com/interviewcoder/leetcode/blob/master/java/src/_069_Sqrtx/Solution.java) | Medium | `Math` `Binary Search`  | `!`binary search along y-axle  | 
 | 070 | [Climbing Stairs](https://github.com/interviewcoder/leetcode/blob/master/java/src/_070_ClimbingStairs/Solution.java) | Easy | `Dynamic Programming`  |  | 
 | 071 | [Simplify Path](https://github.com/interviewcoder/leetcode/blob/master/java/src/_071_SimplifyPath/Solution.java) | Medium | `Stack` `String`  |  | 
 | 072 | [Edit Distance](https://github.com/interviewcoder/leetcode/blob/master/java/src/_072_EditDistance/Solution.java) | Hard | `Dynamic Programming` `String`  |  | 
 | 073 | [Set Matrix Zeroes](https://github.com/interviewcoder/leetcode/blob/master/java/src/_073_SetMatrixZeroes/Solution.java) | Medium | `Array`  |  | 
-| 074 | [Search a 2D Matrix](https://github.com/interviewcoder/leetcode/blob/master/java/src/_074_SearchA2DMatrix/Solution.java) | Medium | `Array` `Binary Search`  |  | 
+| 074 | [Search a 2D Matrix](https://github.com/interviewcoder/leetcode/blob/master/java/src/_074_SearchA2DMatrix/Solution.java) | Medium | `Array` `Binary Search`  | 2D coordidates --> 1D index | 
 | 075 | [Sort Colors](https://github.com/interviewcoder/leetcode/blob/master/java/src/_075_SortColors/Solution.java) | Medium | `Array` `Two Pointers` `Sort`  |  | 
 | 076 | [Minimum Window Substring](https://github.com/interviewcoder/leetcode/blob/master/java/src/_076_MinimumWindowSubstring/Solution.java) | Hard | `Hash Table` `Two Pointers` `String`  |  | 
 | 077 | [Combinations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_077_Combinations/Solution.java) | Medium | `Backtracking`  |  | 
@@ -101,7 +100,7 @@ P.S.:
 | 085 | [Maximal Rectangle](https://github.com/interviewcoder/leetcode/blob/master/java/src/_085_MaximalRectangle/Solution.java) | Hard | `Array` `Hash Table` `Stack` `Dynamic Programming`  |  | 
 | 086 | [Partition List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_086_PartitionList/Solution.java) | Medium | `Linked List` `Two Pointers`  |  | 
 | 087 | [Scramble String](https://github.com/interviewcoder/leetcode/blob/master/java/src/_087_ScrambleString/Solution.java) | Hard | `Dynamic Programming` `String`  |  | 
-| 088 | [Merge Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_088_MergeSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  |  | 
+| 088 | [Merge Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_088_MergeSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  | in-place merging -> from end to begin; two pointers on two lists | 
 | 089 | [Gray Code](https://github.com/interviewcoder/leetcode/blob/master/java/src/_089_GrayCode/Solution.java) | Medium | `Backtracking`  |  | 
 | 090 | [Subsets II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_090_SubsetsII/Solution.java) | Medium | `Array` `Backtracking`  |  | 
 | 091 | [Decode Ways](https://github.com/interviewcoder/leetcode/blob/master/java/src/_091_DecodeWays/Solution.java) | Medium | `Dynamic Programming` `String`  |  | 
@@ -161,7 +160,7 @@ P.S.:
 | 145 | [Binary Tree Postorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/java/src/_145_BinaryTreePostorderTraversal/Solution.java) | Hard | `Tree` `Stack`  |  | 
 | 146 | [LRU Cache](https://github.com/interviewcoder/leetcode/blob/master/java/src/_146_LRUCache/Solution.java) | Hard | `Data Structure`  |  | 
 | 147 | [Insertion Sort List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_147_InsertionSortList/Solution.java) | Medium | `Linked List` `Sort`  |  | 
-| 148 | [Sort List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_148_SortList/Solution.java)  | Medium | `Linked List` `Sort`  |  | 
+| 148 | [Sort List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_148_SortList/Solution.java)  | Medium | `Linked List` `Sort`  | `!` fast-slow to find middle + iterative reverse + merge sort | 
 | 149 | [Max Points on a Line](https://github.com/interviewcoder/leetcode/blob/master/java/src/_149_MaxPointsOnALine/Solution.java) | Hard | `Hash Table` `Math`  |  | 
 | 150 | [Evaluate Reverse Polish Notation](https://github.com/interviewcoder/leetcode/blob/master/java/src/_150_EvaluateReversePolishNotation/Solution.java) | Medium | `Stack`  |  | 
 | 151 | [Reverse Words in a String](https://github.com/interviewcoder/leetcode/blob/master/java/src/_151_ReverseWordsInAString/Solution.java) | Medium | `String`  |  | 
@@ -173,7 +172,7 @@ P.S.:
 | 157 | Read N Characters Given Read4 | Easy | You need buy that book  |  | 
 | 158 | Read N Characters Given Read4 II - Call multiple times | Hard | You need buy that book  |  | 
 | 159 | Longest Substring with At Most Two Distinct Characters | Hard | You need buy that book  |  | 
-| 160 | Intersection of Two Linked Lists | Easy | `Linked List`  |  | 
+| 160 | Intersection of Two Linked Lists | Easy | `Linked List`  | two pointers on two lists  | 
 | 161 | One Edit Distance | Medium | You need buy that book  |  | 
 | 162 | Find Peak Element | Medium | `Array` `Binary Search`  |  | 
 | 163 | Missing Ranges | Medium | You need buy that book  |  | 
@@ -237,6 +236,7 @@ P.S.:
 | 237 | Delete Node in a Linked List | Easy | `Linked List`  |  | 
 | 238 | Product of Array Except Self | Medium | `Array`  |  | 
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
+| 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  |  | 
 
 
 | # |  Problem              |   Difficulty  | Tags             | Description  |

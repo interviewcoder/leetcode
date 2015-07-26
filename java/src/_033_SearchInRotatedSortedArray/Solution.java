@@ -25,12 +25,10 @@ public class Solution {
         if (len == 0) {
             return -1;
         }
-
         int left = 0;
         int right = len - 1;
-
         while (left <= right) {
-            int mid = (left + right) / 2;
+            int mid = (right - left) / 2 + left;
             if (nums[mid] == target) {
                 // found target
                 return mid;
@@ -42,16 +40,14 @@ public class Solution {
                     right = mid - 1;
                 }
             } else {
-                // nums[left : mid] is sorted
+                // find part target in nums[left : mid] is sorted
                 if (nums[left] <= target && target < nums[mid]) {
                     right = mid - 1;
                 } else {
-                    left = left + 1;
+                    left = mid + 1;
                 }
             }
-
         }
-
         return -1;
     }
 

@@ -237,5 +237,6 @@ P.S.:
 | 238 | Product of Array Except Self | Medium | `Array`  |  | 
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
 | 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
+| 241 | Different Ways to Add Parentheses | Medium | You need buy that book  |  | 
 
 

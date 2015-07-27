@@ -89,5 +89,11 @@
         // TODO
     }
     ```
-9. 
+9. avoid stack overflow in binary sort
+
+    ```java
+    // avoid using (low + high) / 2 because (low + high) might be very large
+    int mid = low + (high - low) / 2;
+    ```
+
   

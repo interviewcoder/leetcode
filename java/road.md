@@ -22,6 +22,7 @@
 - [vim]  ctrl + u  go upwards by half screen
 - [vim]  ctrl + d  go downwards by half screen
 - [vim]  W  go to next position delimiter is blank space
+---------------------------------------------------
 
 1.  One way to loop over a String
     ```java
@@ -96,4 +97,28 @@
     int mid = low + (high - low) / 2;
     ```
 
+10. Test whether a given url exists and has good connection status, see [gist](https://gist.github.com/StevenCooks/39c51a012e5303aba584)
+    ```java
+    import java.net.URL;
+    import javax.net.ssl.HttpsURLConnection;
+
+    /**
+    * Returns <tt>true</tt> if given url exists and has good connection status.
+    * @param urlStr url that we want to check
+    */
+    public boolean urlExists(String urlStr) {
+        try {
+            URL url = new URL(urlStr);
+            HttpsURLConnection huc = (HttpsURLConnection) url.openConnection();
+            huc.setRequestMethod("HEAD");
+            if (huc.getResponseCode() == HttpsURLConnection.HTTP_OK) {
+                return true;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // System.out.println(url);
+        return false;
+    }
+    ```
   

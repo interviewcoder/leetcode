@@ -24,7 +24,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/** see test {@link _090_SubsetsII.SolutionTest } */
+/** 
+ * 
+ * see test {@link _090_SubsetsII.SolutionTest } , see recursive solution
+ * {@link _090_SubsetsII.SolutionRecursive } 
+ */
 public class Solution {
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {

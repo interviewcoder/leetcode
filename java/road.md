@@ -23,6 +23,9 @@
 - [vim]  ctrl + d  go downwards by half screen
 - [vim]  W  go to next position delimiter is blank space
 ---------------------------------------------------
+* [online editor] alt + upper arrow : moves current line to upper line
+* [online editor] alt + down arrow: moves current line to next line.
+* [online editor] alt + right arrow, move cursor to right by one word  
 
 1.  One way to loop over a String
     ```java

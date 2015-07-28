@@ -43,6 +43,13 @@ public class TreeNode {
         return string.substring(0, string.length() - 2) + "]";
     }
     
+    /**
+     * If root node is not null, then connect root with its left and right child.
+     * 
+     * @param root root node (should not be null)
+     * @param left
+     * @param right
+     */
     public static void connect(TreeNode root, TreeNode left, TreeNode right) {
         if (root != null) {
             root.left = left;
@@ -99,6 +106,63 @@ public class TreeNode {
         }
     }
     
+    // null
+    public static TreeNode getEmptyBST() {
+        return null;
+    }
+    
+    //   1
+    public static TreeNode getBST1() {
+        return getTree0();
+    }
+    
+    //   1 
+    //    \
+    //     2
+    //      \
+    //       3 
+    public static TreeNode getBST2() {
+        return getTree1();
+    }
+    
+    //      1 
+    //     /   
+    //    2
+    //   / 
+    //  3 
+    public static TreeNode getBST3() {
+        return getTree21();
+    }
+
+    //      2 
+    //    /   \
+    //   1     3
+    public static TreeNode getBST4() {
+        return getTree31();
+    }
+    
+    //      10
+    //     /  \
+    //    5   12
+    //   / \
+    //  4   7
+    public static TreeNode getBST5() {
+        return getTree5();
+    }
+
+    //         8
+    //      /     \
+    //     6       18
+    //   /   \     / \
+    //  3     7   10  20
+    //   \
+    //     5
+    //    /
+    //    4
+    public static TreeNode getBST6() {
+        return getTree11();
+    }
+    
     // 1 
     public static TreeNode getTree0() {
         TreeNode root = new TreeNode(1);
@@ -137,6 +201,23 @@ public class TreeNode {
         TreeNode root = t1;
         return root;
     }
+    
+    //      3 
+    //     /   
+    //    2
+    //   / 
+    //  1 
+    // length; search tree; balanced
+    //    3        true      false 
+    public static TreeNode getTree21() {
+        TreeNode t1 = new TreeNode(3);
+        TreeNode t3 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(1);
+        TreeNode.connect(t1, t3, null);
+        TreeNode.connect(t3, t4, null);
+        TreeNode root = t1;
+        return root;
+    }
 
     //      1 
     //    /   \
@@ -146,6 +227,19 @@ public class TreeNode {
     public static TreeNode getTree3() {
         TreeNode t1 = new TreeNode(1);
         TreeNode t2 = new TreeNode(2);
+        TreeNode t3 = new TreeNode(3);
+        TreeNode.connect(t1, t2, t3);
+        return t1;
+    }
+
+    //      2 
+    //    /   \
+    //   1     3
+    // length; search tree; balanced
+    //    2        true      true 
+    public static TreeNode getTree31() {
+        TreeNode t1 = new TreeNode(2);
+        TreeNode t2 = new TreeNode(1);
         TreeNode t3 = new TreeNode(3);
         TreeNode.connect(t1, t2, t3);
         return t1;
@@ -309,6 +403,35 @@ public class TreeNode {
         TreeNode.connect(t6, t9, t10);
         TreeNode root = t1;
         return root;
+    }
+    
+    //         8
+    //      /     \
+    //     6       18
+    //   /   \     / \
+    //  3     7   10  20
+    //   \
+    //     5
+    //    /
+    //    4
+    // length; search tree; balanced
+    //    5        true       false 
+    public static TreeNode getTree11() {
+        TreeNode t1 = new TreeNode(8);
+        TreeNode t2 = new TreeNode(6);
+        TreeNode t3 = new TreeNode(18);
+        TreeNode t4 = new TreeNode(3);
+        TreeNode t5 = new TreeNode(7);
+        TreeNode t6 = new TreeNode(10);
+        TreeNode t7 = new TreeNode(20);
+        TreeNode t8 = new TreeNode(5);
+        TreeNode t9 = new TreeNode(4);
+        TreeNode.connect(t1, t2, t3);
+        TreeNode.connect(t2, t4, t5);
+        TreeNode.connect(t3, t6, t7);
+        TreeNode.connect(t4, null, t8);
+        TreeNode.connect(t8, t9, null);
+        return t1;
     }
 
 }

@@ -20,12 +20,33 @@
 package _078_Subsets;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /** see test {@link _078_Subsets.SolutionTest } */
 public class Solution {
+
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<Integer> list = new ArrayList<>();
+        int pos = 0;
+        // sort because it is required to put elements in non-descending order
+        Arrays.sort(nums);
+        subsetsHelper(nums, pos, list, result);
         return result;
     }
+
+    private void subsetsHelper(int[] nums, int pos, List<Integer> list,
+            List<List<Integer>> result) {
+        // ! not result.add(list)
+        result.add(new ArrayList<>(list));
+        for (int i = pos; i < nums.length; i++) {
+            list.add(nums[i]);
+            // ! not (pos + 1)
+            subsetsHelper(nums, i + 1, list, result);
+            list.remove(list.size() - 1);
+        }
+        
+    }
+
 }

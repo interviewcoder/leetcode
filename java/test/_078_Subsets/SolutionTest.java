@@ -18,7 +18,7 @@ public class SolutionTest {
     Solution solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(500);
 
     @Before
     public void setUp() throws Exception {
@@ -35,14 +35,14 @@ public class SolutionTest {
         int[] nums = { 1, 2, 3 };
         List<List<Integer>> actuals = solution.subsets(nums);
         List<List<Integer>> expecteds = new ArrayList<>();
-        expecteds.add(Arrays.asList(3));
+        expecteds.add(Arrays.asList());
         expecteds.add(Arrays.asList(1));
         expecteds.add(Arrays.asList(2));
-        expecteds.add(Arrays.asList(1, 2, 3));
+        expecteds.add(Arrays.asList(3));
         expecteds.add(Arrays.asList(1, 3));
-        expecteds.add(Arrays.asList(2, 3));
         expecteds.add(Arrays.asList(1, 2));
-        expecteds.add(Arrays.asList());
+        expecteds.add(Arrays.asList(2, 3));
+        expecteds.add(Arrays.asList(1, 2, 3));
         assertEqualsIgnoreOrder(expecteds, actuals);
     }
 
@@ -51,10 +51,10 @@ public class SolutionTest {
         int[] nums = { 1, 2 };
         List<List<Integer>> actual = solution.subsets(nums);
         List<List<Integer>> expecteds = new ArrayList<>();
+        expecteds.add(Arrays.asList());
         expecteds.add(Arrays.asList(1));
         expecteds.add(Arrays.asList(2));
         expecteds.add(Arrays.asList(1, 2));
-        expecteds.add(Arrays.asList());
         assertEqualsIgnoreOrder(expecteds, actual);
     }
 
@@ -63,7 +63,32 @@ public class SolutionTest {
         int[] nums = { 1 };
         List<List<Integer>> actual = solution.subsets(nums);
         List<List<Integer>> expecteds = new ArrayList<>();
+        expecteds.add(Arrays.asList());
         expecteds.add(Arrays.asList(1));
+        assertEqualsIgnoreOrder(expecteds, actual);
+    }
+
+    @Test
+    public void Test4() {
+        int[] nums = { 4, 1, 0 };
+        List<List<Integer>> actual = solution.subsets(nums);
+        List<List<Integer>> expecteds = new ArrayList<>();
+        expecteds.add(Arrays.asList());
+        expecteds.add(Arrays.asList(0));
+        expecteds.add(Arrays.asList(0, 1));
+        expecteds.add(Arrays.asList(0, 4));
+        expecteds.add(Arrays.asList(0, 1, 4));
+        expecteds.add(Arrays.asList(1));
+        expecteds.add(Arrays.asList(1, 4));
+        expecteds.add(Arrays.asList(4));
+        assertEqualsIgnoreOrder(expecteds, actual);
+    }
+
+    @Test
+    public void Test5() {
+        int[] nums = { };
+        List<List<Integer>> actual = solution.subsets(nums);
+        List<List<Integer>> expecteds = new ArrayList<>();
         expecteds.add(Arrays.asList());
         assertEqualsIgnoreOrder(expecteds, actual);
     }

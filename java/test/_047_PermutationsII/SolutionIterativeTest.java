@@ -12,17 +12,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionIterativeTest {
     
-    /** Test method for {@link _047_PermutationsII.Practice } */
-    Practice solution;
+    /** Test method for {@link _047_PermutationsII.SolutionIterative } */
+    SolutionIterative solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionIterative();
     }
 
     @After

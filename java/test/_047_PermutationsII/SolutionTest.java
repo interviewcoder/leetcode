@@ -151,4 +151,18 @@ public class SolutionTest {
         assertEqualsIgnoreOrder(expected, actual);
     }
 
+    @Test
+    public void Test9() {
+        int[] nums = { 2, 2, 1, 1 };
+        List<List<Integer>> actual = solution.permuteUnique(nums);
+        List<List<Integer>> expected = new ArrayList<List<Integer>>();
+        expected.add(Arrays.asList(1, 1, 2, 2));
+        expected.add(Arrays.asList(1, 2, 1, 2));
+        expected.add(Arrays.asList(1, 2, 2, 1));
+        expected.add(Arrays.asList(2, 1, 1, 2));
+        expected.add(Arrays.asList(2, 1, 2, 1));
+        expected.add(Arrays.asList(2, 2, 1, 1));
+        assertEqualsIgnoreOrder(expected, actual);
+    }
+
 }

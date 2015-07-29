@@ -12,17 +12,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionIterativeSetTest {
     
-    /** Test method for {@link _047_PermutationsII.Practice } */
-    Practice solution;
+    /** Test method for {@link _047_PermutationsII.SolutionIterativeSet } */
+    SolutionIterativeSet solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionIterativeSet();
     }
 
     @After
@@ -38,7 +38,6 @@ public class PracticeTest {
         expected.add(Arrays.asList(1, 1, 2));
         expected.add(Arrays.asList(1, 2, 1));
         expected.add(Arrays.asList(2, 1, 1));
-
         // order in actual is not important!
         assertEqualsIgnoreOrder(expected, actual);
     }
@@ -47,7 +46,6 @@ public class PracticeTest {
     public void Test2() {
         int[] nums = { 1, 2, 3 };
         List<List<Integer>> actual = solution.permuteUnique(nums);
-
         List<List<Integer>> expected = new ArrayList<List<Integer>>();
         expected.add(Arrays.asList(1, 2, 3));
         expected.add(Arrays.asList(1, 3, 2));
@@ -55,7 +53,6 @@ public class PracticeTest {
         expected.add(Arrays.asList(2, 3, 1));
         expected.add(Arrays.asList(3, 1, 2));
         expected.add(Arrays.asList(3, 2, 1));
-
         // order in actual is not important!
         assertEqualsIgnoreOrder(expected, actual);
     }
@@ -88,7 +85,6 @@ public class PracticeTest {
         expected.add(Arrays.asList(1, 1, 2));
         expected.add(Arrays.asList(1, 2, 1));
         expected.add(Arrays.asList(2, 1, 1));
-
         // order in actual is not important!
         assertEqualsIgnoreOrder(expected, actual);
     }
@@ -118,7 +114,6 @@ public class PracticeTest {
         expected.add(Arrays.asList(9, 0, 0, 1));
         expected.add(Arrays.asList(9, 0, 1, 0));
         expected.add(Arrays.asList(9, 1, 0, 0));
-
         assertEqualsIgnoreOrder(expected, actual);
     }
 
@@ -147,9 +142,9 @@ public class PracticeTest {
         expected.add(Arrays.asList(9, 0, 0, 1, 0));
         expected.add(Arrays.asList(9, 0, 1, 0, 0));
         expected.add(Arrays.asList(9, 1, 0, 0, 0));
-        
         assertEqualsIgnoreOrder(expected, actual);
     }
+
 
     @Test
     public void Test9() {

@@ -18,7 +18,7 @@ public class SolutionTest {
     Solution solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(2000);
 
     @Before
     public void setUp() throws Exception {
@@ -70,6 +70,41 @@ public class SolutionTest {
         List<List<Integer>> expected = new ArrayList<List<Integer>>();
         expected.add(Arrays.asList(1, 2));
         expected.add(Arrays.asList(2, 1));
+        assertEqualsIgnoreOrder(expected, actual);
+    }
+
+    @Test
+    public void Test4() {
+        int[] nums = { 4, 5, 6, 7};
+        List<List<Integer>> actual = solution.permute(nums);
+        List<List<Integer>> expected = new ArrayList<List<Integer>>();
+        expected.add(Arrays.asList(4, 5, 6, 7));
+        expected.add(Arrays.asList(4, 5, 7, 6));
+        expected.add(Arrays.asList(4, 6, 5, 7));
+        expected.add(Arrays.asList(4, 6, 7, 5));
+        expected.add(Arrays.asList(4, 7, 5, 6));
+        expected.add(Arrays.asList(4, 7, 6, 5));
+
+        expected.add(Arrays.asList(5, 4, 6, 7));
+        expected.add(Arrays.asList(5, 4, 7, 6));
+        expected.add(Arrays.asList(5, 6, 4, 7));
+        expected.add(Arrays.asList(5, 6, 7, 4));
+        expected.add(Arrays.asList(5, 7, 4, 6));
+        expected.add(Arrays.asList(5, 7, 6, 4));
+
+        expected.add(Arrays.asList(6, 4, 5, 7));
+        expected.add(Arrays.asList(6, 4, 7, 5));
+        expected.add(Arrays.asList(6, 5, 4, 7));
+        expected.add(Arrays.asList(6, 5, 7, 4));
+        expected.add(Arrays.asList(6, 7, 4, 5));
+        expected.add(Arrays.asList(6, 7, 5, 4));
+
+        expected.add(Arrays.asList(7, 4, 5, 6));
+        expected.add(Arrays.asList(7, 4, 6, 5));
+        expected.add(Arrays.asList(7, 5, 4, 6));
+        expected.add(Arrays.asList(7, 5, 6, 4));
+        expected.add(Arrays.asList(7, 6, 4, 5));
+        expected.add(Arrays.asList(7, 6, 5, 4));
         assertEqualsIgnoreOrder(expected, actual);
     }
 

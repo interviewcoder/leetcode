@@ -39,9 +39,16 @@ public class Solution {
             for (int j = 0; j <= i; j++) {
                 // insert num[i] at position j of each existing set
                 for (List<Integer> list : result) {
+                    // create new copy of list is faster than operation on
+                    // the same code
                     List<Integer> expanding = new ArrayList<>(list);
                     expanding.add(j, num);
                     next.add(expanding);
+                    
+                    //slow version: because list.remove() is O(N)
+//                    list.add(j, num);
+//                    next.add(list);
+//                    list.remove(j);
                 }
             }
             result = next;

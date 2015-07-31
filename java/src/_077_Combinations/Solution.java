@@ -16,11 +16,35 @@
  */
 package _077_Combinations;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /** see test {@link _077_Combinations.SolutionTest } */
 public class Solution {
+
     public List<List<Integer>> combine(int n, int k) {
-        return null;
+        List<List<Integer>> result = new ArrayList<>();
+        if (k > n) {
+            return result;
+        }
+        ArrayList<Integer> list = new ArrayList<>();
+        int index = 0;
+        combineHelper(n, k, index, list, result);
+        return result;
     }
+    
+    private void combineHelper(int n, int k, int index, List<Integer> list, List<List<Integer>> res) {
+        if (list.size() == k) {
+            res.add(new ArrayList<>(list));
+        }
+        if (list.size() > k) {
+            return;
+        }
+        for (int i = index; i < n; i++) {
+            list.add(i + 1);
+            combineHelper(n, k, i + 1, list, res);
+            list.remove(list.size() - 1);
+        }
+    }
+    
 }

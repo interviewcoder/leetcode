@@ -35,45 +35,38 @@ public class Solution {
 
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-
+        List<Integer> combination = new ArrayList<Integer>();
         Arrays.sort(candidates);
         int index = 0;
-        List<Integer> combination = new ArrayList<Integer>();
         combinationSum2(candidates, target, index, combination, result);
         return result;
     }
 
-    private void combinationSum2(int[] candidates, int target, int index,
+    private void combinationSum2(int[] nums, int target, int index,
             List<Integer> combination, List<List<Integer>> result) {
         // base case
         if (target == 0) {
             // found one valid combination
             result.add(combination);
-            // no need to check number [candidates[index], candidates[end]]
-            // as next number in combination
-            return;
         }
 
         // recursive case
-        for (int i = index; i < candidates.length; i++) {
-            // try each number as the next number put into combination
-            if (i == index || candidates[i] != candidates[index]) {
-                // skip duplicates in candidates
-                int newTarget = target - candidates[i];
-                if (newTarget < 0) {
-                    // prune: no need to try larger number in candidates
-                    // to put in current combination
-                    break;
-                }
-
-                List<Integer> copy = new ArrayList<Integer>(combination);
-                copy.add(candidates[i]);
-                // go on search
-                combinationSum2(candidates, newTarget, i + 1, copy, result);
-
-                // TODO: advance index to i for duplicates check
-                index = i;
+        // try each number as the next number put into combination
+        for (int i = index; i < nums.length; i++) {
+            int num = nums[i];
+            if (i != index && num == nums[i - 1]) {
+                // skip duplicate at the same position of resulting combination
+                continue;
             }
+            if (target - num < 0) {
+                // prune: no need to try larger number in candidates
+                // to put in current combination
+                // no need to check later siblings
+                break;
+            }
+            List<Integer> copy = new ArrayList<Integer>(combination);
+            copy.add(num);
+            combinationSum2(nums, target - num, i + 1, copy, result);
         }
     }
 

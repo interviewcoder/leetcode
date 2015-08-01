@@ -51,15 +51,15 @@ P.S.:
 | 036 | [Valid Sudoku](https://github.com/interviewcoder/leetcode/blob/master/java/src/_036_ValidSudoku/Solution.java) | Easy | `Hash Table`  |  | 
 | 037 | [Sudoku Solver](https://github.com/interviewcoder/leetcode/blob/master/java/src/_037_SudokuSolver/Solution.java) | Hard | `Backtracking` `Hash Table`  |  | 
 | 038 | [Count and Say](https://github.com/interviewcoder/leetcode/blob/master/java/src/_038_CountAndSay/Solution.java) | Easy | `String`  |  | 
-| 039 | [Combination Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_039_CombinationSum/Solution.java) | Medium | `Array` `Backtracking`  |  | 
-| 040 | [Combination Sum II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_040_CombinationSumII/Solution.java) | Medium | `Array` `Backtracking`  |  | 
+| 039 | [Combination Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_039_CombinationSum/Solution.java) | Medium | `Array` `Backtracking`  | backtrack template + prune siblings | 
+| 040 | [Combination Sum II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_040_CombinationSumII/Solution.java) | Medium | `Array` `Backtracking`  | backtrack template + prune siblings + skip duplicate | 
 | 041 | [First Missing Positive](https://github.com/interviewcoder/leetcode/blob/master/java/src/_041_FirstMissingPositive/Solution.java) | Hard | `Array`  | swap-until technique | 
 | 042 | [Trapping Rain Water](https://github.com/interviewcoder/leetcode/blob/master/java/src/_042_TrappingRainWater/Solution.java) | Hard | `Array` `Stack` `Two Pointers`  |  | 
 | 043 | [Multiply Strings](https://github.com/interviewcoder/leetcode/blob/master/java/src/_043_MultiplyStrings/Solution.java) | Medium | `Math` `String`  | `!` simulate multiplication | 
 | 044 | [Wildcard Matching](https://github.com/interviewcoder/leetcode/blob/master/java/src/_044_WildcardMatching/Solution.java) | Hard | `Dynamic Programming` `Backtracking` `Greedy` `String`  |  | 
 | 045 | Jump Game II | Hard | `Array` `Greedy`  |  | 
-| 046 | [Permutations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_046_Permutations/Solution.java) | Medium | `Backtracking`  |  | 
-| 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  |  | 
+| 046 | [Permutations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_046_Permutations/Solution.java) | Medium | `Backtracking`  | backtrack template + select to add | 
+| 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  | backtrack template + select to add + skip duplicate | 
 | 048 | [Rotate Image](https://github.com/interviewcoder/leetcode/blob/master/java/src/_048_RotateImage/Solution.java) | Medium | `Array`  |  | 
 | 049 | [Anagrams](https://github.com/interviewcoder/leetcode/blob/master/java/src/_049_Anagrams/Solution.java) | Medium | `Hash Table` `String`  |  | 
 | 050 | [Pow(x, n)](https://github.com/interviewcoder/leetcode/blob/master/java/src/_050_PowxN/Solution.java) | Medium | `Math` `Binary Search`  |  | 
@@ -90,7 +90,7 @@ P.S.:
 | 075 | [Sort Colors](https://github.com/interviewcoder/leetcode/blob/master/java/src/_075_SortColors/Solution.java) | Medium | `Array` `Two Pointers` `Sort`  |  | 
 | 076 | [Minimum Window Substring](https://github.com/interviewcoder/leetcode/blob/master/java/src/_076_MinimumWindowSubstring/Solution.java) | Hard | `Hash Table` `Two Pointers` `String`  | `!`**[substring/sublist]** hashing + two pointers -> O(N) | 
 | 077 | [Combinations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_077_Combinations/Solution.java) | Medium | `Backtracking`  |  | 
-| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/java/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  |  | 
+| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/java/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  | backtrack template | 
 | 079 | [Word Search](https://github.com/interviewcoder/leetcode/blob/master/java/src/_079_WordSearch/Solution.java) | Medium | `Array` `Backtracking`  |  | 
 | 080 | [Remove Duplicates from Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_080_RemoveDuplicatesFromSortedArrayII/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
 | 081 | [Search in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_081_SearchInRotatedSortedArrayII/Solution.java) | Medium | `Array` `Binary Search`  |  | 
@@ -102,7 +102,7 @@ P.S.:
 | 087 | [Scramble String](https://github.com/interviewcoder/leetcode/blob/master/java/src/_087_ScrambleString/Solution.java) | Hard | `Dynamic Programming` `String`  |  | 
 | 088 | [Merge Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_088_MergeSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  | in-place merging -> from end to begin; two pointers on two lists | 
 | 089 | [Gray Code](https://github.com/interviewcoder/leetcode/blob/master/java/src/_089_GrayCode/Solution.java) | Medium | `Backtracking`  |  | 
-| 090 | [Subsets II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_090_SubsetsII/Solution.java) | Medium | `Array` `Backtracking`  |  | 
+| 090 | [Subsets II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_090_SubsetsII/Solution.java) | Medium | `Array` `Backtracking`  | backtrack template + skip duplicate | 
 | 091 | [Decode Ways](https://github.com/interviewcoder/leetcode/blob/master/java/src/_091_DecodeWays/Solution.java) | Medium | `Dynamic Programming` `String`  |  | 
 | 092 | [Reverse Linked List II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_092_ReverseLinkedListII/Solution.java) | Medium | `Linked List`  |  | 
 | 093 | [Restore IP Addresses](https://github.com/interviewcoder/leetcode/blob/master/java/src/_093_RestoreIPAddresses/Solution.java) | Medium | `Backtracking` `String`  |  | 
@@ -238,4 +238,5 @@ P.S.:
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
 | 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
 | 241 | Different Ways to Add Parentheses | Medium | You need buy that book  |  | 
+| 242 | Valid Anagram | Easy | `Hash Table` `Sort`  |  | 
 

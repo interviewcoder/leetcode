@@ -22,6 +22,9 @@
 - [vim]  ctrl + u  go upwards by half screen
 - [vim]  ctrl + d  go downwards by half screen
 - [vim]  W  go to next position delimiter is blank space
+- [vim] :%s/\<Solution\>/SolutionIterative/g Change only whole words exactly matching 
+- [vim] :.,$s/Solution/SolutionReplace/g from current line to last line
+- [vim] :.,+2s/Solution/SolutionR/g from current line to two next lines
 ---------------------------------------------------
 * [online editor] alt + upper arrow : moves current line to upper line
 * [online editor] alt + down arrow: moves current line to next line.

@@ -53,4 +53,12 @@ public class PracticeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void Test4() {
+        int n = 3;
+        List<Integer> actual = solution.grayCode(n);
+        List<Integer> expected = Arrays.asList(0, 1, 3, 2, 6, 7, 5, 4);
+        assertEquals(expected, actual);
+    }
+
 }

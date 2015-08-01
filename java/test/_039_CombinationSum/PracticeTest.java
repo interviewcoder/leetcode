@@ -66,4 +66,22 @@ public class PracticeTest {
         assertEqualsIgnoreOrder(expecteds, actuals);
     }
 
+    @Test
+    public void Test4() {
+        int[] candidates = { 2, 3, 4, 6, 7 };
+        int target = 10;
+        List<List<Integer>> actuals = solution.combinationSum(candidates,
+                target);
+        List<List<Integer>> expecteds = new ArrayList<List<Integer>>();
+        expecteds.add(Arrays.asList(2, 2, 2, 2, 2));
+        expecteds.add(Arrays.asList(2, 2, 2, 4));
+        expecteds.add(Arrays.asList(2, 2, 3, 3));
+        expecteds.add(Arrays.asList(2, 2, 6));
+        expecteds.add(Arrays.asList(2, 4, 4));
+        expecteds.add(Arrays.asList(3, 3, 4));
+        expecteds.add(Arrays.asList(3, 7));
+        expecteds.add(Arrays.asList(4, 6));
+        assertEqualsIgnoreOrder(expecteds, actuals);
+    }
+
 }

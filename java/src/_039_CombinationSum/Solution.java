@@ -42,30 +42,23 @@ public class Solution {
     }
 
     private void recurse(List<Integer> combination, int target,
-            int[] candidates, int index, List<List<Integer>> result) {
+            int[] nums, int index, List<List<Integer>> result) {
         // base case
         if (target == 0) {
             // found one valid combination
-            result.add(combination);
-            // no need to search this path any more
-            return;
+            result.add(new ArrayList<>(combination));
         }
 
         // recursive case
-        for (int i = index; i < candidates.length; i++) {
-            int number = candidates[i];
-            int newTarget = target - number;
-            if (newTarget < 0) {
-                // prune: next number in combination
-                // cannot be [candidates[index], candidates[end]]
-                return;
-            } else {
-                List<Integer> copy = new ArrayList<Integer>(combination);
-                copy.add(number);
-
-                // go to next level
-                recurse(copy, newTarget, candidates, i, result);
+        for (int i = index; i < nums.length; i++) {
+            int num = nums[i];
+            if(target - num < 0) {
+                // no need to check later siblings
+                break;
             }
+            combination.add(num);
+            recurse(combination, target - num, nums, i, result);
+            combination.remove(combination.size() - 1);
         }
     }
 

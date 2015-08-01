@@ -39,26 +39,27 @@ public class Solution {
             return result;
         }
         int index = 0;
-        String prefix = "";
+        StringBuilder prefix = new StringBuilder();
         letterCombinations(digits, index, prefix, result);
         return result;
     }
 
     // depth-first search
-    public void letterCombinations(String digits, int index, String prefix,
+    public void letterCombinations(String digits, int index, StringBuilder prefix,
             List<String> result) {
         // reaching end
         if (index == digits.length()) {
             // found one combination and return from stack
-            result.add(prefix);
+            result.add(prefix.toString());
             return;
         }
-        int digit = digits.charAt(index) - '0';
-        String letters = mapping[digit];
+        String letters = mapping[digits.charAt(index) - '0'];
         for (int i = 0; i < letters.length(); i++) {
             char ch = letters.charAt(i);
             // go to deeper depth
-            letterCombinations(digits, index + 1, prefix + ch, result);
+            StringBuilder copy = new StringBuilder(prefix);
+            copy.append(ch);
+            letterCombinations(digits, index + 1, copy, result);
         }
     }
 

@@ -31,6 +31,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Stack;
 
+/** see test {@link _224_BasicCalculator.SolutionTest } */
 public class Solution {
 
     // define functional type

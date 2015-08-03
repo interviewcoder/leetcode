@@ -1,5 +1,5 @@
 /**
- * Time : O(N); Space: O(N)
+ * Time : O(N); Space: O(1)
  * @tag : Dynamic Programming; String
  * @by  : Steven Cooks
  * @date: May 8, 2015
@@ -24,28 +24,42 @@ package _091_DecodeWays;
 /** see test {@link _091_DecodeWays.SolutionTest } */
 public class Solution {
 
+    /**
+     * Similarly to climbing stairs, for each s[i] we have two choices,
+     * 1) if s[i-1:i] is in [10, 26], we can treat s[i:1:i] as the last number we decode 
+     * 2) if s[i] is in [1, 9], we can treat s[i] as the last number we decode
+     */
     public int numDecodings(String s) {
         int len = s.length();
-        if (len == 0 || s.charAt(0) == '0') {
+        if (len == 0) {
             return 0;
         }
-        // dp[i] = decode ways for s[: i]
-        int[] dp = new int[len + 1];
-        dp[0] = 1;
-        dp[1] = s.charAt(0) == '0' ? 0 : 1;
+        int p1 = 1;   // number of decoding s[0 : i - 2]
+        int p2 = 1;   // number of decoding s[0 : i - 1]
+        int last = 0; // last digit before current digit
 
-        for (int i = 2; i < len + 1; i++) {
+        for (int i = 0; i < len ; i++) {
+            int digit = s.charAt(i) - '0';
+            // number of decoding s[0 : i]
+            int result = 0;
+
+            int num = last * 10 + digit;
             // if last 2 digits is in [10,26]
-            if (s.charAt(i - 2) != '0'
-                    && Integer.parseInt(s.substring(i - 2, i)) <= 26) {
-                dp[i] = dp[i - 2];
+            if (num >= 10 && num <= 26) {
+                result += p1;
             }
+
             // if last digit is [1-9]
-            if (s.charAt(i - 1) != '0') {
-                dp[i] += dp[i - 1];
+            if (digit != 0) {
+                result += p2;
             }
+            
+            // update
+            p1 = p2;
+            p2 = result;
+            last = digit;
         }
-        return dp[len];
+        return p2;
     }
 
 }

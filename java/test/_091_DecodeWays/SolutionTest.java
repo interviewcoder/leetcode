@@ -14,7 +14,7 @@ public class SolutionTest {
     Solution solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -97,4 +97,21 @@ public class SolutionTest {
         int expected = 0;
         assertEquals(s, expected, actual);
     }
+
+    @Test
+    public void Test10() {
+        String s = "1";
+        int actual = solution.numDecodings(s);
+        int expected = 1;
+        assertEquals(s, expected, actual);
+    }
+
+    @Test
+    public void Test11() {
+        String s = "8";
+        int actual = solution.numDecodings(s);
+        int expected = 1;
+        assertEquals(s, expected, actual);
+    }
+
 }

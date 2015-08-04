@@ -102,4 +102,15 @@ public class SolutionMemoTest {
         assertEquals(true, actual);
     }
 
+    @Test
+    public void Test7() {
+        String s = "leetcode";
+        Set<String> wordDict = new HashSet<>();
+        wordDict.add("leet");
+        wordDict.add("co");
+        wordDict.add("de");
+        boolean actual = solution.wordBreak(s, wordDict);
+        assertEquals(true, actual);
+    }
+
 }

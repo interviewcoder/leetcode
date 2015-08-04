@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(n^2); Space: O(1)
  * @tag : Dynamic Programming
  * @by  : Steven Cooks
  * @date: Jun 11, 2015
@@ -22,8 +22,10 @@ import java.util.Set;
 /** see test {@link _139_WordBreak.SolutionTest } */
 public class Solution {
 
+    /** bottom-up dynamic programming */
     public boolean wordBreak(String s, Set<String> wordDict) {
         int len = s.length();
+        // whether s[i : end] can be successfully broken
         boolean[] dp = new boolean[len + 1];
         for (int i = len; i >= 0; i--) {
             boolean breakable = false;

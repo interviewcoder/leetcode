@@ -17,7 +17,7 @@ public class SolutionDFSTest {
     SolutionDFS solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(20);
 
     @Before
     public void setUp() throws Exception {
@@ -63,6 +63,8 @@ public class SolutionDFSTest {
     public void Test4() {
         String s = "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
                 + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
         Set<String> wordDict = new HashSet<>();
         wordDict.add("a");
@@ -75,6 +77,26 @@ public class SolutionDFSTest {
         wordDict.add("aaaaaaaa");
         wordDict.add("aaaaaaaaa");
         wordDict.add("aaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        wordDict.add("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         boolean actual = solution.wordBreak(s, wordDict);
         assertEquals(false, actual);
     }

@@ -208,4 +208,11 @@ public class Problem implements Comparable<Problem> {
         this.acceptance = acceptance;
     }
 
+    /**
+     * @return
+     */
+    public boolean isLocked() {
+        return tags.isEmpty();
+    }
+
 }

@@ -64,17 +64,19 @@ public class Leetcode {
     // suffix is "/Solution.java";
 
     // TODO: set your github repository's prefix
-    // private static final String GIT_PREFIX =
-    // "https://github.com/interviewcoder/leetcode/blob/master/java/src/";
     private static final String GIT_PREFIX = "";
+    // private static final String GIT_PREFIX = "https://github.com/interviewcoder/leetcode/blob/master/java/src/";
 
     // TODO: set your github repository's suffix
-    // private static final String GIT_SUFFIX = "/Solution.java";
     private static final String GIT_SUFFIX = "";
+    // private static final String GIT_SUFFIX = "/Solution.java";
 
     private static final String MD_DEST_FILE = "leetcode_java.md";
 
     private List<String> output = new ArrayList<>();
+
+    private static final String STAR_DECO = "***************************************************";
+    private static final String DASH_DECO = "---------------------------------------------------";
 
     @SuppressWarnings("serial")
     private static final Set<Character> skipSet = new HashSet<Character>() {
@@ -95,7 +97,11 @@ public class Leetcode {
      * @param args
      */
     public static void main(String[] args) {
-        new Leetcode().run();
+        try {
+            new Leetcode().run();
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
     }
 
     // create a new mark down file if target file does not exist,
@@ -107,22 +113,29 @@ public class Leetcode {
             throw new NoSuchElementException(
                     "Please set your prefix and suffix");
         }
+        // read in existing problem from mark down file and add solution link
         int lastProblem = readInProblems();
         // crawl new problems from leetcode
         try {
             List<Problem> problems = extractProblems(LEETCODE_ALGO_URL,
                     lastProblem);
             Collections.sort(problems);
-            System.out.println(problems.size() + " new problems found!");
+            int unlock = 0;
             for (Problem problem : problems) {
                 setProblemTags(problem);
-                problem.setGitUrl(getGitSolutionURL(problem.getGitNumber(),
-                        problem.getTitle()));
-                System.out.println(problem);
-                output.add(problem.toMDformat());
+                if (!problem.isLocked()) {
+                    problem.setGitUrl(getGitSolutionURL(problem.getGitNumber(),
+                            problem.getTitle()));
+                    System.out.println(problem);
+                    output.add(problem.toMDformat());
+                    unlock++;
+                }
             }
+            System.out.println(DASH_DECO);
+            System.out.println(unlock + " new problems found!");
+            System.out.println(STAR_DECO);
             writeToFile(output, MD_DEST_FILE);
-            System.out.println("job done, please see" + MD_DEST_FILE);
+            System.out.println("job done, please see " + MD_DEST_FILE);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -145,6 +158,8 @@ public class Leetcode {
             // first two rows are header row and format row
             output.add(md.get(0));
             output.add(md.get(1));
+            int numOfNewSolution = 0;
+            System.out.println(STAR_DECO);
             for (int i = 2; i < md.size(); i++) {
                 String row = md.get(i);
                 int titleStart = row.indexOf("|", 1) + 1;
@@ -156,14 +171,24 @@ public class Leetcode {
                     // try to find solution for this problem
                     String gitUrl = getGitSolutionURL(num, title);
                     if (!gitUrl.equals("")) {
+                        numOfNewSolution++;
                         // new solution found!
-                        row = "| " + num + " | [" + title + "](" + gitUrl
-                                + ") " + row.substring(titleEnd);
+                        StringBuilder sb = new StringBuilder();
+                        sb.append("| ").append(num).append(" | [")
+                                .append(title).append("]");
+                        System.out.println(sb.toString());
+                        sb.append("(").append(gitUrl).append(") ");
+                        row = sb.append(row.substring(titleEnd)).toString();
                     }
                 }
                 lastProblem = Math.max(lastProblem, Integer.parseInt(num));
                 output.add(row);
             }
+            String info = numOfNewSolution + " new solution links added.";
+            System.out.println(DASH_DECO);
+            System.out.println(info);
+            System.out.println();
+            System.out.println(STAR_DECO);
         }
         return lastProblem;
     }

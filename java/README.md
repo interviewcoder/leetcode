@@ -168,27 +168,18 @@ P.S.:
 | 153 | Find Minimum in Rotated Sorted Array | Medium | `Array` `Binary Search`  |  | 
 | 154 | Find Minimum in Rotated Sorted Array II | Hard | `Array` `Binary Search`  |  | 
 | 155 | [Min Stack](https://github.com/interviewcoder/leetcode/blob/master/java/src/_155_MinStack/Solution.java) | Easy | `Stack` `Data Structure`  |  | 
-| 156 | Binary Tree Upside Down | Medium | You need buy that book  |  | 
-| 157 | Read N Characters Given Read4 | Easy | You need buy that book  |  | 
-| 158 | Read N Characters Given Read4 II - Call multiple times | Hard | You need buy that book  |  | 
-| 159 | Longest Substring with At Most Two Distinct Characters | Hard | You need buy that book  |  | 
 | 160 | Intersection of Two Linked Lists | Easy | `Linked List`  | two pointers on two lists  | 
-| 161 | One Edit Distance | Medium | You need buy that book  |  | 
 | 162 | Find Peak Element | Medium | `Array` `Binary Search`  |  | 
-| 163 | Missing Ranges | Medium | You need buy that book  |  | 
 | 164 | [Maximum Gap](https://github.com/interviewcoder/leetcode/blob/master/java/src/_164_MaximumGap/Solution.java) | Hard | `Sort`  |  | 
 | 165 | [Compare Version Numbers](https://github.com/interviewcoder/leetcode/blob/master/java/src/_165_CompareVersionNumbers/Solution.java) | Easy | `String`  |  | 
 | 166 | Fraction to Recurring Decimal | Medium | `Hash Table` `Math`  |  | 
-| 167 | Two Sum II - Input array is sorted | Medium | You need buy that book  |  | 
 | 168 | [Excel Sheet Column Title](https://github.com/interviewcoder/leetcode/blob/master/java/src/_168_ExcelSheetColumnTitle/Solution.java) | Easy | `Math`  | convert decimal to other BASE system  | 
 | 169 | Majority Element | Easy | `Divide and Conquer` `Array` `Bit Manipulation`  |  | 
-| 170 | Two Sum III - Data structure design | Easy | You need buy that book  |  | 
 | 171 | [Excel Sheet Column Number](https://github.com/interviewcoder/leetcode/blob/master/java/src/_171_ExcelSheetColumnNumber/Solution.java) | Easy | `Math`  | convert other BASE system to decimal system  | 
 | 172 | [Factorial Trailing Zeroes](https://github.com/interviewcoder/leetcode/blob/master/java/src/_172_FactorialTrailingZeroes/Solution.java) | Easy | `Math`  | count the number of certain number (e.g. 5) in n! | 
 | 173 | [Binary Search Tree Iterator](https://github.com/interviewcoder/leetcode/blob/master/java/src/_173_BinarySearchTreeIterator/Solution.java)  | Medium | `Tree` `Stack`  |  | 
 | 174 | Dungeon Game | Hard | `Dynamic Programming` `Binary Search`  |  | 
 | 179 | [Largest Number](https://github.com/interviewcoder/leetcode/blob/master/java/src/_179_LargestNumber/Solution.java) | Medium | `Sort`  |  | 
-| 186 | Reverse Words in a String II | Medium | You need buy that book  |  | 
 | 187 | Repeated DNA Sequences | Medium | `Hash Table` `Bit Manipulation`  |  | 
 | 188 | Best Time to Buy and Sell Stock IV | Hard | `Dynamic Programming`  |  | 
 | 189 | [Rotate Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_189_RotateArray/Solution.java) | Easy | `Array`  |  | 
@@ -237,6 +228,5 @@ P.S.:
 | 238 | Product of Array Except Self | Medium | `Array`  |  | 
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
 | 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
-| 241 | Different Ways to Add Parentheses | Medium | You need buy that book  |  | 
 | 242 | Valid Anagram | Easy | `Hash Table` `Sort`  |  | 
 

@@ -19,7 +19,7 @@ public class SolutionTest {
     Solution solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(500);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -81,12 +81,54 @@ public class SolutionTest {
         String s = "dogcat";
         Set<String> wordDict = new HashSet<>();
         wordDict.add("cat");
-        wordDict.add("dogcat");
+        wordDict.add("dog");
         wordDict.add("dogcat");
         List<String> actual = solution.wordBreak(s, wordDict);
         List<String> expected = new ArrayList<>();
         expected.add("dogcat");
         expected.add("dog cat");
+        assertEqualsIgnoreOrder(expected, actual);
+    }
+
+    @Test
+    public void Test5() {
+        String s = "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
+        Set<String> wordDict = new HashSet<>();
+        wordDict.add("a");
+        wordDict.add("aa");
+        wordDict.add("aaa");
+        wordDict.add("aaaa");
+        wordDict.add("aaaaa");
+        wordDict.add("aaaaaa");
+        wordDict.add("aaaaaaa");
+        wordDict.add("aaaaaaaa");
+        wordDict.add("aaaaaaaaa");
+        wordDict.add("aaaaaaaaaa");
+        List<String> actual = solution.wordBreak(s, wordDict);
+        List<String> expected = new ArrayList<>();
+        assertEqualsIgnoreOrder(expected, actual);
+    }
+
+    @Test
+    public void Test6() {
+        String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+        Set<String> wordDict = new HashSet<>();
+        wordDict.add("a");
+        wordDict.add("aa");
+        wordDict.add("aaa");
+        wordDict.add("aaaa");
+        wordDict.add("aaaaa");
+        wordDict.add("aaaaaa");
+        wordDict.add("aaaaaaa");
+        wordDict.add("aaaaaaaa");
+        wordDict.add("aaaaaaaaa");
+        wordDict.add("aaaaaaaaaa");
+        List<String> actual = solution.wordBreak(s, wordDict);
+        List<String> expected = new ArrayList<>();
         assertEqualsIgnoreOrder(expected, actual);
     }
 

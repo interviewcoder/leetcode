@@ -71,4 +71,13 @@ public class PracticeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void Test6() {
+        String s1 = "abbbcbaaccacaacc";
+        String s2 = "acaaaccabcabcbcb";
+        boolean actual = solution.isScramble(s1, s2);
+        boolean expected = true;
+        assertEquals(expected, actual);
+    }
+
 }

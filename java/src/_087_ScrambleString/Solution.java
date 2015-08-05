@@ -47,16 +47,18 @@ package _087_ScrambleString;
 public class Solution {
 
     public boolean isScramble(String s1, String s2) {
+        // corner case: different lengths of two string
         if (s1.length() != s2.length()) {
             return false;
         }
+
         int len = s1.length();
         // memo[i][j][l] =
         // isScramble(s1.substring(i, i + l), s2.substring(j, j + l));
         boolean[][][] memo = new boolean[len + 1][len + 1][len + 1];
         for (int l = 1; l <= len; l++) {
-            for (int i = 0; i < len - l + 1; i++) {
-                for (int j = 0; j < len - l + 1; j++) {
+            for (int i = len - l; i >= 0; i--) {
+                for (int j = len - l; j >= 0; j--) {
                     if (l == 1) {
                         // base case: only one character
                         memo[i][j][l] = s1.charAt(i) == s2.charAt(j);

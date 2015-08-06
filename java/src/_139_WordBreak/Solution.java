@@ -30,6 +30,7 @@ public class Solution {
         for (int i = len; i >= 0; i--) {
             boolean breakable = false;
             if (wordDict.contains(s.substring(i))) {
+                // base case
                 breakable = true;
             } else {
                 for (int j = i; j < len; j++) {

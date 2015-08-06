@@ -102,4 +102,20 @@ public class PracticeTest {
         assertEquals(true, actual);
     }
 
+    @Test
+    public void Test7() {
+        String s = "aaaabaababaaaabaabbabbbbbabaabbbbabbbabaabbabaaaaaabaabbabbbaabaababaabbaaabaababbaabbbaabaaaaabbbbaaaaabaababbbababbabbaabbbbabababaababaaaababbbaaaaaaabbbbaabbbbabbbabbbaaabbaaaaabbbabaaaabbababbbbaababaabaababbbbababbbaaaabbbbaabbbaaaabaababbbaaaaaabbbabbaaabaabaabaaaababbbabbbabbbaabbabaaabaaabbababaabbabaaaabbbbbbabbababaaabbababbabbaaaabbabbbababbbbaabaaabbbaababababaaaaaaaabababaabbabaaabbabaaaaaabbbbbbabaaabbaaaaaaaabbbbabbaaabaabbabbbbbbbbbbbbbbabbbababbbbaabaaabaababbaaabbbbaaabbbbbaabababbaabbabbaaabaababbbbbaaaaabbbabaabaaaabaaaaababbabbababbbbbbaaababbbbbbbabbaabbabaaabbbaabbabaaaabaababb";
+        Set<String> wordDict = new HashSet<>();
+        String[] strs = { "aabababaa", "aaaabaa", "ababaabaa", "aaaa", "b",
+                "aaaaba", "a", "aaba", "bbaaaaaab", "bbb", "aabbaaaaba", "baa",
+                "aabbaba", "abbabb", "bbaaab", "bbbbabbaab", "abbaabbb",
+                "babaa", "b", "bbaaa", "bab", "abaaaaaa", "bbbba", "baababab",
+                "abbaa", "bbaaaaa", "aaaabbbbba" };
+        for (String string : strs) {
+            wordDict.add(string);
+        }
+        boolean actual = solution.wordBreak(s, wordDict);
+        assertEquals(true, actual);
+    }
+
 }

@@ -27,7 +27,7 @@ package _120_Triangle;
 import java.util.List;
 
 /** see test {@link _120_Triangle.SolutionTest } */
-public class Solution {
+public class Practice {
 
     public int minimumTotal(List<List<Integer>> a) {
         if (a.size() == 0 || a.get(0).size() == 0) {

@@ -32,40 +32,29 @@
 package _044_WildcardMatching;
 
 /**
- * @reference {@link https://leetcode.com/discuss/10133/linear-runtime-and-constant-space-solution }
- *  see test {@link _044_WildcardMatching.SolutionTest } */
-public class Solution {
+ * @reference {@link https://leetcode.com/discuss/30620/my-java-dp-solution }
+ *  see test {@link _044_WildcardMatching.SolutionDPTest } */
+public class SolutionDP {
     
     public boolean isMatch(String s, String p) {
         int sLen = s.length();
-        int pLen = p.length();
-        int sIndex = 0;
-        int pIndex = 0;
-        int index = 0;
-        int startIndex = -1;
-        while (sIndex < sLen) {
-            if (pIndex < pLen && (p.charAt(pIndex) == '?' || s.charAt(sIndex) == p.charAt(pIndex))) {
-                // advance index on s and p together
-                sIndex++;
-                pIndex++;
-            } else if (pIndex < pLen && p.charAt(pIndex) == '*') {
-                // 
-                startIndex = pIndex;
-                index = sIndex;
-                pIndex++;
-            } else if (startIndex != -1) {
-                // 
-                pIndex = startIndex + 1;
-                index++;
-                sIndex = index;
+        // initialize: dp[i] represents s[i:end] is matched with p
+        boolean[] dp = new boolean[sLen + 1];
+        dp[0] = true;
+        // dynamic programming
+        for (int i = 0; i < p.length(); i++) {
+            if (p.charAt(i) == '*') {
+                for (int j = 0; j < s.length(); j++) {
+                    dp[j + 1] = dp[j + 1] || dp[j] ;
+                }
             } else {
-                return false;
+                for (int j = s.length() - 1; j >= 0; j--) {
+                    dp[j + 1] = dp[j] && (p.charAt(i) == '?' || p.charAt(i) == s.charAt(j));
+                }
             }
+            dp[0] = dp[0] && p.charAt(i) == '*';
         }
-        while (pIndex < pLen && p.charAt(pIndex) == '*') {
-            pIndex++;
-        }
-        return pIndex == pLen;
+        return dp[sLen];
     }
 
 }

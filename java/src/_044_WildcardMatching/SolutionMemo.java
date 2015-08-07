@@ -31,7 +31,6 @@
  */
 package _044_WildcardMatching;
 
-import java.awt.Point;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,21 +39,17 @@ import java.util.Map;
  * see test {@link _044_WildcardMatching.SolutionMemoTest } */
 public class SolutionMemo {
 
-    private Map<Point, Boolean> memo = new HashMap<>(); 
+    private Map<Integer, Boolean> memo = new HashMap<>(); 
     
-    private Point point = new Point();
-
     public boolean isMatch(String s, String p) {
         return isMatchCore(s, p, 0, 0, s.length(), p.length());
     }
 
     private boolean isMatchCore(String s, String p, int sIndex, int pIndex,
             int sLen, int pLen) {
-        
-        point.x = sIndex;
-        point.y = pIndex;
-        if (memo.containsKey(point)) {
-            return memo.get(point);
+        int index = sIndex * (pLen + 1) + pIndex;
+        if (memo.containsKey(index)) {
+            return memo.get(index);
         }
         
         // base case
@@ -84,7 +79,7 @@ public class SolutionMemo {
             // met same characters in string and pattern || met '?' in pattern
             matched = isMatchCore(s, p, sIndex + 1, pIndex + 1, sLen, pLen);
         }
-        memo.put(point, matched);
+        memo.put(index, matched);
         return matched;
     }
 

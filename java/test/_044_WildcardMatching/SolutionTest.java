@@ -14,7 +14,7 @@ public class SolutionTest {
     Solution solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(200);
+    public Timeout globalTimeout = new Timeout(4000);
     
     @Before
     public void setUp() throws Exception {

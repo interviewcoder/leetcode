@@ -52,7 +52,7 @@
 			<formatter type="plain" />
 			<!-- to file -->
 			<batchtest>
-				<fileset dir="${bin}" includes="**/Solution*Test.class"/>
+				<fileset dir="${bin}" includes="**/SolutionTest.class"/>
 			</batchtest>
 		</junit>
 	</target>

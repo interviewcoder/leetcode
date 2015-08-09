@@ -44,7 +44,7 @@ public class Solution {
             }
             pointMap.put(pStr, count);
         }
-        System.out.println(pointMap);
+//        System.out.println(pointMap);
         if (pointMap.size() == 1) {
             return pointMap.get(pointToString(points[0]));
         }
@@ -78,11 +78,11 @@ public class Solution {
         // find the result
         int result = 0;
         for (String line : lineMap.keySet()) {
-            System.out.println("-------------" + line + "-------------");
+//            System.out.println("-------------" + line + "-------------");
             int count = 0;
             Set<String> pointSet = lineMap.get(line);
             for (String p : pointSet) {
-                System.out.println(p + ", " + pointMap.get(p));
+//                System.out.println(p + ", " + pointMap.get(p));
                 count += pointMap.get(p);
             }
             result = Math.max(result, count);

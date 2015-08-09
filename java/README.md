@@ -1,6 +1,9 @@
 ##Leetcode solutions in Java (in progress)
 ###Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/). 
 
+[![Build Status](https://travis-ci.org/interviewcoder/leetcode.svg?branch=master)](https://travis-ci.org/interviewcoder/leetcode)
+
+
 * Discussions and code reviews are more than welcome.
 * `Solution.java` provides OJ-accepted solution.
 * `Practice.java` provides code skeleton for each problem

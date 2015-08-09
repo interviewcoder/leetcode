@@ -45,23 +45,23 @@ public class PracticeTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void Test3() {
-        String num1 = "2";
-        String num2 = "-2";
-        String actual = solution.multiply(num1, num2);
-        String expected = "-4";
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    public void Test4() {
-        String num1 = "-1";
-        String num2 = "-2";
-        String actual = solution.multiply(num1, num2);
-        String expected = "2";
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void Test3() {
+//        String num1 = "2";
+//        String num2 = "-2";
+//        String actual = solution.multiply(num1, num2);
+//        String expected = "-4";
+//        assertEquals(expected, actual);
+//    }
+//
+//    @Test
+//    public void Test4() {
+//        String num1 = "-1";
+//        String num2 = "-2";
+//        String actual = solution.multiply(num1, num2);
+//        String expected = "2";
+//        assertEquals(expected, actual);
+//    }
 
     @Test
     public void Test5() {

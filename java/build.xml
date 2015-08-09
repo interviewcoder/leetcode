@@ -8,6 +8,7 @@
 	<property name="bin" location="bin" />
 	<property name="test" location="test" />
 	<property name="lib" location="lib" />
+	<property name="report" location="report" />
 
 	<property name="main-class" value="com.leetcode.Leetcode" />
 
@@ -15,12 +16,12 @@
 		<fileset dir="${lib}" includes="**/*.jar" />
 	</path>
 
-
 	<!-- - - - - - - - - - - - - - - - - - 
           target: init                      
     - - - - - - - - - - - - - - - - - -->
 	<target name="init">
 		<mkdir dir="${bin}" />
+		<mkdir dir="${report}" />
 	</target>
 
 
@@ -29,6 +30,7 @@
     ================================= -->
 	<target name="clean" description="Clean uncessary parts">
 		<delete dir="${bin}" />
+		<delete dir="${report}" />
 	</target>
 
 	<!-- ================================= 
@@ -56,11 +58,11 @@
 				<path refid="classpath" />
 				<pathelement location="${bin}" />
 			</classpath>
-			<formatter type="plain" usefile="false" />
-			<!-- to screen -->
-			<formatter type="plain" />
-			<!-- to file -->
-			<batchtest>
+			<!-- formatter to screen -->
+			<formatter type="brief" usefile="false" />
+			<!-- formatter to file -->
+			<formatter type="brief" />
+			<batchtest todir="${report}">
 				<fileset dir="${bin}" includes="**/SolutionTest.class" />
 			</batchtest>
 		</junit>

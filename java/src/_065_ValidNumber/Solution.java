@@ -18,51 +18,67 @@
  */
 package _065_ValidNumber;
 
-/** see test {@link _065_ValidNumber.SolutionTest } */
+/** 
+ * Q1: leading/trailing spaces ok?
+ * Q2: '+'/'-' ok?
+ * Q3: 1. ok? 
+ * Q4: spaces between characters ok?
+ * Q5: 3e ok?
+ * Q6: -.e ok?
+ * Q7: -e ok?
+ * see test {@link _065_ValidNumber.SolutionTest } 
+ */
 public class Solution {
+
     /**
-     * Valid example: +10e2, -0.12, +100.12e-3, 00100, .12, Invalid: 0..1,
-     * 1e0.1, -e2,
+     * valid number format: 
+     * [sign] [digit may include dot] [e|E[sign]digit+] 
+     * | p1 | |          p2         | |      p3       |
+     * p1: optional
+     * p2: there must be at least one digit, dot is allowed to appear
+     * p3: if 'e' or 'E' appears, then there must be at least one digit after e sign
+     * P.S.: also check for duplicated '.' and 'e|E' and 'e|E' cannot be before '.'
      */
     public boolean isNumber(String s) {
         s = s.trim();
-        boolean numberSeen = false;
-        boolean numberAfterESeen = false;
-        boolean pointSeen = false;
-        boolean eSeen = false;
+        int eSignIndex = -1;
+        boolean digitsBeforeESign = false;
+        boolean digitsAfterESign = false;
+        boolean dotSign = false;
 
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             if (ch == '+' || ch == '-') {
-                // optional +/- sign
-                // must be either 1st char in before-e portion or 1st char in
-                // after-e portion
-                if (i != 0 && ((i - 1 < 0) || s.charAt(i - 1) != 'e')) {
+                // sign should be the beginning char or right after the e|E sign
+                if (!(i == 0 || eSignIndex != -1 && i == eSignIndex + 1)) {
                     return false;
-                }
-            } else if (ch >= '0' && ch <= '9') {
-                numberSeen = true;
-                if (eSeen) {
-                    numberAfterESeen = true;
                 }
             } else if (ch == '.') {
-                // should have number before '.'
-                if (eSeen || pointSeen) {
+                // cannot have duplicated '.' and '.' must before e sign
+                if (dotSign || eSignIndex != -1) {
                     return false;
                 }
-                pointSeen = true;
-            } else if (ch == 'e') {
-                // no e appearred && number has appearred
-                if (eSeen || !numberSeen) {
+                dotSign = true;
+            } else if (ch == 'e' || ch == 'E') {
+                // cannot have duplicated e sign and there should be at least
+                // one digit before e sign
+                if (eSignIndex != -1 || !digitsBeforeESign) {
                     return false;
                 }
-                eSeen = true;
+                eSignIndex = i;
+            } else if (Character.isDigit(ch)) {
+                if (eSignIndex != -1) {
+                    digitsAfterESign = true;
+                } else {
+                    digitsBeforeESign = true;
+                }
             } else {
+                // unexpected character in string
                 return false;
             }
-
         }
-        return numberSeen && (eSeen ? numberAfterESeen : true);
+        // p2 should not be empty and p3 part is optional
+        return (digitsBeforeESign) && (eSignIndex != -1 ? digitsAfterESign : true);
     }
 
 }

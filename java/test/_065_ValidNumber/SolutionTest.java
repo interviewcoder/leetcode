@@ -14,7 +14,7 @@ public class SolutionTest {
     Solution solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -115,4 +115,79 @@ public class SolutionTest {
         String s = "-e";
         assertTrue(!solution.isNumber(s));
     }
+
+    @Test
+    public void Test16() {
+        String s = ".";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test17() {
+        String s = "-.";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test18() {
+        String s = "e9";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    // dot after 'e'
+    @Test
+    public void Test19() {
+        String s = "1e9.4";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    // duplicated '.'
+    @Test
+    public void Test20() {
+        String s = "1.0.0";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test21() {
+        String s = "1 ";
+        assertTrue(solution.isNumber(s));
+    }
+
+    @Test
+    public void Test22() {
+        String s = " 1 ";
+        assertTrue(solution.isNumber(s));
+    }
+
+    @Test
+    public void Test23() {
+        String s = "  ";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test24() {
+        String s = ". 1";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test25() {
+        String s = " 1 3 ";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test26() {
+        String s = "0.e";
+        assertTrue(!solution.isNumber(s));
+    }
+
+    @Test
+    public void Test27() {
+        String s = ".2e81";
+        assertTrue(solution.isNumber(s));
+    }
+
 }

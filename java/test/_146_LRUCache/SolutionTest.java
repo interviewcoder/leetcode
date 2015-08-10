@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 
 public class SolutionTest {
-    
+
     /** Test method for {@link _146_LRUCache.Solution } */
     Solution cache;
 
@@ -42,7 +42,7 @@ public class SolutionTest {
         cache.set(2, 21);
         cache.set(3, 31);
         cache.set(4, 41);
-        System.out.println(cache);
+        // System.out.println(cache);
         assertEquals(-1, cache.get(1));
         assertEquals(21, cache.get(2));
         assertEquals(31, cache.get(3));

@@ -39,7 +39,7 @@ public class SolutionTest {
         int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
         solution.rotate(matrix);
         int[][] expected = { { 7, 4, 1 }, { 8, 5, 2 }, { 9, 6, 3 } };
-        printMatrix(matrix);
+        // printMatrix(matrix);
         assertArrayEquals(expected, matrix);
     }
 
@@ -50,7 +50,7 @@ public class SolutionTest {
         solution.rotate(matrix);
         int[][] expected = { { 13, 9, 5, 1 }, { 14, 10, 6, 2 },
                 { 15, 11, 7, 3 }, { 16, 12, 8, 4 } };
-        printMatrix(matrix);
+        // printMatrix(matrix);
         assertArrayEquals(expected, matrix);
     }
 
@@ -63,7 +63,7 @@ public class SolutionTest {
         int[][] expected = { { 21, 16, 11, 6, 1 }, { 22, 17, 12, 7, 2 },
                 { 23, 18, 13, 8, 3 }, { 24, 19, 14, 9, 4 },
                 { 25, 20, 15, 10, 5 } };
-        printMatrix(matrix);
+        // printMatrix(matrix);
         assertArrayEquals(expected, matrix);
     }
 
@@ -78,9 +78,9 @@ public class SolutionTest {
                 { 24, 1, 14, 33, 27, 29 }, { 1, 20, 32, 32, 9, 20 },
                 { 6, 7, 27, 2, 25, 26 }, { 32, 21, 22, 28, 13, 16 },
                 { 34, 7, 26, 14, 21, 28 } };
-        printMatrix(matrix);
-        System.out.println("=============");
-        printMatrix(expected);
+        // printMatrix(matrix);
+        // System.out.println("=============");
+        // printMatrix(expected);
         assertArrayEquals(expected, matrix);
     }
 

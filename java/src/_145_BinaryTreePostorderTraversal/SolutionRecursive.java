@@ -20,6 +20,7 @@ import com.leetcode.TreeNode;
 
 /** see test {@link _145_BinaryTreePostorderTraversal.SolutionRecursiveTest } */
 public class SolutionRecursive {
+
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         // base case
@@ -35,4 +36,5 @@ public class SolutionRecursive {
         result.add(root.val);
         return result;
     }
+
 }

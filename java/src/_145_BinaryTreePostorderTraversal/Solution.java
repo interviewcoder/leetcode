@@ -21,6 +21,7 @@ import com.leetcode.TreeNode;
 
 /** see test {@link _145_BinaryTreePostorderTraversal.SolutionTest } */
 public class Solution {
+
     public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         Stack<TreeNode> children = new Stack<>();
@@ -36,4 +37,5 @@ public class Solution {
         }
         return result;
     }
+
 }

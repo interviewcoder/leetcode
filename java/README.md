@@ -171,7 +171,7 @@ P.S.:
 | 153 | Find Minimum in Rotated Sorted Array | Medium | `Array` `Binary Search`  |  | 
 | 154 | Find Minimum in Rotated Sorted Array II | Hard | `Array` `Binary Search`  |  | 
 | 155 | [Min Stack](https://github.com/interviewcoder/leetcode/blob/master/java/src/_155_MinStack/Solution.java) | Easy | `Stack` `Data Structure`  |  | 
-| 160 | Intersection of Two Linked Lists | Easy | `Linked List`  | two pointers on two lists  | 
+| 160 | [Intersection of Two Linked Lists](https://github.com/interviewcoder/leetcode/blob/master/java/src/_160_IntersectionOfTwoLinkedLists/Solution.java)  | Easy | `Linked List`  | two pointers on two lists; combine long and short lists into one  | 
 | 162 | Find Peak Element | Medium | `Array` `Binary Search`  |  | 
 | 164 | [Maximum Gap](https://github.com/interviewcoder/leetcode/blob/master/java/src/_164_MaximumGap/Solution.java) | Hard | `Sort`  |  | 
 | 165 | [Compare Version Numbers](https://github.com/interviewcoder/leetcode/blob/master/java/src/_165_CompareVersionNumbers/Solution.java) | Easy | `String`  |  | 
@@ -232,4 +232,3 @@ P.S.:
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
 | 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
 | 242 | Valid Anagram | Easy | `Hash Table` `Sort`  |  | 
-

@@ -2,6 +2,7 @@ package _094_BinaryTreeInorderTraversal;
 
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -19,7 +20,7 @@ public class SolutionTest {
     Solution solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -29,6 +30,15 @@ public class SolutionTest {
     @After
     public void tearDown() throws Exception {
         solution = null;
+    }
+
+    // null
+    @Test
+    public void Test0() {
+        TreeNode root = null;
+        List<Integer> actual = solution.inorderTraversal(root);
+        List<Integer> expected = new ArrayList<>();
+        assertEquals(expected, actual);
     }
 
     //  1

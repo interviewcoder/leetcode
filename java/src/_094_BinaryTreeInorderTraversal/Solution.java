@@ -24,24 +24,59 @@ package _094_BinaryTreeInorderTraversal;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 import com.leetcode.TreeNode;
 
-/** see test {@link _094_BinaryTreeInorderTraversal.SolutionTest } */
+/**
+ * see test {@link _094_BinaryTreeInorderTraversal.SolutionTest } 
+ * @reference {@link https://leetcode.com/discuss/19765/iterative-solution-in-java-simple-and-readable }
+ */
 public class Solution {
 
-    // recursive version
+    // more concise version compared to my verbose one
     public List<Integer> inorderTraversal(TreeNode root) {
-        List<Integer> result = new ArrayList<Integer>();
-        // base case
-        if (root == null) {
-            return result;
+        List<Integer> result = new ArrayList<>();
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode node = root;
+        while (node != null || !stack.empty()) {
+            // push left nodes into stack
+            while (node != null) {
+                stack.push(node);
+                node = node.left;
+            }
+            node = stack.pop();
+            result.add(node.val);
+            // ! key step: invoke recursive call on node's right child
+            node = node.right;
         }
-        // recursive case
-        result.addAll(inorderTraversal(root.left));
-        result.add(root.val);
-        result.addAll(inorderTraversal(root.right));
         return result;
     }
+
+//    public List<Integer> inorderTraversal(TreeNode root) {
+//        List<Integer> result = new ArrayList<>();
+//        if (root == null) {
+//            return result;
+//        }
+//        Stack<TreeNode> stack = new Stack<>();
+//        TreeNode node = root;
+//        while (node != null) {
+//            stack.push(node);
+//            node = node.left;
+//        }
+//        
+//        while (!stack.empty()) {
+//            node = stack.pop();
+//            result.add(node.val);
+//            if (node.right != null) {
+//                node = node.right;
+//                while (node != null) {
+//                    stack.push(node);
+//                    node = node.left;
+//                }
+//            }
+//        }
+//        return result;
+//    }
 
 }

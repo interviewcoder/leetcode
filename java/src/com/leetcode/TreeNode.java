@@ -434,4 +434,52 @@ public class TreeNode {
         return t1;
     }
 
+    //           8
+    //        /    
+    //       6  
+    //    /     \
+    //   3       7
+    //  / \       \
+    // 2   4      10
+    // length; search tree; balanced
+    //    4        no         false 
+    public static TreeNode getTree12() {
+        TreeNode t1 = new TreeNode(8);
+        TreeNode t2 = new TreeNode(6);
+        TreeNode t4 = new TreeNode(3);
+        TreeNode t5 = new TreeNode(7);
+        TreeNode t6 = new TreeNode(2);
+        TreeNode t7 = new TreeNode(4);
+        TreeNode t8 = new TreeNode(10);
+        TreeNode.connect(t1, t2, null);
+        TreeNode.connect(t2, t4, t5);
+        TreeNode.connect(t4, t6, t7);
+        TreeNode.connect(t5, null, t8);
+        return t1;
+    }
+
+    //      8
+    //        \     
+    //         6  
+    //      /     \
+    //     3       7
+    //    / \       \
+    //   2   4      10
+    // length; search tree; balanced
+    //    4        no         false 
+    public static TreeNode getTree13() {
+        TreeNode t1 = new TreeNode(8);
+        TreeNode t2 = new TreeNode(6);
+        TreeNode t4 = new TreeNode(3);
+        TreeNode t5 = new TreeNode(7);
+        TreeNode t6 = new TreeNode(2);
+        TreeNode t7 = new TreeNode(4);
+        TreeNode t8 = new TreeNode(10);
+        TreeNode.connect(t1, null, t2);
+        TreeNode.connect(t2, t4, t5);
+        TreeNode.connect(t4, t6, t7);
+        TreeNode.connect(t5, null, t8);
+        return t1;
+    }
+
 }

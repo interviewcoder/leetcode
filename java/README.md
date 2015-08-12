@@ -14,22 +14,6 @@ P.S.:
 - Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
 - Solution that passed unit tests does not guarantee to pass Leetcode OJ.
 
-##Leetcode solutions in Java (in progress)
-###Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/). 
-
-[![Build Status](https://travis-ci.org/interviewcoder/leetcode.svg?branch=master)](https://travis-ci.org/interviewcoder/leetcode)
-
-
-* Discussions and code reviews are more than welcome.
-* `Solution.java` provides OJ-accepted solution.
-* `Practice.java` provides code skeleton for each problem
-* `SolutionTest.java` and `PracticeTest.java` provides basic unit tests to verify your solution.
-
-P.S.:
-- Please use Java 8 to compile and run
-- Many solutions are from online sources, like Leetcode OJ discussion, coders' blogs, etc.
-- Solution that passed unit tests does not guarantee to pass Leetcode OJ.
-
 | # | Problem | Difficulty | Tags | Note |
 | :---: | ---- | ---- | ---- | ----- |
 | 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  |  | 
@@ -80,7 +64,7 @@ P.S.:
 | 046 | [Permutations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_046_Permutations/Solution.java) | Medium | `Backtracking`  | backtrack template + select to add | 
 | 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  | backtrack template + select to add + skip duplicate | 
 | 048 | [Rotate Image](https://github.com/interviewcoder/leetcode/blob/master/java/src/_048_RotateImage/Solution.java) | Medium | `Array`  |  | 
-| 049 | [Anagrams](https://github.com/interviewcoder/leetcode/blob/master/java/src/_049_Anagrams/Solution.java) | Medium | `Hash Table` `String`  | `!!` | 
+| 049 | [Group Anagrams](https://github.com/interviewcoder/leetcode/blob/master/java/src/_049_GroupAnagrams/Solution.java) | Medium | `Hash Table` `String`  | `!!` | 
 | 050 | [Pow(x, n)](https://github.com/interviewcoder/leetcode/blob/master/java/src/_050_PowxN/Solution.java) | Medium | `Math` `Binary Search`  |  | 
 | 051 | [N-Queens](https://github.com/interviewcoder/leetcode/blob/master/java/src/_051_NQueens/Solution.java) | Hard | `Backtracking`  |  | 
 | 052 | [N-Queens II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_052_NQueensII/Solution.java) | Hard | `Backtracking`  |  | 

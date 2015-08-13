@@ -13,6 +13,7 @@
 10. [Eclipse] cmd + F11 run last junit test
 11. [Eclipse] F3: go to definition
 12. [Eclipse] cmd + shift + F indent
+
 ---------------------------------------------------
 - [vim]  H  go to heading line of current screen
 - [vim]  M  go to middle line of current screen
@@ -25,6 +26,7 @@
 - [vim] :%s/\<Solution\>/SolutionIterative/g Change only whole words exactly matching 
 - [vim] :.,$s/Solution/SolutionReplace/g from current line to last line
 - [vim] :.,+2s/Solution/SolutionR/g from current line to two next lines
+
 ---------------------------------------------------
 * [online editor] alt + upper arrow : moves current line to upper line
 * [online editor] alt + down arrow: moves current line to next line.
@@ -128,5 +130,7 @@
     }
     ```
     
- 10. generate Javadoc http://stackoverflow.com/questions/4468669/how-to-generate-javadoc-html-in-eclipse   
+11. generate Javadoc in Eclipse see [This](http://stackoverflow.com/questions/4468669/how-to-generate-javadoc-html-in-eclipse)
+
+12.  
   

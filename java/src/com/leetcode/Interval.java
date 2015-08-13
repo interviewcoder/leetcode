@@ -4,9 +4,14 @@ package com.leetcode;
  * For problems:
  * <p>
  * {@link _056_MergeIntervals.Solution [056]Merge Intervals}
+ * {@link _057_InsertInterval.Solution [057] Insert Interval}
  */
 public class Interval {
+    
+    // start position of interval
     public int start;
+    
+    // end position of interval
     public int end;
 
     public Interval() {
@@ -19,6 +24,7 @@ public class Interval {
         end = e;
     }
 
+    @Override
     public String toString() {
         return "[" + start + "," + end + "]";
     }
@@ -46,8 +52,10 @@ public class Interval {
      */
     @Override
     public int hashCode() {
-        // TODO Auto-generated method stub
-        return super.hashCode();
+        int hash = 17;
+        hash = 31 * hash + ((Integer)start).hashCode();
+        hash = 31 * hash + ((Integer)end).hashCode();
+        return hash;
     }
 
 }

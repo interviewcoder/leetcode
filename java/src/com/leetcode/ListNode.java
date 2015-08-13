@@ -17,6 +17,7 @@ public class ListNode {
         val = x;
     }
 
+    @Override
     public String toString() {
         ListNode node = next;
         String str = "[" + val;

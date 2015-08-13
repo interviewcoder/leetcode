@@ -2,6 +2,14 @@
 | Type         | # | Description |
 | ---------------------: |:---:| ------------|
 |-------------------------------------- | ----------------- | ------------------------------------------------- |
+| **`Tree`** | | |
+| Traversal | 144 | Binary Tree Preorder Traversal |
+| Traversal | 094 | Binary Tree Inorder Traversal |
+| Traversal | 145 | Bianry Tree Postorder Traversal |
+| Traversal | 102 | Binary Tree Level Order Traversal |
+| Traversal | 107 | Binary Tree Level Order Traversal II |
+| Traversal | 103 | Binary Tree Zigzag Level Order Traversal |
+|-------------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Largescale Data stream`** | | |
 | max-heap + min-heap | s07 | Median of Data Stream |
 |-------------------------------------- | ----------------- | ------------------------------------------------- |

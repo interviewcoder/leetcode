@@ -23,7 +23,37 @@ import com.leetcode.TreeNode;
 /** see test {@link _099_RecoverBinarySearchTree.SolutionTest } */
 public class Solution {
 
-    public void recoverTree(TreeNode root) {
+    private TreeNode first = null;
+    private TreeNode second = null;
+    private TreeNode last = new TreeNode(Integer.MIN_VALUE);
 
+    public void recoverTree(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inorder(root);
+        if (first != null && second != null) {
+            int temp = first.val;
+            first.val = second.val;
+            second.val = temp;
+        }
     }
+
+    private void inorder(TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        inorder(root.left);
+        // try to find first wrong number
+        if (first == null && last.val > root.val) {
+            first = last;
+        }
+        // try to find second wrong number
+        if (first != null && last.val > root.val) {
+            second = root;
+        }
+        last = root;
+        inorder(root.right);
+    }
+
 }

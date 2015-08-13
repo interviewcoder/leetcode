@@ -16,7 +16,7 @@ public class PracticeTest {
     Practice solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -44,25 +44,25 @@ public class PracticeTest {
         TreeNode t3 = new TreeNode(3);
         TreeNode t4 = new TreeNode(4);
         TreeNode t5 = new TreeNode(1);
-        TreeNode.connect(t1, null, t2);
-        TreeNode.connect(t2, null, t3);
-        TreeNode.connect(t3, null, t4);
-        TreeNode.connect(t4, null, t5);
+        TreeNode.connect(t1, t2, null);
+        TreeNode.connect(t2, t3, null);
+        TreeNode.connect(t3, t4, null);
+        TreeNode.connect(t4, t5, null);
         TreeNode root = t1;
-        solution.recoverTree(root);
 
         TreeNode e1 = new TreeNode(5);
         TreeNode e2 = new TreeNode(4);
         TreeNode e3 = new TreeNode(3);
         TreeNode e4 = new TreeNode(2);
         TreeNode e5 = new TreeNode(1);
-        TreeNode.connect(e1, null, e2);
-        TreeNode.connect(e2, null, e3);
-        TreeNode.connect(e3, null, e4);
-        TreeNode.connect(e4, null, e5);
+        TreeNode.connect(e1, e2, null);
+        TreeNode.connect(e2, e3, null);
+        TreeNode.connect(e3, e4, null);
+        TreeNode.connect(e4, e5, null);
         TreeNode expected = e1;
-        assertTrue(TreeNode.isSameTree(root, expected));
 
+        solution.recoverTree(root);
+        assertTrue(TreeNode.isSameTree(expected, root));
     }
 
 }

@@ -12,6 +12,30 @@ public class TreeNode {
     public TreeNode(int x) {
         val = x;
     }
+    
+    /* (non-Javadoc)
+     * @see java.lang.Object#equals(java.lang.Object)
+     */
+    @Override
+    public boolean equals(Object that) {
+        if (!(that instanceof TreeNode)) {
+            return false;
+        } else {
+            return this == that || isTreeSame(this, (TreeNode) that);
+        }
+    }
+    
+    /* (non-Javadoc)
+     * @see java.lang.Object#hashCode()
+     */
+    @Override
+    public int hashCode() {
+        int hash = 17;
+        hash = 31 * hash + ((Integer) val).hashCode();
+        hash = 31 * hash + left.hashCode();
+        hash = 31 * hash + right.hashCode();
+        return hash;
+    }
 
     /**
      * Level order traversal of tree. Fill empty nodes with "#".
@@ -480,6 +504,21 @@ public class TreeNode {
         TreeNode.connect(t4, t6, t7);
         TreeNode.connect(t5, null, t8);
         return t1;
+    }
+
+    private boolean isTreeSame(TreeNode p, TreeNode q) {
+        if (p == null && q == null) {
+            // base case: 1) root is null 2) reaching leaf's child
+            return true;
+        }
+        if (p != null && q != null) {
+            return (p.val == q.val && // compare roots' values
+                    isTreeSame(p.left, q.left) && // compare left subtrees
+            isTreeSame(p.right, q.right)); // compare right subtrees
+        } else {
+            // is only of root is null, return false
+            return false;
+        }
     }
 
 }

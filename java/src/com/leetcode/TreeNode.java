@@ -125,11 +125,11 @@ public class TreeNode {
         return getTree1();
     }
     
-    //      1 
+    //      3 
     //     /   
     //    2
     //   / 
-    //  3 
+    //  1 
     public static TreeNode getBST3() {
         return getTree21();
     }

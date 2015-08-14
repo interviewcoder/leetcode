@@ -2,6 +2,7 @@
 ###Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/). 
 
 [![Build Status](https://travis-ci.org/interviewcoder/leetcode.svg?branch=master)](https://travis-ci.org/interviewcoder/leetcode)
+[![Coverage Status](https://coveralls.io/repos/interviewcoder/leetcode/badge.svg?branch=master&service=github)](https://coveralls.io/github/interviewcoder/leetcode?branch=master)
 
 
 * Discussions and code reviews are more than welcome.

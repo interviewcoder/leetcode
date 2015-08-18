@@ -231,6 +231,12 @@ P.S.:
 | 237 | Delete Node in a Linked List | Easy | `Linked List`  |  | 
 | 238 | Product of Array Except Self | Medium | `Array`  |  | 
 | 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
-| 240 | Search a 2D Matrix II | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
-| 242 | Valid Anagram | Easy | `Hash Table` `Sort`  |  | 
+| 240 | [Search a 2D Matrix II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_240_SearchA2DMatrixII/Solution.java)  | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
+| 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
+| 242 | [Valid Anagram](https://github.com/interviewcoder/leetcode/blob/master/java/src/_242_ValidAnagram/Solution.java) | Easy | `Hash Table` `Sort`  |  | 
+| 257 | Binary Tree Paths | Easy | `Tree`  |  | 
+| 258 | Add Digits | Easy | `Math`  |  | 
+| 260 | Single Number III | Medium | `Bit Manipulation`  |  | 
+| 263 | Ugly Number | Easy | `Math`  |  | 
+| 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
 

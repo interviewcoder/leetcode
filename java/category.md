@@ -1,11 +1,11 @@
 #### Category
 | Type         | # | Description |
 | ---------------------: |:---:| ------------|
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Monotonic Stack/Queue`** | | keep indices of numbers which are in ascending/descending order |
 | descending deque | 239 | Sliding Window Maximum |
 | ascending stack  | 084 | Largest Rectangle In Histogram |
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Tree`** | | |
 | Traversal | 144 | Binary Tree Preorder Traversal |
 | Traversal | 094 | Binary Tree Inorder Traversal |
@@ -13,10 +13,10 @@
 | Traversal | 102 | Binary Tree Level Order Traversal |
 | Traversal | 107 | Binary Tree Level Order Traversal II |
 | Traversal | 103 | Binary Tree Zigzag Level Order Traversal |
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Largescale Data stream`** | | |
 | max-heap + min-heap | s07 | Median of Data Stream |
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Backtracking template`** |  |  |
 | [...] + `[.]` + `[]` + pure  | 078 | Subsets |
 | `[..]` + select + skip + pure | 090 | SubsetsII: skip duplicates |
@@ -24,7 +24,7 @@
 | `[..]` + select + skip + pure | 047 | PermuationII: template + select qualified + skip duplicates |
 | prune + select + `[]` + pure | 039 | Combination Sum: template + select qualified + prune sibilings |
 | prune + select + skip + pure | 040 | Combination SumII: template + select qualified + skip duplicates + prune siblings |
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Dynamic Programming`** | | |
 | 1 sequence : boolean(*) | 139 | Word Break |
 | 1 sequence : `max`/min(*) | 198 | House Robber |
@@ -52,7 +52,7 @@
 |  ** : count(*) | 096 | Unique Binary Trees |
 |  ** : count(*) | 070 | Climbing Stairs |
 |  ** : all(*) | 095 | Unique Binary Trees II |
-|-------------------------------------- | ----------------- | ------------------------------------------------- |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | Contiguous Subarray sum |     |             |
 | | 209 | Minimum Size Subarray Sum | Two pointers to keep a sliding window |
 | Both BFS and DFS can do |     |             |

@@ -2,6 +2,10 @@
 | Type         | # | Description |
 | ---------------------: |:---:| ------------|
 |-------------------------------------- | ----------------- | ------------------------------------------------- |
+| **`Monotonic Stack/Queue`** | | keep indices of numbers which are in ascending/descending order |
+| descending deque | 239 | Sliding Window Maximum |
+| ascending stack  | 084 | Largest Rectangle In Histogram |
+|-------------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Tree`** | | |
 | Traversal | 144 | Binary Tree Preorder Traversal |
 | Traversal | 094 | Binary Tree Inorder Traversal |
@@ -57,8 +61,6 @@
 | pair matching using stack | | |
 | | 020 | Valid Parentheses | using stack to match parenthesis pair |
 | | 071 | Simplify Path | using stack to counteract the latest path for ".." |
-| use stack to keep indices of ascending element | | |
-| | 084 | Largest Rectangle In Histogram | |
 | |     | [Find Next Greater/Smaller Element]() | |
 | [Subarray/sublist] Window-two-pointer |     | left-right pointers to keep a window to solve `sub` problem  |
 | | 003 | Longest Substring Without Repeating Characters |

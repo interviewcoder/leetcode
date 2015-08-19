@@ -230,7 +230,7 @@ P.S.:
 | 236 | Lowest Common Ancestor of a Binary Tree | Medium | `Tree`  |  | 
 | 237 | Delete Node in a Linked List | Easy | `Linked List`  |  | 
 | 238 | Product of Array Except Self | Medium | `Array`  |  | 
-| 239 | Sliding Window Maximum | Hard | `Heap`  |  | 
+| 239 | [Sliding Window Maximum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_239_SlidingWindowMaximum/Solution.java)  | Hard | `Heap`  | descending queue | 
 | 240 | [Search a 2D Matrix II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_240_SearchA2DMatrixII/Solution.java)  | Medium | `Divide and Conquer` `Binary Search`  | `!` vote algorithm | 
 | 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
 | 242 | [Valid Anagram](https://github.com/interviewcoder/leetcode/blob/master/java/src/_242_ValidAnagram/Solution.java) | Easy | `Hash Table` `Sort`  |  | 

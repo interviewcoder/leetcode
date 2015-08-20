@@ -226,8 +226,8 @@ P.S.:
 | 232 | Implement Queue using Stacks | Easy | `Stack` `Data Structure`  |  | 
 | 233 | Number of Digit One | Medium | `Math`  |  | 
 | 234 | Palindrome Linked List | Easy | `Linked List` `Two Pointers`  |  | 
-| 235 | Lowest Common Ancestor of a Binary Search Tree | Easy | `Tree`  |  | 
-| 236 | Lowest Common Ancestor of a Binary Tree | Medium | `Tree`  |  | 
+| 235 | [Lowest Common Ancestor of a Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_235_LowestCommonAncestorOfABinarySearchTree/Solution.java)  | Easy | `Tree`  |  | 
+| 236 | [Lowest Common Ancestor of a Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_236_LowestCommonAncestorOfABinaryTree/Solution.java)  | Medium | `Tree`  |  | 
 | 237 | [Delete Node in a Linked List](https://github.com/interviewcoder/leetcode/blob/master/java/src/_237_DeleteNodeInALinkedList/Solution.java)  | Easy | `Linked List`  |  | 
 | 238 | [Product of Array Except Self](https://github.com/interviewcoder/leetcode/blob/master/java/src/_238_ProductOfArrayExceptSelf/Solution.java)  | Medium | `Array`  |  | 
 | 239 | [Sliding Window Maximum](https://github.com/interviewcoder/leetcode/blob/master/java/src/_239_SlidingWindowMaximum/Solution.java)  | Hard | `Heap`  | descending queue | 

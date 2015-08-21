@@ -1,4 +1,4 @@
-package _215_KthSmallestElementInAnArray;
+package _215_KthLargestElementInAnArray;
 
 import static org.junit.Assert.*;
 
@@ -8,17 +8,19 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionNlgNTest {
+import _215_KthLargestElementInAnArray.Solution;
 
-    /** Test method for {@link _215_KthSmallestElementInAnArray.SolutionNlgN } */
-    SolutionNlgN solution;
+public class SolutionTest {
+
+    /** Test method for {@link _215_KthLargestElementInAnArray.Solution } */
+    Solution solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new SolutionNlgN();
+        solution = new Solution();
     }
 
     @After

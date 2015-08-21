@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(NlgK); Space : O(K)
  * @tag : Divide and Conquer; Heap
  * @by  : Steven Cooks
  * @date: Jul 11, 2015
@@ -15,14 +15,24 @@
  *******************************************************************************
  * {@link https://leetcode.com/problems/kth-largest-element-in-an-array/  }
  */
-package _215_KthSmallestElementInAnArray;
+package _215_KthLargestElementInAnArray;
 
-import java.util.Arrays;
+import java.util.PriorityQueue;
 
-/** see test {@link _215_KthSmallestElementInAnArray.SolutionNlgNTest } */
-public class SolutionNlgN {
+/** see test {@link _215_KthLargestElementInAnArray.SolutionNlgKTest } */
+public class SolutionNlgK {
+
+    // maintain a max-heap with size k, containing the largest k numbers
     public int findKthLargest(int[] nums, int k) {
-        Arrays.sort(nums);
-        return nums[nums.length - k];
+        // min heap which implements a red-black tree
+        PriorityQueue<Integer> queue = new PriorityQueue<>();
+        for (int num : nums) {
+            queue.offer(num);
+            if (queue.size() > k) {
+                queue.poll();
+            }
+        }
+        return queue.peek();
     }
+
 }

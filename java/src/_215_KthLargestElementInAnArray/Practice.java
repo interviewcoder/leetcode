@@ -1,8 +1,4 @@
 /**
- * Time : O(); Space : O()
- * @tag : Divide and Conquer; Heap
- * @by  : Steven Cooks
- * @date: Jul 11, 2015
  *******************************************************************************
  * Description: 
  * 
@@ -13,23 +9,16 @@
  * Note: You may assume k is always valid, 1 ≤ k ≤ array's length.
  * 
  *******************************************************************************
+ * @tag : Divide and Conquer; Heap
  * {@link https://leetcode.com/problems/kth-largest-element-in-an-array/  }
  */
-package _215_KthSmallestElementInAnArray;
+package _215_KthLargestElementInAnArray;
 
-import java.util.PriorityQueue;
+/** see test {@link _215_KthLargestElementInAnArray.PracticeTest } */
+public class Practice {
 
-/** see test {@link _215_KthSmallestElementInAnArray.SolutionNlgKTest } */
-public class SolutionNlgK {
     public int findKthLargest(int[] nums, int k) {
-        // min heap which implements a red-black tree
-        PriorityQueue<Integer> queue = new PriorityQueue<>();
-        for (int num : nums) {
-            queue.offer(num);
-            if (queue.size() > k) {
-                queue.poll();
-            }
-        }
-        return queue.peek();
+        return k;
     }
+
 }

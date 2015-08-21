@@ -27,6 +27,7 @@ import java.util.List;
 /** see test {@link _090_SubsetsII.SolutionRecursiveTest } */
 public class SolutionRecursive {
 
+    // backtracking template: skip duplicates
     public List<List<Integer>> subsetsWithDup(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
@@ -36,15 +37,20 @@ public class SolutionRecursive {
         return result;
     }
 
-    private void subsetsHelper(int[] nums, int pos, List<Integer> list,
+    // @param index start index in nums that we choose candidate to insert into subset
+    private void subsetsHelper(int[] nums, int index, List<Integer> list,
             List<List<Integer>> result) {
+        // base case
         result.add(new ArrayList<>(list));
-        for (int i = pos; i < nums.length; i++) {
-            // skip duplicates appearing at position i of subsets.
-            if (i != pos && nums[i] == nums[i - 1]) {
+        
+        // recursive case
+        for (int i = index; i < nums.length; i++) {
+            // skip duplicates appearing as the index-th number in subset
+            if (i != index && nums[i] == nums[i - 1]) {
                 continue;
             }
             list.add(nums[i]);
+            //           ! not index + 1
             subsetsHelper(nums, i + 1, list, result);
             list.remove(list.size() - 1);
         }

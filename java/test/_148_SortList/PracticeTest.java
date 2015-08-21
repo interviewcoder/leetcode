@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.ListNode;
 
-public class SolutionTest {
+public class PracticeTest {
     
-    /** Test method for {@link _148_SortList.Solution } */
-    Solution solution;
+    /** Test method for {@link _148_SortList.Practice } */
+    Practice solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After

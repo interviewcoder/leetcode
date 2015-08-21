@@ -9,7 +9,7 @@ import org.junit.rules.Timeout;
 public class UndirectedGraphNodeTest {
     
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     /**
      * Test method for {@link com.leetcode.UndirectedGraphNode#isSameGraph}

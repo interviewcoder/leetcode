@@ -4,11 +4,16 @@ import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 
 public class SolutionParsingTest {
 
     SolutionParsing solution;
+
+    @Rule
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {

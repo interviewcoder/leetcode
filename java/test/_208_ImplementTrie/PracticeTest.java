@@ -16,7 +16,7 @@ public class PracticeTest {
     Practice trie;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(50);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {

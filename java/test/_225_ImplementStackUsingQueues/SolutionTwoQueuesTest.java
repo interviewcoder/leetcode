@@ -8,17 +8,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class MyStackSolutionTest {
+public class SolutionTwoQueuesTest {
     
-    /** Test method for {@link _225_ImplementStackUsingQueues.MyStackSolution } */
-    MyStackSolution stack;
+    /** Test method for {@link _225_ImplementStackUsingQueues.SolutionTwoQueues } */
+    SolutionTwoQueues stack;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(100);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        stack = new MyStackSolution();
+        stack = new SolutionTwoQueues();
     }
 
     @After

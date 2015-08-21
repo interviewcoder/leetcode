@@ -25,8 +25,8 @@
  */
 package _225_ImplementStackUsingQueues;
 
-/** see test {@link _225_ImplementStackUsingQueues.MyStackTest } */
-public class MyStack {
+/** see test {@link _225_ImplementStackUsingQueues.PracticeTest } */
+public class Practice {
 
     /**
      * Push element x onto stack.

@@ -32,9 +32,9 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /** 
- * see also implementation with only one Queue {@link _225_ImplementStackUsingQueues.MyStackOneQueue }
- * see test {@link _225_ImplementStackUsingQueues.MyStackSolutionTest } */
-class MyStackSolution {
+ * see also implementation with only one Queue {@link _225_ImplementStackUsingQueues.Solution }
+ * see test {@link _225_ImplementStackUsingQueues.SolutionTwoQueuesTest } */
+class SolutionTwoQueues {
     
     private Queue<Integer> main = new LinkedList<>();
     

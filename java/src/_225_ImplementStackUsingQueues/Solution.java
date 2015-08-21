@@ -10,8 +10,8 @@ package _225_ImplementStackUsingQueues;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/** see test {@link _225_ImplementStackUsingQueues.MyStackOneQueueTest } */
-class MyStackOneQueue {
+/** see test {@link _225_ImplementStackUsingQueues.SolutionTest } */
+class Solution {
     
     private Queue<Integer> main = new LinkedList<>();
     

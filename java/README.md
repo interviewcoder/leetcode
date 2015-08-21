@@ -214,16 +214,16 @@ P.S.:
 | 220 | [Contains Duplicate III](https://github.com/interviewcoder/leetcode/blob/master/java/src/_220_ContainsDuplicateIII/Solution.java) | Medium | `Binary Search Tree`  |  | 
 | 221 | Maximal Square | Medium | `Dynamic Programming`  |  | 
 | 222 | Count Complete Tree Nodes | Medium | `Tree` `Binary Search`  |  | 
-| 223 | Rectangle Area | Easy | `Math`  |  | 
+| 223 | [Rectangle Area](https://github.com/interviewcoder/leetcode/blob/master/java/src/_223_RectangleArea/Solution.java)  | Easy | `Math`  |  | 
 | 224 | [Basic Calculator](https://github.com/interviewcoder/leetcode/blob/master/java/src/_224_BasicCalculator/Solution.java) | Medium | `Stack` `Math`  |  | 
-| 225 | Implement Stack using Queues | Easy | `Stack` `Data Structure`  |  | 
+| 225 | [Implement Stack using Queues](https://github.com/interviewcoder/leetcode/blob/master/java/src/_225_ImplementStackUsingQueues/Solution.java)  | Easy | `Stack` `Data Structure`  |  | 
 | 226 | Invert Binary Tree | Easy | `Tree`  |  | 
 | 227 | Basic Calculator II | Medium | `String`  |  | 
 | 228 | [Summary Ranges](https://github.com/interviewcoder/leetcode/blob/master/java/src/_228_SummaryRanges/Solution.java) | Easy | `Array`  |  | 
 | 229 | [Majority Element II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_229_MajorityElementII/Solution.java) | Medium | `Array`  | `!`vote algorithm | 
 | 230 | [Kth Smallest Element in a BST](https://github.com/interviewcoder/leetcode/blob/master/java/src/_230_KthSmallestElementInABST/Solution.java) | Medium | `Tree` `Binary Search`  |  | 
 | 231 | Power of Two | Easy | `Math` `Bit Manipulation`  |  | 
-| 232 | Implement Queue using Stacks | Easy | `Stack` `Data Structure`  |  | 
+| 232 | [Implement Queue using Stacks](https://github.com/interviewcoder/leetcode/blob/master/java/src/_232_ImplementQueueUsingStacks/Solution.java)  | Easy | `Stack` `Data Structure`  |  | 
 | 233 | Number of Digit One | Medium | `Math`  |  | 
 | 234 | Palindrome Linked List | Easy | `Linked List` `Two Pointers`  |  | 
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/java/src/_235_LowestCommonAncestorOfABinarySearchTree/Solution.java)  | Easy | `Tree`  |  | 

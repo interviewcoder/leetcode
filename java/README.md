@@ -206,7 +206,7 @@ P.S.:
 | 212 | [Word Search II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_212_WordSearchII/Solution.java) | Hard | `Backtracking` `Trie`  |  | 
 | 213 | [House Robber II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_213_HouseRobberII/Solution.java) | Medium | `Dynamic Programming`  |  | 
 | 214 | Shortest Palindrome | Hard | `String`  |  | 
-| 215 | Kth Largest Element in an Array | Medium | `Divide and Conquer` `Heap`  | max-heap using Java's Priority Queue | 
+| 215 | [Kth Largest Element in an Array](https://github.com/interviewcoder/leetcode/blob/master/java/src/_215_KthLargestElementInAnArray/Solution.java)  | Medium | `Divide and Conquer` `Heap`  | max-heap using Java's Priority Queue | 
 | 216 | Combination Sum III | Medium | `Array` `Backtracking`  |  | 
 | 217 | [Contains Duplicate](https://github.com/interviewcoder/leetcode/blob/master/java/src/_217_ContainsDuplicate/Solution.java) | Easy | `Array` `Hash Table`  |  | 
 | 218 | The Skyline Problem | Hard | `Divide and Conquer` `Heap`  |  | 

@@ -1,4 +1,4 @@
-package _232_ImplementQueueUsingStack;
+package _232_ImplementQueueUsingStacks;
 
 import static org.junit.Assert.*;
 
@@ -8,17 +8,19 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionTest {
+import _232_ImplementQueueUsingStacks.Practice;
+
+public class PracticeTest {
     
-    /** Test method for {@link _232_ImplementQueueUsingStack.Solution } */
-    Solution solution;
+    /** Test method for {@link _232_ImplementQueueUsingStacks.Practice } */
+    Practice solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After

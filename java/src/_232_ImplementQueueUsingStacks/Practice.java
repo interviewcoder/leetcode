@@ -1,8 +1,4 @@
 /**
- * Time : O() ; Space: O()
- * @tag : Stack; Data Structure
- * @by  : Steven Cooks
- * @date: Aug 21, 2015
  ***************************************************************************
  * Description:
  * 
@@ -22,49 +18,30 @@
  * operations will be called on an empty queue).
  *
  ***************************************************************************
+ * @tag : Stack; Data Structure
  * {@link https://leetcode.com/problems/implement-queue-using-stacks/ }
  */
-package _232_ImplementQueueUsingStack;
+package _232_ImplementQueueUsingStacks;
 
-import java.util.Stack;
-
-/** see test {@link _232_ImplementQueueUsingStack.SolutionTest } */
-public class Solution {
-
-    // container for newly pushed item
-    private Stack<Integer> pushStack = new Stack<>();
-
-    // container in which items are in 'queue' order
-    private Stack<Integer> peekStack = new Stack<>();
+/** see test {@link _232_ImplementQueueUsingStacks.PracticeTest } */
+public class Practice {
 
     // Push element x to the back of queue.
     public void push(int x) {
-        pushStack.push(x);
     }
 
     // Removes the element from in front of queue.
     public void pop() {
-        transfer();
-        peekStack.pop();
     }
 
     // Get the front element.
     public int peek() {
-        transfer();
-        return peekStack.peek();
+        return 0;
     }
 
     // Return whether the queue is empty.
     public boolean empty() {
-        return pushStack.isEmpty() && peekStack.isEmpty();
-    }
-
-    private void transfer() {
-        if (peekStack.isEmpty()) {
-            while (!pushStack.isEmpty()) {
-                peekStack.push(pushStack.pop());
-            }
-        }
+        return false;
     }
 
 }

@@ -1,4 +1,4 @@
-package _208_ImplementTrie;
+package _208_ImplementTriePrefixTree;
 
 import static org.junit.Assert.*;
 
@@ -8,18 +8,19 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-import _208_ImplementTriePrefixTree.Solution;
+import _208_ImplementTriePrefixTree.Practice;
 
-public class SolutionTest {
+public class PracticeTest {
 
-    Solution trie;
+    /** Test method for {@link _208_ImplementTrie.Practice } */
+    Practice trie;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        trie = new Solution();
+        trie = new Practice();
     }
 
     @After

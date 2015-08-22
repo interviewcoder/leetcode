@@ -28,9 +28,14 @@
 - [vim] :.,+2s/Solution/SolutionR/g from current line to two next lines
 
 ---------------------------------------------------
+
 * [online editor] alt + upper arrow : moves current line to upper line
 * [online editor] alt + down arrow: moves current line to next line.
 * [online editor] alt + right arrow, move cursor to right by one word  
+
+---------------------------------------------------
+
+- [git] git rm -r dir    # remove remote directory
 
 1.  One way to loop over a String
     ```java

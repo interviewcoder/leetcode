@@ -63,7 +63,7 @@ P.S.:
 | 044 | [Wildcard Matching](https://github.com/interviewcoder/leetcode/blob/master/java/src/_044_WildcardMatching/Solution.java) | Hard | `Dynamic Programming` `Backtracking` `Greedy` `String`  |  | 
 | 045 | Jump Game II | Hard | `Array` `Greedy`  |  | 
 | 046 | [Permutations](https://github.com/interviewcoder/leetcode/blob/master/java/src/_046_Permutations/Solution.java) | Medium | `Backtracking`  | backtrack template + select to add | 
-| 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  | backtrack template + select to add + skip duplicate | 
+| 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/java/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  | backtrack template + select to add + skip duplicate using set | 
 | 048 | [Rotate Image](https://github.com/interviewcoder/leetcode/blob/master/java/src/_048_RotateImage/Solution.java) | Medium | `Array`  |  | 
 | 049 | [Group Anagrams](https://github.com/interviewcoder/leetcode/blob/master/java/src/_049_GroupAnagrams/Solution.java) | Medium | `Hash Table` `String`  | `!!` | 
 | 050 | [Pow(x, n)](https://github.com/interviewcoder/leetcode/blob/master/java/src/_050_PowxN/Solution.java) | Medium | `Math` `Binary Search`  |  | 

@@ -32,16 +32,59 @@ package _211_AddAndSearchWordDataStructureDesign;
 /** see test {@link _211_AddAndSearchWordDataStructureDesign.SolutionTest } */
 public class Solution {
 
+    class Node {
+        boolean isLeaf;
+        Node[] children = new Node[26];
+    }
+
+    private Node root;
+
+    public Solution() {
+        root = new Node();
+    }
+
     // Adds a word into the data structure.
     public void addWord(String word) {
-        
+        Node node = root;
+        for (char ch : word.toCharArray()) {
+            int index = ch - 'a';
+            if (node.children[index] == null) {
+                // fill in new child
+                node.children[index] = new Node();
+            }
+            node = node.children[index];
+        }
+        node.isLeaf = true;
     }
 
     // Returns if the word is in the data structure. A word could
     // contain the dot character '.' to represent any one letter.
     public boolean search(String word) {
-        return false;
+        return search(root, word, 0);
     }
+
+    private boolean search(Node root, String word, int wordIndex) {
+        // base case
+        if (root == null) {
+            return false;
+        } else if (wordIndex == word.length()) {
+            return root.isLeaf;
+        }
+        // recursive case
+        if (word.charAt(wordIndex) == '.') {
+            // try all children of current root
+            for (Node child : root.children) {
+                if (search(child, word, wordIndex + 1)) {
+                    return true;
+                }
+            }
+            return false;
+        } else {
+            int index = word.charAt(wordIndex) - 'a';
+            return search(root.children[index], word, wordIndex + 1);
+        }
+    }
+
 }
 
 // Your WordDictionary object will be instantiated and called as such:

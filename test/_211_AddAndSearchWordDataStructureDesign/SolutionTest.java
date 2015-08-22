@@ -29,6 +29,15 @@ public class SolutionTest {
     @Test
     public void Test1() {
         solution.addWord("bad");
+        assertTrue(solution.search("bad"));
+        assertTrue(!solution.search("good"));
+        solution.addWord("good");
+        assertTrue(solution.search("good"));
+    }
+    
+    @Test
+    public void Test2() {
+        solution.addWord("bad");
         solution.addWord("dad");
         solution.addWord("mad");
         assertTrue(!solution.search("pad"));
@@ -36,4 +45,5 @@ public class SolutionTest {
         assertTrue(solution.search(".ad"));
         assertTrue(solution.search("b.."));
     }
+
 }

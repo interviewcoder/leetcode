@@ -58,20 +58,20 @@ public class Leetcode {
 
     // For example:
     // My solution for problem 1 is
-    // https://github.com/interviewcoder/leetcode/blob/master/java/src/_001_TwoSum/Solution.java
+    // https://github.com/interviewcoder/leetcode/blob/master/src/_001_TwoSum/Solution.java
     // then prefix is
-    // "https://github.com/interviewcoder/leetcode/blob/master/java/src/";
+    // "https://github.com/interviewcoder/leetcode/blob/master/src/";
     // suffix is "/Solution.java";
 
     // TODO: set your github repository's prefix
-    // private static final String GIT_PREFIX = "";
-    private static final String GIT_PREFIX = "https://github.com/interviewcoder/leetcode/blob/master/java/src/";
+    private static final String GIT_PREFIX = "";
+    //private static final String GIT_PREFIX = "https://github.com/interviewcoder/leetcode/blob/master/src/";
 
     // TODO: set your github repository's suffix
-    // private static final String GIT_SUFFIX = "";
-    private static final String GIT_SUFFIX = "/Solution.java";
+    private static final String GIT_SUFFIX = "";
+    //private static final String GIT_SUFFIX = "/Solution.java";
 
-    private static final String MD_DEST_FILE = "leetcode_java.md";
+    private static final String MD_DEST_FILE = "doc/leetcode_java.md";
 
     private List<String> output = new ArrayList<>();
 

@@ -26,7 +26,8 @@ package _035_SearchInsertPosition;
  * We can consider the scenario that nums only has one element, (i.e. both
  * left and right pointers are pointing to the same position)
  * 
- * see test {@link _035_SearchInsertPosition.SolutionTest } */
+ * see test {@link _035_SearchInsertPosition.SolutionTest } 
+ */
 public class Solution {
 
     public int searchInsert(int[] nums, int target) {
@@ -37,7 +38,7 @@ public class Solution {
         int left = 0;
         int right = len - 1;
         while (left <= right) {
-            int mid = (left + right) / 2;
+            int mid = left + (right - left) / 2;
             if (nums[mid] == target) {
                 // insert at mid
                 return mid;

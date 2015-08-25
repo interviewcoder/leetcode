@@ -2,8 +2,6 @@ package _033_SearchInRotatedSortedArray;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -16,7 +14,7 @@ public class PracticeTest {
     Practice solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -34,7 +32,7 @@ public class PracticeTest {
         int target = 2;
         int actual = solution.search(nums, target);
         int expected = 6;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -43,7 +41,7 @@ public class PracticeTest {
         int target = 0;
         int actual = solution.search(nums, target);
         int expected = 4;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -52,7 +50,7 @@ public class PracticeTest {
         int target = 4;
         int actual = solution.search(nums, target);
         int expected = 0;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -61,7 +59,7 @@ public class PracticeTest {
         int target = 7;
         int actual = solution.search(nums, target);
         int expected = 3;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -70,7 +68,7 @@ public class PracticeTest {
         int target = 1;
         int actual = solution.search(nums, target);
         int expected = 5;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -79,7 +77,7 @@ public class PracticeTest {
         int target = 1;
         int actual = solution.search(nums, target);
         int expected = 0;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -88,7 +86,7 @@ public class PracticeTest {
         int target = 2;
         int actual = solution.search(nums, target);
         int expected = 1;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -97,7 +95,7 @@ public class PracticeTest {
         int target = 3;
         int actual = solution.search(nums, target);
         int expected = 2;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -106,7 +104,7 @@ public class PracticeTest {
         int target = 6;
         int actual = solution.search(nums, target);
         int expected = 0;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -115,7 +113,7 @@ public class PracticeTest {
         int target = 4;
         int actual = solution.search(nums, target);
         int expected = 1;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -124,7 +122,7 @@ public class PracticeTest {
         int target = 5;
         int actual = solution.search(nums, target);
         int expected = 2;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -133,7 +131,7 @@ public class PracticeTest {
         int target = 8;
         int actual = solution.search(nums, target);
         int expected = -1;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -142,7 +140,7 @@ public class PracticeTest {
         int target = 3;
         int actual = solution.search(nums, target);
         int expected = -1;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -151,7 +149,7 @@ public class PracticeTest {
         int target = 42;
         int actual = solution.search(nums, target);
         int expected = 43;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -160,7 +158,16 @@ public class PracticeTest {
         int target = 202;
         int actual = solution.search(nums, target);
         int expected = 8;
-        assertEquals(target + " in " + Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
+    }
+    
+    @Test
+    public void Test16() {
+        int[] nums = { 4, 5, 6, 7, 8, 1, 2, 3 };
+        int target = 8;
+        int actual = solution.search(nums, target);
+        int expected = 4;
+        assertEquals(expected, actual);
     }
 
 }

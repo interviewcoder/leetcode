@@ -1,9 +1,10 @@
 ### [211]  [Add and Search Word - Data structure design](https://github.com/interviewcoder/leetcode/blob/master/src/_211_AddAndSearchWordDataStructureDesign/Solution.java) 
 
-`Tag`: Backtracking; Data Structure; Trie
+**Tag**: Backtracking; Data Structure; Trie
 
 1. implement Prefix Trie
    ```java
+
               []
           / ..|.. \
         [a]   [h]   [z]

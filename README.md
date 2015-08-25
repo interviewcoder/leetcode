@@ -170,10 +170,10 @@ P.S.:
 | 151 | [Reverse Words in a String](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/Solution.java) | Medium | `String`  |  | 
 | 152 | [Maximum Product Subarray](https://github.com/interviewcoder/leetcode/blob/master/src/_152_MaximumProductSubarray/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
 | 153 | [Find Minimum in Rotated Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/src/_153_FindMinimumInRotatedSortedArray/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
-| 154 | Find Minimum in Rotated Sorted Array II | Hard | `Array` `Binary Search`  |  | 
+| 154 | [Find Minimum in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_154_FindMinimumInRotatedSortedArrayII/Solution.java)  | Hard | `Array` `Binary Search`  |  | 
 | 155 | [Min Stack](https://github.com/interviewcoder/leetcode/blob/master/src/_155_MinStack/Solution.java) | Easy | `Stack` `Data Structure`  |  | 
 | 160 | [Intersection of Two Linked Lists](https://github.com/interviewcoder/leetcode/blob/master/src/_160_IntersectionOfTwoLinkedLists/Solution.java)  | Easy | `Linked List`  | two pointers on two lists; combine long and short lists into one  | 
-| 162 | Find Peak Element | Medium | `Array` `Binary Search`  |  | 
+| 162 | [Find Peak Element](https://github.com/interviewcoder/leetcode/blob/master/src/_162_FindPeakElement/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
 | 164 | [Maximum Gap](https://github.com/interviewcoder/leetcode/blob/master/src/_164_MaximumGap/Solution.java) | Hard | `Sort`  |  | 
 | 165 | [Compare Version Numbers](https://github.com/interviewcoder/leetcode/blob/master/src/_165_CompareVersionNumbers/Solution.java) | Easy | `String`  |  | 
 | 166 | Fraction to Recurring Decimal | Medium | `Hash Table` `Math`  |  | 
@@ -239,4 +239,5 @@ P.S.:
 | 260 | Single Number III | Medium | `Bit Manipulation`  |  | 
 | 263 | Ugly Number | Easy | `Math`  |  | 
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
+| 268 | Missing Number | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 

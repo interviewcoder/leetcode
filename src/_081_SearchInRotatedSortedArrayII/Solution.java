@@ -45,9 +45,9 @@ public class Solution {
                 } else {
                     right = mid - 1;
                 }
-            } else if (nums[left] == nums[mid]) {
-                left++;
             } else {
+                // nums[mid] == nums[right]
+                // because nums[mid] != target, so know nums[right] != target
                 right--;
             }
         }

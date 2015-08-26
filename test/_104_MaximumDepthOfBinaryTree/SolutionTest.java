@@ -16,7 +16,7 @@ public class SolutionTest {
     Solution solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -33,7 +33,8 @@ public class SolutionTest {
     public void Test0() {
         TreeNode rootNode = null;
         int actual = solution.maxDepth(rootNode);
-        assertEquals("null root", 0, actual);
+        int expected = 0;
+        assertEquals(expected, actual);
     }
 
     // 1
@@ -42,100 +43,72 @@ public class SolutionTest {
         TreeNode root = new TreeNode(1);
         int actual = solution.maxDepth(root);
         int expected = 1;
-        assertEquals("null root", expected, actual);
+        assertEquals(expected, actual);
     }
 
-    //   1
-    //  /
-    // 2
+    //   1 
+    //    \
+    //     2
+    //      \
+    //       3 
     @Test
     public void Test2() {
-        TreeNode root = new TreeNode(1);
-        TreeNode node1 = new TreeNode(2);
-        TreeNode.connect(root, node1, null);
+        TreeNode root = TreeNode.getTree1();
         int actual = solution.maxDepth(root);
-        int expected = 2;
-        assertEquals("left node", expected, actual);
+        int expected = 3;
+        assertEquals(expected, actual);
     }
 
-    //    1
-    //  /   \
-    // 2     3
+    //      1 
+    //     /   
+    //    2
+    //   / 
+    //  3 
     @Test
     public void Test3() {
-        TreeNode root = new TreeNode(1);
-        TreeNode node1 = new TreeNode(2);
-        TreeNode node2 = new TreeNode(3);
-        TreeNode.connect(root, node1, node2);
+        TreeNode root = TreeNode.getTree2();
         int actual = solution.maxDepth(root);
-        int expected = 2;
-        assertEquals("balanced tree", expected, actual);
-    }
-
-    //    1
-    //  /   \
-    // 2     3
-    //  \
-    //   4
-    @Test
-    public void Test4() {
-        TreeNode node1 = new TreeNode(1);
-        TreeNode node2 = new TreeNode(2);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node4 = new TreeNode(4);
-        TreeNode.connect(node1, node2, node3);
-        TreeNode.connect(node2, null, node4);
-        int actual = solution.maxDepth(node1);
         int expected = 3;
-        assertEquals("max in left", expected, actual);
+        assertEquals(expected, actual);
     }
 
-    //      1
+    //      1 
     //    /   \
     //   2     3
-    //        /
-    //       4
+    @Test
+    public void Test4() {
+        TreeNode root = TreeNode.getTree3();
+        int actual = solution.maxDepth(root);
+        int expected = 2;
+        assertEquals(expected, actual);
+    }
+
+    //        5
+    //      /   \
+    //     4     8
+    //    /     /  \
+    //   11    13   4
+    //  /  \       / \
+    // 7    2     5   1
     @Test
     public void Test5() {
-        TreeNode node1 = new TreeNode(1);
-        TreeNode node2 = new TreeNode(2);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node4 = new TreeNode(4);
-        TreeNode.connect(node1, node2, node3);
-        TreeNode.connect(node3, node4, null);
-        int actual = solution.maxDepth(node1);
-        int expected = 3;
-        assertEquals("balanced tree", expected, actual);
+        TreeNode root = TreeNode.getTree4();
+        int actual = solution.maxDepth(root);
+        int expected = 4;
+        assertEquals(expected, actual);
     }
 
-    //          5
-    //         /
-    //       4
-    //      /
-    //     3
-    //    /
-    //   2
-    //  /
-    // 1
+    //      10
+    //     /  \
+    //    5   12
+    //   / \
+    //  4   7
     @Test
     public void Test6() {
-        TreeNode rootNode = TreeNode.getTree6();
-        assertEquals(5, solution.maxDepth(rootNode));
-    }
-
-    //   5 
-    //    \
-    //     4 
-    //      \
-    //       3
-    //        \
-    //         2 
-    //          \
-    //           1 
-    @Test
-    public void Test7() {
-        TreeNode rootNode = TreeNode.getTree7();
-        assertEquals(5, solution.maxDepth(rootNode));
+        TreeNode root = TreeNode.getTree5();
+        int actual = solution.maxDepth(root);
+        int expected = 3;
+        assertEquals(expected, actual);
     }
 
     //  1
@@ -144,9 +117,11 @@ public class SolutionTest {
     //     /
     //    3
     @Test
-    public void Test8() {
-        TreeNode rootNode = TreeNode.getTree8();
-        assertEquals(3, solution.maxDepth(rootNode));
+    public void Test7() {
+        TreeNode root = TreeNode.getTree8();
+        int actual = solution.maxDepth(root);
+        int expected = 3;
+        assertEquals(expected, actual);
     }
 
     //        5
@@ -157,9 +132,29 @@ public class SolutionTest {
     //            / \
     //           5   1
     @Test
-    public void Test9() {
-        TreeNode rootNode = TreeNode.getTree10();
-        assertEquals(4, solution.maxDepth(rootNode));
+    public void Test8() {
+        TreeNode root = TreeNode.getTree10();
+        int actual = solution.maxDepth(root);
+        int expected = 4;
+        assertEquals(expected, actual);
     }
+
+    //         8
+    //      /     \
+    //     6       18
+    //   /   \     / \
+    //  3     7   10  20
+    //   \
+    //     5
+    //    /
+    //    4
+    @Test
+    public void Test9() {
+        TreeNode root = TreeNode.getTree11();
+        int actual = solution.maxDepth(root);
+        int expected = 5;
+        assertEquals(expected, actual);
+    }
+
 }
 

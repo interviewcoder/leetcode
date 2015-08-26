@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.TreeNode;
 
-public class PracticeTest {
+public class SolutionIterativeTest {
 
-    /** Test method for {@link _104_MaximumDepthOfBinaryTree.Practice } */
-    Practice solution;
+    /** Test method for {@link _104_MaximumDepthOfBinaryTree.SolutionIterative } */
+    SolutionIterative solution;
     
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionIterative();
     }
 
     @After

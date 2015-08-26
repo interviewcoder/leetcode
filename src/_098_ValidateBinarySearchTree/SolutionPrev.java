@@ -20,22 +20,29 @@ package _098_ValidateBinarySearchTree;
 
 import com.leetcode.TreeNode;
 
-/** see test {@link _098_ValidateBinarySearchTree.SolutionTest } */
-public class Solution {
+/** see test {@link _098_ValidateBinarySearchTree.SolutionPrevTest } */
+public class SolutionPrev {
+    
+    private TreeNode prev = null;
 
     public boolean isValidBST(TreeNode root) {
-        return isValidBST(root, null, null);
-    }
-
-    private boolean isValidBST(TreeNode root, Integer min, Integer max) {
         if (root == null) {
             return true;
         }
-        if ((min != null && root.val <= min) || (max != null && root.val >= max)) {
-            return false;
-        }
-        return isValidBST(root.left, min, root.val) 
-                && isValidBST(root.right, root.val, max);
+        return inorder(root);
     }
 
+    private boolean inorder(TreeNode root) {
+        if (root == null) {
+            return true;
+        }
+        if (!inorder(root.left)) {
+            return false;
+        }
+        if (prev != null && prev.val >= root.val) {
+            return false;
+        }
+        prev = root;
+        return inorder(root.right);
+    }
 }

@@ -18,23 +18,27 @@
  */
 package _099_RecoverBinarySearchTree;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.leetcode.TreeNode;
 
-/**
- * {@link https://leetcode.com/discuss/13034/no-fancy-algorithm-just-simple-and-powerful-order-traversal } 
- * see test {@link _099_RecoverBinarySearchTree.SolutionTest } 
- */
-public class Solution {
-
-    private TreeNode first = null;
-    private TreeNode second = null;
-    private TreeNode last = new TreeNode(Integer.MIN_VALUE);
+/** see test {@link _099_RecoverBinarySearchTree.SolutionNTest } */
+public class SolutionN {
 
     public void recoverTree(TreeNode root) {
-        if (root == null) {
-            return;
+        List<TreeNode> in = new ArrayList<>();
+        inorder(root, in);
+        TreeNode first = null;
+        TreeNode second = null;
+        for (int i = 0; i < in.size() - 1; i++) {
+            if (first == null && in.get(i).val > in.get(i + 1).val) {
+                first = in.get(i);
+            }
+            if (first != null && in.get(i).val > in.get(i + 1).val) {
+                second = in.get(i + 1);
+            }
         }
-        inorder(root);
         if (first != null && second != null) {
             int temp = first.val;
             first.val = second.val;
@@ -42,21 +46,13 @@ public class Solution {
         }
     }
 
-    private void inorder(TreeNode root) {
+    private void inorder(TreeNode root, List<TreeNode> in) {
         if (root == null) {
             return;
         }
-        inorder(root.left);
-        // try to find first wrong number
-        if (first == null && last.val > root.val) {
-            first = last;
-        }
-        // try to find second wrong number
-        if (first != null && last.val > root.val) {
-            second = root;
-        }
-        last = root;
-        inorder(root.right);
+        inorder(root.left, in);
+        in.add(root);
+        inorder(root.right, in);
     }
 
 }

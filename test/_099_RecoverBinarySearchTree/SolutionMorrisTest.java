@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.TreeNode;
 
-public class SolutionTest {
+public class SolutionMorrisTest {
 
-    /** Test method for {@link _099_RecoverBinarySearchTree.Solution } */
-    Solution solution;
+    /** Test method for {@link _099_RecoverBinarySearchTree.SolutionMorris } */
+    SolutionMorris solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionMorris();
     }
 
     @After
@@ -234,5 +234,6 @@ public class SolutionTest {
         solution.recoverTree(root);
         assertTrue(TreeNode.isSameTree(expected, root));
     }
+
 
 }

@@ -3,6 +3,7 @@
 1. Time: O(N);  Space: `O(N)`:
 
     1) convert tree to in-order list
+    
     2) check if the list is in ascending order
     ```java
     // step (1)
@@ -18,7 +19,7 @@
     return true;
     ```
     
-2. Time: O(N); Space: `O(1)`, see  **`SolutionPrev.java`**
+2. Time: O(N); Space: `O(1)`, see  [SolutionPrev.java](https://github.com/interviewcoder/leetcode/blob/master/src/_098_ValidateBinarySearchTree/SolutionPrev.java)
         
     Instead of converting tree to list, we store prev while doing `in-order` traversal
     ```java

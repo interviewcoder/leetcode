@@ -23,26 +23,32 @@ import com.leetcode.TreeNode;
 /** see test {@link _098_ValidateBinarySearchTree.SolutionPrevTest } */
 public class SolutionPrev {
     
+    // previous node of current node in in-order traversal
     private TreeNode prev = null;
 
     public boolean isValidBST(TreeNode root) {
-        if (root == null) {
-            return true;
-        }
         return inorder(root);
     }
 
-    private boolean inorder(TreeNode root) {
-        if (root == null) {
+    // business while visiting current node:
+    //     1) assert pre.val < cur.val
+    //     2) update pre = cur
+    private boolean inorder(TreeNode cur) {
+        if (cur == null) {
             return true;
         }
-        if (!inorder(root.left)) {
+        // visit left subtree
+        if (!inorder(cur.left)) {
             return false;
         }
-        if (prev != null && prev.val >= root.val) {
+
+        // visit cur
+        if (prev != null && prev.val >= cur.val) {
             return false;
         }
-        prev = root;
-        return inorder(root.right);
+        prev = cur;
+
+        // visit right subtree
+        return inorder(cur.right);
     }
 }

@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.TreeNode;
 
-public class PracticeTest {
+public class SolutionNlgNTest {
 
-    /** Test method for {@link _110_BalancedBinaryTree.Practice } */
-    Practice solution;
+    /** Test method for {@link _110_BalancedBinaryTree.Solution } */
+    Solution solution;
     
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new Solution();
     }
 
     @After

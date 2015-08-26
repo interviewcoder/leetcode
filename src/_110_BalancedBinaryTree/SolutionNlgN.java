@@ -1,8 +1,8 @@
 /**
- * Time : O(N); Space: O(1)
+ * Time : O(NlgN) ~ O(N^2); Space: O()
  * @tag : Tree; Depth-first Search
  * @by  : Steven Cooks
- * @date: Aug 26, 2015
+ * @date: Jun 11, 2015
  *************************************************************************
  * Description: 
  * 
@@ -18,25 +18,23 @@ package _110_BalancedBinaryTree;
 
 import com.leetcode.TreeNode;
 
-/** see test {@link _110_BalancedBinaryTree.SolutionTest } */
-public class Solution {
+/** see test {@link _110_BalancedBinaryTree.SolutionNlgNTest } */
+public class SolutionNlgN {
 
     public boolean isBalanced(TreeNode root) {
-        return maxDepth(root) != -1;
+        if (root == null) {
+            return true;
+        }
+        return isBalanced(root.left) && isBalanced(root.right)
+                && Math.abs(depth(root.left) - depth(root.right)) <= 1;
+
     }
-    
-    // is tree is balanced, it returns the max depth of tree,
-    // return -1 otherwise
-    public int maxDepth(TreeNode root) {
+
+    private int depth(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
-        if (left == -1 || right == -1 || Math.abs(left - right) > 1) {
-            return -1;
-        }
-        return Math.max(left, right) + 1;
+        return 1 + Math.max(depth(root.left), depth(root.right));
     }
 
 }

@@ -412,7 +412,7 @@ public class TreeNode {
     //            / \
     //           5   1
     // length; search tree; balanced
-    //    4        false      true 
+    //    4        false      false 
     public static TreeNode getTree10() {
         TreeNode t1 = new TreeNode(5);
         TreeNode t2 = new TreeNode(4);

@@ -12,15 +12,15 @@ import com.leetcode.TreeNode;
 
 public class SolutionTest {
 
-    /** Test method for {@link _110_BalancedBinaryTree.Solution } */
-    Solution solution;
+    /** Test method for {@link _110_BalancedBinaryTree.SolutionNlgN } */
+    SolutionNlgN solution;
     
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionNlgN();
     }
 
     @After
@@ -28,79 +28,126 @@ public class SolutionTest {
         solution = null;
     }
 
-    // 3
-    // / \
-    // 9 20
-    // /
-    // 15
+    //  null
+    @Test
+    public void Test0() {
+        TreeNode root = null;
+        boolean actual = solution.isBalanced(root);
+        assertTrue(actual);
+    }
+
+    //  1
     @Test
     public void Test1() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode t2 = new TreeNode(9);
-        TreeNode t3 = new TreeNode(20);
-        TreeNode t4 = new TreeNode(15);
-        TreeNode.connect(t1, t2, t3);
-        TreeNode.connect(t3, t4, null);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree0();
         boolean actual = solution.isBalanced(root);
-        assertEquals(true, actual);
+        assertTrue(actual);
     }
 
-    // 3
-    // /
-    // 9
-    // /
-    // 15
+    //   1 
+    //    \
+    //     2
+    //      \
+    //       3 
     @Test
     public void Test2() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode t2 = new TreeNode(9);
-        TreeNode t4 = new TreeNode(15);
-        TreeNode.connect(t1, t2, null);
-        TreeNode.connect(t2, t4, null);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree1();
         boolean actual = solution.isBalanced(root);
-        assertEquals(false, actual);
+        assertFalse(actual);
     }
 
-    // 3
-    // \
-    // 9
-    // \
-    // 15
+    //      1 
+    //    /   \
+    //   2     3
     @Test
     public void Test3() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode t2 = new TreeNode(9);
-        TreeNode t4 = new TreeNode(15);
-        TreeNode.connect(t1, null, t2);
-        TreeNode.connect(t2, null, t4);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree3();
         boolean actual = solution.isBalanced(root);
-        assertEquals(false, actual);
+        assertTrue(actual);
     }
 
-    // 3
-    // / \
-    // 9 15
+    //        5
+    //      /   \
+    //     4     8
+    //    /     /  \
+    //   11    13   4
+    //  /  \       / \
+    // 7    2     5   1
     @Test
     public void Test4() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode t2 = new TreeNode(9);
-        TreeNode t4 = new TreeNode(15);
-        TreeNode.connect(t1, t2, t4);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree4();
         boolean actual = solution.isBalanced(root);
-        assertEquals(true, actual);
+        assertFalse(actual);
     }
 
-    // 3
+    //      10
+    //     /  \
+    //    5   12
+    //   / \
+    //  4   7
     @Test
     public void Test5() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree5();
         boolean actual = solution.isBalanced(root);
-        assertEquals(true, actual);
+        assertTrue(actual);
+    }
+
+    //   5 
+    //    \
+    //     4 
+    //      \
+    //       3
+    //        \
+    //         2 
+    //          \
+    //           1 
+    @Test
+    public void Test6() {
+        TreeNode root = TreeNode.getTree7();
+        boolean actual = solution.isBalanced(root);
+        assertFalse(actual);
+    }
+    
+    //  1
+    //    \
+    //      2
+    //     /
+    //    3
+    @Test
+    public void Test7() {
+        TreeNode root = TreeNode.getTree8();
+        boolean actual = solution.isBalanced(root);
+        assertFalse(actual);
+    }
+    
+    //        5
+    //      /   \
+    //     4     8
+    //         /  \
+    //       13    4
+    //            / \
+    //           5   1
+    @Test
+    public void Test8() {
+        TreeNode root = TreeNode.getTree10();
+        boolean actual = solution.isBalanced(root);
+        assertFalse(actual);
+    }
+
+    //         8
+    //      /     \
+    //     6       18
+    //   /   \     / \
+    //  3     7   10  20
+    //   \
+    //     5
+    //    /
+    //    4
+    @Test
+    public void Test9() {
+        TreeNode root = TreeNode.getTree11();
+        boolean actual = solution.isBalanced(root);
+        assertFalse(actual);
     }
 
 }

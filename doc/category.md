@@ -6,13 +6,20 @@
 | descending deque | 239 | Sliding Window Maximum |
 | ascending stack  | 084 | Largest Rectangle In Histogram |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
-| **`Tree`** | | |
+| **`Tree::Traversal`** | | |
 | Traversal | 144 | Binary Tree Preorder Traversal |
 | Traversal | 094 | Binary Tree Inorder Traversal |
 | Traversal | 145 | Bianry Tree Postorder Traversal |
 | Traversal | 102 | Binary Tree Level Order Traversal |
 | Traversal | 107 | Binary Tree Level Order Traversal II |
 | Traversal | 103 | Binary Tree Zigzag Level Order Traversal |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
+| **`Tree::divide and conquer + DFS`** | | |
+| *post*-order | 144 | Maximum Depth Of Binary Tree |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
+| **`BST:: oder matters`** | | |
+| inorder + prev | 098 | Validate Binary Search Tree |
+| inorder + prev | 099 | Recover Binary Search Tree |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Largescale Data stream`** | | |
 | max-heap + min-heap | s07 | Median of Data Stream |

@@ -1,9 +1,30 @@
-##Leetcode solutions in Java (in progress)
-###Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/). 
+##### Solutions, unit tests, and code skeletons for problems from [Leetcode OJ](https://leetcode.com/problemset/algorithms/).  (in progress)
 
 [![Build Status](https://travis-ci.org/interviewcoder/leetcode.svg?branch=master)](https://travis-ci.org/interviewcoder/leetcode)
 [![Coverage Status](https://coveralls.io/repos/interviewcoder/leetcode/badge.svg?branch=master&service=github)](https://coveralls.io/github/interviewcoder/leetcode?branch=master)
 
+```plain
+  root
+    |--- doc
+    |     |-- category.md   // category for problems in leetcode
+    |     |-- problems.tsv  // searchable tsv file listing problems from leetcode
+    |     |-- road.md       // general things I learnt through the process
+    |--- lib
+    |     |-- *.jar         // jar file referenced in this project
+    |--- src   // solutions for problems
+    |     |-- _001_TwoSum
+    |     |         |-- Practice.java    // code skeleton
+    |     |         |-- Solution.java
+    |     |         |-- Solution*.java   // other solutions for this problem
+    |     |-- ......
+    |--- test  // unit tests
+    |     |-- _001_TwoSum
+    |     |         |-- PracticeTest.java 
+    |     |         |-- SolutionTest.java
+    |     |         |-- Solution*Test.java
+    |     |-- ......
+
+```
 
 * Discussions and code reviews are more than welcome.
 * `Solution.java` provides OJ-accepted solution.

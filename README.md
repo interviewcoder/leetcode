@@ -188,7 +188,7 @@ P.S.:
 | 148 | [Sort List](https://github.com/interviewcoder/leetcode/blob/master/src/_148_SortList/Solution.java)  | Medium | `Linked List` `Sort`  | `!` fast-slow to find middle + iterative reverse + merge sort | 
 | 149 | [Max Points on a Line](https://github.com/interviewcoder/leetcode/blob/master/src/_149_MaxPointsOnALine/Solution.java) | Hard | `Hash Table` `Math`  |  | 
 | 150 | [Evaluate Reverse Polish Notation](https://github.com/interviewcoder/leetcode/blob/master/src/_150_EvaluateReversePolishNotation/Solution.java) | Medium | `Stack`  |  | 
-| 151 | [Reverse Words in a String](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/Solution.java) | Medium | `String`  |  | 
+| 151 | [Reverse Words in a String](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/Solution.java) | Medium | `String`  | [README](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/README.md) | 
 | 152 | [Maximum Product Subarray](https://github.com/interviewcoder/leetcode/blob/master/src/_152_MaximumProductSubarray/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
 | 153 | [Find Minimum in Rotated Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/src/_153_FindMinimumInRotatedSortedArray/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
 | 154 | [Find Minimum in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_154_FindMinimumInRotatedSortedArrayII/Solution.java)  | Hard | `Array` `Binary Search`  |  | 
@@ -205,7 +205,7 @@ P.S.:
 | 173 | [Binary Search Tree Iterator](https://github.com/interviewcoder/leetcode/blob/master/src/_173_BinarySearchTreeIterator/Solution.java)  | Medium | `Tree` `Stack`  |  | 
 | 174 | [Dungeon Game](https://github.com/interviewcoder/leetcode/blob/master/src/_174_DungeonGame/Solution.java)  | Hard | `Dynamic Programming` `Binary Search`  |  | 
 | 179 | [Largest Number](https://github.com/interviewcoder/leetcode/blob/master/src/_179_LargestNumber/Solution.java) | Medium | `Sort`  |  | 
-| 186 | [Reverse words in a string II](https://github.com/interviewcoder/leetcode/blob/master/src/_179_ReverseWordsInAStringII/Solution.java) | Medium | `Array` | two pass + include last position trick |
+| 186 | [Reverse words in a string II](https://github.com/interviewcoder/leetcode/blob/master/src/_186_ReverseWordsInAStringII/Solution.java) | Medium | `Array` | two pass + include last position trick |
 | 187 | Repeated DNA Sequences | Medium | `Hash Table` `Bit Manipulation`  |  | 
 | 188 | Best Time to Buy and Sell Stock IV | Hard | `Dynamic Programming`  |  | 
 | 189 | [Rotate Array](https://github.com/interviewcoder/leetcode/blob/master/src/_189_RotateArray/Solution.java) | Easy | `Array`  |  | 

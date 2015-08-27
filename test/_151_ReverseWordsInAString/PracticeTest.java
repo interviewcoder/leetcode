@@ -42,4 +42,28 @@ public class PracticeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void Test3() {
+        String A = " ";
+        String actual = solution.reverseWords(A);
+        String expected = "";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void Test4() {
+        String A = "abc ";
+        String actual = solution.reverseWords(A);
+        String expected = "abc";
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void Test5() {
+        String A = "  ab   cd ef   ";
+        String actual = solution.reverseWords(A);
+        String expected = "ef cd ab";
+        assertEquals(expected, actual);
+    }
+
 }

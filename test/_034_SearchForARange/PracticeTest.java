@@ -2,8 +2,6 @@ package _034_SearchForARange;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -16,7 +14,7 @@ public class PracticeTest {
     Practice solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -34,7 +32,7 @@ public class PracticeTest {
         int target = 8;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 3, 4 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -43,7 +41,7 @@ public class PracticeTest {
         int target = 5;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 0, 0 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -52,7 +50,7 @@ public class PracticeTest {
         int target = 10;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 5, 5 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -61,7 +59,7 @@ public class PracticeTest {
         int target = 3;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { -1, -1 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -70,7 +68,7 @@ public class PracticeTest {
         int target = 6;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { -1, -1 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -79,7 +77,7 @@ public class PracticeTest {
         int target = 12;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { -1, -1 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -88,7 +86,7 @@ public class PracticeTest {
         int target = 10;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 5, 7 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -97,7 +95,7 @@ public class PracticeTest {
         int target = 5;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 0, 2 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -106,7 +104,7 @@ public class PracticeTest {
         int target = 8;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = { 2, 5 };
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test
@@ -119,7 +117,7 @@ public class PracticeTest {
         int target = 1;
         int[] actuals = solution.searchRange(nums, target);
         int[] expecteds = {0, size - 1};
-        assertArrayEquals(Arrays.toString(nums), expecteds, actuals);
+        assertArrayEquals(expecteds, actuals);
     }
 
     @Test

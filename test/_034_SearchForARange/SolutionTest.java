@@ -16,7 +16,7 @@ public class SolutionTest {
     Solution solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -111,7 +111,7 @@ public class SolutionTest {
 
     @Test
     public void Test10() {
-        int size = 3000000;
+        int size = 30000000;
         int[] nums = new int[size]; 
         for (int i = 0; i < size; i++) {
             nums[i] = 1;

@@ -28,32 +28,26 @@ package _075_SortColors;
 public class Solution {
 
     public void sortColors(int[] nums) {
-        if (nums.length == 0) {
-            return;
-        }
-        int last0 = -1;
-        int last1 = -1;
+        int red = -1;
+        int white = -1;
+        int blue = -1;
         for (int i = 0; i < nums.length; i++) {
-            int number = nums[i];
-            if (number == 2) {
-                // do nothing
-            } else if (number == 1) {
-                swap(nums, i, last1 + 1);
-                last1++;
-            } else if (number == 0) {
-                swap(nums, i, last1 + 1);
-                swap(nums, last1 + 1, last0 + 1);
-                last0++;
-                last1++;
+            int num = nums[i];
+            if (num == 2) {
+                // enlarge blue part 
+                blue++;
+            } else if (num == 1) {
+                // enlarge white part
+                ++blue;
+                nums[blue] = nums[++white];
+                nums[white] = 1;
+            } else {
+                // enlarge red part
+                blue++;
+                nums[blue] = nums[++white];
+                nums[white] = nums[++red];
+                nums[red] = 0;
             }
-        }
-    }
-
-    private void swap(int[] nums, int i, int j) {
-        if (i >= 0 && i < nums.length && j >= 0 && j < nums.length && i != j) {
-            int temp = nums[i];
-            nums[i] = nums[j];
-            nums[j] = temp;
         }
     }
 

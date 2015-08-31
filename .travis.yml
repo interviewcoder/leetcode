@@ -9,9 +9,10 @@ jdk:
     #- cd java
    
 script:
-    - ant test > report 
+    - ant test > rep 
 
 after_script:
-    - rm report 
+    - rm -rf report
+    - rm rep 
 
 

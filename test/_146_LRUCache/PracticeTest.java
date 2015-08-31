@@ -12,7 +12,7 @@ public class PracticeTest {
     Practice cache;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Test
     public void Test1() {

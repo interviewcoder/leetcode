@@ -18,7 +18,7 @@ public class PracticeTest {
     Practice solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(20);
+    public Timeout globalTimeout = new Timeout(200);
 
     List<List<Integer>> expectedList = new ArrayList<List<Integer>>();
 

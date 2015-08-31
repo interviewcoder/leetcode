@@ -6,6 +6,10 @@
 | descending deque | 239 | Sliding Window Maximum |
 | ascending stack  | 084 | Largest Rectangle In Histogram |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
+| **`Trie`** | | *1 dict + input string contains only a-z* |
+| | 208 | Implemen Trie (Prefix Tree)
+| | 211 | Add and Search Word - Data structure design |
+| | 212 | Word Search II |
 | **`Tree::Traversal`** | | |
 | Traversal | 144 | Binary Tree Preorder Traversal |
 | Traversal | 094 | Binary Tree Inorder Traversal |
@@ -13,11 +17,10 @@
 | Traversal | 102 | Binary Tree Level Order Traversal |
 | Traversal | 107 | Binary Tree Level Order Traversal II |
 | Traversal | 103 | Binary Tree Zigzag Level Order Traversal |
-|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Tree::divide and conquer + DFS`** | | |
 | *post*-order | 144 | Maximum Depth Of Binary Tree |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
-| **`BST:: oder matters`** | | |
+| **`BST:: order matters`** | | |
 | inorder + prev | 098 | Validate Binary Search Tree |
 | inorder + prev | 099 | Recover Binary Search Tree |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
@@ -31,6 +34,9 @@
 | `[..]` + select + skip + pure | 047 | PermuationII: template + select qualified + skip duplicates |
 | prune + select + `[]` + pure | 039 | Combination Sum: template + select qualified + prune sibilings |
 | prune + select + skip + pure | 040 | Combination SumII: template + select qualified + skip duplicates + prune siblings |
+| **`Backtracking::matrix`** | | |
+| | 079 | Word Search |
+| | 212 | Word Search II |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Dynamic Programming`** | | |
 | 1 sequence : boolean(*) | 139 | Word Break |

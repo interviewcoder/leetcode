@@ -1,6 +1,6 @@
 package _212_WordSearchII;
 
-import static com.leetcode.Test.*;
+import static com.leetcode.Test.assertEqualsIgnoreOrder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,17 +13,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionTest {
+public class PracticeTest {
 
-    /** Test method for {@link _212_WordSearchII.Solution } */
-    Solution solution;
+    /** Test method for {@link _212_WordSearchII.Practice } */
+    Practice solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After

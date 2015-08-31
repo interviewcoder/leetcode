@@ -4,6 +4,12 @@ sudo: false
 jdk:
     - oraclejdk8
 
+script:
+    - ant test > junk
+
+after_script:
+    - rm junk
+
 #before_script:
     ##cd to root directory for java
     #- cd java

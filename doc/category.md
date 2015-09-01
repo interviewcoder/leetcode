@@ -6,33 +6,35 @@
 | descending deque | 239 | Sliding Window Maximum |
 | ascending stack  | 084 | Largest Rectangle In Histogram |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
-| **`Trie`** | | *1 dict + input string contains only a-z* |
+| **`Trie`** | | *1 dict + input `strings` contains only a-z* |
 | | 208 | Implemen Trie (Prefix Tree)
 | | 211 | Add and Search Word - Data structure design |
 | | 212 | Word Search II |
-| **`Tree::Traversal`** | | |
+| **`Tree::Traversal`** | | DFS / BFS for level order |
 | Traversal | 144 | Binary Tree Preorder Traversal |
 | Traversal | 094 | Binary Tree Inorder Traversal |
 | Traversal | 145 | Bianry Tree Postorder Traversal |
-| Traversal | 102 | Binary Tree Level Order Traversal |
-| Traversal | 107 | Binary Tree Level Order Traversal II |
-| Traversal | 103 | Binary Tree Zigzag Level Order Traversal |
-| **`Tree::divide and conquer + DFS`** | | |
-| *post*-order | 144 | Maximum Depth Of Binary Tree |
+| level traversal | 102 | Binary Tree Level Order Traversal |
+| level traversal | 107 | Binary Tree Level Order Traversal II |
+| level traversal | 103 | Binary Tree Zigzag Level Order Traversal |
+| **`Tree::divide and conquer`** | | |
+| *`post`*-order | 124 | Binary Tree Maximum Path Sum |
+| *`post`*-order | 144 | Maximum Depth Of Binary Tree |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
-| **`BST:: order matters`** | | |
+| **`BST::order matters`** | | |
 | inorder + prev | 098 | Validate Binary Search Tree |
 | inorder + prev | 099 | Recover Binary Search Tree |
+| inorder + prune | Lint | [Search Range In Binary Search Tree](https://github.com/interviewcoder/lintcode/blob/master/03_binarytree%26divideconquer/_02_SearchRangeInBinarySearchTree/Solution.java) |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Largescale Data stream`** | | |
 | max-heap + min-heap | s07 | Median of Data Stream |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
-| **`Backtracking template`** |  |  |
-| [...] + `[.]` + `[]` + pure  | 078 | Subsets |
-| `[..]` + select + skip + pure | 090 | SubsetsII: skip duplicates |
-| `[..]` + select + `[]` + pure | 046 | Permutation |
-| `[..]` + select + skip + pure | 047 | PermuationII: template + select qualified + skip duplicates |
-| prune + select + `[]` + pure | 039 | Combination Sum: template + select qualified + prune sibilings |
+| **`Backtracking::array`** |  |  |
+| pure  | 078 | Subsets |
+| select + skip + pure | 090 | SubsetsII: skip duplicates |
+| select +  pure | 046 | Permutation |
+| select + skip (with set) + pure | 047 | PermuationII: template + select qualified + skip duplicates |
+| prune + select + pure | 039 | Combination Sum: template + select qualified + prune sibilings |
 | prune + select + skip + pure | 040 | Combination SumII: template + select qualified + skip duplicates + prune siblings |
 | **`Backtracking::matrix`** | | |
 | | 079 | Word Search |

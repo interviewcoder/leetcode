@@ -35,6 +35,8 @@ public class Solution {
         return globalMax;
     }
 
+    // return the max path that starts from root node
+    // while updating potential global max
     private int maxPathSumDown(TreeNode root) {
         // base case
         if (root == null) {

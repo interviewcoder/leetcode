@@ -26,6 +26,7 @@
  */
 package _232_ImplementQueueUsingStacks;
 
+import java.util.NoSuchElementException;
 import java.util.Stack;
 
 /** see test {@link _232_ImplementQueueUsingStacks.SolutionTest } */
@@ -59,11 +60,16 @@ public class Solution {
         return pushStack.isEmpty() && peekStack.isEmpty();
     }
 
+    // if peek stack is empty
+    // transfer all elements from push stack to peek stack
     private void transfer() {
         if (peekStack.isEmpty()) {
             while (!pushStack.isEmpty()) {
                 peekStack.push(pushStack.pop());
             }
+        }
+        if (peekStack.isEmpty()) {
+            throw new NoSuchElementException("queue underflow");
         }
     }
 

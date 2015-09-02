@@ -245,7 +245,7 @@ P.S.:
 | 229 | [Majority Element II](https://github.com/interviewcoder/leetcode/blob/master/src/_229_MajorityElementII/Solution.java) | Medium | `Array`  | `!`vote algorithm | 
 | 230 | [Kth Smallest Element in a BST](https://github.com/interviewcoder/leetcode/blob/master/src/_230_KthSmallestElementInABST/Solution.java) | Medium | `Tree` `Binary Search`  |  | 
 | 231 | Power of Two | Easy | `Math` `Bit Manipulation`  |  | 
-| 232 | [Implement Queue using Stacks](https://github.com/interviewcoder/leetcode/blob/master/src/_232_ImplementQueueUsingStacks/Solution.java)  | Easy | `Stack` `Data Structure`  |  | 
+| 232 | [Implement Queue using Stacks](https://github.com/interviewcoder/leetcode/blob/master/src/_232_ImplementQueueUsingStacks/Solution.java)  | Easy | `Stack` `Data Structure`  | [README](https://github.com/interviewcoder/leetcode/blob/master/src/_232_ImplementQueueUsingStacks) | 
 | 233 | Number of Digit One | Medium | `Math`  |  | 
 | 234 | Palindrome Linked List | Easy | `Linked List` `Two Pointers`  |  | 
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_235_LowestCommonAncestorOfABinarySearchTree/Solution.java)  | Easy | `Tree`  |  | 

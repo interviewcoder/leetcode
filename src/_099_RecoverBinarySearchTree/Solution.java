@@ -21,19 +21,17 @@ package _099_RecoverBinarySearchTree;
 import com.leetcode.TreeNode;
 
 /**
- * {@link https://leetcode.com/discuss/13034/no-fancy-algorithm-just-simple-and-powerful-order-traversal } 
- * see test {@link _099_RecoverBinarySearchTree.SolutionTest } 
+ * {@link https
+ * ://leetcode.com/discuss/13034/no-fancy-algorithm-just-simple-and-powerful
+ * -order-traversal } see test {@link _099_RecoverBinarySearchTree.SolutionTest }
  */
 public class Solution {
 
-    private TreeNode first = null;
-    private TreeNode second = null;
-    private TreeNode last = new TreeNode(Integer.MIN_VALUE);
+    private TreeNode first = null;  // first wrong node
+    private TreeNode second = null; // second wrong node
+    private TreeNode prev = null;   // previous node before current node
 
     public void recoverTree(TreeNode root) {
-        if (root == null) {
-            return;
-        }
         inorder(root);
         if (first != null && second != null) {
             int temp = first.val;
@@ -48,14 +46,18 @@ public class Solution {
         }
         inorder(root.left);
         // try to find first wrong number
-        if (first == null && last.val > root.val) {
-            first = last;
+        if (first == null && prev != null && prev.val > root.val) {
+            first = prev;
         }
         // try to find second wrong number
-        if (first != null && last.val > root.val) {
+        if (first != null && prev.val > root.val) {
             second = root;
         }
-        last = root;
+        // pruning
+        if (second != null && root.val > first.val) {
+            return;
+        }
+        prev = root;
         inorder(root.right);
     }
 

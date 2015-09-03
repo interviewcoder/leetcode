@@ -27,21 +27,32 @@ package _120_Triangle;
 import java.util.List;
 
 /** see test {@link _120_Triangle.SolutionTest } */
-public class Solution {
+public class Solution2 {
 
-    public int minimumTotal(List<List<Integer>> a) {
-        if (a.size() == 0 || a.get(0).size() == 0) {
+    public int minimumTotal(List<List<Integer>> t) {
+        int rows = t.size();
+        if (rows == 0) {
             return 0;
         }
-        int rows = a.size();
-        int cols = a.get(rows - 1).size();
-        int[] dp = new int[cols + 1];
-        for (int i = rows - 1; i >= 0; i--) {
-            for (int j = 0; j < a.get(i).size(); j++) {
-                dp[j] = a.get(i).get(j) + Math.min(dp[j], dp[j + 1]);
+        int[] dp = new int[rows + 1];
+        int result = 0;
+        
+        for (int i = 1; i <= rows; i++) {
+            int cols = t.get(i - 1).size();
+            int res = Integer.MAX_VALUE;
+            for (int j = cols; j >= 1; j--) {
+                if (j == cols) {
+                    dp[j] = t.get(i - 1).get(j - 1) + dp[j - 1];
+                } else if (j == 1) {
+                    dp[j] = t.get(i - 1).get(j - 1) + dp[j];
+                } else {
+                    dp[j] = t.get(i - 1).get(j - 1) + Math.min(dp[j - 1], dp[j]);
+                }
+                res = Math.min(res, dp[j]);
             }
+            result = res;
         }
-        return dp[0];
+        return result;
     }
 
 }

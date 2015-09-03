@@ -15,14 +15,14 @@ import org.junit.rules.Timeout;
 public class PracticeTest {
     
     /** Test method for {@link _120_Triangle.Solution } */
-    Solution solution;
+    Practice solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After
@@ -48,6 +48,16 @@ public class PracticeTest {
         triangle.add(Arrays.asList(2));
         int actual = solution.minimumTotal(triangle);
         int expected = 2;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void Test3() {
+        List<List<Integer>> triangle = new ArrayList<>();
+        triangle.add(Arrays.asList(1));
+        triangle.add(Arrays.asList(2, 3));
+        int actual = solution.minimumTotal(triangle);
+        int expected = 3;
         assertEquals(expected, actual);
     }
 

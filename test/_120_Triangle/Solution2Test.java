@@ -12,17 +12,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionTest {
+public class Solution2Test {
     
-    /** Test method for {@link _120_Triangle.Solution } */
-    Solution solution;
+    /** Test method for {@link _120_Triangle.Solution2 } */
+    Solution2 solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Solution2();
     }
 
     @After

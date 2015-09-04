@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /** see test {@link s11_ReplacePermutation.SolutionTest } */
-public class Solution {
+public class Solution2 {
 
     private static final char[] REPLACE = { 'J', 'K' };
 
@@ -29,17 +29,18 @@ public class Solution {
     }
 
     private void replace(String s, int index, StringBuilder sb, List<String> res) {
-        // find the next ? in string
-        int i = index;
-        while (i < s.length() && s.charAt(i) != '?') {
-            i++;
-        }
-        if (i == s.length() ) {
+        // base case
+        if (index == s.length()) {
             res.add(sb.toString());
         } else {
-            for (char ch : REPLACE) {
-                sb.setCharAt(i, ch);
-                replace(s, i + 1, sb, res);
+            // recursive case
+            if (s.charAt(index) != '?') {
+                replace(s, index + 1, sb, res);
+            } else {
+                for (char ch : REPLACE) {
+                    sb.setCharAt(index, ch);
+                    replace(s, index + 1, sb, res);
+                }
             }
         }
     }

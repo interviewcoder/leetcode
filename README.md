@@ -60,7 +60,7 @@ P.S.:
 | 020 | [Valid Parentheses](https://github.com/interviewcoder/leetcode/blob/master/src/_020_ValidParentheses/Solution.java) | Easy | `Stack` `String`  | stack basic, corner case | 
 | 021 | [Merge Two Sorted Lists](https://github.com/interviewcoder/leetcode/blob/master/src/_021_MergeTwoSortedLists/Solution.java) | Easy | `Linked List`  |  | 
 | 022 | [Generate Parentheses](https://github.com/interviewcoder/leetcode/blob/master/src/_022_GenerateParentheses/Solution.java) | Medium | `Backtracking` `String`  | `BT` template | 
-| 023 | Merge k Sorted Lists | Hard | `Divide and Conquer` `Linked List` `Heap`  |  | 
+| 023 | [Merge k Sorted Lists](https://github.com/interviewcoder/leetcode/blob/master/src/_023_MergeKSortedLists/Solution.java)  | Hard | `Divide and Conquer` `Linked List` `Heap`  |  | 
 | 024 | [Swap Nodes in Pairs](https://github.com/interviewcoder/leetcode/blob/master/src/_024_SwapNodesInPairs/Solution.java) | Medium | `Linked List`  |  | 
 | 025 | Reverse Nodes in k-Group | Hard | `Linked List`  |  | 
 | 026 | [Remove Duplicates from Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/src/_026_RemoveDuplicatesFromSortedArray/Solution.java) | Easy | `Array` `Two Pointers`  |  partition techinque on array | 
@@ -263,4 +263,6 @@ P.S.:
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
 | 268 | Missing Number | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 | 273 | Integer to English Words | Medium | `Math` `String`  |  | 
+| 274 | H-Index | Medium | `Hash Table` `Sort`  |  | 
+| 275 | H-Index II | Medium | `Binary Search`  |  | 
 

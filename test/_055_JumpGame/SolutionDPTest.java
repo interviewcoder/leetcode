@@ -12,17 +12,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.Helper;
 
-public class PracticeTest {
+public class SolutionDPTest {
 
-    /** Test method for {@link _055_JumpGame.Practice } */
-    Practice solution;
+    /** Test method for {@link _055_JumpGame.SolutionDP } */
+    SolutionDP solution;
 
     @Rule
-    public Timeout globalTimeout = new Timeout(200);
+    public Timeout globalTimeout = new Timeout(300);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionDP();
     }
 
     @After
@@ -46,6 +46,7 @@ public class PracticeTest {
         assertEquals(expected, actual);
     }
 
+    // expected TLE
     @Test
     public void Test3() {
         String filename = "test/_055_JumpGame/Input3.txt";

@@ -18,36 +18,38 @@
  */
 package _072_EditDistance;
 
-/** see test {@link _072_EditDistance.SolutionTest } */
-public class Solution {
+/** see test {@link _072_EditDistance.SolutionPrefixTest } */
+public class SolutionPrefix {
 
     public int minDistance(String word1, String word2) {
         int len1 = word1.length();
         int len2 = word2.length();
-        int[] memo = new int[len2 + 1];
+        int[][] memo = new int[len1 + 1][len2 + 1];
 
         // initialize the memo
-        for (int j = 1; j <= len2; j++) {
-            // cost for converting from "" to word2.substring(j)
-            memo[j] = j;
+        for (int i = 0; i < len1 + 1; i++) {
+            // cost for converting from "" to word1.substring(i)
+            memo[i][0] = i;
         }
 
-        for (int i = 1; i <= len1; i++) {
-            int prev = i;
-            for (int j = 1; j <= len2; j++) {
-                int cur = 0;
-                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
-                    // if chars are equal, no cost for converting
-                    cur = memo[j - 1];
-                } else {
-                    cur = 1 + Math.min(memo[j - 1], Math.min(memo[j], prev));
-                }
-                memo[j - 1] = prev;
-                prev = cur;
-            }
-            memo[len2] = prev;
+        for (int j = 0; j < len2 + 1; j++) {
+            // cost for converting from "" to word2.substring(j)
+            memo[0][j] = j;
         }
-        return memo[len2];
+
+        for (int i = 0; i < len1; i++) {
+            for (int j = 0; j < len2; j++) {
+                if (word1.charAt(i) == word2.charAt(j)) {
+                    // if chars are equal, no cost for converting
+                    memo[i + 1][j + 1] = memo[i][j];
+                } else {
+                    memo[i + 1][j + 1] = 1 + Math.min(memo[i][j], // replace
+                            Math.min(memo[i][j + 1], // add
+                                    memo[i + 1][j])); // delete
+                }
+            }
+        }
+        return memo[len1][len2];
     }
 
 }

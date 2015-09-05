@@ -18,36 +18,34 @@
  */
 package _072_EditDistance;
 
-/** see test {@link _072_EditDistance.SolutionTest } */
-public class Solution {
+/** see test {@link _072_EditDistance.SolutionSuffixTest } */
+public class SolutionSuffix {
 
     public int minDistance(String word1, String word2) {
         int len1 = word1.length();
         int len2 = word2.length();
-        int[] memo = new int[len2 + 1];
-
-        // initialize the memo
-        for (int j = 1; j <= len2; j++) {
-            // cost for converting from "" to word2.substring(j)
-            memo[j] = j;
-        }
-
-        for (int i = 1; i <= len1; i++) {
-            int prev = i;
-            for (int j = 1; j <= len2; j++) {
-                int cur = 0;
-                if (word1.charAt(i - 1) == word2.charAt(j - 1)) {
-                    // if chars are equal, no cost for converting
-                    cur = memo[j - 1];
+        int[][] dp = new int[len1 + 1][len2 + 1];
+        for (int i = len1; i >= 0; i--) {
+            for (int j = len2; j >= 0; j--) {
+                int edit = 0;
+                if (i == len1 && j == len2) {
+                    edit = 0;
+                } else if (i == len1) {
+                    edit = len2 - j;
+                } else if (j == len2) {
+                    edit = len1 - i;
                 } else {
-                    cur = 1 + Math.min(memo[j - 1], Math.min(memo[j], prev));
+                    if (word1.charAt(i) == word2.charAt(j)) {
+                        edit = dp[i + 1][j + 1];
+                    } else {
+                        edit = 1 + Math.min(dp[i + 1][j + 1],
+                                Math.min(dp[i][j + 1], dp[i + 1][j]));
+                    }
                 }
-                memo[j - 1] = prev;
-                prev = cur;
+                dp[i][j] = edit;
             }
-            memo[len2] = prev;
         }
-        return memo[len2];
+        return dp[0][0];
     }
 
 }

@@ -42,7 +42,6 @@ public class Solution {
 
                 });
 
-        // push into priority queue
         for (ListNode head : lists) {
             ListNode node = head;
             while (node != null) {
@@ -51,13 +50,11 @@ public class Solution {
             }
         }
 
-        // ordered traversal
         ListNode cur = dummy;
         while (!queue.isEmpty()) {
             ListNode node = queue.poll();
-            // important!
             node.next = null;
-            cur.next = queue.poll();
+            cur.next = node;
             cur = cur.next;
         }
         return dummy.next;

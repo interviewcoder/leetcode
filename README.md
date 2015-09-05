@@ -82,7 +82,7 @@ P.S.:
 | 042 | [Trapping Rain Water](https://github.com/interviewcoder/leetcode/blob/master/src/_042_TrappingRainWater/Solution.java) | Hard | `Array` `Stack` `Two Pointers`  | `!!` | 
 | 043 | [Multiply Strings](https://github.com/interviewcoder/leetcode/blob/master/src/_043_MultiplyStrings/Solution.java) | Medium | `Math` `String`  | `!` simulate multiplication | 
 | 044 | [Wildcard Matching](https://github.com/interviewcoder/leetcode/blob/master/src/_044_WildcardMatching/Solution.java) | Hard | `Dynamic Programming` `Backtracking` `Greedy` `String`  |  | 
-| 045 | Jump Game II | Hard | `Array` `Greedy`  |  | 
+| 045 | [Jump Game II](https://github.com/interviewcoder/leetcode/blob/master/src/_045_JumpGameII/Solution.java)  | Hard | `Array` `Greedy`  |  | 
 | 046 | [Permutations](https://github.com/interviewcoder/leetcode/blob/master/src/_046_Permutations/Solution.java) | Medium | `Backtracking`  | backtrack template + select to add | 
 | 047 | [Permutations II](https://github.com/interviewcoder/leetcode/blob/master/src/_047_PermutationsII/Solution.java) | Hard | `Backtracking`  | backtrack template + select to add + skip duplicate using set | 
 | 048 | [Rotate Image](https://github.com/interviewcoder/leetcode/blob/master/src/_048_RotateImage/Solution.java) | Medium | `Array`  |  | 

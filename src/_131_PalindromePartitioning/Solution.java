@@ -31,9 +31,6 @@ public class Solution {
     
     public List<List<String>> partition(String s) {
         List<List<String>> result = new ArrayList<>();
-        if (s.length() == 0) {
-            return result;
-        }
         int index = 0;
         List<String> path = new ArrayList<>();
         partition(s, index, path, result);
@@ -48,6 +45,7 @@ public class Solution {
         if (index == len) {
             // one valid partition is found
             result.add(path);
+            return;
         }
         
         // recursive case
@@ -64,18 +62,10 @@ public class Solution {
     }
 
     private boolean isPalindrome(String sub) {
-        int len = sub.length();
-        if (len == 0 || len == 1) {
-            return true;
-        }
-        int left = (len - 1) / 2;
-        int right = len / 2;
-        while (left >= 0 && right < len) {
-            if (sub.charAt(left) != sub.charAt(right)) {
+        for (int i = 0, j = sub.length() - 1; i < j; i++, j--) {
+            if (sub.charAt(i) != sub.charAt(j)) {
                 return false;
             }
-            left--;
-            right++;
         }
         return true;
     }

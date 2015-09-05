@@ -1,12 +1,11 @@
 package _131_PalindromePartitioning;
 
-import static org.junit.Assert.*;
+import static com.leetcode.Test.assertEqualsIgnoreOrder;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 
 import org.junit.After;
@@ -39,15 +38,7 @@ public class SolutionDPTest {
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("aa", "b"));
         expected.add(Arrays.asList("a", "a", "b"));
-        assertTrue(actual.containsAll(expected) && expected.containsAll(actual));
-    }
-
-    @Test
-    public void Test2() {
-        String s = "";
-        List<List<String>> actual = solution.partition(s);
-        List<List<String>> expected = new ArrayList<>();
-        assertTrue(actual.containsAll(expected) && expected.containsAll(actual));
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -56,7 +47,7 @@ public class SolutionDPTest {
         List<List<String>> actual = solution.partition(s);
         List<List<String>> expected = new ArrayList<>();
         expected.add(Arrays.asList("a"));
-        assertTrue(actual.containsAll(expected) && expected.containsAll(actual));
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -68,7 +59,7 @@ public class SolutionDPTest {
         expected.add(Arrays.asList("a", "b", "bab"));
         expected.add(Arrays.asList("a", "bb", "a", "b"));
         expected.add(Arrays.asList("abba", "b"));
-        assertTrue(actual.containsAll(expected) && expected.containsAll(actual));
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
     @Test
@@ -93,8 +84,7 @@ public class SolutionDPTest {
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        assertEquals(actual.size(), actual.size());
-        assertEquals(new HashSet<>(expected), new HashSet<>(actual));
+        assertEqualsIgnoreOrder(expected, actual);
     }
 
 }

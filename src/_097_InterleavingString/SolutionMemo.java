@@ -1,5 +1,5 @@
 /**
- * Time : O(m*n); Space: O(min(m, n))
+ * Time : O(m * n); Space: O(m * n))
  * @Tag : Dynamic Programming; String
  * @Date: July 1, 2015
  *************************************************************************
@@ -28,37 +28,33 @@ public class SolutionMemo {
     private Map<Integer, Boolean> memo = new HashMap<>();
 
     public boolean isInterleave(String s1, String s2, String s3) {
-        int len1 = s1.length();
-        int len2 = s2.length();
-        int len3 = s3.length();
-        if (len1 + len2 != len3) {
-            return false;
-        }
-        // backtracking
-        return isInterleave(s1, s2, s3, 0, 0);
+        return helper(0, 0, 0, s1, s2, s3);
     }
 
-    private boolean isInterleave(String s1, String s2, String s3, int i, int j) {
-        // ! watch the index (s2.length() + 1) = cols
-        int index = i * (s2.length() + 1) + j;
-        // look up in memo
+    private boolean helper(int i, int j, int k, String s1, String s2, String s3) {
+        int len1 = s1.length();
+        int len2 = s2.length();
+        // lookup in memo 
+        int index = i * (len2 + 1) + j;
         if (memo.containsKey(index)) {
             return memo.get(index);
         }
-
         // recursive
-        boolean matched = false;
-        int k = i + j;
-        if (k == s3.length()) {
-            matched = true;
+        boolean f = false;
+        if (i == len1 && j == len2) {
+            f = true;
+        } else if (i == len1) {
+            f = s2.substring(j).equals(s3.substring(k));
+        } else if (j == len2) {
+            f = s1.substring(i).equals(s3.substring(k));
         } else {
-            matched = ((i < s1.length() && s1.charAt(i) == s3.charAt(k) 
-                    && isInterleave(s1, s2, s3, i + 1, j)) || (j < s2.length()
-                    && s2.charAt(j) == s3.charAt(k) && isInterleave(s1, s2, s3,
-                    i, j + 1)));
+            // recursive case
+            f = s1.charAt(i) == s3.charAt(k) && helper(i + 1, j, k + 1, s1, s2, s3)
+                    || s2.charAt(j) == s3.charAt(k) && helper(i, j + 1, k + 1, s1, s2, s3);
+
         }
-        memo.put(index, matched);
-        return matched;
+        memo.put(index, f);
+        return f;
     }
 
 }

@@ -1,5 +1,5 @@
 /**
- * Time : O(m*n); Space: O(min(m, n))
+ * Time : O(); Space: O(1)
  * @Tag : Dynamic Programming; String
  * @Date: July 1, 2015
  *************************************************************************

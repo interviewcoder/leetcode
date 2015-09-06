@@ -19,7 +19,7 @@ public class PracticeTest {
     Practice solution;
     
     @Rule
-    public Timeout globalTimeout = new Timeout(500);
+    public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
@@ -81,7 +81,7 @@ public class PracticeTest {
         String s = "dogcat";
         Set<String> wordDict = new HashSet<>();
         wordDict.add("cat");
-        wordDict.add("dogcat");
+        wordDict.add("dog");
         wordDict.add("dogcat");
         List<String> actual = solution.wordBreak(s, wordDict);
         List<String> expected = new ArrayList<>();
@@ -89,7 +89,7 @@ public class PracticeTest {
         expected.add("dog cat");
         assertEqualsIgnoreOrder(expected, actual);
     }
-    
+
     @Test
     public void Test5() {
         String s = "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
@@ -129,6 +129,25 @@ public class PracticeTest {
         wordDict.add("aaaaaaaaaa");
         List<String> actual = solution.wordBreak(s, wordDict);
         List<String> expected = new ArrayList<>();
+        assertEqualsIgnoreOrder(expected, actual);
+    }
+
+    @Test
+    public void Test7() {
+        String s = "baab";
+        Set<String> wordDict = new HashSet<>();
+        wordDict.add("a");
+        wordDict.add("aa");
+        wordDict.add("ab");
+        wordDict.add("b");
+        wordDict.add("ba");
+        List<String> actual = solution.wordBreak(s, wordDict);
+        List<String> expected = new ArrayList<>();
+        expected.add("b a a b");
+        expected.add("b a ab");
+        expected.add("b aa b");
+        expected.add("ba a b");
+        expected.add("ba ab");
         assertEqualsIgnoreOrder(expected, actual);
     }
 

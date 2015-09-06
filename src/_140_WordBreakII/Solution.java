@@ -21,63 +21,38 @@
 package _140_WordBreakII;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /** see test {@link _140_WordBreakII.SolutionTest } */
 public class Solution {
+    
+    // memo[word] = list of word break
+    private Map<String, List<String>> memo = new HashMap<>();
 
-    /**
-     * Check the whole string is breakable first.  
-     * If not breakable, then all other operations are a waste of time.
-     */
     public List<String> wordBreak(String s, Set<String> wordDict) {
-        int n = s.length();
-        // check whether whole string can be broken
-        if (!wordBreakOk(s, wordDict)) {
-            return new ArrayList<>();
-        }
-
-        // initialize
-        List<List<String>> dp = new ArrayList<>();
-        for (int i = 0; i <= n; i++) {
-            dp.add(new ArrayList<>());
-        }
-        dp.get(n).add("");
-
-        for (int i = n - 1; i >= 0; i--) {
-            for (int j = i; j <= n; j++) {
-                String word = s.substring(i, j);
-                if (wordDict.contains(word)) {
-                    for (String sentence : dp.get(j)) {
-                        StringBuilder sb = new StringBuilder(word);
-                        if (!sentence.isEmpty()) {
-                            // append white space between words
-                            sb.append(" ").append(sentence);
-                        }
-                        dp.get(i).add(sb.toString());
+        List<String> res = new ArrayList<>();
+        int len = s.length();
+        for (int i = 1; i <= len; i++) {
+            String prefix = s.substring(0, i);
+            if (wordDict.contains(prefix)) {
+                if (i == len) {
+                    res.add(prefix);
+                } else {
+                    String remain = s.substring(i);
+                    List<String> remainSet = memo.containsKey(remain) ? memo.get(remain) : wordBreak(remain, wordDict);
+                    for (String str : remainSet) {
+                        StringBuilder sb = new StringBuilder(prefix);
+                        sb.append(" ").append(str);
+                        res.add(sb.toString());
                     }
                 }
             }
         }
-        return dp.get(0);
-    }
-
-    // solution from word break I
-    private boolean wordBreakOk(String s, Set<String> wordDict) {
-        int len = s.length();
-        // whether s[i : end] can be successfully broken
-        boolean[] dp = new boolean[len + 1];
-        dp[len] = true;
-        for (int i = len - 1; i >= 0; i--) {
-            for (int j = i; j <= len; j++) {
-                if (wordDict.contains(s.substring(i, j)) && dp[j]) {
-                    dp[i] = true;
-                    break;
-                }
-            }
-        }
-        return dp[0];
+        memo.put(s, res);
+        return res;
     }
 
 }

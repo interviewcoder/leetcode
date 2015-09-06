@@ -115,7 +115,7 @@ P.S.:
 | 075 | [Sort Colors](https://github.com/interviewcoder/leetcode/blob/master/src/_075_SortColors/Solution.java) | Medium | `Array` `Two Pointers` `Sort`  |  | 
 | 076 | [Minimum Window Substring](https://github.com/interviewcoder/leetcode/blob/master/src/_076_MinimumWindowSubstring/Solution.java) | Hard | `Hash Table` `Two Pointers` `String`  | `!`**[substring/sublist]** hashing + two pointers -> O(N) | 
 | 077 | [Combinations](https://github.com/interviewcoder/leetcode/blob/master/src/_077_Combinations/Solution.java) | Medium | `Backtracking`  |  | 
-| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  | backtrack template | 
+| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  | backtrack template (see [README](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets)) | 
 | 079 | [Word Search](https://github.com/interviewcoder/leetcode/blob/master/src/_079_WordSearch/Solution.java) | Medium | `Array` `Backtracking`  |  | 
 | 080 | [Remove Duplicates from Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_080_RemoveDuplicatesFromSortedArrayII/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
 | 081 | [Search in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_081_SearchInRotatedSortedArrayII/Solution.java) | Medium | `Array` `Binary Search`  |  | 

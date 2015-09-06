@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(2^n); Space: O()
  * @tag : Array; Backtracking; Bit Manipulation
  * @by  : Steven Cooks
  * @date: Jun 7, 2015

@@ -6,7 +6,7 @@ Recursive Tree for nums = [1, 2, 3, 4]
 /**  foo(index):
                                                 []
                             /                 /         \     \
-                      [1]                    [2]        [3]  [4]
+                      [1]                    [2]        [3]   [4]
                /        \       \          /     \       |
             [1,2]       [1,3]    [1,4]   [2,3] [2,4]   [3,4]
           /     \         |                 |    
@@ -19,4 +19,5 @@ Recursive Tree for nums = [1, 2, 3, 4]
     for (int i = index; i < n; i++) {
         foo(i + 1)
     }
+ }   
 ```

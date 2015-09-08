@@ -21,37 +21,24 @@
  */
 package _115_DistinctSubsequences;
 
-// DFS version without DP, and will cause TLE
 /** see test {@link _115_DistinctSubsequences.SolutionDFSTest } */
 public class SolutionDFS {
 
-    private int distincts;
-
-    // try to pick tLen characters from s to match t
     public int numDistinct(String s, String t) {
-        distincts = 0;
-        numDistinct(s, t, 0, 0);
-        return distincts;
+        return dfs(s, t, 0, 0);
     }
 
-    private void numDistinct(String s, String t, int sIndex, int tIndex) {
-        // base case
-        if (tIndex == t.length()) {
-            // one distinct way found
-            distincts++;
-        }
-        // recursive case
-        int sLen = s.length();
-        int tLen = t.length();
-        if (sIndex < sLen && tIndex < tLen) {
-            for (int i = sIndex; i <= sLen - tLen + tIndex; i++) {
-                // try each character in s[tIndex, sLen - tLen + tIndex]
-                // to match t[tIndex:end], last possible index of s is (sLen - tLen + tIndex)
-                if (s.charAt(i) == t.charAt(tIndex)) {
-                    // go on
-                    numDistinct(s, t, i + 1, tIndex + 1);
-                }
-            }
+    private int dfs(String s, String t, int i , int j) {
+        if (i == s.length() && j == t.length()) {
+            return 1;
+        } else if (i == s.length()) {
+            return 0;
+        } else if (j == t.length()) {
+            return 1;
+        } else if (s.charAt(i) != t.charAt(j)) {
+            return dfs(s, t, i + 1, j);
+        } else {
+            return dfs(s, t, i + 1, j) + dfs(s, t, i + 1, j + 1);
         }
     }
 

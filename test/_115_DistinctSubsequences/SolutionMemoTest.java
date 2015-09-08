@@ -122,6 +122,13 @@ public class SolutionMemoTest {
         assertEquals(expected, actual);
     }
     
-    
+    @Test
+    public void Test9() {
+        String s = "abcb";
+        String t = "";
+        int actual = solution.numDistinct(s, t);
+        int expected = 1;
+        assertEquals(expected, actual);
+    }
 
 }

@@ -24,30 +24,48 @@ package _115_DistinctSubsequences;
 /** see test {@link _115_DistinctSubsequences.SolutionTest } */
 public class Solution {
 
-    // try to pick tLen characters from s to match t
     public int numDistinct(String s, String t) {
-        int sLen = s.length();
-        int tLen = t.length();
-        // dp[i][j] = number of distinct for S[0:j) to T[0:i)
-        int[][] dp = new int[tLen + 1][sLen + 1];
-        for (int i = 0; i <= tLen; i++) {
-            for (int j = 0; j <= sLen; j++) {
+        int[][] dp = new int[s.length() + 1][t.length() + 1];
+        for (int i = s.length(); i >= 0; i--) {
+            for (int j = t.length(); j >= 0; j--) {
                 int count = 0;
-                if (i == 0) {
-                    // for empty T
+                if (i == s.length() && j == t.length()) {
                     count = 1;
-                } else if (j == 0) {
-                    // for empty S
+                } else if (i == s.length()) {
                     count = 0;
-                } else if (s.charAt(j - 1) != t.charAt(i - 1)) {
-                    count = dp[i][j - 1];
+                } else if (j == t.length()) {
+                    count = 1;
+                } else if (s.charAt(i) != t.charAt(j)) {
+                    count = dp[i + 1][j];
                 } else {
-                    count = dp[i - 1][j - 1] + dp[i][j - 1];
+                    count = dp[i + 1][j] + dp[i + 1][j + 1];
                 }
                 dp[i][j] = count;
             }
         }
-        return dp[tLen][sLen];
+        return dp[0][0];
+    }
+
+    public int numDistinct2(String s, String t) {
+        int[][] dp = new int[s.length() + 1][t.length() + 1];
+        for (int i = s.length(); i >= 0; i--) {
+            for (int j = t.length(); j >= 0; j--) {
+                int count = 0;
+                if (i == s.length() && j == t.length()) {
+                    count = 1;
+                } else if (i == s.length()) {
+                    count = 0;
+                } else if (j == t.length()) {
+                    count = 1;
+                } else if (s.charAt(i) != t.charAt(j)) {
+                    count = dp[i + 1][j];
+                } else {
+                    count = dp[i + 1][j] + dp[i + 1][j + 1];
+                }
+                dp[i][j] = count;
+            }
+        }
+        return dp[0][0];
     }
 
 }

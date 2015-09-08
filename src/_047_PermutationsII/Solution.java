@@ -1,5 +1,5 @@
 /**
- * Time : O(N^2); Space: O(N^2)
+ * Time : O(N!); Space: O(N!)
  * @tag : Backtracking
  * @by  : Steven Cooks
  * @date: Jun 2, 2015

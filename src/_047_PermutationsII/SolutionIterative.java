@@ -1,5 +1,5 @@
 /**
- * Time : O(N^2); Space: O(N^2)
+ * Time : O(N!); Space: O(N!)
  * @tag : Backtracking
  * @by  : Steven Cooks
  * @date: Jun 2, 2015
@@ -43,12 +43,9 @@ public class SolutionIterative {
         if (nums.length == 0) {
             return result;
         }
-
-        // no need to sort
-        // Arrays.sort(nums);
-
         result.add(new ArrayList<>(Arrays.asList(nums[0])));
         for (int i = 1; i < nums.length; i++) {
+            // try to insert num into existing permutations
             int num = nums[i];
             List<List<Integer>> next = new ArrayList<>();
             for (List<Integer> list : result) {

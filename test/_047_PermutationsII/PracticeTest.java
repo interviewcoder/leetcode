@@ -118,6 +118,7 @@ public class PracticeTest {
         expected.add(Arrays.asList(9, 0, 0, 1));
         expected.add(Arrays.asList(9, 0, 1, 0));
         expected.add(Arrays.asList(9, 1, 0, 0));
+        System.out.println(actual.size());
 
         assertEqualsIgnoreOrder(expected, actual);
     }

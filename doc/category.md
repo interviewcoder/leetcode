@@ -45,7 +45,7 @@
 | 1 sequence : `max`/min(*) | 198 | House Robber |
 | 1 sequence : `max`/min(*) | 213 | House Robber II |
 | 1 sequence : `max`/min(*) | 053 | Maximum Subarray |
-| 1 sequence : `max`/min(*) | 153 | Maximum Product Subarray |
+| 1 sequence : `max`/min(*) : global V.S. local | 153 | Maximum Product Subarray |
 | 1 sequence : max/`min`(*) | 132 | Palindrome Partitioning II |
 | 1 sequence : `max`/min(*) | 032 | Longest Valid Parentheses |
 | 1 sequence : `max`/min(*) | 121 | Best Time to Buy and Sell Stock |
@@ -53,12 +53,12 @@
 | 1 sequence : count(*) | 091 | Decode Ways |
 | 1 sequence : all(*) | 140 | Word Break II: dp + backtracking |
 |-------------------------------- | **`2 sequences`** | ------------------------------------------------- |
-| boolean(*) | 044 | Wildcard Matching |
-| boolean(*) | 087 | Scramble String |
-| boolean(*) | 010 | Regular Expression Matching |
-| boolean(*) : DFS->Memo->Bottomup | 097 | Interleaving String |
-| max/`min`(*) : DFS->Memo->Botto  | 072 | Edit Distance |
-| count(*) | 115 | Distinct Subsequences |
+| 2 sequences : boolean(*) | 044 | Wildcard Matching |
+| 2 sequences : boolean(*) | 087 | Scramble String |
+| 2 sequences : boolean(*) | 010 | Regular Expression Matching |
+| 2 sequences : boolean(*) : DFS->Memo->Bottomup | 097 | Interleaving String |
+| 2 sequences : max/`min`(*) : DFS->Memo->Bottomup  | 072 | Edit Distance |
+| 2 sequences : count(*) : DFS->Memo->Bottomup | 115 | Distinct Subsequences |
 |-------------------------------- | ----------------- | ------------------------------------------------- |
 | Matrix : max/`min`(*) | 120 | Triangle |
 | Matrix : max/`min`(*) | 064 | Minimum Path Sum |

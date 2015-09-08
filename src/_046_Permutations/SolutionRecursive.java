@@ -1,5 +1,5 @@
 /**
- * Time : O(N^2); Space: O(N^2)
+ * Time : O(N!); Space: O(N!)
  * @tag : Backtracking
  * @by  : Steven Cooks
  * @date: Jun 2, 2015
@@ -19,15 +19,11 @@ package _046_Permutations;
 import java.util.ArrayList;
 import java.util.List;
 
-//TODO: iterative method
 /** see test {@link _046_Permutations.SolutionRecursiveTest } */
 public class SolutionRecursive {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        if (nums.length == 0) {
-            return result;
-        }
         List<Integer> permutation = new ArrayList<Integer>();
         int index = 0;
         permuate(nums, index, permutation, result);

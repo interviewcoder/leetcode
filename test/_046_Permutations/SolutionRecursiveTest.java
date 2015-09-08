@@ -49,8 +49,6 @@ public class SolutionRecursiveTest {
         expected.add(Arrays.asList(2, 3, 1));
         expected.add(Arrays.asList(3, 1, 2));
         expected.add(Arrays.asList(3, 2, 1));
-
-        // order of set in list does not matter
         assertEqualsIgnoreOrder(expected, actual);
     }
 

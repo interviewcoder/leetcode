@@ -1,5 +1,5 @@
 /**
- * Time : O(N^2); Space: O(N^2)
+ * Time : O(N!); Space: O(N!)
  * @tag : Backtracking
  * @by  : Steven Cooks
  * @date: Jun 2, 2015
@@ -20,9 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Iterative solution see test {@link _046_Permutations.SolutionTest }
- */
+/** see test {@link _046_Permutations.SolutionTest } */
 public class Solution {
 
     public List<List<Integer>> permute(int[] nums) {

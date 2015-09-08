@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(2^N); Space: O(2^N)
  * @tag : Array; Backtracking
  * @by  : Steven Cooks
  * @date: Jun 13, 2015

@@ -32,7 +32,7 @@ public class Solution {
         if (head == null || n <= 0) {
             return null;
         }
-        ListNode dummyHead = new ListNode(-1);
+        ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
 
         ListNode fast = dummyHead;

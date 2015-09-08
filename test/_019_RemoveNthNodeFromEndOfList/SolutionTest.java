@@ -64,17 +64,6 @@ public class SolutionTest {
     }
 
     @Test
-    public void Test4() {
-        int n = 0;
-        int[] nums = {};
-        ListNode head = ListNode.constructLinkedList(nums);
-        ListNode actual = solution.removeNthFromEnd(head, n);
-        int[] exps = {};
-        ListNode expect = ListNode.constructLinkedList(exps);
-        assertTrue(ListNode.isSameList(actual, expect));
-    }
-
-    @Test
     public void Test5() {
         int n = 1;
         int[] nums = {1};

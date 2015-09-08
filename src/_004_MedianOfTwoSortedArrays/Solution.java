@@ -29,6 +29,7 @@ public class Solution {
 
     }
 
+    // find the Kth number in sorted array of (nums1 + nums2)
     private double findKth(int[] nums1, int s1, int[] nums2, int s2, int k) {
         if (s1 >= nums1.length) {
             return nums2[s2 + k - 1];
@@ -39,9 +40,12 @@ public class Solution {
         }
         int k1 = s1 + k / 2 - 1 < nums1.length ? nums1[s1 + k / 2 - 1] : Integer.MAX_VALUE;
         int k2 = s2 + k / 2 - 1 < nums2.length ? nums2[s2 + k / 2 - 1] : Integer.MAX_VALUE;
+        // cut impossible k/2 part
         if (k1 < k2) {
+            // [s1 : s1 + k/2] cannot have the Kth number
             return findKth(nums1, s1 + k / 2, nums2, s2, k - k / 2);
         } else {
+            // [s2 : s2 + k/2] cannot have the Kth number
             return findKth(nums1, s1, nums2, s2 + k / 2, k - k / 2);
         }
     }

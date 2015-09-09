@@ -13,17 +13,17 @@ import org.junit.rules.Timeout;
 import com.leetcode.ListNode;
 import com.leetcode.TreeNode;
 
-public class PracticeTest {
+public class SolutionRecursiveTest {
     
-    /** Test method for {@link _109_ConvertSortedListToBinarySearchTree.Practice } */
-    Practice solution;
+    /** Test method for {@link _109_ConvertSortedListToBinarySearchTree.SolutionRecursive } */
+    SolutionRecursive solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionRecursive();
     }
 
     @After

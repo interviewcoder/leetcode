@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(N); Space: O(N)
  * @tag : Depth-first Search; Linked List
  * @by  : Steven Cooks
  * @date: Jun 14, 2015

@@ -2,6 +2,8 @@ package _109_ConvertSortedListToBinarySearchTree;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -29,80 +31,105 @@ public class SolutionTest {
         solution = null;
     }
 
-    //                          3 
-    //                        /   \
-    // [1->2->3->4->5] ==>   1     4 
-    //                        \     \
-    //                         2     5
+    // null
     @Test
-    public void Test1() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-        ListNode n5 = new ListNode(5);
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        n4.next = n5;
-        ListNode head = n1;
-
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(5);
-        TreeNode.connect(t3, t1, t4);
-        TreeNode.connect(t1, null, t2);
-        TreeNode.connect(t4, null, t5);
-
-        TreeNode expected = t3;
-        TreeNode actual = solution.sortedListToBST(head);
+    public void Test0() {
+        TreeNode actual = solution.sortedListToBST(null);
+        TreeNode expected = null;
         assertTrue(TreeNode.isSameTree(actual, expected));
     }
 
     //   [1]   ==>   1
     @Test
-    public void Test2() {
-        ListNode head = new ListNode(1);
+    public void Test1() {
+        ListNode head = ListNode.constructLinkedList(Arrays.asList(1));
         TreeNode actual = solution.sortedListToBST(head);
         TreeNode t1 = new TreeNode(1);
         TreeNode expected = t1;
         assertTrue(TreeNode.isSameTree(actual, expected));
     }
 
-    //                       2 
-    //                     /   \   
-    // [1->2->3->4]  ==>  1     3  
-    //                           \
-    //                            4
+    //   [1, 2]   ==>   1            2
+    //                    \   or   /
+    //                     2      1 
+    @Test
+    public void Test2() {
+        ListNode head = ListNode.constructLinkedList(Arrays.asList(1, 2));
+        TreeNode actual = solution.sortedListToBST(head);
+
+        TreeNode e11 = new TreeNode(1);
+        TreeNode e12 = new TreeNode(2);
+        TreeNode.connect(e11, null, e12);
+        TreeNode expected1 = e11;
+
+        TreeNode e21 = new TreeNode(1);
+        TreeNode e22 = new TreeNode(2);
+        TreeNode.connect(e22, e21, null);
+        TreeNode expected2 = e22;
+
+        assertTrue(TreeNode.isSameTree(actual, expected2) || TreeNode.isSameTree(actual, expected1));
+    }
+
+    //   [1, 2, 3] ==>   1             3          2
+    //                    \           /         /   \
+    //                     2   or    2     or  1     3
+    //                      \      /
+    //                       3    1
     @Test
     public void Test3() {
-        ListNode n1 = new ListNode(1);
-        ListNode n2 = new ListNode(2);
-        ListNode n3 = new ListNode(3);
-        ListNode n4 = new ListNode(4);
-        n1.next = n2;
-        n2.next = n3;
-        n3.next = n4;
-        ListNode head = n1;
+        ListNode head = ListNode.constructLinkedList(Arrays.asList(1, 2, 3));
+        TreeNode actual = solution.sortedListToBST(head);
+
+        TreeNode e11 = new TreeNode(1);
+        TreeNode e12 = new TreeNode(2);
+        TreeNode e13 = new TreeNode(3);
+        TreeNode.connect(e11, null, e12);
+        TreeNode.connect(e12, null, e13);
+        TreeNode expected1 = e11;
+
+        TreeNode e21 = new TreeNode(1);
+        TreeNode e22 = new TreeNode(2);
+        TreeNode e23 = new TreeNode(3);
+        TreeNode.connect(e23, e22, null);
+        TreeNode.connect(e22, e21, null);
+        TreeNode expected2 = e23;
+
+        TreeNode e31 = new TreeNode(1);
+        TreeNode e32 = new TreeNode(2);
+        TreeNode e33 = new TreeNode(3);
+        TreeNode.connect(e32, e31, e33);
+        TreeNode expected3 = e32;
+
+        assertTrue(TreeNode.isSameTree(actual, expected3) || TreeNode.isSameTree(actual, expected2) || TreeNode.isSameTree(actual, expected1));
+    }
+
+    //                    2 
+    //                  /   \   
+    // [1->2->3]  ==>  1     3  
+    @Test
+    public void Test4() {
+        ListNode head = ListNode.constructLinkedList(Arrays.asList(1, 2, 3));
 
         TreeNode t1 = new TreeNode(1);
         TreeNode t2 = new TreeNode(2);
         TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
         TreeNode.connect(t2, t1, t3);
-        TreeNode.connect(t3, null, t4);
 
         TreeNode expected = t2;
         TreeNode actual = solution.sortedListToBST(head);
         assertTrue(TreeNode.isSameTree(actual, expected));
     }
 
+    //       4 
+    //     /    \
+    //    2      6 
+    //   / \    / \
+    //  1   3  5   7 
     @Test
-    public void Test4() {
-        TreeNode actual = solution.sortedListToBST(null);
-        TreeNode expected = null;
+    public void Test5() {
+        ListNode head = ListNode.constructLinkedList(Arrays.asList(1, 2, 3, 4, 5, 6, 7));
+        TreeNode actual = solution.sortedListToBST(head);
+        TreeNode expected = TreeNode.getBST7();
         assertTrue(TreeNode.isSameTree(actual, expected));
     }
 

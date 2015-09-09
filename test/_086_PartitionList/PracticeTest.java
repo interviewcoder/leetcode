@@ -77,4 +77,15 @@ public class PracticeTest {
         assertTrue(ListNode.isSameList(expected, actual));
     }
 
+    @Test
+    public void Test5() {
+        int[] nums = {3, 3, 1, 2, 4};
+        ListNode head = ListNode.constructLinkedList(nums);
+        int x = 3;
+        ListNode actual = solution.partition(head, x);
+        int[] exps = {1, 2, 3, 3, 4};
+        ListNode expected = ListNode.constructLinkedList(exps);
+        assertTrue(ListNode.isSameList(expected, actual));
+    }
+
 }

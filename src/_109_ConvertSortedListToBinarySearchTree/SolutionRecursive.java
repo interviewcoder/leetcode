@@ -24,7 +24,7 @@ public class SolutionRecursive{
             return null;
         }
         if (head.next == null) {
-            return null;
+            return new TreeNode(head.val);
         }
         
         // find the node right before middle node

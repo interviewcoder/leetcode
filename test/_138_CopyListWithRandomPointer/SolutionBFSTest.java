@@ -8,15 +8,15 @@ import org.junit.rules.Timeout;
 
 public class SolutionBFSTest {
     
-    /** Test method for {@link _138_CopyListWithRandomPointer.Solution } */
-    Solution solution;
+    /** Test method for {@link _138_CopyListWithRandomPointer.SolutionBFS } */
+    SolutionBFS solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionBFS();
     }
 
     @After

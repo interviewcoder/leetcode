@@ -22,36 +22,8 @@ import java.util.Queue;
 public class Practice {
 
     public RandomListNode copyRandomList(RandomListNode head) {
-        if (head == null) {
-            return head;
-        }
-        Queue<RandomListNode> queue = new LinkedList<>();
-        Map<RandomListNode, RandomListNode> copyMap = new HashMap<>();
-
-        queue.offer(head);
-        RandomListNode copyHead = new RandomListNode(head.label);
-        copyMap.put(head, copyHead);
-
-        while (!queue.isEmpty()) {
-            RandomListNode node = queue.poll();
-            copyMap.get(node).next = copyNode(node.next, queue, copyMap);
-            copyMap.get(node).random = copyNode(node.random, queue, copyMap);
-        }
-        return copyHead;
-    }
-
-    private RandomListNode copyNode(RandomListNode node,
-            Queue<RandomListNode> queue, Map<RandomListNode, RandomListNode> map) {
-        if (node == null) {
-            return node;
-        }
-        if (map.containsKey(node)) {
-            return map.get(node);
-        }
-        RandomListNode copy = new RandomListNode(node.label);
-        map.put(node, copy);
-        queue.offer(node);
-        return copy;
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

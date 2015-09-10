@@ -12,6 +12,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+/** see test {@link _138_CopyListWithRandomPointer.SolutionBFSTest } */
 public class SolutionBFS {
 
     // BFS version

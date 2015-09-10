@@ -21,24 +21,8 @@ import com.leetcode.ListNode;
 public class Practice {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode fast = dummy;
-        // let fast walks (m - 1) steps to node before reversing head
-        for (int i = 0; i < (m - 1); i++) {
-            fast = fast.next;
-        }
-        ListNode preReverse = fast;
-        ListNode reverseHead = fast.next;
-        ListNode pre = reverseHead;
-        for (int i = 0; i < (n - m); i++) {
-            ListNode cur = pre.next;
-            pre.next = cur.next;
-            cur.next = reverseHead;
-            reverseHead = cur;
-        }
-        preReverse.next = reverseHead;
-        return dummy.next;
+        // TODO Auto-generated method stub
+        return null;
     }
 
 }

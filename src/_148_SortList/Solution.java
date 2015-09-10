@@ -18,10 +18,13 @@ import com.leetcode.ListNode;
 /** see test {@link _148_SortList.SolutionTest } */
 public class Solution {
     
+    // simulating merge sort on linked list
     public ListNode sortList(ListNode head) {
+        // base case
         if (head == null || head.next == null) {
             return head;
         }
+
         // find the middle node
         ListNode fast = head.next;
         ListNode slow = head;

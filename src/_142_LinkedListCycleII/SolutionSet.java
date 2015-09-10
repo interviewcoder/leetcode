@@ -18,34 +18,26 @@
  */
 package _142_LinkedListCycleII;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import com.leetcode.ListNode;
 
 /** see test {@link _142_LinkedListCycleII.SolutionTest } */
-public class Solution {
+public class SolutionSet {
+
+    private Set<ListNode> nodeSet = new HashSet<>();
 
     public ListNode detectCycle(ListNode head) {
         if (head == null) {
             return head;
         }
-        ListNode slow = head;
-        ListNode fast = head.next;
-        while (fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-            if (fast == slow.next) {
-                break;
-            }
+        ListNode node = head;
+        while (node != null && !nodeSet.contains(node)) {
+            nodeSet.add(node);
+            node = node.next;
         }
-        // no cycle
-        if (fast == null || fast.next == null) {
-            return null;
-        }
-        fast = head;
-        while (fast != slow) {
-            fast = fast.next;
-            slow = slow.next;
-        }
-        return fast;
+        return node;
     }
     
 }

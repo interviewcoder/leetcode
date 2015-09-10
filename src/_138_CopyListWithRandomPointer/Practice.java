@@ -13,11 +13,6 @@
  */
 package _138_CopyListWithRandomPointer;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Queue;
-
 /** see test {@link _138_CopyListWithRandomPointer.PracticeTest } */
 public class Practice {
 

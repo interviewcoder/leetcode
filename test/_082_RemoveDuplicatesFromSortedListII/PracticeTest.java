@@ -62,7 +62,6 @@ public class PracticeTest {
         int[] nums = {1, 2, 2, 2};
         ListNode head = ListNode.constructLinkedList(nums);
         ListNode actual = solution.deleteDuplicates(head);
-        System.out.println(actual);
         ListNode e1 = new ListNode(1);
         ListNode expected = e1;
         assertTrue(ListNode.isSameList(expected, actual));

@@ -55,7 +55,7 @@ public class Solution {
             if (pre.next == node) {
                 // ! don't use (pre.val == node.val) unless you are sure
                 // dummy has different value from head node
-                pre = pre.next;
+                pre = node;
             } else {
                 pre.next = node.next;
             }

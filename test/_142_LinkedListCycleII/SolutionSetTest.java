@@ -12,15 +12,15 @@ import com.leetcode.ListNode;
 
 public class SolutionSetTest {
     
-    /** Test method for {@link _142_LinkedListCycleII.Solution } */
-    Solution solution;
+    /** Test method for {@link _142_LinkedListCycleII.SolutionSet } */
+    SolutionSet solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionSet();
     }
 
     @After

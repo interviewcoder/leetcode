@@ -28,11 +28,9 @@ import com.leetcode.ListNode;
 public class Solution {
 
     public ListNode reverseBetween(ListNode head, int m, int n) {
-        if (head == null) {
-            return head;
-        }
-        ListNode dummy = new ListNode(-1);
+        ListNode dummy = new ListNode(0);
         dummy.next = head;
+
         ListNode pre = dummy;
         // let pre walks (m - 1) steps itself
         for (int i = 0; i < m - 1; i++) {

@@ -2,6 +2,9 @@
 | Type         | # | Description |
 | ---------------------: |:---:| ------------|
 |-------------------------------- | ----------------- | ------------------------------------------------- |
+| **`Linked List`** | | |
+| dummy head | 021 | Merge Two Sortd Lists |
+|-------------------------------- | ----------------- | ------------------------------------------------- |
 | **`Monotonic Stack/Queue`** | | keep indices of numbers which are in ascending/descending order |
 | descending deque | 239 | Sliding Window Maximum |
 | ascending stack  | 084 | Largest Rectangle In Histogram |

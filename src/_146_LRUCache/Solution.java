@@ -26,7 +26,7 @@ import java.util.Map;
 public class Solution {
 
     // memory that stores <key, value> mapping
-    private Map<Integer, Item> memo = new HashMap<>();
+    private Map<Integer, Item> memo;
 
     // dummy beginning pointer
     private Item begin;
@@ -40,6 +40,7 @@ public class Solution {
 
     public Solution(int capacity) {
         this.capacity = capacity;
+        memo = new HashMap<>(capacity);
         // two dummy pointers
         begin = new Item(0, 0);
         end = new Item(0, 0);

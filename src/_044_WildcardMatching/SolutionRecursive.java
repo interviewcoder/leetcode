@@ -10,13 +10,12 @@ package _044_WildcardMatching;
 public class SolutionRecursive {
 
     public boolean isMatch(String s, String p) {
-        return isMatchCore(s, p, 0, 0, s.length(), p.length());
+        return isMatchCore(s, p, 0, 0);
     }
 
-    private boolean isMatchCore(String s, String p, int sIndex, int pIndex,
-            int sLen, int pLen) {
+    private boolean isMatchCore(String s, String p, int sIndex, int pIndex) {
         // base case
-        if (sIndex >= s.length() && pIndex == p.length()) {
+        if (sIndex == s.length() && pIndex == p.length()) {
             // both string and pattern end
             return true;
         }
@@ -31,14 +30,14 @@ public class SolutionRecursive {
             // return isMatchCore(s, p, sIndex, pIndex + 1, sLen, pLen)
             // use '*' to match a sequence including s.charAt(sIndex) in string
             // || isMatchCore(s, p, sIndex + 1, pIndex, sLen, pLen);
-            return isMatchCore(s, p, sIndex, pIndex + 1, sLen, pLen) 
-                    || (sIndex < sLen && isMatchCore(s, p, sIndex + 1, pIndex, sLen, pLen));
+            return isMatchCore(s, p, sIndex, pIndex + 1)
+                    || (sIndex < s.length() && isMatchCore(s, p, sIndex + 1, pIndex));
         }
         // recursive case 2: met character other than '*' in pattern
-        if (sIndex < sLen
+        if (sIndex < s.length() 
                 && (s.charAt(sIndex) == p.charAt(pIndex) || p.charAt(pIndex) == '?')) {
             // met same characters in string and pattern || met '?' in pattern
-            return isMatchCore(s, p, sIndex + 1, pIndex + 1, sLen, pLen);
+            return isMatchCore(s, p, sIndex + 1, pIndex + 1);
         }
 
         return false;

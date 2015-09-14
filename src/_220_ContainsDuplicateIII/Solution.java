@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(NlgK); Space : O()
  * @tag : Binary Search Tree
  * @by  : Steven Cooks
  * @date: Jul 3, 2015
@@ -15,30 +15,30 @@
  */
 package _220_ContainsDuplicateIII;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.TreeSet;
 
 /** see test {@link _220_ContainsDuplicateIII.SolutionTest } */
 public class Solution {
+
     public boolean containsNearbyAlmostDuplicate(int[] nums, int k, int t) {
-        if (nums.length < 2) {
-            return false;
-        }
-        int maxHeight = 0;
-        int minHeight = 0;
-        Set<Integer> numSet = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            int number = nums[i];
-            if (number <= maxHeight + t && number >= minHeight - t) {
-                // within boundary
+        TreeSet<Long> values = new TreeSet<>();
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            // remove values that are out of current window
+            int num = nums[i];
+            // in case of integer overflow
+            Long floor = values.floor((long) num);
+            Long ceiling = values.ceiling((long) num);
+            if ((floor != null && num - floor <= t) || (ceiling != null && ceiling - num <= t)) {
                 return true;
             }
-            if (numSet.size() == k) {
-                // update set by deleting the leftmost number
-                numSet.remove(nums[i - k]);
+            values.add((long) num);
+            if (i >= k) {
+                values.remove((long)nums[i - k]);
             }
-            numSet.add(number);
         }
         return false;
+
     }
+
 }

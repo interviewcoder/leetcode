@@ -17,26 +17,28 @@
  */
 package _152_MaximumProductSubarray;
 
-/** see test {@link _152_MaximumProductSubarray.SolutionTest } */
-public class Solution {
+/** see test {@link _152_MaximumProductSubarray.SolutionNTest } */
+public class SolutionN {
 
     public int maxProduct(int[] nums) {
         int n = nums.length;
         if (n <= 0) {
             return 0;
         }
-        // initialize
+        // initialize 
+        int[] maxs = new int[n];
+        int[] mins = new int[n];
         int res = nums[0];
-        int max = nums[0];
-        int min = nums[0];
+        maxs[0] = nums[0];
+        mins[0] = nums[0];
         // dp
         for (int i = 1; i < n; i++) {
             int num = nums[i];
-            int lmax = max * num;
-            int lmin = min * num;
-            max = Math.max(num, Math.max(lmax, lmin));
-            min = Math.min(num, Math.min(lmax, lmin));
-            res = Math.max(res, max);
+            int max = maxs[i - 1] * num;
+            int min = mins[i - 1] * num;
+            maxs[i] = Math.max(num, Math.max(max, min));
+            mins[i] = Math.min(num, Math.min(max, min));
+            res = Math.max(res, maxs[i]);
         }
         return res;
     }

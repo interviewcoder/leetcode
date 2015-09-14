@@ -2,8 +2,6 @@ package _041_FirstMissingPositive;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -33,7 +31,7 @@ public class SolutionTest {
         int[] nums = { 1, 2, 0 };
         int expected = 3;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -41,7 +39,7 @@ public class SolutionTest {
         int[] nums = { 3, 4, -1, 1 };
         int expected = 2;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -49,7 +47,7 @@ public class SolutionTest {
         int[] nums = { -1, -3 };
         int expected = 1;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -57,7 +55,7 @@ public class SolutionTest {
         int[] nums = { 5, 4, 3, 2 };
         int expected = 1;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -65,7 +63,7 @@ public class SolutionTest {
         int[] nums = { 2 };
         int expected = 1;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -73,7 +71,7 @@ public class SolutionTest {
         int[] nums = { 1 };
         int expected = 2;
         int actual = solution.firstMissingPositive(nums);
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test

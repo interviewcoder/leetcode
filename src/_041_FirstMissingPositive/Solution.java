@@ -21,6 +21,7 @@ package _041_FirstMissingPositive;
 
 /** see test {@link _041_FirstMissingPositive.SolutionTest } */
 public class Solution {
+
     public int firstMissingPositive(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             // TODO: make sure index within boundary
@@ -39,4 +40,5 @@ public class Solution {
         }
         return nums.length + 1;
     }
+
 }

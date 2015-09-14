@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 
 public class SolutionTest {
-    
+
     /** Test method for {@link _239_SlidingWindowMaximum.Solution } */
     Solution solution;
 
@@ -28,19 +28,19 @@ public class SolutionTest {
 
     @Test
     public void Test0() {
-        int[] nums = { };
+        int[] nums = {};
         int k = 0;
         int[] actuals = solution.maxSlidingWindow(nums, k);
-        int[] expecteds = { };
+        int[] expecteds = {};
         assertArrayEquals(expecteds, actuals);
     }
 
     @Test
     public void Test1() {
-        int[] nums = {1, 3, -1, -3, 5, 3, 6, 7};
+        int[] nums = { 1, 3, -1, -3, 5, 3, 6, 7 };
         int k = 3;
         int[] actuals = solution.maxSlidingWindow(nums, k);
-        int[] expecteds = {3, 3, 5, 5, 6, 7};
+        int[] expecteds = { 3, 3, 5, 5, 6, 7 };
         assertArrayEquals(expecteds, actuals);
     }
 
@@ -55,19 +55,28 @@ public class SolutionTest {
 
     @Test
     public void Test3() {
-        int[] nums = {1, -1};
+        int[] nums = { 1, -1 };
         int k = 1;
         int[] actuals = solution.maxSlidingWindow(nums, k);
-        int[] expecteds = {1, -1};
+        int[] expecteds = { 1, -1 };
         assertArrayEquals(expecteds, actuals);
     }
 
     @Test
     public void Test4() {
-        int[] nums = {1,3,1,2,0,5};
+        int[] nums = { 1, 3, 1, 2, 0, 5 };
         int k = 3;
         int[] actuals = solution.maxSlidingWindow(nums, k);
-        int[] expecteds = {3, 3, 2, 5};
+        int[] expecteds = { 3, 3, 2, 5 };
+        assertArrayEquals(expecteds, actuals);
+    }
+
+    @Test
+    public void Test5() {
+        int[] nums = { 1, 2, 5, 10, 3, 4 };
+        int k = 3;
+        int[] actuals = solution.maxSlidingWindow(nums, k);
+        int[] expecteds = { 5, 10, 10, 10 };
         assertArrayEquals(expecteds, actuals);
     }
 

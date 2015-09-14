@@ -37,32 +37,35 @@ import java.util.LinkedList;
 /** see test {@link _239_SlidingWindowMaximum.SolutionTest } */
 public class Solution {
 
-    /**  Keep monotonic deque: containing index, and nums[index] is monotonic in deque*/
+    /**
+     * Keep monotonic deque: containing index, and nums[index] is monotonic in
+     * deque peek element is the index of the max number in current sliding
+     * window and the numbers that indices in this deque represents are in
+     * non-ascending order
+     * */
     public int[] maxSlidingWindow(int[] nums, int k) {
-        if (nums.length == 0) {
+        int n = nums.length;
+        if (n == 0) {
             return new int[]{};
         }
-        int[] res = new int[nums.length - k + 1];
-        Deque<Integer> indices = new LinkedList<>();
-        for (int i = 0; i < nums.length; i++) {
-            // swipe elements that are out of window
-            if (!indices.isEmpty() && (i - k + 1 > indices.peek())) {
-                indices.removeFirst();
-            }
+        int[] res = new int[n - k + 1];
+        // peek element is the index of the max number in current sliding window
+        // and the numbers that indices in this deque represents are in non-ascending order
+        Deque<Integer> descendIndices = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
             int num = nums[i];
-            // meet a global max, clear deque
-            if (!indices.isEmpty() && num > nums[indices.peek()]) {
-                indices.clear();
-                indices.addFirst(i);
-            } else {
-                // meet local max, remove deque elements to keep monotonic
-                while (!indices.isEmpty() && num > nums[indices.getLast()]) {
-                    indices.removeLast();
-                }
-                indices.addLast(i);
+            int window = i - k + 1;
+            // poll elements out of current window
+            while (!descendIndices.isEmpty() && descendIndices.peekFirst() < i - k + 1) {
+                descendIndices.removeFirst();
             }
-            if (i >= k - 1) {
-                res[i - k + 1] = nums[indices.peek()];
+            // build descending indices
+            while (!descendIndices.isEmpty() && nums[descendIndices.peekLast()] < num) {
+                descendIndices.removeLast();
+            }
+            descendIndices.addLast(i);
+            if (window >= 0) {
+                res[window] = nums[descendIndices.peekFirst()];
             }
         }
         return res;

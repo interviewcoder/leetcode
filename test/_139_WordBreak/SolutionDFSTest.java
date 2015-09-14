@@ -102,17 +102,6 @@ public class SolutionDFSTest {
     }
 
     @Test
-    public void Test5() {
-        String s = "";
-        Set<String> wordDict = new HashSet<>();
-        wordDict.add("let");
-        wordDict.add("tcode");
-        wordDict.add("tode");
-        boolean actual = solution.wordBreak(s, wordDict);
-        assertEquals(false, actual);
-    }
-
-    @Test
     public void Test6() {
         String s = "";
         Set<String> wordDict = new HashSet<>();
@@ -138,6 +127,18 @@ public class SolutionDFSTest {
         }
         boolean actual = solution.wordBreak(s, wordDict);
         assertEquals(true, actual);
+    }
+
+    @Test
+    public void Test8() {
+        String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+        String[] strs = {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
+        Set<String> wordDict = new HashSet<>();
+        for (String string : strs) {
+            wordDict.add(string);
+        }
+        boolean actual = solution.wordBreak(s, wordDict);
+        assertEquals(false, actual);
     }
 
 }

@@ -117,5 +117,17 @@ public class SolutionTest {
         boolean actual = solution.wordBreak(s, wordDict);
         assertEquals(true, actual);
     }
+    
+    @Test
+    public void Test8() {
+        String s = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab";
+        String[] strs = {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
+        Set<String> wordDict = new HashSet<>();
+        for (String string : strs) {
+            wordDict.add(string);
+        }
+        boolean actual = solution.wordBreak(s, wordDict);
+        assertEquals(false, actual);
+    }
 
 }

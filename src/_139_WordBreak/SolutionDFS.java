@@ -21,18 +21,27 @@ import java.util.Set;
 
 /** see test {@link _139_WordBreak.SolutionDFSTest } */
 public class SolutionDFS {
+
     public boolean wordBreak(String s, Set<String> wordDict) {
+        return dfs(0, s, wordDict);
+    }
+
+    private boolean dfs(int i, String s, Set<String> wordDict) {
         // base case
-        if (wordDict.contains(s)) {
+        boolean breakable = false;
+        if (i == s.length()) {
             return true;
-        }
-        // recursive case
-        for (int i = 0; i <= s.length(); i++) {
-            if (wordDict.contains(s.substring(0, i))
-                    && wordBreak(s.substring(i), wordDict)) {
-                return true;
+        } else {
+            // recursive case
+            for (int j = i + 1; j <= s.length(); j++) {
+                String word = s.substring(i, j);
+                if (wordDict.contains(word) && dfs(j, s, wordDict)) {
+                    breakable = true;
+                    break;
+                }
             }
         }
-        return false;
+        return breakable;
     }
+
 }

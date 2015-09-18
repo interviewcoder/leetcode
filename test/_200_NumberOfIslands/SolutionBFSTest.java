@@ -28,9 +28,12 @@ public class SolutionBFSTest {
 
     @Test
     public void Test1() {
-        char[][] grid = { { '1', '1', '1', '1', '0' },
-                { '1', '1', '0', '1', '0' }, { '1', '1', '0', '0', '0' },
-                { '0', '0', '0', '0', '0' } };
+        char[][] grid = {
+                { '1', '1', '1', '1', '0' },
+                { '1', '1', '0', '1', '0' }, 
+                { '1', '1', '0', '0', '0' },
+                { '0', '0', '0', '0', '0' } 
+        };
         int actual = solution.numIslands(grid);
         int expected = 1;
         assertEquals(expected, actual);
@@ -38,9 +41,12 @@ public class SolutionBFSTest {
 
     @Test
     public void Test2() {
-        char[][] grid = { { '1', '1', '0', '0', '0' },
-                { '1', '1', '0', '0', '0' }, { '0', '0', '1', '0', '0' },
-                { '0', '0', '0', '1', '1' } };
+        char[][] grid = { 
+                { '1', '1', '0', '0', '0' },
+                { '1', '1', '0', '0', '0' }, 
+                { '0', '0', '1', '0', '0' },
+                { '0', '0', '0', '1', '1' } 
+        };
         int actual = solution.numIslands(grid);
         int expected = 3;
         assertEquals(expected, actual);
@@ -64,7 +70,13 @@ public class SolutionBFSTest {
 
     @Test
     public void Test5() {
-        char[][] grid = { { '1' }, { '1' }, { '1' }, { '1' }, { '1' } };
+        char[][] grid = { 
+                { '1' }, 
+                { '1' }, 
+                { '1' }, 
+                { '1' }, 
+                { '1' } 
+        };
         int actual = solution.numIslands(grid);
         int expected = 1;
         assertEquals(expected, actual);
@@ -72,7 +84,13 @@ public class SolutionBFSTest {
 
     @Test
     public void Test6() {
-        char[][] grid = { { '1' }, { '0' }, { '1' }, { '0' }, { '0' } };
+        char[][] grid = { 
+                { '1' }, 
+                { '0' }, 
+                { '1' }, 
+                { '0' }, 
+                { '0' } 
+        };
         int actual = solution.numIslands(grid);
         int expected = 2;
         assertEquals(expected, actual);
@@ -80,7 +98,9 @@ public class SolutionBFSTest {
 
     @Test
     public void Test7() {
-        char[][] grid = { { '1', '1', '0', '1' } };
+        char[][] grid = { 
+                { '1', '1', '0', '1' } 
+        };
         int actual = solution.numIslands(grid);
         int expected = 2;
         assertEquals(expected, actual);
@@ -124,5 +144,6 @@ public class SolutionBFSTest {
         int expected = 58;
         assertEquals(expected, actual);
     }
+
 
 }

@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(N); Space : O(1)
  * @tag : Depth-first Search; Breadth-first Search
  * @by  : Steven Cooks
  * @date: Jun 30, 2015
@@ -33,6 +33,8 @@ package _200_NumberOfIslands;
 
 /** see test {@link _200_NumberOfIslands.SolutionTest } */
 public class Solution {
+
+    // DFS version
     public int numIslands(char[][] grid) {
         if (grid.length == 0 || grid[0].length == 0) {
             return 0;
@@ -44,7 +46,6 @@ public class Solution {
             for (int j = 0; j < cols; j++) {
                 // label each reachable land from current position
                 if (grid[i][j] == '1') {
-                    // BFS to find all reaching land
                     labelReachableLand(i, j, rows, cols, grid);
                     result++;
                 }
@@ -69,7 +70,7 @@ public class Solution {
             return;
         }
         // recursive case
-        grid[i][j] = 'I';
+        grid[i][j] = 'I';   // label as visited
         labelReachableLand(i + 1, j, rows, cols, grid);
         labelReachableLand(i - 1, j, rows, cols, grid);
         labelReachableLand(i, j - 1, rows, cols, grid);

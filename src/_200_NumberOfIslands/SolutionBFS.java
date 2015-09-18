@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(N); Space : O(N)
  * @tag : Depth-first Search; Breadth-first Search
  * @by  : Steven Cooks
  * @date: Jun 30, 2015

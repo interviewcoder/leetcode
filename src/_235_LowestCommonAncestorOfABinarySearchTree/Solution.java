@@ -1,5 +1,5 @@
 /**
- * Time : O() ; Space: O()
+ * Time : O(lgN) ; Space: O(1)
  * @tag : Tree
  * @by  : Steven Cooks
  * @date: Aug 19, 2015
@@ -39,7 +39,6 @@ public class Solution {
         while ((root.val - p.val) * (root.val - q.val) > 0) {
             // p and q are under the same sub-tree
             root = root.val > p.val ? root.left : root.right;
-            
         }
         return root;
     }

@@ -1,5 +1,5 @@
 /**
- * Time : O() ; Space: O()
+ * Time : O(N) ; Space: O(1)
  * @tag : Tree
  * @by  : Steven Cooks
  * @date: Aug 19, 2015
@@ -34,9 +34,11 @@ import com.leetcode.TreeNode;
 public class Solution {
 
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // base case
         if (root == null || root == p || root == q) {
             return root;
         }
+        // recursive case: divide and conquer
         TreeNode left = lowestCommonAncestor(root.left, p, q);
         TreeNode right = lowestCommonAncestor(root.right, p, q);
         if (left != null && right != null) {

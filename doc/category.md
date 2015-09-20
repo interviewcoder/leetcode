@@ -8,6 +8,7 @@
 | [Monotonic Stack](https://github.com/interviewcoder/leetcode/blob/master/doc/category_monotonicstack.md) | |
 | [Tree/Trie](https://github.com/interviewcoder/leetcode/blob/master/doc/category_tree.md) | |
 
+
 | Type         | # | Description |
 | ---------------------: |:---:| ------------|
 |-------------------------------- | ----------------- | ------------------------------------------------- |

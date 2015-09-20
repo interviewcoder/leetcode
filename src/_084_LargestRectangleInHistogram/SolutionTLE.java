@@ -2,8 +2,6 @@
  * Time : O(N); Space: O()
  * @Tag : Array; Stack
  * @Date: Jun 9, 2015
- * -------------------------------------------------
- * 
  */
 package _084_LargestRectangleInHistogram;
 

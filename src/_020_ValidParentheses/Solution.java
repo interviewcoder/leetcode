@@ -5,6 +5,7 @@
  * @date: 04.27.2015
  *******************************************************************************
  * Description: 
+ * 
  * Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
  * determine if the input string is valid. 
  * The brackets must close in the correct order, "()" and "()[]{}" are all 
@@ -46,7 +47,7 @@ public class Solution {
                 lefts.push(parentheseMap.get(ch));
             } else {
                 // for '}', ']', ')',
-                // return false if nothing left or not matching
+                // return false if nothing left in stack or not matching
                 if (lefts.isEmpty() || lefts.pop() != ch) {
                     return false;
                 }

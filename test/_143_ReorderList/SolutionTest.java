@@ -30,30 +30,40 @@ public class SolutionTest {
 
     @Test
     public void Test1() {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = { 1, 2, 3, 4 };
         ListNode head = ListNode.constructLinkedList(nums);
         solution.reorderList(head);
-        int[] exps = {1, 4, 2, 3};
+        int[] exps = { 1, 4, 2, 3 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(head, expected));
     }
 
     @Test
     public void Test2() {
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8 };
         ListNode head = ListNode.constructLinkedList(nums);
         solution.reorderList(head);
-        int[] exps = {1, 8, 2, 7, 3, 6, 4, 5};
+        int[] exps = { 1, 8, 2, 7, 3, 6, 4, 5 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(head, expected));
     }
 
     @Test
     public void Test3() {
-        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         ListNode head = ListNode.constructLinkedList(nums);
         solution.reorderList(head);
-        int[] exps = {1, 9, 2, 8, 3, 7, 4, 6, 5};
+        int[] exps = { 1, 9, 2, 8, 3, 7, 4, 6, 5 };
+        ListNode expected = ListNode.constructLinkedList(exps);
+        assertTrue(ListNode.isSameList(head, expected));
+    }
+
+    @Test
+    public void Test4() {
+        int[] nums = { 1 };
+        ListNode head = ListNode.constructLinkedList(nums);
+        solution.reorderList(head);
+        int[] exps = { 1 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(head, expected));
     }

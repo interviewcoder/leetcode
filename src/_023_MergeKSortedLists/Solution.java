@@ -16,48 +16,41 @@ package _023_MergeKSortedLists;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 import com.leetcode.ListNode;
 
 /** see test {@link _023_MergeKSortedLists.SolutionTest } */
 public class Solution {
 
-    public ListNode mergeKLists(ListNode[] lists) {
+    public ListNode mergeKLists(ListNode[] lists) {  
         ListNode dummy = new ListNode(0);
-        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>(
-                new Comparator<ListNode>() {
-
-                    @Override
-                    public int compare(ListNode o1, ListNode o2) {
-                        if (o1 == null && o2 == null) {
-                            return 0;
-                        } else if (o1 == null) {
-                            return -1;
-                        } else if (o2 == null) {
-                            return 1;
-                        } else {
-                            return o1.val - o2.val;
-                        }
-                    }
-
-                });
-
+        ListNode node = dummy;
+        
+        Queue<ListNode> queue = new PriorityQueue<>(new Comparator<ListNode>() {
+            @Override
+            public int compare(ListNode o1, ListNode o2) {
+                return o1.val - o2.val;
+            }
+        });
+        
+        // push all heads into queue
         for (ListNode head : lists) {
-            ListNode node = head;
-            while (node != null) {
-                queue.offer(node);
-                node = node.next;
+            if (head != null) {
+                queue.add(head);        
             }
         }
-
-        ListNode cur = dummy;
+        
+        // choose next node from k candidates
         while (!queue.isEmpty()) {
-            ListNode node = queue.poll();
-            node.next = null;
-            cur.next = node;
-            cur = cur.next;
+            ListNode cur = queue.poll();
+            node.next = cur;
+            if (cur.next != null) {
+                queue.add(cur.next);
+            }
+            node = node.next;
         }
-        return dummy.next;
+        return dummy.next; 
     }
 
 }

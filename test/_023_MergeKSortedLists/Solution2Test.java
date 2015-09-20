@@ -12,17 +12,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.ListNode;
 
-public class SolutionTest {
+public class Solution2Test {
     
-    /** Test method for {@link _023_MergeKSortedLists.Solution } */
-    Solution solution;
+    /** Test method for {@link _023_MergeKSortedLists.Solution2 } */
+    Solution2 solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Solution2();
     }
 
     @After

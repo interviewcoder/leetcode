@@ -26,8 +26,25 @@ package _075_SortColors;
 
 /** see test {@link _075_SortColors.SolutionTest } */
 public class Solution {
-
+    
+    // concise version
     public void sortColors(int[] nums) {
+        int r = -1;
+        int w = -1;
+        for (int b = 0; b < nums.length; b++) {
+            int num = nums[b];
+            if (num == 1) {
+                nums[b] = nums[++w];
+                nums[w] = 1;
+            } else if (num == 0) {
+                nums[b] = nums[++w];
+                nums[w] = nums[++r];
+                nums[r] = 0;
+            }
+        }
+    }
+
+    public void sortColorsVerbose(int[] nums) {
         int red = -1;
         int white = -1;
         int blue = -1;

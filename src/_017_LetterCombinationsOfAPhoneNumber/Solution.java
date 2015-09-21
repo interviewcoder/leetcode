@@ -32,35 +32,26 @@ public class Solution {
     public static final String[] mapping = { "", "", "abc", "def", "ghi",
             "jkl", "mno", "pqrs", "tuv", "wxyz" };
 
+    // iterative, BFS version
     public List<String> letterCombinations(String digits) {
-        List<String> result = new ArrayList<String>();
+        List<String> cur = new ArrayList<String>();
         if (digits.length() == 0) {
-            // return [] rather than [""] for empty string: ""
-            return result;
+            return cur;
         }
-        int index = 0;
-        StringBuilder prefix = new StringBuilder();
-        letterCombinations(digits, index, prefix, result);
-        return result;
-    }
-
-    // depth-first search
-    public void letterCombinations(String digits, int index, StringBuilder prefix,
-            List<String> result) {
-        // reaching end
-        if (index == digits.length()) {
-            // found one combination and return from stack
-            result.add(prefix.toString());
-            return;
+        cur.add("");
+        for (int i = 0; i < digits.length(); i++) {
+            String strs = mapping[digits.charAt(i) - '0'];
+            List<String> next = new ArrayList<>();
+            for (int j = 0; j < strs.length(); j++) {
+                char ch = strs.charAt(j);
+                // try to insert 'ch' to each current combination
+                for (String comb : cur) {
+                    next.add(comb + ch);
+                }
+            }
+            cur = next;
         }
-        String letters = mapping[digits.charAt(index) - '0'];
-        for (int i = 0; i < letters.length(); i++) {
-            char ch = letters.charAt(i);
-            // go to deeper depth
-            StringBuilder copy = new StringBuilder(prefix);
-            copy.append(ch);
-            letterCombinations(digits, index + 1, copy, result);
-        }
+        return cur;
     }
 
 }

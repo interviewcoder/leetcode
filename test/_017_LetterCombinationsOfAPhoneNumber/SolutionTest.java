@@ -51,7 +51,19 @@ public class SolutionTest {
     public void Test2() {
         String digits = "9";
         List<String> actuals = solution.letterCombinations(digits);
-        List<String> expecteds = new ArrayList<>(Arrays.asList("w", "x", "y", "z"));
+        List<String> expecteds = new ArrayList<>(Arrays.asList("w", "x", "y",
+                "z"));
+        assertEqualsIgnoreOrder(expecteds, actuals);
+   }
+
+    @Test
+    public void Test3() {
+        String digits = "234";
+        List<String> actuals = solution.letterCombinations(digits);
+        List<String> expecteds = Arrays.asList("adg", "adh", "adi", "aeg",
+                "aeh", "aei", "afg", "afh", "afi", "bdg", "bdh", "bdi", "beg",
+                "beh", "bei", "bfg", "bfh", "bfi", "cdg", "cdh", "cdi", "ceg",
+                "ceh", "cei", "cfg", "cfh", "cfi");
         assertEqualsIgnoreOrder(expecteds, actuals);
     }
 

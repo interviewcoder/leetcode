@@ -12,17 +12,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionBacktrackingTest {
 
-    /** Test method for {@link _017_LetterCombinationsOfAPhoneNumber.Practice } */
-    Practice solution;
+    /** Test method for {@link _017_LetterCombinationsOfAPhoneNumber.SolutionBacktracking } */
+    SolutionBacktracking solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionBacktracking();
     }
 
     @After
@@ -51,9 +51,10 @@ public class PracticeTest {
     public void Test2() {
         String digits = "9";
         List<String> actuals = solution.letterCombinations(digits);
-        List<String> expecteds = new ArrayList<>(Arrays.asList("w", "x", "y", "z"));
+        List<String> expecteds = new ArrayList<>(Arrays.asList("w", "x", "y",
+                "z"));
         assertEqualsIgnoreOrder(expecteds, actuals);
-    }
+   }
 
     @Test
     public void Test3() {

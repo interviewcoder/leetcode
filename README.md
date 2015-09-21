@@ -224,7 +224,7 @@ P.S.:
 | 207 | [Course Schedule](https://github.com/interviewcoder/leetcode/blob/master/src/_207_CourseSchedule/Solution.java) | Medium | `Depth-first Search` `Breadth-first Search` `Graph` `Topological Sort`  |  | 
 | 208 | [Implement Trie (Prefix Tree)](https://github.com/interviewcoder/leetcode/blob/master/src/_208_ImplementTriePrefixTree/Solution.java) | Medium | `Data Structure` `Trie`  |  | 
 | 209 | [Minimum Size Subarray Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_209_MinimumSizeSubarraySum/Solution.java) | Medium | `Array` `Two Pointers` `Binary Search`  |  | 
-| 210 | Course Schedule II | Medium | `Depth-first Search` `Breadth-first Search` `Graph` `Topological Sort`  |  | 
+| 210 | [Course Schedule II](https://github.com/interviewcoder/leetcode/blob/master/src/_210_CourseScheduleII/Solution.java)  | Medium | `Depth-first Search` `Breadth-first Search` `Graph` `Topological Sort`  |  | 
 | 211 | [Add and Search Word - Data structure design](https://github.com/interviewcoder/leetcode/blob/master/src/_211_AddAndSearchWordDataStructureDesign/Solution.java)  | Medium | `Backtracking` `Data Structure` `Trie`  |  | 
 | 212 | [Word Search II](https://github.com/interviewcoder/leetcode/blob/master/src/_212_WordSearchII/Solution.java) | Hard | `Backtracking` `Trie`  |  | 
 | 213 | [House Robber II](https://github.com/interviewcoder/leetcode/blob/master/src/_213_HouseRobberII/Solution.java) | Medium | `Dynamic Programming`  |  | 
@@ -257,13 +257,19 @@ P.S.:
 | 240 | [Search a 2D Matrix II](https://github.com/interviewcoder/leetcode/blob/master/src/_240_SearchA2DMatrixII/Solution.java)  | Medium | `Divide and Conquer` `Binary Search`  | | 
 | 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
 | 242 | [Valid Anagram](https://github.com/interviewcoder/leetcode/blob/master/src/_242_ValidAnagram/Solution.java) | Easy | `Hash Table` `Sort`  |  | 
+| 251 | [Flatten2DVector](https://github.com/interviewcoder/leetcode/tree/master/src/_251_Flatten2DVector) | Medium | `Design` | |
 | 257 | Binary Tree Paths | Easy | `Tree`  |  | 
 | 258 | Add Digits | Easy | `Math`  |  | 
 | 260 | Single Number III | Medium | `Bit Manipulation`  |  | 
 | 263 | Ugly Number | Easy | `Math`  |  | 
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
-| 268 | Missing Number | Medium | `Array` `Math` `Bit Manipulation`  |  | 
+| 268 | [Missing Number](https://github.com/interviewcoder/leetcode/blob/master/src/_268_MissingNumber/Solution.java)  | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 | 273 | Integer to English Words | Medium | `Math` `String`  |  | 
 | 274 | H-Index | Medium | `Hash Table` `Sort`  |  | 
 | 275 | H-Index II | Medium | `Binary Search`  |  | 
+| 278 | First Bad Version | Easy | `Binary Search`  |  | 
+| 279 | Perfect Squares | Medium | `Dynamic Programming` `Breadth-first Search` `Math`  |  | 
+| 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
+| 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
+| 284 | Peeking Iterator | Medium | `Design`  |  | 
 

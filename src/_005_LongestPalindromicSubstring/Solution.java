@@ -1,5 +1,5 @@
 /**
- * Time : O(2N); Space : O(1)
+ * Time : O(N^2); Space : O(1)
  * @tag : String
  * @by  : Steven Cooks
  * @date: Jul 10, 2015

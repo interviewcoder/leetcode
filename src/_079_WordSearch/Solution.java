@@ -33,9 +33,6 @@ public class Solution {
         if (board.length == 0 || board[0].length == 0) {
             return false;
         }
-        if (word.length() == 0) {
-            return false;
-        }
         int rows = board.length;
         int cols = board[0].length;
         boolean[][] visited = new boolean[rows][cols];
@@ -70,8 +67,9 @@ public class Solution {
                 && (board[row][col] == word.charAt(wordIndex))) {
             // go on searching in adjacent positions
             visited[row][col] = true;
-            boolean found = exist(wordIndex + 1, row - 1, col, rows, cols,
-                    board, word, visited)
+            boolean found = 
+                       exist(wordIndex + 1, row - 1, col, rows, cols, board, 
+                            word, visited)
                     || exist(wordIndex + 1, row + 1, col, rows, cols, board,
                             word, visited)
                     || exist(wordIndex + 1, row, col - 1, rows, cols, board,

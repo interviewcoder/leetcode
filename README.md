@@ -54,7 +54,7 @@ P.S.:
 | 014 | [Longest Common Prefix](https://github.com/interviewcoder/leetcode/blob/master/src/_014_LongestCommonPrefix/Solution.java) | Easy | `String`  |  | 
 | 015 | [3Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_015_3Sum/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
 | 016 | [3Sum Closest](https://github.com/interviewcoder/leetcode/blob/master/src/_016_3SumClosest/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
-| 017 | [Letter Combinations of a Phone Number](https://github.com/interviewcoder/leetcode/blob/master/src/_017_LetterCombinationsOfAPhoneNumber/Solution.java) | Medium | `Backtracking` `String`  | `BT` template | 
+| 017 | [Letter Combinations of a Phone Number](https://github.com/interviewcoder/leetcode/blob/master/src/_017_LetterCombinationsOfAPhoneNumber/Solution.java) | Medium | `Backtracking` `String`  | BFS: iterative V.S. DFS: backtracking | 
 | 018 | [4Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_018_4Sum/Solution.java) | Medium | `Array` `Hash Table` `Two Pointers`  |  | 
 | 019 | [Remove Nth Node From End of List](https://github.com/interviewcoder/leetcode/blob/master/src/_019_RemoveNthNodeFromEndOfList/Solution.java) | Easy | `Linked List` `Two Pointers`  | fast-slow two pointers on Linked List | 
 | 020 | [Valid Parentheses](https://github.com/interviewcoder/leetcode/blob/master/src/_020_ValidParentheses/Solution.java) | Easy | `Stack` `String`  | stack basic, corner case | 

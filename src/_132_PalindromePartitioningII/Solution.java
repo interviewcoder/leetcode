@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(n^2); Space: O(n^2)
  * @tag : Dynamic Programming
  * @by  : Steven Cooks
  * @date: Jun 17, 2015
@@ -52,6 +52,6 @@ public class Solution {
             }
         }
         return dp[0];
-
     }
+
 }

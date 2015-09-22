@@ -12,6 +12,8 @@
 | prune + select + skip + pure | 040 | [Combination SumII: template + select qualified + skip duplicates + prune siblings](https://github.com/interviewcoder/leetcode/blob/master/src/_040_CombinationSumII/Solution.java) |
 | permuatate when in need | s11 | [Replace Permutation](https://github.com/interviewcoder/leetcode/tree/master/src/s11_ReplacePermutation) |
 |-------------------------------- | ---- | ------------------------------------------------- |
+| **`DFS`** | | |
+| skip visited | 133 | [Clone Graph](https://github.com/interviewcoder/leetcode/tree/master/src/_133_CloneGraph) |
 | **`Backtracking(DFS)::matrix`** | | two for-loop for each possible starting position |
 | boolean | 079 | [Word Search](https://github.com/interviewcoder/leetcode/tree/master/src/_079_WordSearch) |
 | O(1) space | 200 | [Number of Islands](https://github.com/interviewcoder/leetcode/tree/master/src/_200_NumberOfIslands) |

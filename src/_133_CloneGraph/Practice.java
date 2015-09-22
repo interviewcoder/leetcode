@@ -21,7 +21,7 @@ package _133_CloneGraph;
 
 import com.leetcode.UndirectedGraphNode;
 
-/** {@link _133_CloneGraph.SolutionTest} */
+/** {@link _133_CloneGraph.PracticeTest } */
 public class Practice {
 
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode n1) {

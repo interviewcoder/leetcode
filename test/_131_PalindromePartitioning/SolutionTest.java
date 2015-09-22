@@ -69,7 +69,7 @@ public class SolutionTest {
                 + "muvxnugdzjfxeihogzsdjtvdmkudckjoggltcuybddbjoizu";
         List<List<String>> actual = solution.partition(s);
         List<List<String>> expected = new ArrayList<>();
-        String file = "src/_131_PalindromePartitioning/Test5Expected";
+        String file = "test/_131_PalindromePartitioning/Test5Expected";
         try {
             BufferedReader rd = new BufferedReader(new FileReader(file));
             while (true) {

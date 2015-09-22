@@ -1,5 +1,4 @@
 /**
- * @tag : Backtracking
  *************************************************************************
  *  Given a string s, partition s such that every substring of the 
  *  partition is a palindrome. 
@@ -13,6 +12,7 @@
  *      ]
  *      
  *************************************************************************
+ * @tag : Backtracking
  * {@link https://leetcode.com/problems/palindrome-partitioning/ }
  */
 package _131_PalindromePartitioning;
@@ -26,6 +26,5 @@ public class Practice {
         // TODO Auto-generated method stub
         return null;
     }
-    
 
 }

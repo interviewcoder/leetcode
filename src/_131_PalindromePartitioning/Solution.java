@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(2^n); Space: O(2^n)
  * @tag : Backtracking
  * @by  : Steven Cooks
  * @date: Jun 16, 2015
@@ -23,9 +23,10 @@
 package _131_PalindromePartitioning;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-/** {@link com.leetcode.Classify#findAllPaths() } */
 /** see test {@link _131_PalindromePartitioning.SolutionTest } */
 public class Solution {
     
@@ -40,16 +41,13 @@ public class Solution {
     // backtracking
     private void partition(String s, int index, List<String> path,
             List<List<String>> result) {
-        int len = s.length();
         // base case
-        if (index == len) {
-            // one valid partition is found
+        if (index == s.length()) {
             result.add(path);
             return;
         }
-        
         // recursive case
-        for (int i = index; i < len; i++) {
+        for (int i = index; i < s.length(); i++) {
             String sub = s.substring(index, i + 1);
             if (isPalindrome(sub)) {
                 List<String> newPath = new ArrayList<String>(path);
@@ -58,16 +56,23 @@ public class Solution {
                 partition(s, i + 1, newPath, result);
             }
         }
-        
     }
+    
+    private Map<String, Boolean> memo = new HashMap<>();
 
     private boolean isPalindrome(String sub) {
+        if (memo.containsKey(sub)) {
+            return memo.get(sub);
+        }
+        boolean ispalin = true;
         for (int i = 0, j = sub.length() - 1; i < j; i++, j--) {
             if (sub.charAt(i) != sub.charAt(j)) {
-                return false;
+                ispalin = false;
+                break;
             }
         }
-        return true;
+        memo.put(sub, ispalin);
+        return ispalin;
     }
 
 }

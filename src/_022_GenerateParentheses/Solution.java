@@ -40,7 +40,6 @@ public class Solution {
             result.add(prefix);
             return;
         }
-
         // recursive case
         if (leftsUsed == rightsUsed) {
             // next must be '("
@@ -59,4 +58,5 @@ public class Solution {
             }
         }
     }
+
 }

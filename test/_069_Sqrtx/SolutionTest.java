@@ -65,4 +65,5 @@ public class SolutionTest {
         int expected = (int) Math.sqrt(x);
         assertEquals(expected, actual);
     }
+
 }

@@ -37,24 +37,18 @@ package _011_ContainerWithMostWater;
  *    |  .....  ....  |
  *   left            right
  */
+/** see test {@link _011_ContainerWithMostWater.SolutionTest } */
 public class Solution {
 
     public int maxArea(int[] height) {
-        int len = height.length;
-        if (len == 0) {
-            return 0;
-        }
         int left = 0;
-        int right = len - 1;
+        int right = height.length - 1;
         int result = 0;
         while (left < right) {
+            result = Math.max(Math.min(height[left], height[right]) * (right - left), result);
             if (height[left] < height[right]) {
-                // lower bar decides the container's capacity
-                result = Math.max(height[left] * (right - left), result);
-                // only left side bar may have larger container
                 left++;
             } else {
-                result = Math.max(height[right] * (right - left), result);
                 right--;
             }
         }

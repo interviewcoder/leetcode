@@ -9,7 +9,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 
 public class SolutionTest {
-    
+
     /** Test method for {@link _011_ContainerWithMostWater.Solution } */
     Solution solution;
 
@@ -36,7 +36,7 @@ public class SolutionTest {
 
     @Test
     public void Test2() {
-        int[] height = {5};
+        int[] height = { 5 };
         int actual = solution.maxArea(height);
         int expected = 0;
         assertEquals(expected, actual);
@@ -44,7 +44,7 @@ public class SolutionTest {
 
     @Test
     public void Test3() {
-        int[] height = {3, 2};
+        int[] height = { 3, 2 };
         int actual = solution.maxArea(height);
         int expected = 2;
         assertEquals(expected, actual);
@@ -52,7 +52,7 @@ public class SolutionTest {
 
     @Test
     public void Test4() {
-        int[] height = {1, 2, 3, 4, 5};
+        int[] height = { 1, 2, 3, 4, 5 };
         int actual = solution.maxArea(height);
         int expected = 6;
         assertEquals(expected, actual);
@@ -60,7 +60,7 @@ public class SolutionTest {
 
     @Test
     public void Test5() {
-        int[] height = {2, 4, 3, 5, 1};
+        int[] height = { 2, 4, 3, 5, 1 };
         int actual = solution.maxArea(height);
         int expected = 8;
         assertEquals(expected, actual);
@@ -68,7 +68,7 @@ public class SolutionTest {
 
     @Test
     public void Test6() {
-        int[] height = {8, 4, 3, 2, 1};
+        int[] height = { 8, 4, 3, 2, 1 };
         int actual = solution.maxArea(height);
         int expected = 6;
         assertEquals(expected, actual);

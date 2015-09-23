@@ -38,21 +38,21 @@ P.S.:
 
 | # | Problem | Difficulty | Tags | Note |
 | :---: | ---- | ---- | ---- | ----- |
-| 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  |  | 
+| 001 | [Two Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_001_TwoSum/Solution.java) | Medium | `Array` `Hash Table`  | O(N^2) -> O(N) + O(N) hashtable | 
 | 002 | [Add Two Numbers](https://github.com/interviewcoder/leetcode/blob/master/src/_002_AddTwoNumbers/Solution.java) | Medium | `Linked List` `Math`  |  | 
-| 003 | [Longest Substring Without Repeating Characters](https://github.com/interviewcoder/leetcode/blob/master/src/_003_LongestSubstringWithoutRepeatingCharacters/Solution.java)  | Medium | `Hash Table` `Two Pointers` `String`  | [**substring**] hashing + two pointers -> O(N) | 
+| 003 | [Longest Substring Without Repeating Characters](https://github.com/interviewcoder/leetcode/blob/master/src/_003_LongestSubstringWithoutRepeatingCharacters/Solution.java)  | Medium | `Hash Table` `Two Pointers` `String`  | two pointers to keep window -> O(N) | 
 | 004 | [Median of Two Sorted Arrays](https://github.com/interviewcoder/leetcode/blob/master/src/_004_MedianOfTwoSortedArrays/Solution.java)  | Hard | `Divide and Conquer` `Array` `Binary Search`  |  | 
-| 005 | [Longest Palindromic Substring](https://github.com/interviewcoder/leetcode/blob/master/src/_005_LongestPalindromicSubstring/Solution.java) | Medium | `String`  | span palindrome from center towards left and right | 
+| 005 | [Longest Palindromic Substring](https://github.com/interviewcoder/leetcode/blob/master/src/_005_LongestPalindromicSubstring/Solution.java) | Medium | `String`  | expanding two pointers |
 | 006 | [ZigZag Conversion](https://github.com/interviewcoder/leetcode/blob/master/src/_006_ZigZagConversion/Solution.java)  | Easy | `String`  |  | 
 | 007 | [Reverse Integer](https://github.com/interviewcoder/leetcode/blob/master/src/_007_ReverseInteger/Solution.java) | Easy | `Math`  | How to monitor Stack Overflow | 
 | 008 | String to Integer (atoi) | Easy | `Math` `String`  |  | 
 | 009 | [Palindrome Number](https://github.com/interviewcoder/leetcode/blob/master/src/_009_PalindromeNumber/Solution.java) | Easy | `Math`  | 1) count digits; 2) get digit from number's front/back; 3) to avoid StackOverflow, only reverse half part of number  | 
 | 010 | [Regular Expression Matching](https://github.com/interviewcoder/leetcode/blob/master/src/_010_RegularExpressionMatching/Solution.java) | Hard | `Dynamic Programming` `Backtracking` `String`  | finite state machine! | 
-| 011 | [Container With Most Water](https://github.com/interviewcoder/leetcode/blob/master/src/_011_ContainerWithMostWater/Solution.java)  | Medium | `Array` `Two Pointers`  | [**substring**] head-tail pointers | 
+| 011 | [Container With Most Water](https://github.com/interviewcoder/leetcode/blob/master/src/_011_ContainerWithMostWater/Solution.java)  | Medium | `Array` `Two Pointers`  | narrowing two pointers | 
 | 012 | [Integer to Roman](https://github.com/interviewcoder/leetcode/blob/master/src/_012_IntegerToRoman/Solution.java) | Medium | `Math` `String`  |  | 
 | 013 | [Roman to Integer](https://github.com/interviewcoder/leetcode/blob/master/src/_013_RomanToInteger/Solution.java) | Easy | `Math` `String`  |  | 
 | 014 | [Longest Common Prefix](https://github.com/interviewcoder/leetcode/blob/master/src/_014_LongestCommonPrefix/Solution.java) | Easy | `String`  |  | 
-| 015 | [3Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_015_3Sum/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
+| 015 | [3Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_015_3Sum/Solution.java) | Medium | `Array` `Two Pointers`  |  sorting then 2sum | 
 | 016 | [3Sum Closest](https://github.com/interviewcoder/leetcode/blob/master/src/_016_3SumClosest/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
 | 017 | [Letter Combinations of a Phone Number](https://github.com/interviewcoder/leetcode/blob/master/src/_017_LetterCombinationsOfAPhoneNumber/Solution.java) | Medium | `Backtracking` `String`  | BFS: iterative V.S. DFS: backtracking | 
 | 018 | [4Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_018_4Sum/Solution.java) | Medium | `Array` `Hash Table` `Two Pointers`  |  | 
@@ -170,7 +170,7 @@ P.S.:
 | 130 | [Surrounded Regions](https://github.com/interviewcoder/leetcode/blob/master/src/_130_SurroundedRegions/Solution.java) | Medium | `Breadth-first Search`  |  | 
 | 131 | [Palindrome Partitioning](https://github.com/interviewcoder/leetcode/blob/master/src/_131_PalindromePartitioning/Solution.java) | Medium | `Backtracking`  |  | 
 | 132 | [Palindrome Partitioning II](https://github.com/interviewcoder/leetcode/blob/master/src/_132_PalindromePartitioningII/Solution.java) | Hard | `Dynamic Programming`  |  | 
-| 133 | [Clone Graph](https://github.com/interviewcoder/leetcode/blob/master/src/_133_CloneGraph/Solution.java) | Medium | `Depth-first Search` `Breadth-first Search` `Graph`  |  | 
+| 133 | [Clone Graph](https://github.com/interviewcoder/leetcode/blob/master/src/_133_CloneGraph/Solution.java) | Medium | `Depth-first Search` `Breadth-first Search` `Graph`  | `DFS` V.S. `BFS` | 
 | 134 | Gas Station | Medium | `Greedy`  |  | 
 | 135 | [Candy](https://github.com/interviewcoder/leetcode/blob/master/src/_135_Candy/Solution.java) | Hard | `Greedy`  |  | 
 | 136 | [Single Number](https://github.com/interviewcoder/leetcode/blob/master/src/_136_SingleNumber/Solution.java) | Medium | `Hash Table` `Bit Manipulation`  |  | 

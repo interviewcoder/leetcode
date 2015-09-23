@@ -5,23 +5,15 @@
  * @date: Jul 10, 2015
  *************************************************************************
  * Description: 
- *  
- * Implement the next permutation, which rearranges numbers into the 
- * numerically next greater permutation of numbers. 
+ * The count-and-say sequence is the sequence of integers beginning as 
+ * follows: 1, 11, 21, 1211, 111221, ... 
  * 
- * If such arrangement is not possible, it must be rearranged as the 
- * lowest possible order ie, sorted in an ascending order. 
+ * 1 is read off as "one 1" or 11.
+ * 11 is read off as "two 1s" or 21. 
+ * 21 is read off as "one 2, then one 1" or 1211. 
  * 
- * The replacement must be in-place, do not allocate extra memory. 
- * 
- * Examples: 
- *  1,2,3 → 1,3,2 
- *  3,2,1 → 1,2,3 
- *  1,1,5 → 1,5,1 
- *  20, 50, 113 → 20, 113, 50 
- *  
- * Inputs are in the left-hand column and its corresponding 
- * outputs are in the right-hand column.
+ * Given an integer n, generate the nth sequence. 
+ * Note: The sequence of integers will be represented as a string.
  *
  *************************************************************************
  * {@link https://leetcode.com/problems/count-and-say/ }

@@ -1,6 +1,6 @@
 #### Category : : Dynamic Programming
 | Type         | # | Description | Note |
-| ---------------------: |:---:| :-----| --- |
+| ---------------------: |:---:| :-----:| :--- |
 | 1 sequence : boolean(*) | 139 | [Word Break](https://github.com/interviewcoder/leetcode/tree/master/src/_139_WordBreak) |  |
 | 1 sequence : `max`/min(*) | 198 | House Robber |  |
 | 1 sequence : `max`/min(*) | 213 | [House Robber II](https://github.com/interviewcoder/leetcode/tree/master/src/_213_HouseRobberII) |  | 

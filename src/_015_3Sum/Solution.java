@@ -21,52 +21,46 @@
  */
 package _015_3Sum;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Arrays;
 
 /** see test {@link _015_3Sum.SolutionTest } */
 public class Solution {
 
     public List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
 
-        for (int i = 0; i < nums.length; i++) {
+        int n = nums.length;
+        for (int i = 0; i < n; i++) {
+            // skip duplicates
+            if (i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
             // number will serve as the 1st number in triplet candidate
-            int number = nums[i];
-            // skip duplicated numbers who serve as 1st number in triplet.
-            // so that we don't need set or map to avoid duplicates.
-            if (i == 0 || number != nums[i - 1]) {
-                int leftIndex = i + 1;
-                int rightIndex = nums.length - 1;
-                int twoSumTarget = 0 - number;
-                // try to find two numbers that sum up to twoSumTarget
-                while (leftIndex < rightIndex) {
-                    int twoSum = nums[leftIndex] + nums[rightIndex];
-                    if (twoSum == twoSumTarget) {
-                        // one valid triplet found!!!
-                        result.add(Arrays.asList(number, nums[leftIndex],
-                                nums[rightIndex]));
+            int num = nums[i];
+            int left = i + 1;
+            int right = n - 1;
+            int target = 0 - num;
+            // try to find two numbers that sum up to target
+            while (left < right) {
+                int twoSum = nums[left] + nums[right];
+                if (twoSum < target) {
+                    left++;
+                } else if (twoSum > target) {
+                    right--;
+                } else {
+                    // found one combination
+                    result.add(new ArrayList<>(Arrays.asList(num, nums[left], nums[right])));
+                    while (left + 1 < right && nums[left] == nums[left + 1]) {
+                        left++;
                     }
-
-                    if (twoSum <= twoSumTarget) {
-                        // skip duplicates with nums[leftIndex]
-                        while (leftIndex < rightIndex
-                                && nums[leftIndex] == nums[leftIndex + 1]) {
-                            leftIndex++;
-                        }
-                        // move to next non-duplicate number
-                        leftIndex++;
+                    left++;
+                    while (right - 1 > left && nums[right] == nums[right - 1]) {
+                        right--;
                     }
-                    if (twoSum >= twoSumTarget) {
-                        while (leftIndex < rightIndex
-                                && nums[rightIndex] == nums[rightIndex - 1]) {
-                            rightIndex--;
-                        }
-                        rightIndex--;
-                    }
-
+                    right--;
                 }
             }
         }

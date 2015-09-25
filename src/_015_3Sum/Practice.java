@@ -21,8 +21,6 @@ package _015_3Sum;
 import java.util.List;
 
 /** see test {@link _015_3Sum.PracticeTest } */
-
-/** see test {@link _015_3Sum.PracticeTest } */
 public class Practice {
 
     public List<List<Integer>> threeSum(int[] nums) {

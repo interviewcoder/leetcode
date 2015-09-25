@@ -330,4 +330,5 @@ public class SolutionTest {
 
         assertEqualsIgnoreOrder(expected, actual);
     }
+
 }

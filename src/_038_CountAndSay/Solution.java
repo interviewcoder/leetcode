@@ -22,8 +22,28 @@ package _038_CountAndSay;
 
 /** see test {@link _038_CountAndSay.SolutionTest } */
 public class Solution {
-
+    
     public String countAndSay(int n) {
+        StringBuilder sb = new StringBuilder("1");
+        for (int i = 1; i < n; i++) {
+            StringBuilder next = new StringBuilder();
+            int index = 0;
+            int count = 0;
+            while (index <= sb.length()) {
+                if (index == 0 || (index < sb.length() && sb.charAt(index) == sb.charAt(index - 1))) {
+                    count++;
+                } else {
+                    next.append(count).append(sb.charAt(index - 1));
+                    count = 1;
+                }
+                index++;
+            }
+            sb = next;
+        }
+        return sb.toString();
+    }
+
+    public String countAndSay2(int n) {
         if (n < 1) {
             return "";
         }

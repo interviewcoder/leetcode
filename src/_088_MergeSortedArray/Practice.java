@@ -21,7 +21,6 @@ public class Practice {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         // TODO Auto-generated method stub
-        
     }
 
 }

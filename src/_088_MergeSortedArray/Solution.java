@@ -26,11 +26,11 @@ public class Solution {
         int mergeIndex = m + n - 1;
         int index1 = m - 1;
         int index2 = n - 1;
+        // when all elements in nums2 are merged, job's done
         while (index2 >= 0) {
-            // when all elements in nums2 are merged, job's done
+            // choose from B if no element is left in nums1
+            // or nums2 has larger element
             if (index1 < 0 || nums2[index2] > nums1[index1]) {
-                // choose from B if no element is left in nums1
-                // or nums2 has larger element
                 nums1[mergeIndex--] = nums2[index2--];
             } else {
                 nums1[mergeIndex--] = nums1[index1--];

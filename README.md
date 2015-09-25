@@ -235,7 +235,7 @@ P.S.:
 | 218 | The Skyline Problem | Hard | `Divide and Conquer` `Heap`  |  | 
 | 219 | [Contains Duplicate II](https://github.com/interviewcoder/leetcode/blob/master/src/_219_ContainsDuplicateII/Solution.java) | Easy | `Array` `Hash Table`  |  | 
 | 220 | [Contains Duplicate III](https://github.com/interviewcoder/leetcode/blob/master/src/_220_ContainsDuplicateIII/Solution.java) | Medium | `Binary Search Tree`  |  | 
-| 221 | Maximal Square | Medium | `Dynamic Programming`  |  | 
+| 221 | [Maximal Square](https://github.com/interviewcoder/leetcode/blob/master/src/_221_MaximalSquare/Solution.java)  | Medium | `Dynamic Programming`  |  | 
 | 222 | Count Complete Tree Nodes | Medium | `Tree` `Binary Search`  |  | 
 | 223 | [Rectangle Area](https://github.com/interviewcoder/leetcode/blob/master/src/_223_RectangleArea/Solution.java)  | Easy | `Math`  |  | 
 | 224 | [Basic Calculator](https://github.com/interviewcoder/leetcode/blob/master/src/_224_BasicCalculator/Solution.java) | Medium | `Stack` `Math`  |  | 
@@ -265,9 +265,9 @@ P.S.:
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
 | 268 | [Missing Number](https://github.com/interviewcoder/leetcode/blob/master/src/_268_MissingNumber/Solution.java)  | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 | 273 | Integer to English Words | Medium | `Math` `String`  |  | 
-| 274 | H-Index | Medium | `Hash Table` `Sort`  |  | 
+| 274 | [H-Index](https://github.com/interviewcoder/leetcode/blob/master/src/_274_HIndex/Solution.java)  | Medium | `Hash Table` `Sort`  |  | 
 | 275 | H-Index II | Medium | `Binary Search`  |  | 
-| 278 | First Bad Version | Easy | `Binary Search`  |  | 
+| 278 | [First Bad Version](https://github.com/interviewcoder/leetcode/blob/master/src/_278_FirstBadVersion/Solution.java)  | Easy | `Binary Search`  |  | 
 | 279 | Perfect Squares | Medium | `Dynamic Programming` `Breadth-first Search` `Math`  |  | 
 | 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 

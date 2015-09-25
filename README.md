@@ -193,6 +193,8 @@ P.S.:
 | 153 | [Find Minimum in Rotated Sorted Array](https://github.com/interviewcoder/leetcode/blob/master/src/_153_FindMinimumInRotatedSortedArray/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
 | 154 | [Find Minimum in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_154_FindMinimumInRotatedSortedArrayII/Solution.java)  | Hard | `Array` `Binary Search`  |  | 
 | 155 | [Min Stack](https://github.com/interviewcoder/leetcode/blob/master/src/_155_MinStack/Solution.java) | Easy | `Stack` `Data Structure`  |  | 
+| 157 | [Read N Characters Given Read4](https://github.com/interviewcoder/leetcode/tree/master/src/_157_ReadNCharactersGivenRead4) | Easy | `String` | |
+| 158 | [Read N Characters Given Read4 II](https://github.com/interviewcoder/leetcode/tree/master/src/_158_ReadNCharactersGivenRead4II) | Hard | `String` | |
 | 160 | [Intersection of Two Linked Lists](https://github.com/interviewcoder/leetcode/blob/master/src/_160_IntersectionOfTwoLinkedLists/Solution.java)  | Easy | `Linked List`  | two pointers on two lists; combine long and short lists into one  | 
 | 161 | [One Edit Distance](https://github.com/interviewcoder/leetcode/blob/master/src/_161_OneEditDistance/) | Medium | `String` |  |
 | 162 | [Find Peak Element](https://github.com/interviewcoder/leetcode/blob/master/src/_162_FindPeakElement/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
@@ -245,7 +247,7 @@ P.S.:
 | 228 | [Summary Ranges](https://github.com/interviewcoder/leetcode/blob/master/src/_228_SummaryRanges/Solution.java) | Easy | `Array`  |  | 
 | 229 | [Majority Element II](https://github.com/interviewcoder/leetcode/blob/master/src/_229_MajorityElementII/Solution.java) | Medium | `Array`  | `!`vote algorithm | 
 | 230 | [Kth Smallest Element in a BST](https://github.com/interviewcoder/leetcode/blob/master/src/_230_KthSmallestElementInABST/Solution.java) | Medium | `Tree` `Binary Search`  |  | 
-| 231 | Power of Two | Easy | `Math` `Bit Manipulation`  |  | 
+| 231 | [Power of Two](https://github.com/interviewcoder/leetcode/blob/master/src/_231_PowerOfTwo/Solution.java)  | Easy | `Math` `Bit Manipulation`  |  | 
 | 232 | [Implement Queue using Stacks](https://github.com/interviewcoder/leetcode/blob/master/src/_232_ImplementQueueUsingStacks/Solution.java)  | Easy | `Stack` `Data Structure`  | [README](https://github.com/interviewcoder/leetcode/blob/master/src/_232_ImplementQueueUsingStacks) | 
 | 233 | Number of Digit One | Medium | `Math`  |  | 
 | 234 | Palindrome Linked List | Easy | `Linked List` `Two Pointers`  |  | 
@@ -272,4 +274,4 @@ P.S.:
 | 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
 | 284 | Peeking Iterator | Medium | `Design`  |  | 
-
+| 286 | [Walls And Gates](https://github.com/interviewcoder/leetcode/tree/master/src/_286_WallsAndGates) | Medium | `BFS` |  |

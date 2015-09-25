@@ -1,5 +1,5 @@
 /**
- * Time : O(n^4); Space: O(n^3)
+ * Time : O(n^3); Space: O(n^3)
  * @tag : Array; Hash Table; Stack; Dynamic Programming
  * @by  : Steven Cooks
  * @date: Jun 9, 2015
@@ -11,8 +11,6 @@
  * 
  *************************************************************************
  * {@link https://leetcode.com/problems/maximal-rectangle/ }
- * P.S. : can be improved to O(N^3) using stack, see SolutionStack.java
- *      'board' dp problem, how to iterate
  */
 package _085_MaximalRectangle;
 

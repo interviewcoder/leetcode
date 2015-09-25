@@ -19,9 +19,10 @@
 | 2 sequences : max/`min`(*) | 072 | Edit Distance | DFS->Memo->Bottomup |
 | 2 sequences : count(*) | 115 | Distinct Subsequences | DFS->Memo->Bottomup |
 | Matrix : max/`min`(*) | 120 | Triangle | |
+| Matrix : max/`min`(*) | 174 | Dungeon Game | |
 | Matrix : max/`min`(*) | 064 | Minimum Path Sum | |
 | Matrix : `max`/min(*) | 085 | Maximal Rectangle | |
-| Matrix : max/`min`(*) | 174 | Dungeon Game | |
+| Matrix : `max`/min(*) | 221 | Maximal Square | |
 | Matrix : count(*) | 062 | Unique Paths | |
 | Matrix : count(*) | 063 | Unique Paths II | |
 |  ** : count(*) | 096 | Unique Binary Trees | |

@@ -266,6 +266,7 @@ P.S.:
 | 263 | Ugly Number | Easy | `Math`  |  | 
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
 | 268 | [Missing Number](https://github.com/interviewcoder/leetcode/blob/master/src/_268_MissingNumber/Solution.java)  | Medium | `Array` `Math` `Bit Manipulation`  |  | 
+| 269 | [Alien Dictionary](https://github.com/interviewcoder/leetcode/tree/master/src/_269_AlienDictionary) | Hard | `Graph` `Topological Sort` | BFS |
 | 273 | Integer to English Words | Medium | `Math` `String`  |  | 
 | 274 | [H-Index](https://github.com/interviewcoder/leetcode/blob/master/src/_274_HIndex/Solution.java)  | Medium | `Hash Table` `Sort`  |  | 
 | 275 | H-Index II | Medium | `Binary Search`  |  | 

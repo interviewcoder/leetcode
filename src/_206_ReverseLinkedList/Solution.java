@@ -23,17 +23,37 @@ public class Solution {
             return head;
         }
         ListNode reverseHead = head;
-        ListNode tail = head;
-        ListNode node = head.next;
-        while (node != null) {
-            // put current node as the new head of reversed list
-            tail.next = node.next;
-            node.next = reverseHead;
-            reverseHead = node;
+        ListNode pre = head;
+        ListNode cur = head.next;
+        while (cur != null) {
+            pre.next = cur.next;
+            cur.next = reverseHead;
+            reverseHead = cur;
+
             // for next step
-            node = tail.next;
+            cur = pre.next;
         }
         return reverseHead;
     }
+
+    // use dummy head
+    public ListNode reverseList_Dummy(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+        ListNode dummy = new ListNode(0);
+        dummy.next = head;
+        ListNode pre = head;
+        ListNode cur = head.next; 
+        while (cur != null) {
+            pre.next = cur.next;
+            cur.next = dummy.next;
+            dummy.next = cur;
+            
+            cur = pre.next;
+        }
+        return dummy.next;
+    }
+
 
 }

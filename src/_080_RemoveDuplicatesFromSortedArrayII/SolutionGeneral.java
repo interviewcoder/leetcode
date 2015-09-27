@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(N); Space: O(1)
  * @tag : Array; Backtracking
  * @by  : Steven Cooks
  * @date: Jun 7, 2015
@@ -28,33 +28,29 @@ package _080_RemoveDuplicatesFromSortedArrayII;
 
 /** see test {@link _080_RemoveDuplicatesFromSortedArrayII.SolutionGeneralTest } */
 public class SolutionGeneral {
+    
+    private static final int K = 2;
 
     public int removeDuplicates(int[] nums) {
-        int k = 2;
-        return removeDuplicatesAtMostKDuplicates(nums, k);
+        return removeDuplicatesAtMostKDuplicates(nums, K);
     }
 
     // counting the number of duplicates of each number in array
-    public int removeDuplicatesAtMostKDuplicates(int[] nums, int k) {
-        int len = nums.length;
-        if (len <= k) {
-            return len;
-        }
-        int lastValidIndex = 0;
-        int duplicates = 1;
-        for (int i = 1; i < len; i++) {
-            if (nums[i] != nums[lastValidIndex]) {
+    public int removeDuplicatesAtMostKDuplicates(int[] nums, int K) {
+        int j = -1;  // index of last valid elements
+        int duplicates = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0 || nums[i] != nums[j]) {
                 // first-time appeared number
-                lastValidIndex++;
-                nums[lastValidIndex] = nums[i];
+                nums[++j] = nums[i];
                 duplicates = 1;
-            } else if (duplicates < k) {
-                lastValidIndex++;
-                nums[lastValidIndex] = nums[i];
+            } else if (duplicates < K) {
+                nums[++j] = nums[i];
                 duplicates++;
             }
+            // ignore more than enough duplicates
         }
-        return lastValidIndex + 1;
+        return j + 1;
     }
 
 }

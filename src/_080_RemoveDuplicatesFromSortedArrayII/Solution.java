@@ -23,18 +23,25 @@ package _080_RemoveDuplicatesFromSortedArrayII;
 public class Solution {
 
     public int removeDuplicates(int[] nums) {
-        int len = nums.length;
-        if (len <= 2) {
-            return len;
-        }
-        int lastValid = 1;
-        for (int i = 2; i < len; i++) {
-            if (nums[i] != nums[lastValid] || (nums[i] != nums[lastValid - 1])) {
-                lastValid++;
-                nums[lastValid] = nums[i];
+        int j = -1;  // last index of `good` part
+        for (int i = 0; i < nums.length; i++) {
+            if (i < 2 || (nums[i] != nums[j - 1])) {
+                nums[++j] = nums[i];
             }
         }
-        return lastValid + 1;
+        return j + 1;
+    }
+
+    // version2, use `continue` keyword
+    public int removeDuplicates2(int[] nums) {
+        int j = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if (i >= 2 && nums[i] == nums[j] && nums[i] == nums[j - 1]) {
+                continue;
+            }
+            nums[++j] = nums[i];
+        }
+        return j + 1;
     }
 
 }

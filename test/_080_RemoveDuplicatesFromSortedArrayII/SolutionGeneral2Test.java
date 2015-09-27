@@ -6,21 +6,16 @@ import java.util.Arrays;
 
 import org.junit.After;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionGeneral2Test {
 
-    /** Test method for {@link _080_RemoveDuplicatesFromSortedArrayII.Practice } */
-    Practice solution;
-    
-    @Rule
-    public Timeout globalTimeout = new Timeout(200);
+    /** Test solution {@Link _080_RemoveDuplicatesFromSortedArrayII.SolutionGeneral2 } */
+    SolutionGeneral2 solution;
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionGeneral2();
     }
 
     @After

@@ -10,6 +10,7 @@ import org.junit.Test;
 
 public class SolutionGeneralTest {
 
+    /** Test solution {@Link _080_RemoveDuplicatesFromSortedArrayII.SolutionGeneral  } */
     SolutionGeneral solution;
 
     @Before
@@ -22,13 +23,27 @@ public class SolutionGeneralTest {
         solution = null;
     }
 
+
+    @Test
+    public void Test0() {
+        int[] nums = { };
+        int actual = solution.removeDuplicates(nums);
+        int expected = 0;
+        assertEquals(expected, actual);
+
+        // the part after expected length does not matter
+        int[] expecteds = { };
+        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
+    }
+
     @Test
     public void Test1() {
         int[] nums = { 1, 1, 1, 2, 2, 3 };
         int actual = solution.removeDuplicates(nums);
         int expected = 5;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
+        // the part after expected length does not matter
         int[] expecteds = { 1, 1, 2, 2, 3 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
     }
@@ -38,7 +53,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 1, 1, 2, 2, 3, 3, 3 };
         int actual = solution.removeDuplicates(nums);
         int expected = 6;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 1, 2, 2, 3, 3 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
@@ -49,7 +64,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 2, 3, 4, 4, 4 };
         int actual = solution.removeDuplicates(nums);
         int expected = 5;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 2, 3, 4, 4 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
@@ -60,7 +75,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 2, 3, 4, 4, 4, 5, 5 };
         int actual = solution.removeDuplicates(nums);
         int expected = 7;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 2, 3, 4, 4, 5, 5 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
@@ -71,7 +86,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 1, 1, 2, 3, 4, 5 };
         int actual = solution.removeDuplicates(nums);
         int expected = 6;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 1, 2, 3, 4, 5 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
@@ -82,7 +97,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 1 };
         int actual = solution.removeDuplicates(nums);
         int expected = 2;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 1 };
         assertArrayEquals(expecteds, nums);
@@ -93,7 +108,7 @@ public class SolutionGeneralTest {
         int[] nums = { 1, 2, 2 };
         int actual = solution.removeDuplicates(nums);
         int expected = 3;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        assertEquals(expected, actual);
 
         int[] expecteds = { 1, 2, 2 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
@@ -101,67 +116,12 @@ public class SolutionGeneralTest {
 
     @Test
     public void Test8() {
-        int[] nums = { 1, 1, 1, 1, 2, 2 };
+        int[] nums = { 1 };
         int actual = solution.removeDuplicates(nums);
-        int expected = 4;
-        assertEquals(Arrays.toString(nums), expected, actual);
+        int expected = 1;
+        assertEquals(expected, actual);
 
-        int[] expecteds = { 1, 1, 2, 2 };
-        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
-    }
-
-    @Test
-    public void Test9() {
-        int[] nums = { 1, 1, 1, 2, 2, 3 };
-        int actual = solution.removeDuplicatesAtMostKDuplicates(nums, 2);
-        int expected = 5;
-        assertEquals(Arrays.toString(nums), expected, actual);
-
-        int[] expecteds = { 1, 1, 2, 2, 3 };
-        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
-    }
-
-    @Test
-    public void Test10() {
-        int[] nums = { 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 };
-        int actual = solution.removeDuplicatesAtMostKDuplicates(nums, 4);
-        int expected = 12;
-        assertEquals(Arrays.toString(nums), expected, actual);
-
-        int[] expecteds = { 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3 };
-        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
-    }
-
-    @Test
-    public void Test11() {
-        int[] nums = { 1, 2, 2, 2, 2, 2, 2, 3, 4, 4, 4 };
-        int actual = solution.removeDuplicatesAtMostKDuplicates(nums, 4);
-        int expected = 9;
-        assertEquals(Arrays.toString(nums), expected, actual);
-
-        int[] expecteds = { 1, 2, 2, 2, 2, 3, 4, 4, 4 };
-        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
-    }
-
-    @Test
-    public void Test12() {
-        int[] nums = { 1, 2, 3, 4, 4, 4, 5, 5, 5, 5 };
-        int actual = solution.removeDuplicatesAtMostKDuplicates(nums, 3);
-        int expected = 9;
-        assertEquals(Arrays.toString(nums), expected, actual);
-
-        int[] expecteds = { 1, 2, 3, 4, 4, 4, 5, 5, 5 };
-        assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
-    }
-
-    @Test
-    public void Test13() {
-        int[] nums = { 1, 1, 1, 1, 2, 3, 4, 5 };
-        int actual = solution.removeDuplicatesAtMostKDuplicates(nums, 3);
-        int expected = 7;
-        assertEquals(Arrays.toString(nums), expected, actual);
-
-        int[] expecteds = { 1, 1, 1, 2, 3, 4, 5 };
+        int[] expecteds = { 1 };
         assertArrayEquals(expecteds, Arrays.copyOf(nums, actual));
     }
 

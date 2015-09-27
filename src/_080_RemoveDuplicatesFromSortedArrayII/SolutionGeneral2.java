@@ -19,27 +19,27 @@
  */
 package _080_RemoveDuplicatesFromSortedArrayII;
 
-/** see test {@link _080_RemoveDuplicatesFromSortedArrayII.SolutionGeneral_2Test } */
-public class SolutionGeneral_2 {
+/** see test {@link _080_RemoveDuplicatesFromSortedArrayII.SolutionGeneral2Test } */
+public class SolutionGeneral2 {
+    
+    // allowed number of duplicates
+    private static final int K = 2;
 
     public int removeDuplicates(int[] nums) {
-        int k = 2;
-        return removeDuplicatesAtMostKDuplicates(nums, k);
+        return removeDuplicatesAtMostKDuplicates(nums, K);
     }
 
-    public int removeDuplicatesAtMostKDuplicates(int[] nums, int k) {
-        int len = nums.length;
-        if (len <= k) {
-            return len;
-        }
-        int lastValidIndex = k - 1;
-        for (int i = k; i < len; i++) {
-            // as long as nums[i] is different nums[lastValid - k + 1]
-            // we can still insert nums[i] into valid part
-            if (nums[i] != nums[lastValidIndex - k + 1]) {
-                nums[++lastValidIndex] = nums[i];
+    /** 
+     * As long as nums[i] is different nums[lastValid - K + 1]
+     * we can still insert nums[i] into valid part
+     */
+    public int removeDuplicatesAtMostKDuplicates(int[] nums, int K) {
+        int j = - 1;  // index of last valid elements
+        for (int i = 0; i < nums.length; i++) {
+            if (j - K + 1 < 0 || nums[i] != nums[j - K + 1]) {
+                nums[++j] = nums[i];
             }
         }
-        return lastValidIndex + 1;
+        return j + 1;
     }
 }

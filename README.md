@@ -260,19 +260,23 @@ P.S.:
 | 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
 | 242 | [Valid Anagram](https://github.com/interviewcoder/leetcode/blob/master/src/_242_ValidAnagram/Solution.java) | Easy | `Hash Table` `Sort`  |  | 
 | 251 | [Flatten2DVector](https://github.com/interviewcoder/leetcode/tree/master/src/_251_Flatten2DVector) | Medium | `Design` | |
+| 252 | [Meeting Rooms](https://github.com/interviewcoder/leetcode/tree/master/src/_252_MeetingRooms) | Easy | `Sort` | |
+| 253 | [Meeting Rooms II](https://github.com/interviewcoder/leetcode/tree/master/src/_253_MeetingRoomsII) | Medium | `Heap` `Greedy` `Sort` | |
 | 257 | Binary Tree Paths | Easy | `Tree`  |  | 
 | 258 | Add Digits | Easy | `Math`  |  | 
-| 260 | Single Number III | Medium | `Bit Manipulation`  |  | 
+| 260 | Single Number III | Medium | `Bit Manipulation`  |  |
+| 261 | [Graph Valid Tree](https://github.com/interviewcoder/leetcode/tree/master/src/_261_GraphValidTree) | Medium | `Breadth-first Search` `Depth-first Search` `Graph` `Union-Find` | |
 | 263 | Ugly Number | Easy | `Math`  |  | 
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
 | 268 | [Missing Number](https://github.com/interviewcoder/leetcode/blob/master/src/_268_MissingNumber/Solution.java)  | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 | 269 | [Alien Dictionary](https://github.com/interviewcoder/leetcode/tree/master/src/_269_AlienDictionary) | Hard | `Graph` `Topological Sort` | BFS |
-| 273 | Integer to English Words | Medium | `Math` `String`  |  | 
+| 273 | [Integer to English Words](https://github.com/interviewcoder/leetcode/blob/master/src/_273_IntegerToEnglishWords/Solution.java)  | Medium | `Math` `String`  |  | 
 | 274 | [H-Index](https://github.com/interviewcoder/leetcode/blob/master/src/_274_HIndex/Solution.java)  | Medium | `Hash Table` `Sort`  |  | 
-| 275 | H-Index II | Medium | `Binary Search`  |  | 
+| 275 | [H-Index II](https://github.com/interviewcoder/leetcode/blob/master/src/_275_HIndexII/Solution.java)  | Medium | `Binary Search`  |  | 
 | 278 | [First Bad Version](https://github.com/interviewcoder/leetcode/blob/master/src/_278_FirstBadVersion/Solution.java)  | Easy | `Binary Search`  |  | 
 | 279 | Perfect Squares | Medium | `Dynamic Programming` `Breadth-first Search` `Math`  |  | 
 | 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
 | 284 | Peeking Iterator | Medium | `Design`  |  | 
 | 286 | [Walls And Gates](https://github.com/interviewcoder/leetcode/tree/master/src/_286_WallsAndGates) | Medium | `BFS` |  |
+

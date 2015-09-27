@@ -222,7 +222,7 @@ P.S.:
 | 203 | [Remove Linked List Elements](https://github.com/interviewcoder/leetcode/blob/master/src/_203_RemoveLinkedListElements/Solution.java) | Easy | `Linked List`  |  | 
 | 204 | [Count Primes](https://github.com/interviewcoder/leetcode/blob/master/src/_204_CountPrimes/Solution.java) | Easy | `Hash Table` `Math`  | sieve algorithm | 
 | 205 | Isomorphic Strings | Easy | `Hash Table`  |  | 
-| 206 | [Reverse Linked List](https://github.com/interviewcoder/leetcode/blob/master/src/_206_ReverseLinkedList/Solution.java) | Easy | `Linked List`  |  | 
+| 206 | [Reverse Linked List](https://github.com/interviewcoder/leetcode/blob/master/src/_206_ReverseLinkedList/) | Easy | `Linked List`  |  | 
 | 207 | [Course Schedule](https://github.com/interviewcoder/leetcode/blob/master/src/_207_CourseSchedule/Solution.java) | Medium | `Depth-first Search` `Breadth-first Search` `Graph` `Topological Sort`  |  | 
 | 208 | [Implement Trie (Prefix Tree)](https://github.com/interviewcoder/leetcode/blob/master/src/_208_ImplementTriePrefixTree/Solution.java) | Medium | `Data Structure` `Trie`  |  | 
 | 209 | [Minimum Size Subarray Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_209_MinimumSizeSubarraySum/Solution.java) | Medium | `Array` `Two Pointers` `Binary Search`  |  | 

@@ -1,5 +1,5 @@
 /**
- * Time : O(N); Space: O()
+ * Time : O(N); Space: O(N)
  * @tag : Hash Table; Two Pointers; String
  * @by  : Steven Cooks
  * @date: Jun 6, 2015
@@ -8,9 +8,11 @@
  * 
  * Given a string S and a string T, find the minimum window in S which will 
  * contain all the characters in T in complexity O(n). 
+ * 
  * For example, 
  *  S = "ADOBECODEBANC",  T = "ABC" 
  *  Minimum window is "BANC". 
+ *  
  * Note: 
  * If there is no such window in S that covers all characters in T, 
  * return the emtpy string "". 
@@ -30,11 +32,17 @@ import java.util.Map;
 /** see test {@link _076_MinimumWindowSubstring.SolutionTest } */
 public class Solution {
 
+    /**
+     * First expand window until we find a qualified window, 
+     * then minimize this window until window is not qualified any more.
+     */
     public String minWindow(String s, String t) {
-        if (s.length() == 0) {
+        if (s.length() < t.length()) {
             return "";
         }
-        // count string t
+
+        // count characters in string t
+        int nums = t.length();
         Map<Character, Integer> tMap = new HashMap<>();
         for (char ch : t.toCharArray()) {
             int count = 1;
@@ -43,50 +51,51 @@ public class Solution {
             }
             tMap.put(ch, count);
         }
+        
+        // only stores characters that exist in both s and t
+        Map<Character, Integer> sMap = new HashMap<>();
+        int start = 0; // start index for global maximal solution
+        int end = Integer.MAX_VALUE; // end index for global maximal solution
+        int num = 0; // number of characters from string t in current window
 
-        int lenT = t.length();
-        String result = s + t;
-        Map<Character, Integer> window = new HashMap<>();
-        int left = 0;
-        int counts = 0; // how many 'useful' characters that we find in current
-                        // window
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
+        // [i : j] is current window
+        for (int j = 0, i = 0; j < s.length(); j++) {
+            char ch = s.charAt(j);
             if (tMap.containsKey(ch)) {
+                // update s map and number
                 int count = 1;
-                if (!window.containsKey(ch) || window.get(ch) < tMap.get(ch)) {
-                    // another useful character appears
-                    counts++;
+                if (sMap.containsKey(ch)) {
+                    count += sMap.get(ch);
                 }
-                if (window.containsKey(ch)) {
-                    count += window.get(ch);
+                sMap.put(ch, count);
+                
+                if (count <= tMap.get(ch)) {
+                    num++;
                 }
-                window.put(ch, count);
-                // if we find a qualified window, then shrink window until not
-                if (counts == lenT) {
-                    for (int j = left; j <= i; j++) {
-                        char c = s.charAt(j);
-                        if (!tMap.containsKey(c)) {
-                            // rubbish character
-                        } else if (window.get(c) > tMap.get(c)) {
-                            // without c , current window is still qualified
-                            window.put(c, window.get(c) - 1);
-                        } else {
-                            // min window appears window is going to break;
-                            if (i - j + 1 < result.length()) {
-                                result = s.substring(j, i + 1);
-                            }
-                            left = j;
-                            break;
-                        }
-                    }
-                    window.put(s.charAt(left), window.get(s.charAt(left)) - 1);
-                    left++;
-                    counts--;
+            }
+            
+            // minimize window
+            while (i <= j && num >= nums) {
+                // update global result
+                if (j - i < end - start) {
+                    start = i;
+                    end = j;
+                }
+                char h = s.charAt(i);
+                if (!tMap.containsKey(h)) {  // irrelevant character
+                    i++;
+                } else if (tMap.get(h) < sMap.get(h)) { // more than enough
+                    sMap.put(h, sMap.get(h) - 1);
+                    i++;
+                } else {  // key character in window
+                    sMap.put(h, sMap.get(h) - 1);
+                    num--;
+                    i++;
                 }
             }
         }
-        return result.length() == (s.length() + t.length()) ? "" : result;
+                
+        return end == Integer.MAX_VALUE ? "" : s.substring(start, end + 1); 
     }
 
 }

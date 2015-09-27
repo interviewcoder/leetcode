@@ -18,7 +18,10 @@ import com.leetcode.ListNode;
 
 /** see test {@link _206_ReverseLinkedList.PracticeTest } */
 public class Practice {
+
     public ListNode reverseList(ListNode head) {
-        return head;
+        // TODO Auto-generated method stub
+        return null;
     }
+
 }

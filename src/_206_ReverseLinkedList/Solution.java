@@ -1,8 +1,15 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(N); Space : O(1)
  * @tag : Linked List
  * @by  : Steven Cooks
  * @date: Jun 25, 2015
+  *******************************************************************************
+ * Description: 
+ * 
+ * Reverse a singly linked list.
+ * 
+ *******************************************************************************
+ * {@link https://leetcode.com/problems/reverse-linked-list/ }
  */
 package _206_ReverseLinkedList;
 

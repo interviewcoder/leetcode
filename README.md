@@ -117,7 +117,7 @@ P.S.:
 | 077 | [Combinations](https://github.com/interviewcoder/leetcode/blob/master/src/_077_Combinations/Solution.java) | Medium | `Backtracking`  |  | 
 | 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  | backtrack template (see [README](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets)) | 
 | 079 | [Word Search](https://github.com/interviewcoder/leetcode/blob/master/src/_079_WordSearch/Solution.java) | Medium | `Array` `Backtracking`  |  | 
-| 080 | [Remove Duplicates from Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_080_RemoveDuplicatesFromSortedArrayII/Solution.java) | Medium | `Array` `Two Pointers`  |  | 
+| 080 | [Remove Duplicates from Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_080_RemoveDuplicatesFromSortedArrayII/) | Medium | `Array` `Two Pointers`  |  from 2 to k (general) | 
 | 081 | [Search in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_081_SearchInRotatedSortedArrayII/Solution.java) | Medium | `Array` `Binary Search`  |  | 
 | 082 | [Remove Duplicates from Sorted List II](https://github.com/interviewcoder/leetcode/blob/master/src/_082_RemoveDuplicatesFromSortedListII/Solution.java) | Medium | `Linked List`  |  | 
 | 083 | [Remove Duplicates from Sorted List](https://github.com/interviewcoder/leetcode/blob/master/src/_083_RemoveDuplicatesFromSortedList/Solution.java) | Easy | `Linked List`  |  | 
@@ -135,13 +135,13 @@ P.S.:
 | 095 | [Unique Binary Search Trees II](https://github.com/interviewcoder/leetcode/blob/master/src/_095_UniqueBinarySearchTreesII/Solution.java) | Medium | `Tree` `Dynamic Programming`  |  | 
 | 096 | [Unique Binary Search Trees](https://github.com/interviewcoder/leetcode/blob/master/src/_096_UniqueBinarySearchTrees/Solution.java) | Medium | `Tree` `Dynamic Programming`  |  | 
 | 097 | [Interleaving String](https://github.com/interviewcoder/leetcode/blob/master/src/_097_InterleavingString/Solution.java) | Hard | `Dynamic Programming` `String`  |  | 
-| 098 | [Validate Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_098_ValidateBinarySearchTree/Solution.java) | Medium | `Tree` `Depth-first Search`  |  | 
-| 099 | [Recover Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_099_RecoverBinarySearchTree/Solution.java) | Hard | `Tree` `Depth-first Search`  |  | 
+| 098 | [Validate Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_098_ValidateBinarySearchTree/) | Medium | `Tree` `Depth-first Search`  |  | 
+| 099 | [Recover Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_099_RecoverBinarySearchTree/) | Hard | `Tree` `Depth-first Search`  |  | 
 | 100 | [Same Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_100_SameTree/Solution.java) | Easy | `Tree` `Depth-first Search`  |  | 
 | 101 | [Symmetric Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_101_SymmetricTree/Solution.java) | Easy | `Tree` `Depth-first Search`  |  | 
 | 102 | [Binary Tree Level Order Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_102_BinaryTreeLevelOrderTraversal/Solution.java) | Easy | `Tree` `Breadth-first Search`  |  | 
 | 103 | [Binary Tree Zigzag Level Order Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_103_BinaryTreeZigzagLevelOrderTraversal/Solution.java) | Medium | `Tree` `Breadth-first Search` `Stack`  |  | 
-| 104 | [Maximum Depth of Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_104_MaximumDepthOfBinaryTree/Solution.java) | Easy | `Tree` `Depth-first Search`  |  | 
+| 104 | [Maximum Depth of Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_104_MaximumDepthOfBinaryTree/) | Easy | `Tree` `Depth-first Search`  |  | 
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_105_ConstructBinaryTreeFromPreorderAndInorderTraversal/Solution.java) | Medium | `Tree` `Array` `Depth-first Search`  |  | 
 | 106 | [Construct Binary Tree from Inorder and Postorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_106_ConstructBinaryTreeFromInorderAndPostorderTraversal/Solution.java) | Medium | `Tree` `Array` `Depth-first Search`  |  | 
 | 107 | [Binary Tree Level Order Traversal II](https://github.com/interviewcoder/leetcode/blob/master/src/_107_BinaryTreeLevelOrderTraversalII/Solution.java) | Easy | `Tree` `Breadth-first Search`  |  | 
@@ -161,7 +161,7 @@ P.S.:
 | 121 | [Best Time to Buy and Sell Stock](https://github.com/interviewcoder/leetcode/blob/master/src/_121_BestTimeToBuyAndSellStock/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
 | 122 | [Best Time to Buy and Sell Stock II](https://github.com/interviewcoder/leetcode/blob/master/src/_122_BestTimeToBuyAndSellStockII/Solution.java) | Medium | `Array` `Greedy`  |  | 
 | 123 | [Best Time to Buy and Sell Stock III](https://github.com/interviewcoder/leetcode/blob/master/src/_123_BestTimeToBuyAndSellStockIII/Solution.java) | Hard | `Array` `Dynamic Programming`  |  | 
-| 124 | [Binary Tree Maximum Path Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_124_BinaryTreeMaximumPathSum/Solution.java) | Hard | `Tree` `Depth-first Search`  | post-order, local and global , [README](https://github.com/interviewcoder/leetcode/tree/master/src/_124_BinaryTreeMaximumPathSum) | 
+| 124 | [Binary Tree Maximum Path Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_124_BinaryTreeMaximumPathSum/) | Hard | `Tree` `Depth-first Search`  | post-order, local and global , [README](https://github.com/interviewcoder/leetcode/tree/master/src/_124_BinaryTreeMaximumPathSum) | 
 | 125 | [Valid Palindrome](https://github.com/interviewcoder/leetcode/blob/master/src/_125_ValidPalindrome/Solution.java) | Easy | `Two Pointers` `String`  |  | 
 | 126 | [Word Ladder II](https://github.com/interviewcoder/leetcode/blob/master/src/_126_WordLadderII/Solution.java) | Hard | `Array` `Backtracking` `Breadth-first Search` `String`  |  | 
 | 127 | [Word Ladder](https://github.com/interviewcoder/leetcode/blob/master/src/_127_WordLadder/Solution.java) | Medium | `Breadth-first Search`  |  | 
@@ -181,7 +181,7 @@ P.S.:
 | 141 | [Linked List Cycle](https://github.com/interviewcoder/leetcode/blob/master/src/_141_LinkedListCycle/Solution.java) | Medium | `Linked List` `Two Pointers`  |  | 
 | 142 | [Linked List Cycle II](https://github.com/interviewcoder/leetcode/blob/master/src/_142_LinkedListCycleII/Solution.java) | Medium | `Linked List` `Two Pointers`  |  | 
 | 143 | [Reorder List](https://github.com/interviewcoder/leetcode/blob/master/src/_143_ReorderList/Solution.java) | Medium | `Linked List`  |  | 
-| 144 | [Binary Tree Preorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_144_BinaryTreePreorderTraversal/Solution.java) | Medium | `Tree` `Stack`  |  | 
+| 144 | [Binary Tree Preorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_144_BinaryTreePreorderTraversal/) | Medium | `Tree` `Stack`  |  | 
 | 145 | [Binary Tree Postorder Traversal](https://github.com/interviewcoder/leetcode/blob/master/src/_145_BinaryTreePostorderTraversal/Solution.java) | Hard | `Tree` `Stack`  |  | 
 | 146 | [LRU Cache](https://github.com/interviewcoder/leetcode/blob/master/src/_146_LRUCache/Solution.java) | Hard | `Data Structure`  |  | 
 | 147 | [Insertion Sort List](https://github.com/interviewcoder/leetcode/blob/master/src/_147_InsertionSortList/Solution.java) | Medium | `Linked List` `Sort`  |  | 
@@ -252,7 +252,7 @@ P.S.:
 | 233 | Number of Digit One | Medium | `Math`  |  | 
 | 234 | Palindrome Linked List | Easy | `Linked List` `Two Pointers`  |  | 
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_235_LowestCommonAncestorOfABinarySearchTree/Solution.java)  | Easy | `Tree`  |  | 
-| 236 | [Lowest Common Ancestor of a Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_236_LowestCommonAncestorOfABinaryTree/Solution.java)  | Medium | `Tree`  | [README](https://github.com/interviewcoder/leetcode/tree/master/src/_236_LowestCommonAncestorOfABinaryTree) | 
+| 236 | [Lowest Common Ancestor of a Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_236_LowestCommonAncestorOfABinaryTree/)  | Medium | `Tree`  | [README](https://github.com/interviewcoder/leetcode/tree/master/src/_236_LowestCommonAncestorOfABinaryTree) | 
 | 237 | [Delete Node in a Linked List](https://github.com/interviewcoder/leetcode/blob/master/src/_237_DeleteNodeInALinkedList/Solution.java)  | Easy | `Linked List`  |  | 
 | 238 | [Product of Array Except Self](https://github.com/interviewcoder/leetcode/blob/master/src/_238_ProductOfArrayExceptSelf/Solution.java)  | Medium | `Array`  |  | 
 | 239 | [Sliding Window Maximum](https://github.com/interviewcoder/leetcode/blob/master/src/_239_SlidingWindowMaximum/Solution.java)  | Hard | `Heap`  | descending queue | 

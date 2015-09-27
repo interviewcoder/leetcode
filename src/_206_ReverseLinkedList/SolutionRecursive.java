@@ -17,9 +17,22 @@ import com.leetcode.ListNode;
 
 /** see test {@link _206_ReverseLinkedList.SolutionRecursiveTest } */
 public class SolutionRecursive {
-
+    
+    // bottom-up recursion
     public ListNode reverseList(ListNode head) {
-        return reverseList(head, null);
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode next = head.next;
+        ListNode rHead = reverseList(next);
+        next.next = head;
+        head.next = null;
+        return rHead;
+    }
+
+    // top-down
+    public ListNode reverseList2(ListNode head) {
+        return reverseList2(head, null);
     }
 
     // put `head` node as the new reversed head, and then recursively reverse the rest
@@ -30,7 +43,7 @@ public class SolutionRecursive {
     //      4 -> 3 -> 2 -> 1 -> null      5
     //      |                             |  
     //      reverseHead                   head
-    private ListNode reverseList(ListNode head, ListNode reverseHead) {
+    private ListNode reverseList2(ListNode head, ListNode reverseHead) {
         // base case
         if (head == null) {
             // when no nodes left to reverse, return reversedHead
@@ -42,6 +55,6 @@ public class SolutionRecursive {
         // for next recursive call
         reverseHead = head;
         head = headNext;
-        return reverseList(head, reverseHead);
+        return reverseList2(head, reverseHead);
     }
 }

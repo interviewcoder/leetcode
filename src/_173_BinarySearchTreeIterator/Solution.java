@@ -1,6 +1,6 @@
 /**
  * Time : O() ; Space: O()
- * @tag : Tree; Stack
+ * @tag : Tree; Stack; Design
  * @by  : Steven Cooks
  * @date: Jul 27, 2015
  ***************************************************************************
@@ -23,6 +23,7 @@ import java.util.Stack;
 
 import com.leetcode.TreeNode;
 
+/** see test {@link _173_BinarySearchTreeIterator.SolutionTest } */
 public class Solution {
     
     Stack<TreeNode> nodes = new Stack<>();

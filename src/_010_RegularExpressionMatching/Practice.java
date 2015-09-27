@@ -27,6 +27,7 @@
  */
 package _010_RegularExpressionMatching;
 
+/** see test {@link _010_RegularExpressionMatching.PracticeTest } */
 public class Practice {
 
     public boolean isMatch(String s, String p) {

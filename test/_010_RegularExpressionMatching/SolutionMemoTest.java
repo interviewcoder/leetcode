@@ -8,17 +8,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionBottomUpTest {
+public class SolutionMemoTest {
     
-    /** Test method for {@link _010_RegularExpressionMatching.SolutionBottomUp} */
-    SolutionBottomUp solution;
+    /** Test method for {@link _010_RegularExpressionMatching.SolutionMemo } */
+    SolutionMemo solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new SolutionBottomUp();
+        solution = new SolutionMemo();
     }
 
     @After

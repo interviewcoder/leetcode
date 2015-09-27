@@ -30,62 +30,39 @@
  */
 package _010_RegularExpressionMatching;
 
-import java.util.HashMap;
-import java.util.Map;
-
-/**
- * see also bottom-up version {@link _010_RegularExpressionMatching.SolutionBottomUp} 
- * see test {@link _010_RegularExpressionMatching.SolutionTest } */
+/** see test {@link _010_RegularExpressionMatching.SolutionTest } */
 public class Solution {
-
-    Map<Integer, Map<Integer, Boolean>> memo = new HashMap<>();
 
     public boolean isMatch(String s, String p) {
         int sLen = s.length();
         int pLen = p.length();
-        int sIndex = 0;
-        int pIndex = 0;
-        return isMatchCore(s, p, sIndex, pIndex, sLen, pLen);
-    }
 
-    private boolean isMatchCore(String s, String p, int sIndex, int pIndex,
-            int sLen, int pLen) {
-        // look up in memo
-        if (memo.containsKey(sIndex) && memo.get(sIndex).containsKey(pIndex)) {
-            return memo.get(sIndex).get(pIndex);
-        }
+        boolean[][] dp = new boolean[sLen + 1][pLen + 1];
 
-        if (sIndex == sLen && pIndex == pLen) {
-            return true;
-        }
-        if (sIndex != sLen && pIndex == pLen) {
-            return false;
-        }
-        boolean matched = false;
-        if ((pIndex + 1) < pLen && p.charAt(pIndex + 1) == '*') {
-            if (sIndex < sLen && p.charAt(pIndex) == s.charAt(sIndex)
-                    || (p.charAt(pIndex) == '.' && sIndex < sLen)) {
-                // if equals or met with '.', then move on to the next state
-                matched = isMatchCore(s, p, sIndex + 1, pIndex + 2, sLen, pLen)
-                        || isMatchCore(s, p, sIndex + 1, pIndex, sLen, pLen)
-                        || isMatchCore(s, p, sIndex, pIndex + 2, sLen, pLen);
-            } else {
-                // ignore a '*'
-                matched = isMatchCore(s, p, sIndex, pIndex + 2, sLen, pLen);
+        for (int i = sLen; i >= 0; i--) {
+            for (int j = pLen; j >= 0; j--) {
+                boolean matched = false;
+                if (i == sLen && j == pLen) {
+                    matched = true;
+                } else if (i < sLen && j == pLen) {
+                    matched = false;
+                } else if ((j + 1) < pLen && p.charAt(j + 1) == '*') {
+                    if (i < sLen && (p.charAt(j) == s.charAt(i) || p.charAt(j) == '.')) {
+                        // if equals or met with '.', then move on to the next state
+                        matched = dp[i][j + 2]
+                               || dp[i + 1][j + 2] 
+                               || dp[i + 1][j];
+                    } else {
+                        // ignore '*'
+                        matched = dp[i][j + 2];
+                    }
+                } else if (i < sLen && j < pLen && (s.charAt(i) == p.charAt(j) || (p.charAt(j) == '.' ))) {
+                    matched = dp[i + 1][j + 1];
+                }
+                dp[i][j] = matched;
             }
-        } else if (sIndex < sLen && pIndex < pLen
-                && s.charAt(sIndex) == p.charAt(pIndex)
-                || (p.charAt(pIndex) == '.' && sIndex < sLen)) {
-            matched = isMatchCore(s, p, sIndex + 1, pIndex + 1, sLen, pLen);
         }
-        if (!memo.containsKey(sIndex)) {
-            Map<Integer, Boolean> map = new HashMap<>();
-            map.put(pIndex, matched);
-            memo.put(sIndex, map);
-        } else {
-            memo.get(sIndex).put(pIndex, matched);
-        }
-        return matched;
+        return dp[0][0];
     }
 
 }

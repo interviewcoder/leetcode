@@ -24,22 +24,27 @@ package _026_RemoveDuplicatesFromSortedArray;
 /** see test {@link _026_RemoveDuplicatesFromSortedArray.SolutionTest } */
 public class Solution {
 
+    // similar idea to partition
     public int removeDuplicates(int[] nums) {
-        int len = nums.length;
-        if (len == 0) {
-            return 0;
-        }
-        int last = 0;
-        for (int i = 1; i < len; i++) {
-            if (nums[i] != nums[last]) {
-                // another 'new' number
-                last++;
-                if (last != i) {
-                    nums[last] = nums[i];
-                }
+        int j = -1; // index of last unique element
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0 || nums[i] != nums[i - 1]) {
+                nums[++j] = nums[i];
             }
         }
-        return last + 1;
+        return j + 1;
+    }
+
+    // version2
+    public int removeDuplicates2(int[] nums) {
+        int j = -1; // index of last unique element
+        for (int i = 0; i < nums.length; i++) {
+            if (i != 0 && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            nums[++j] = nums[i];
+        }
+        return j + 1;
     }
 
 }

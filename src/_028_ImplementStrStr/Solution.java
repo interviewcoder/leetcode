@@ -1,5 +1,5 @@
 /**
- * Time : O(N); Space: O()
+ * Time : O(N); Space: O(1)
  * @tag : String; Two Pointers
  * @by  : Steven Cooks
  * @date: May 8, 2015
@@ -7,6 +7,7 @@
  * Description: 
  * 
  * Implement strStr(). 
+ * 
  * Returns the index of the first occurrence of needle in haystack, 
  * or -1 if needle is not part of haystack.
  *
@@ -17,23 +18,22 @@ package _028_ImplementStrStr;
 
 /** see test {@link _028_ImplementStrStr.SolutionTest } */
 public class Solution {
+
+    // try each possible start index from haystack
     public int strStr(String haystack, String needle) {
-        int startIndex = 0;
-        int lenOfNeedle = needle.length();
-        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
-            startIndex = i;
+        for (int index = 0; index <= haystack.length() - needle.length(); index++) {
+            int i = index;
             int j = 0;
-            while (i < haystack.length() && j < needle.length()
-                    && haystack.charAt(i) == needle.charAt(j)) {
+            while (j < needle.length() && haystack.charAt(i) == needle.charAt(j)) {
                 i++;
                 j++;
             }
-            if (j == lenOfNeedle) {
+            if (j == needle.length()) {
                 // found
-                return startIndex;
+                return index;
             }
-            i = startIndex;
         }
         return -1;
     }
+
 }

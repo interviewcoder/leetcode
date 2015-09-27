@@ -1,5 +1,5 @@
 /**
- * Time : O(N); Space : O()
+ * Time : O(N); Space : O(1)
  * @tag : Array; Two Pointers; Binary Search
  * @by  : Steven Cooks
  * @date: Jun 25, 2015

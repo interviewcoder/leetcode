@@ -12,6 +12,7 @@ import _209_MinimumSizeSubarraySum.Practice;
 
 public class PracticeTest {
 
+    /** Test solution for {@link _209_MinimumSizeSubarraySum.Practice } */
     Practice solution;
 
     @Rule

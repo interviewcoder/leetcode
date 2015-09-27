@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space : O()
+ * Time : O(N); Space : O(1)
  * @tag : Array; Two Pointers; Binary Search
  * @by  : Steven Cooks
  * @date: Jun 25, 2015
@@ -21,41 +21,23 @@
  */
 package _209_MinimumSizeSubarraySum;
 
+/** see test {@link _209_MinimumSizeSubarraySum.SolutionTest } */
 public class Solution {
 
-    /* Be careful of off-by-one errors */
+    /* keep a sliding window using two pointers */
     public int minSubArrayLen(int s, int[] nums) {
-        int len = nums.length;
-        int sum = 0;
-        int endIndex = 0;
-        int result = Integer.MAX_VALUE;
-        for (int startIndex = 0; startIndex < len; startIndex++) {
-            if (startIndex > 0) {
-                sum -= nums[startIndex - 1];
-            } else {
-                sum = nums[0];
-            }
-            if (sum >= s) {
-                // go backwards to shrink sub array
-                while (endIndex >= startIndex && sum >= s) {
-                    sum -= nums[endIndex--];
-                }
-                result = Math.min(endIndex - startIndex + 2, result);
-            } else {
-                // go forwards to expand sub array
-                while (endIndex < len - 1 && sum < s) {
-                    sum += nums[++endIndex];
-                }
-                if (sum >= s) {
-                    result = Math.min(endIndex - startIndex + 1, result);
-                } else if (endIndex == len - 1) {
-                    //prune: no sum of sub array will be larger
-                    break;
-                }
+        int res = Integer.MAX_VALUE;
+        int cursum = 0;
+        int start = 0;
+        for (int end = 0; end < nums.length; end++) {
+            int num = nums[end];
+            cursum += num;
+            while (start <= end && cursum >= s) {
+                res = Math.min(res, end - start + 1);
+                cursum -= nums[start++];
             }
         }
-        // return 0 if no sub array is found
-        return result == Integer.MAX_VALUE ? 0 : result;
+        return res < Integer.MAX_VALUE ? res : 0;
     }
 
 }

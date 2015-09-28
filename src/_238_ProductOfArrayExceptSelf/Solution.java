@@ -26,7 +26,9 @@ package _238_ProductOfArrayExceptSelf;
 /** see test {@link _238_ProductOfArrayExceptSelf.SolutionTest } */
 public class Solution {
 
-    // cache product of left subarray
+    // res[i] = A[i - 1] * B[i + 1]
+    // where A[i - 1] = nums[0] * nums[1] * .. * nums[i - 1]
+    //       B[i + 1] = nums[i + 1] * nums[i + 2] * .. nums[len - 1]
     public int[] productExceptSelf(int[] nums) {
         int n = nums.length;
         int[] res = new int[n];

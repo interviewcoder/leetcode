@@ -28,17 +28,25 @@ public class SolutionLinearSpaceTest {
 
     @Test
     public void Test1() {
-        int[] nums = {1, 2, 3, 4};
+        int[] nums = { 1, 2, 3, 4 };
         int[] actuals = solution.productExceptSelf(nums);
-        int[] expecteds = new int[]{24, 12, 8, 6};
+        int[] expecteds = { 24, 12, 8, 6 };
         assertArrayEquals(expecteds, actuals);
     }
 
     @Test
     public void Test2() {
-        int[] nums = {1, 2};
+        int[] nums = { 1, 2 };
         int[] actuals = solution.productExceptSelf(nums);
-        int[] expecteds = new int[]{2, 1};
+        int[] expecteds = { 2, 1 };
+        assertArrayEquals(expecteds, actuals);
+    }
+
+    @Test
+    public void Test3() {
+        int[] nums = { 6 };
+        int[] actuals = solution.productExceptSelf(nums);
+        int[] expecteds = { 1 };
         assertArrayEquals(expecteds, actuals);
     }
 

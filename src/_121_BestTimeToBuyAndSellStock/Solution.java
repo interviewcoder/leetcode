@@ -22,17 +22,15 @@ package _121_BestTimeToBuyAndSellStock;
 public class Solution {
 
     public int maxProfit(int[] prices) {
-        int result = 0;
+        int result = 0; 
+        // lowest price so far
         int minPrice = Integer.MAX_VALUE;
         for (int price : prices) {
-            // sell stock at current price
-            // find the minimum price before this way
+
             minPrice = Math.min(minPrice, price);
 
-            // profit = minPrice < price ? (price - minPrice) : 0;
-//            profit = Math.max(price - minPrice, 0);
-
             result = Math.max(result, price - minPrice);
+
         }
         return result;
     }

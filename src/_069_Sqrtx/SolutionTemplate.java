@@ -15,28 +15,35 @@
 package _069_Sqrtx;
 
 /** see test {@link _069_Sqrtx.SolutionTest } */
-public class Solution {
+public class SolutionTemplate {
 
-    // find the last value that value*value <= x
+    // take advantage of binary search template
+    /** 
+     * Since target is in [left, right], reduce to only two numbers left,
+     * then solve the subproblem.
+     */
     public int mySqrt(int x) {
-        if (x == 0) {
+        if (x <= 0) {
             return 0;
         }
         int left = 1;
         int right = x;
-        while (left <= right) {
-            // avoid potential Stack Overflow caused by (left + right) / 2;
-            int half = (right - left) / 2 + left;
-            if (half <= x / half && ((half + 1) > x / (half + 1))) {
-                return half;
-            } else if (half > x / half) {
-                // instead of (half * half) > x to avoid stack overflow
-                right = half - 1;
+        while (left + 1 < right) {
+            int mid = left + (right - left) / 2;
+            if (mid > x / mid) {
+                right = mid;
             } else {
-                left = half + 1;
+                left = mid;
             }
         }
-        return left;
+        // [left, target, right], choose between left and right
+        if (left == x / left) {
+            return left;
+        } else if (right == x / right) {
+            return right;
+        } else {
+            return left;
+        }
     }
 
 }

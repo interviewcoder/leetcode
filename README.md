@@ -200,7 +200,7 @@ P.S.:
 | 162 | [Find Peak Element](https://github.com/interviewcoder/leetcode/blob/master/src/_162_FindPeakElement/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
 | 164 | [Maximum Gap](https://github.com/interviewcoder/leetcode/blob/master/src/_164_MaximumGap/Solution.java) | Hard | `Sort`  |  | 
 | 165 | [Compare Version Numbers](https://github.com/interviewcoder/leetcode/blob/master/src/_165_CompareVersionNumbers/Solution.java) | Easy | `String`  |  | 
-| 166 | Fraction to Recurring Decimal | Medium | `Hash Table` `Math`  |  | 
+| 166 | [Fraction to Recurring Decimal](https://github.com/interviewcoder/leetcode/blob/master/src/_166_FractionToRecurringDecimal/Solution.java)  | Medium | `Hash Table` `Math`  |  | 
 | 168 | [Excel Sheet Column Title](https://github.com/interviewcoder/leetcode/blob/master/src/_168_ExcelSheetColumnTitle/Solution.java) | Easy | `Math`  | convert decimal to other BASE system  | 
 | 169 | Majority Element | Easy | `Divide and Conquer` `Array` `Bit Manipulation`  |  | 
 | 171 | [Excel Sheet Column Number](https://github.com/interviewcoder/leetcode/blob/master/src/_171_ExcelSheetColumnNumber/Solution.java) | Easy | `Math`  | convert other BASE system to decimal system  | 
@@ -279,4 +279,5 @@ P.S.:
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
 | 284 | Peeking Iterator | Medium | `Design`  |  | 
 | 286 | [Walls And Gates](https://github.com/interviewcoder/leetcode/tree/master/src/_286_WallsAndGates) | Medium | `BFS` |  |
+| 287 | Find the Duplicate Number | Hard | `Array` `Two Pointers` `Binary Search`  |  | 
 

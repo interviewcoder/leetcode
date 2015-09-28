@@ -28,15 +28,16 @@ public class Solution {
     
     private int BASE = 26;
     
-    private int START = 1;
+    private int OFFSET = 1;
     
     public String convertToTitle(int n) {
-        StringBuilder stringBuilder = new StringBuilder();
+        StringBuilder sb = new StringBuilder();
         while (n != 0) {
-            char c = (char) ((n - START) % BASE + 'A');
-            stringBuilder.insert(0, c);
-            n = (n - START) / BASE;
+            char c = (char) ((n - OFFSET) % BASE + 'A');
+            sb.append(c);
+            n = (n - OFFSET) / BASE;
         }
-        return stringBuilder.toString();
+        return sb.reverse().toString();
     }
+
 }

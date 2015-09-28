@@ -1,5 +1,5 @@
 /**
- * Time : O(); Space: O()
+ * Time : O(N); Space: O(N)
  * @tag : Tree; Breadth-first Search
  * @by  : Steven Cooks
  * @date: Jun 10, 2015
@@ -19,7 +19,7 @@
  * [ [3], [9,20], [15,7] ]
  *  
  *************************************************************************
- * {@link https://leetcode.com/problems/binary-tree-level-order-traversal/ V
+ * {@link https://leetcode.com/problems/binary-tree-level-order-traversal/ }
  */
 package _102_BinaryTreeLevelOrderTraversal;
 
@@ -34,30 +34,28 @@ import com.leetcode.TreeNode;
 public class Solution {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> res = new ArrayList<>();
         if (root == null) {
-            return result;
+            return res;
         }
-        Queue<TreeNode> curLevel = new LinkedList<>();
-        curLevel.add(root);
-        while (!curLevel.isEmpty()) {
-            List<Integer> curList = new ArrayList<>();
-            Queue<TreeNode> nextLevel = new LinkedList<>();
-            while (!curLevel.isEmpty()) {
-                TreeNode node = curLevel.poll();
-                curList.add(node.val);
+        Queue<TreeNode> level = new LinkedList<>();
+        level.offer(root);
+        while (!level.isEmpty()) {
+            int sz = level.size();
+            List<Integer> levelList = new ArrayList<>();
+            for (int i = 0; i < sz; i++) {
+                TreeNode node = level.poll();
+                levelList.add(node.val);
                 if (node.left != null) {
-                    nextLevel.add(node.left);
+                    level.offer(node.left);
                 }
                 if (node.right != null) {
-                    nextLevel.add(node.right);
+                    level.offer(node.right);
                 }
             }
-            // go to next level
-            result.add(curList);
-            curLevel = nextLevel;
+            res.add(levelList);
         }
-        return result;
+        return res;
     }
 
 }

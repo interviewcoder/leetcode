@@ -18,12 +18,14 @@ package _043_MultiplyStrings;
 
 import java.math.BigInteger;
 
-/** see test {@link _043_MultiplyStrings.SolutionBigIntegerTest} */
+/** see test {@link _043_MultiplyStrings.SolutionBigIntegerTest } */
 public class SolutionBigInteger {
+
     public String multiply(String num1, String num2) {
         // cheating way: use BigInteger class in Java
         BigInteger b1 = new BigInteger(num1);
         BigInteger b2 = new BigInteger(num2);
         return b1.multiply(b2).toString();
     }
+
 }

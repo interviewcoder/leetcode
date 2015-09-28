@@ -45,26 +45,8 @@ public class SolutionTest {
         assertEquals(expected, actual);
     }
 
-//    @Test
-//    public void Test3() {
-//        String num1 = "2";
-//        String num2 = "-2";
-//        String actual = solution.multiply(num1, num2);
-//        String expected = "-4";
-//        assertEquals(expected, actual);
-//    }
-//
-//    @Test
-//    public void Test4() {
-//        String num1 = "-1";
-//        String num2 = "-2";
-//        String actual = solution.multiply(num1, num2);
-//        String expected = "2";
-//        assertEquals(expected, actual);
-//    }
-
     @Test
-    public void Test5() {
+    public void Test3() {
         String num1 = "100000";
         String num2 = "200000";
         String actual = solution.multiply(num1, num2);
@@ -73,7 +55,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void Test6() {
+    public void Test4() {
         String num1 = "15";
         String num2 = "15";
         String actual = solution.multiply(num1, num2);
@@ -82,7 +64,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void Test7() {
+    public void Test5() {
         String num1 = "30000";
         String num2 = "40000";
         String actual = solution.multiply(num1, num2);
@@ -91,7 +73,7 @@ public class SolutionTest {
     }
 
     @Test
-    public void Test8() {
+    public void Test6() {
         String num1 = "93553535314";
         String num2 = "25247452591474";
         String actual = solution.multiply(num1, num2);

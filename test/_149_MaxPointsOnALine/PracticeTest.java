@@ -16,17 +16,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.Point;
 
-public class SolutionTest {
+public class PracticeTest {
 
-    /** Test method for {@link _149_MaxPointsOnALine.Solution } */
-    Solution solution;
+    /** Test method for {@link _149_MaxPointsOnALine.Practice } */
+    Practice solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(500);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After

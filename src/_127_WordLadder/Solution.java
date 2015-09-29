@@ -29,9 +29,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /** see test {@link _127_WordLadder.SolutionTest } */
-    // two-end BFS, construct graph from begin and end at the same time
 public class Solution {
 
+    // two-end BFS, construct graph from begin and end at the same time
     public int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
         int len = 1;
         Set<String> beginSet = new HashSet<>();

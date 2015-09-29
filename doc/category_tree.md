@@ -1,4 +1,15 @@
 #### Category
+```html
+Tree Problem  
+    1. Iterative 
+        1.1) Use stack to simulate recursive DFS
+        1.2) BFS with queue
+    2. Recursive
+        2.1) visit root first = pre-order = top-down = preorder traversal
+        2.2) visit root last = post-order = bottom-up = divide and conquer
+```
+
+
 | Type         | # | Description |
 | ---------------------: |:---:| ------------
 | **`Trie`** | | *1 dict + input `strings` contains only a-z* |
@@ -21,4 +32,3 @@
 | inorder + prev | 099 | [Recover Binary Search Tree](https://github.com/interviewcoder/leetcode/tree/master/src/_099_RecoverBinarySearchTree) |
 | inorder + prune | Lint | [Search Range In Binary Search Tree](https://github.com/interviewcoder/lintcode/blob/master/03_binarytree%26divideconquer/_02_SearchRangeInBinarySearchTree/Solution.java) |
 | inorder + iterative | 173 | [Binary Search Tree Iterator](https://github.com/interviewcoder/leetcode/blob/master/src/_173_BinarySearchTreeIterator/Solution.java) |
-|-------------------------------- | ---- | ------------------------------------------------- | 

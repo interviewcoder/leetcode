@@ -12,24 +12,24 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class PracticeTest {
+public class SolutionOneEndTest {
 
-    /** Test method for {@link _127_WordLadder.Practice } */
-    Practice solution;
+    /** Test method for {@link _127_WordLadder.SolutionOneEnd } */
+    SolutionOneEnd solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Practice();
+        solution = new SolutionOneEnd();
     }
 
     @After
     public void tearDown() throws Exception {
         solution = null;
     }
-
+    
     @Test
     public void Test0() {
         String beginWord = "hot";

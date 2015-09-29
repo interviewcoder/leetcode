@@ -21,9 +21,7 @@
  * 
  *******************************************************************************
  * {@link https://leetcode.com/problems/word-ladder/ }
- * -------------------------------------------------------------
- * 1. use StringBuilder for repeated string operations
- * 2. loop over 'a' - 'z': for (char ch = 'a'; ch <= 'z'; ch++)
+ * @reference {@link https://leetcode.com/discuss/28573/share-my-two-end-bfs-in-c-80ms }
  */
 package _127_WordLadder;
 
@@ -31,43 +29,50 @@ import java.util.HashSet;
 import java.util.Set;
 
 /** see test {@link _127_WordLadder.SolutionTest } */
+    // two-end BFS, construct graph from begin and end at the same time
 public class Solution {
-    public int ladderLength(String beginWord, String endWord,
-            Set<String> wordDict) {
-        if (beginWord.equals(endWord)) {
-            return 2;
-        }
-        Set<String> visited = new HashSet<>();
-        Set<String> current = new HashSet<>();
-        current.add(beginWord);
-        visited.add(beginWord);
 
-        int wordsInLadder = 1;
-        int wordLen = beginWord.length();
-        while (!current.isEmpty()) {
+    public int ladderLength(String beginWord, String endWord, Set<String> wordDict) {
+        int len = 1;
+        Set<String> beginSet = new HashSet<>();
+        Set<String> endSet = new HashSet<>();
+        Set<String> visited = new HashSet<>();
+        beginSet.add(beginWord);
+        endSet.add(endWord);
+        visited.add(beginWord);
+        visited.add(endWord);
+        
+        while (!beginSet.isEmpty() && !endSet.isEmpty()) {
+            // add new words to smaller set to achieve better performance
+            boolean isBeginSetSmall = beginSet.size() < endSet.size();
+            Set<String> small = isBeginSetSmall ? beginSet : endSet;
+            Set<String> big = isBeginSetSmall ? endSet : beginSet;
             Set<String> next = new HashSet<>();
-            wordsInLadder++;
-            // traverse current level
-            for (String str : current) {
-                for (int i = 0; i < wordLen; i++) {
-                    StringBuilder strBuilder = new StringBuilder(str);
+            len++;
+            for (String str : small) {
+                // construct all possible words
+                for (int i = 0; i < str.length(); i++) {
                     for (char ch = 'a'; ch <= 'z'; ch++) {
-                        strBuilder.setCharAt(i, ch);
-                        String word = strBuilder.toString();
-                        if (word.equals(endWord)) {
-                            // found!
-                            return wordsInLadder;
-                        } else if (!visited.contains(word)
-                                && wordDict.contains(word)) {
-                            // only add new word to next level
-                            next.add(word);
+                        StringBuilder sb = new StringBuilder(str);
+                        sb.setCharAt(i, ch);
+                        String word = sb.toString();
+                        if (big.contains(word)) {
+                            return len;
+                        }
+                        if (wordDict.contains(word) && !visited.contains(word)) {
                             visited.add(word);
+                            next.add(word);
                         }
                     }
                 }
             }
-            current = next;
+            if (isBeginSetSmall) {
+                beginSet = next;
+            } else {
+                endSet = next;
+            }
         }
         return 0;
     }
+
 }

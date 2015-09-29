@@ -158,7 +158,7 @@ P.S.:
 | 118 | [Pascal's Triangle](https://github.com/interviewcoder/leetcode/blob/master/src/_118_PascalsTriangle/Solution.java) | Easy | `Array`  |  | 
 | 119 | [Pascal's Triangle II](https://github.com/interviewcoder/leetcode/blob/master/src/_119_PascalsTriangleII/Solution.java) | Easy | `Array`  |  | 
 | 120 | [Triangle](https://github.com/interviewcoder/leetcode/blob/master/src/_120_Triangle/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
-| 121 | [Best Time to Buy and Sell Stock](https://github.com/interviewcoder/leetcode/blob/master/src/_121_BestTimeToBuyAndSellStock/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
+| 121 | [Best Time to Buy and Sell Stock](https://github.com/interviewcoder/leetcode/blob/master/src/_121_BestTimeToBuyAndSellStock/) | Medium | `Array` `Dynamic Programming`  | O(N^2) -> O(N) | 
 | 122 | [Best Time to Buy and Sell Stock II](https://github.com/interviewcoder/leetcode/blob/master/src/_122_BestTimeToBuyAndSellStockII/Solution.java) | Medium | `Array` `Greedy`  |  | 
 | 123 | [Best Time to Buy and Sell Stock III](https://github.com/interviewcoder/leetcode/blob/master/src/_123_BestTimeToBuyAndSellStockIII/Solution.java) | Hard | `Array` `Dynamic Programming`  |  | 
 | 124 | [Binary Tree Maximum Path Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_124_BinaryTreeMaximumPathSum/) | Hard | `Tree` `Depth-first Search`  | post-order, local and global , [README](https://github.com/interviewcoder/leetcode/tree/master/src/_124_BinaryTreeMaximumPathSum) | 
@@ -186,7 +186,7 @@ P.S.:
 | 146 | [LRU Cache](https://github.com/interviewcoder/leetcode/blob/master/src/_146_LRUCache/Solution.java) | Hard | `Data Structure`  |  | 
 | 147 | [Insertion Sort List](https://github.com/interviewcoder/leetcode/blob/master/src/_147_InsertionSortList/Solution.java) | Medium | `Linked List` `Sort`  |  | 
 | 148 | [Sort List](https://github.com/interviewcoder/leetcode/blob/master/src/_148_SortList/Solution.java)  | Medium | `Linked List` `Sort`  | `!` fast-slow to find middle + iterative reverse + merge sort | 
-| 149 | [Max Points on a Line](https://github.com/interviewcoder/leetcode/blob/master/src/_149_MaxPointsOnALine/Solution.java) | Hard | `Hash Table` `Math`  |  | 
+| 149 | [Max Points on a Line](https://github.com/interviewcoder/leetcode/blob/master/src/_149_MaxPointsOnALine/) | Hard | `Hash Table` `Math`  |  | 
 | 150 | [Evaluate Reverse Polish Notation](https://github.com/interviewcoder/leetcode/blob/master/src/_150_EvaluateReversePolishNotation/Solution.java) | Medium | `Stack`  |  | 
 | 151 | [Reverse Words in a String](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/Solution.java) | Medium | `String`  | [README](https://github.com/interviewcoder/leetcode/blob/master/src/_151_ReverseWordsInAString/README.md) | 
 | 152 | [Maximum Product Subarray](https://github.com/interviewcoder/leetcode/blob/master/src/_152_MaximumProductSubarray/Solution.java) | Medium | `Array` `Dynamic Programming`  |  | 
@@ -234,7 +234,7 @@ P.S.:
 | 215 | [Kth Largest Element in an Array](https://github.com/interviewcoder/leetcode/blob/master/src/_215_KthLargestElementInAnArray/Solution.java)  | Medium | `Divide and Conquer` `Heap`  | max-heap using Java's Priority Queue | 
 | 216 | [Combination Sum III](https://github.com/interviewcoder/leetcode/blob/master/src/_216_CombinationSumIII/Solution.java)  | Medium | `Array` `Backtracking`  |  | 
 | 217 | [Contains Duplicate](https://github.com/interviewcoder/leetcode/blob/master/src/_217_ContainsDuplicate/Solution.java) | Easy | `Array` `Hash Table`  |  | 
-| 218 | The Skyline Problem | Hard | `Divide and Conquer` `Heap`  |  | 
+| 218 | [The Skyline Problem](https://github.com/interviewcoder/leetcode/blob/master/src/_218_TheSkylineProblem/Solution.java)  | Hard | `Divide and Conquer` `Heap`  |  | 
 | 219 | [Contains Duplicate II](https://github.com/interviewcoder/leetcode/blob/master/src/_219_ContainsDuplicateII/Solution.java) | Easy | `Array` `Hash Table`  |  | 
 | 220 | [Contains Duplicate III](https://github.com/interviewcoder/leetcode/blob/master/src/_220_ContainsDuplicateIII/Solution.java) | Medium | `Binary Search Tree`  |  | 
 | 221 | [Maximal Square](https://github.com/interviewcoder/leetcode/blob/master/src/_221_MaximalSquare/Solution.java)  | Medium | `Dynamic Programming`  |  | 
@@ -254,7 +254,7 @@ P.S.:
 | 235 | [Lowest Common Ancestor of a Binary Search Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_235_LowestCommonAncestorOfABinarySearchTree/Solution.java)  | Easy | `Tree`  |  | 
 | 236 | [Lowest Common Ancestor of a Binary Tree](https://github.com/interviewcoder/leetcode/blob/master/src/_236_LowestCommonAncestorOfABinaryTree/)  | Medium | `Tree`  | [README](https://github.com/interviewcoder/leetcode/tree/master/src/_236_LowestCommonAncestorOfABinaryTree) | 
 | 237 | [Delete Node in a Linked List](https://github.com/interviewcoder/leetcode/blob/master/src/_237_DeleteNodeInALinkedList/Solution.java)  | Easy | `Linked List`  |  | 
-| 238 | [Product of Array Except Self](https://github.com/interviewcoder/leetcode/blob/master/src/_238_ProductOfArrayExceptSelf/Solution.java)  | Medium | `Array`  |  | 
+| 238 | [Product of Array Except Self](https://github.com/interviewcoder/leetcode/blob/master/src/_238_ProductOfArrayExceptSelf/)  | Medium | `Array`  | O(N^2) -> two pass O(N) | 
 | 239 | [Sliding Window Maximum](https://github.com/interviewcoder/leetcode/blob/master/src/_239_SlidingWindowMaximum/Solution.java)  | Hard | `Heap`  | descending queue | 
 | 240 | [Search a 2D Matrix II](https://github.com/interviewcoder/leetcode/blob/master/src/_240_SearchA2DMatrixII/Solution.java)  | Medium | `Divide and Conquer` `Binary Search`  | | 
 | 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
@@ -262,12 +262,14 @@ P.S.:
 | 251 | [Flatten2DVector](https://github.com/interviewcoder/leetcode/tree/master/src/_251_Flatten2DVector) | Medium | `Design` | |
 | 252 | [Meeting Rooms](https://github.com/interviewcoder/leetcode/tree/master/src/_252_MeetingRooms) | Easy | `Sort` | |
 | 253 | [Meeting Rooms II](https://github.com/interviewcoder/leetcode/tree/master/src/_253_MeetingRoomsII) | Medium | `Heap` `Greedy` `Sort` | |
+| 256 | [Paint House](https://github.com/interviewcoder/leetcode/tree/master/src/_256_PaintHouse) | Medium | `Dynamic Programming` | |
 | 257 | Binary Tree Paths | Easy | `Tree`  |  | 
 | 258 | Add Digits | Easy | `Math`  |  | 
 | 260 | Single Number III | Medium | `Bit Manipulation`  |  |
 | 261 | [Graph Valid Tree](https://github.com/interviewcoder/leetcode/tree/master/src/_261_GraphValidTree) | Medium | `Breadth-first Search` `Depth-first Search` `Graph` `Union-Find` | |
 | 263 | Ugly Number | Easy | `Math`  |  | 
 | 264 | Ugly Number II | Medium | `Math` `Heap`  |  | 
+| 265 | [Paint House](https://github.com/interviewcoder/leetcode/tree/master/src/_265_PaintHouseII) | Hard | `Dynamic Programming` |  |
 | 268 | [Missing Number](https://github.com/interviewcoder/leetcode/blob/master/src/_268_MissingNumber/Solution.java)  | Medium | `Array` `Math` `Bit Manipulation`  |  | 
 | 269 | [Alien Dictionary](https://github.com/interviewcoder/leetcode/tree/master/src/_269_AlienDictionary) | Hard | `Graph` `Topological Sort` | BFS |
 | 273 | [Integer to English Words](https://github.com/interviewcoder/leetcode/blob/master/src/_273_IntegerToEnglishWords/Solution.java)  | Medium | `Math` `String`  |  | 

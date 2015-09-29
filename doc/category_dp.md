@@ -36,6 +36,8 @@
     | Matrix : max/`min`(*) | 120 | Triangle | |
     | Matrix : max/`min`(*) | 174 | Dungeon Game | hard|
     | Matrix : max/`min`(*) | 064 | Minimum Path Sum | |
+    | Matrix : max/`min`(*) | 256 | [Paint House](https://github.com/interviewcoder/leetcode/tree/master/src/_256_PaintHouse) | |
+    | Matrix : max/`min`(*) | 265 |  [Paint House](https://github.com/interviewcoder/leetcode/tree/master/src/_265_PaintHouseII) | |
     | Matrix : `max`/min(*) | 085 | Maximal Rectangle | |
     | Matrix : `max`/min(*) | 221 | Maximal Square | |
     | Matrix : count(*) | 062 | Unique Paths | |

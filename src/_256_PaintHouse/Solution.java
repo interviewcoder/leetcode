@@ -31,6 +31,7 @@ public class Solution {
         if (n == 0) {
             return 0;
         }
+        // f[i][c] = min cost for paint[i : end] if we paint house i with color c
         int f[][] = new int[n + 1][costs[0].length];
         for (int i = n - 1; i >= 0; i--) {
             for (int c = 2; c >= 0; c--) {

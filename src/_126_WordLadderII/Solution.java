@@ -30,7 +30,6 @@
 package _126_WordLadderII;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -51,11 +50,6 @@ public class Solution {
     public List<List<String>> findLadders(String start, String end, Set<String> dict) {
 
         List<List<String>> result = new ArrayList<>();
-
-        if (start.equals(end)) {
-            result.add(Arrays.asList(start, end));
-            return result;
-        }
 
         // use set for current level instead of queue to avoid calculating ladder for duplicated word
         Set<String> cur = new HashSet<>();
@@ -106,6 +100,9 @@ public class Solution {
     private void dfs(String start, String end, List<String> path, Map<String, List<String>> fatherMap, List<List<String>> result) {
         path.add(end);
         if (end.equals(start)) {
+            if (path.size() == 1) {
+                path.add(start);
+            }
             result.add(new ArrayList<>(path));
             Collections.reverse(result.get(result.size() - 1));
         } else {

@@ -32,8 +32,7 @@ public class Solution2 {
             return k;
         // same[i] means the ith post has the same color with the (i-1)th post.
         int[] same = new int[n];
-        // diff[i] means the ith post has a different color with the (i-1)th
-        // post.
+        // diff[i] means the ith post has a different color with the (i-1)th post.
         int[] diff = new int[n];
         same[0] = same[1] = k;
         diff[0] = k;

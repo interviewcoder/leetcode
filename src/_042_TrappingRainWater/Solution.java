@@ -3,26 +3,21 @@
  * @tag : Array; Stack; Two Pointers
  * @by  : Steven Cooks
  * @date: Jul 15, 2015
- *************************************************************************
+ **************************************************************************
  * Description: 
  * 
- * Given an unsorted integer array, find the first missing positive integer. 
+ * Given n non-negative integers representing an elevation map where the 
+ * width of each bar is 1, compute how much water it is able to trap after raining. 
  * 
- * For example, Given [1,2,0] return 3, 
- * and [3,4,-1,1] return 2. 
- * 
- * Your algorithm should run in O(n) time and uses constant space.
+ * For example, 
+ * Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
  * 
  *************************************************************************
  * {@link https://leetcode.com/problems/trapping-rain-water/ }
  */
 package _042_TrappingRainWater;
 
-/**
- * O(1) space solution, and there is another O(N) solution
- * {@link _042_TrappingRainWater.SolutionStack } 
- * see test {@link _042_TrappingRainWater.SolutionTest }
- */
+/** * see test {@link _042_TrappingRainWater.SolutionTest } */
 public class Solution {
 
     public int trap(int[] height) {
@@ -42,7 +37,6 @@ public class Solution {
                     // update left barrier
                     leftBarrier = height[left];
                 } else {
-                    // trap water (leftBarrier - height[left]) * 1
                     result += leftBarrier - height[left];
                 }
                 left++;
@@ -51,7 +45,6 @@ public class Solution {
                     // update right barrier
                     rightBarrier = height[right];
                 } else {
-                    // trap water (rightBarrier - height[right]) * 1
                     result += rightBarrier - height[right];
                 }
                 right--;

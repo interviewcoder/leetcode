@@ -3,56 +3,45 @@
  * @tag : Array; Stack; Two Pointers
  * @by  : Steven Cooks
  * @date: Jul 15, 2015
- *************************************************************************
+ **************************************************************************
  * Description: 
  * 
- * Given an unsorted integer array, find the first missing positive integer. 
+ * Given n non-negative integers representing an elevation map where the 
+ * width of each bar is 1, compute how much water it is able to trap after raining. 
  * 
- * For example, Given [1,2,0] return 3, 
- * and [3,4,-1,1] return 2. 
- * 
- * Your algorithm should run in O(n) time and uses constant space.
+ * For example, 
+ * Given [0,1,0,2,1,0,1,3,2,1,2,1], return 6.
  * 
  *************************************************************************
  * {@link https://leetcode.com/problems/trapping-rain-water/ }
+ * @reference {@link https://leetcode.com/discuss/41688/stack-based-solution-inspired-by-largest-histogram-problem } 
  */
 package _042_TrappingRainWater;
+
+import java.util.Stack;
 
 /** see test {@link _042_TrappingRainWater.SolutionStackTest } */
 public class SolutionStack {
 
+    // keep a non-ascending stack: element in stack is index, and their height[index]
+    // is non-ascending order
+    // because we need a 'valley' to trap water, for 'valley', both left and 
+    // right bar should be higher
     public int trap(int[] height) {
-        int left = 0;
-        int right = height.length - 1;
-
-        int leftBarrier = 0;
-        int rightBarrier = 0;
-        int result = 0;
-
-        while (left <= right) {
-            if (leftBarrier <= rightBarrier) {
-                // there could be a basin between leftBarrier and rightBarrier
-                // and left side is lower one
-                if (height[left] > leftBarrier) {
-                    // update left barrier
-                    leftBarrier = height[left];
-                } else {
-                    // trap water (leftBarrier - height[left]) * 1
-                    result += leftBarrier - height[left];
+        Stack<Integer> indices = new Stack<>();
+        int res = 0;
+        for (int i = 0; i < height.length; i++) {
+            while (!indices.isEmpty() && height[i] > height[indices.peek()]) {
+                int low = height[indices.pop()];
+                if (!indices.empty()) {
+                    int w = i - indices.peek() - 1;
+                    int h = Math.min(height[i], height[indices.peek()]) - low;
+                    res += w * h;
                 }
-                left++;
-            } else {
-                if (height[right] > rightBarrier) {
-                    // update right barrier
-                    rightBarrier = height[right];
-                } else {
-                    // trap water (rightBarrier - height[right]) * 1
-                    result += rightBarrier - height[right];
-                }
-                right--;
             }
+            indices.push(i);
         }
-        return result;
+        return res;
     }
 
 }

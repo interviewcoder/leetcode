@@ -26,32 +26,30 @@ public class SolutionSuffix {
 
     // considering suffix: s[i: end]
     public int numDecodings(String s) {
-        int len = s.length();
-        if (len == 0) {
-            // for "", 0 ways to decode
+        int n = s.length();
+        if (n == 0) {
             return 0;
         }
-        // dp[i] = decode ways for s[i:end]
-        int[] dp = new int[len + 1];
-
-        // initialize dp[len] and dp[len-1]
-        dp[len] = 1;
-        dp[len - 1] = s.charAt(len - 1) == '0' ? 0 : 1;
-
-        for (int i = len - 2; i >= 0; i--) {
-            char ch = s.charAt(i);
-            if (ch != '0') {
-                if (Integer.parseInt(s.substring(i, i + 2)) <= 26) {
-                    // for [10-26]: decode as: [10-26] | decode(s[i+2],end)
-                    // + decode as: [1-9] | decode(s[i+1],end)
-                    dp[i] = dp[i + 2] + dp[i + 1];
-                } else {
-                    // for [27-99], decode as: [2-9] | decode(s[i+1,end])
-                    dp[i] = dp[i + 1];
+        int[] f = new int[n + 1];
+        for (int i = n; i >= 0; i--) {
+            int count = 0;
+            if (i == n) {
+                count = 1;
+            } else {
+                int num1 = s.charAt(i) - '0';
+                if (num1 > 0 && num1 < 10) {
+                    count = f[i + 1];
+                }
+                if (i + 1 < n) {
+                    int num2 = s.charAt(i + 1) - '0' + 10 * num1;
+                    if (num2 >= 10 && num2 <= 26) {
+                        count += f[i + 2];
+                    }
                 }
             }
-            // if ch == '0', dp[i] = 0
+            f[i] = count;
         }
-        return dp[0];
+        return f[0];
     }
+
 }

@@ -30,6 +30,8 @@ import com.leetcode.UndirectedGraphNode;
 /** see test {@link _133_CloneGraph.SolutionDFSTest } */
 public class SolutionDFS {
 
+    private Map<UndirectedGraphNode, UndirectedGraphNode> cloneMap = new HashMap<>();
+
     /**
      * DFS version, see also {@link _133_CloneGraph.Solution BFS version }
      * Similar to memo version top-down dp problem. First find in memo,
@@ -37,13 +39,6 @@ public class SolutionDFS {
      * and add neighbors to it.
      */
     public UndirectedGraphNode cloneGraph(UndirectedGraphNode node) {
-        Map<UndirectedGraphNode, UndirectedGraphNode> cloneMap = 
-                new HashMap<>();
-        return cloneGraph(node, cloneMap);
-    }
-
-    private UndirectedGraphNode cloneGraph(UndirectedGraphNode node,
-            Map<UndirectedGraphNode, UndirectedGraphNode> cloneMap) {
         if (cloneMap.containsKey(node)) {
             // look up in memo first
             return cloneMap.get(node);
@@ -55,7 +50,7 @@ public class SolutionDFS {
             // update map here, don't wait until return statement like memo version dp
             cloneMap.put(node, nodeCopy);
             for (UndirectedGraphNode neighbor : node.neighbors) {
-                nodeCopy.neighbors.add(cloneGraph(neighbor, cloneMap));
+                nodeCopy.neighbors.add(cloneGraph(neighbor));
             }
             return nodeCopy;
         }

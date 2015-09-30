@@ -42,51 +42,55 @@ public class SolutionBottomUp {
 
     public List<List<String>> findLadders(String start, String end,
             Set<String> dict) {
+
         List<List<String>> result = new ArrayList<>();
+
+        // base case
         if (start.equals(end)) {
             result.add(Arrays.asList(start, end));
             return result;
         }
 
-        Set<String> current = new HashSet<>();
+        Set<String> cur = new HashSet<>();
         // all words that have been visited above current visiting level
         Set<String> visited = new HashSet<>();
         // <word, all direct fathers of this word in the path>
         Map<String, List<String>> fatherMap = new HashMap<>();
-        current.add(end);
+        cur.add(end);
 
         boolean found = false;
-        int wordLen = start.length();
 
-        while (!current.isEmpty() && !found) {
+        // BFS 
+        while (!cur.isEmpty() && !found) {
             Set<String> next = new HashSet<>();
-            for (String string : current) {
-                for (int i = 0; i < wordLen; i++) {
-                    StringBuilder wordBuilder = new StringBuilder(string);
+            for (String str : cur) {
+                for (int i = 0; i < str.length(); i++) {
                     for (char ch = 'a'; ch <= 'z'; ch++) {
-                        wordBuilder.setCharAt(i, ch);
-                        String word = wordBuilder.toString();
+                        StringBuilder sb = new StringBuilder(str);
+                        sb.setCharAt(i, ch);
+                        String word = sb.toString();
                         if (word.equals(start)) {
                             found = true;
                         }
-                        if (!found && dict.contains(word) && !visited.contains(word)
+                        if (!found && dict.contains(word)
+                                && !visited.contains(word)
                                 || word.equals(start)) {
                             next.add(word);
                             // update father map
-                            if (fatherMap.containsKey(word)) {
-                                fatherMap.get(word).add(string);
-                            } else {
-                                fatherMap.put(word, new ArrayList<>(Arrays.asList(string)));
+                            if (!fatherMap.containsKey(word)) {
+                                fatherMap.put(word, new ArrayList<>());
                             }
+                            fatherMap.get(word).add(str);
                         }
                     }
                 }
             }
-            current = next;
-            // because we allow duplicates in the same level, 
+            cur = next;
+            // because we allow duplicates in the same level,
             // therefore we delay updating visited until we finish current level
-            visited.addAll(current);
+            visited.addAll(cur);
         }
+
         if (found) {
             List<String> path = new ArrayList<>();
             dfs(result, fatherMap, path, start, end);
@@ -102,11 +106,11 @@ public class SolutionBottomUp {
         if (end.equals(start)) {
             // base case
             result.add(new ArrayList<>(path));
-//            Collections.reverse(result.get(result.size() - 1));
+            // Collections.reverse(result.get(result.size() - 1));
         } else {
             // recursive case
             List<String> fathers = fatherMap.get(start);
-            for (String father: fathers) {
+            for (String father : fathers) {
                 dfs(result, fatherMap, path, father, end);
             }
         }

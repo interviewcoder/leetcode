@@ -18,6 +18,7 @@ import org.junit.rules.Timeout;
 
 public class SolutionBottomUpTest {
 
+    /** Test method for {@link _126_WordLadderII.SolutionBottomUp } */
     SolutionBottomUp solution;
 
     @Rule

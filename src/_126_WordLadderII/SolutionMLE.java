@@ -43,8 +43,7 @@ public class SolutionMLE {
 
     private Queue<List<String>> pathsQueue = new LinkedList<>();
 
-    public List<List<String>> findLadders(String start, String end,
-            Set<String> dict) {
+    public List<List<String>> findLadders(String start, String end, Set<String> dict) {
         List<List<String>> result = new ArrayList<>();
 
         if (start.equals(end)) {
@@ -87,9 +86,6 @@ public class SolutionMLE {
             // update visited until we finish current level
             visited.addAll(curWords);
         }
-//        for (List<String> string : result) {
-//            System.out.println(string);
-//        }
         return result;
     }
 
@@ -112,7 +108,6 @@ public class SolutionMLE {
                 }
             }
         }
-//        System.out.println("pos: [" + start + "], " + words);
         return words;
     }
 

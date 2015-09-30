@@ -48,66 +48,62 @@ public class Solution {
      *       2. each word is allowed duplicates in the same level but not the previous levels
      *       3. use father map to avoid calculating the ladder for the duplicated word in the same level
      */
-    public List<List<String>> findLadders(String start, String end,
-            Set<String> dict) {
+    public List<List<String>> findLadders(String start, String end, Set<String> dict) {
+
         List<List<String>> result = new ArrayList<>();
+
         if (start.equals(end)) {
             result.add(Arrays.asList(start, end));
             return result;
         }
 
         // use set for current level instead of queue to avoid calculating ladder for duplicated word
-        Set<String> current = new HashSet<>();
-        Set<String> next = new HashSet<>();
+        Set<String> cur = new HashSet<>();
         Set<String> visited = new HashSet<>();
+        // word, and all words that can direct lead to this word in path
         Map<String, List<String>> fatherMap = new HashMap<>();
-        current.add(start);
+        cur.add(start);
 
         boolean found = false;
         int wordLen = start.length();
 
-        while (!current.isEmpty() && !found) {
-            visited.addAll(current);
-            // ! should not be next.clear()
-            // next.clear() will empty the set, which current is also pointed to
-            // next = new HashSet<>(); will point next to a new empty set
-            // while keep the originally set which is now pointed by current intact.
-            next = new HashSet<>();
-            for (String string : current) {
+        while (!cur.isEmpty() && !found) {
+
+            Set<String> next = new HashSet<>();
+
+            for (String str : cur) {
                 for (int i = 0; i < wordLen; i++) {
-                    StringBuilder wordBuilder = new StringBuilder(string);
+                    StringBuilder sb = new StringBuilder(str);
                     for (char ch = 'a'; ch <= 'z'; ch++) {
-                        wordBuilder.setCharAt(i, ch);
-                        String word = wordBuilder.toString();
+                        sb.setCharAt(i, ch);
+                        String word = sb.toString();
                         if (word.equals(end)) {
                             found = true;
                         }
                         if (dict.contains(word) && !visited.contains(word)
                                 || word.equals(end)) {
                             next.add(word);
-                            if (fatherMap.containsKey(word)) {
-                                fatherMap.get(word).add(string);
-                            } else {
-                                List<String> list = new ArrayList<>();
-                                list.add(string);
-                                fatherMap.put(word, list);
+                            if (!fatherMap.containsKey(word)) {
+                                fatherMap.put(word, new ArrayList<>());
                             }
+                            fatherMap.get(word).add(str);
                         }
                     }
                 }
             }
-            current = next;
+
+            cur = next;
+            visited.addAll(cur);
         }
         if (found) {
-            List<String> res = new ArrayList<>();
-            dfs(result, fatherMap, res, start, end);
+            List<String> path = new ArrayList<>();
+            dfs(start, end, path, fatherMap, result);
         }
         return result;
     }
 
-    private void dfs(List<List<String>> result,
-            Map<String, List<String>> fatherMap, List<String> path,
-            String start, String end) {
+    // construct paths based father map
+    private void dfs(String start, String end, List<String> path, Map<String, List<String>> fatherMap, List<List<String>> result) {
         path.add(end);
         if (end.equals(start)) {
             result.add(new ArrayList<>(path));
@@ -115,7 +111,7 @@ public class Solution {
         } else {
             List<String> que = fatherMap.get(end);
             for (String word : que) {
-                dfs(result, fatherMap, path, start, word);
+                dfs(start, word, path, fatherMap, result);
             }
         }
         path.remove(path.size() - 1);

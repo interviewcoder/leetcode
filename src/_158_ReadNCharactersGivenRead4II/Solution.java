@@ -30,14 +30,15 @@ import _157_ReadNCharactersGivenRead4.Reader4;
  */
 public class Solution extends Reader4 {
     
-    private char[] buffer = new char[4];
+    // unread part from last read4 call
+    private char[] cache = new char[4];
     private int offset = 0;
     private int bufsize = 0;
     
     /**
-     * Reads from buffer first and then use read4 to read more content.
+     * Reads from cache first and then use read4 to read more content.
      * 
-     * @param buf Destination buffer
+     * @param buf Destination cache
      * @param n Maximum number of characters to read
      * @return The number of characters read
      */
@@ -45,13 +46,13 @@ public class Solution extends Reader4 {
         int readBytes = 0;
         boolean eof = false;
         while (!eof && readBytes < n) {
-            int size = (bufsize > 0)  ? bufsize : read4(buffer);
+            int size = (bufsize > 0)  ? bufsize : read4(cache);
             if (bufsize == 0 && size < 4) {
                 eof = true;
             }
             int bytes = Math.min(n - readBytes, size);
             for (int i = 0; i < bytes; i++) {
-                buf[readBytes + i] = buffer[offset + i];
+                buf[readBytes + i] = cache[offset + i];
             }
             offset = (offset + bytes) % 4;
             bufsize = size - bytes;

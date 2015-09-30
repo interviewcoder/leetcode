@@ -17,9 +17,11 @@
 package _275_HIndexII;
 
 /** see test {@link _275_HIndexII.SolutionTest } */
-public class Solution {
+public class SolutionTemplate {
     
-    // find first i where nums[i] >= n - i
+    // find the first index i where nums[i] >= n - i
+    // invariant: 
+    // the first index i where nums[i] >= n - i is within [left : right] if exists 
     public int hIndex(int[] nums) {
         int n = nums.length;
         if (n == 0) {
@@ -27,15 +29,22 @@ public class Solution {
         }
         int left = 0;
         int right = n - 1;
-        while (left <= right) {
+        while (left + 1 < right) {
             int mid = left + (right - left) / 2;
-            int target = n - mid;
-            if (nums[mid] >= target) {
-                right = mid - 1;
+            if (nums[mid] >= n - mid) {
+                right = mid;
             } else {
-                left = mid + 1;
+                left = mid;
             }
         }
-        return n - right - 1;
+
+        if (nums[left] >= n - left) {
+            return n - left;
+        } else if (nums[right] >= n - right) {
+            return n - right;
+        } else {
+            return 0;
+        }
     }
+
 }

@@ -27,6 +27,7 @@ package _278_FirstBadVersion;
 public class SolutionTwo {
 
     // reduce to only two versions left and then make the judgment.
+    // invariant: if bad version exists, it is within [left : right]
     public int firstBadVersion(int n) {
         int left = 1;
         int right = n;

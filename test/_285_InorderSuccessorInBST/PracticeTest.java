@@ -1,4 +1,4 @@
-package s08_InorderSuccessorInBST;
+package _285_InorderSuccessorInBST;
 
 import static org.junit.Assert.*;
 
@@ -10,17 +10,17 @@ import org.junit.rules.Timeout;
 
 import com.leetcode.TreeNode;
 
-public class SolutionTest {
+public class PracticeTest {
     
-    /** Test method for {@link s08_InorderSuccessorInBST.Solution } */
-    Solution solution;
+    /** Test method for {@link _285_InorderSuccessorInBST.Practice } */
+    Practice solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new Practice();
     }
 
     @After

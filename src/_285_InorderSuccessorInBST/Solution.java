@@ -1,32 +1,28 @@
 /**
- * Time : O(h) ; Space: O(1)
+ * Time : O() ; Space: O()
  * @tag : Tree
  * @by  : Steven Cooks
- * @date: Aug 11, 2015
+ * @date: Sep 30, 2015
  ***************************************************************************
  * Description:
  * 
- * Find the successor of given in in-order traversal, i.e. node that has 
- * next larger number.
+ * Given a binary search tree and a node in it, find the in-order successor
+ * of that node in the BST. 
+ * 
+ * Note: If the given node has no in-order successor in the tree, return null.
  * 
  ***************************************************************************
- * {@link _173_BinarySearchTreeIterator.Solution }
- * {@link http://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/ }
+ * {@link https://leetcode.com/problems/inorder-successor-in-bst/ }
  */
-package s08_InorderSuccessorInBST;
+package _285_InorderSuccessorInBST;
 
 import com.leetcode.TreeNode;
 
+/** see test {@link _285_InorderSuccessorInBST.SolutionTest } */
 
 public class Solution {
-    
-    /**
-     * Returns the successor of given node in the binary search tree.
-     * 
-     * @param root
-     * @param node
-     * @return successor node
-     */
+
+    // iterative version
     public TreeNode inorderSuccessor(TreeNode root, TreeNode node) {
         if (root == null || node == null) {
             return null;

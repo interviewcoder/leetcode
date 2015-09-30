@@ -23,6 +23,9 @@ package _283_MoveZeroes;
 /** see test {@link _283_MoveZeroes.SolutionTest } */
 public class Solution {
 
+    // x, x, x, 0, 0, 0, y  =>  x, x, x, y, 0, 0, 0
+    //          j        i                  j
+    // swap nums[i] with nums[j] 
     public void moveZeroes(int[] nums) {
         int j = -1; // index of first 0 in array
         for (int i = 0; i < nums.length; i++) {

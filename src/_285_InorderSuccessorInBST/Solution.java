@@ -19,7 +19,6 @@ package _285_InorderSuccessorInBST;
 import com.leetcode.TreeNode;
 
 /** see test {@link _285_InorderSuccessorInBST.SolutionTest } */
-
 public class Solution {
 
     // iterative version
@@ -36,10 +35,8 @@ public class Solution {
         } else {
             // find successor from root down to this node
             TreeNode successor = null;
-            while (root != null) {
-                if (root == node) {
-                    break;
-                } else if (node.val < root.val) {
+            while (root != null && root != node) {
+                if (node.val < root.val) {
                     // go to left subtree
                     successor = root;
                     root = root.left;

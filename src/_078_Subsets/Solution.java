@@ -26,27 +26,44 @@ import java.util.List;
 /** see test {@link _078_Subsets.SolutionTest } */
 public class Solution {
 
+    // try to insert each number into all existing subsets
     public List<List<Integer>> subsets(int[] nums) {
-        List<List<Integer>> result = new ArrayList<List<Integer>>();
-        List<Integer> list = new ArrayList<>();
-        int pos = 0;
-        // sort because it is required to put elements in non-descending order
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
         Arrays.sort(nums);
-        subsetsHelper(nums, pos, list, result);
-        return result;
-    }
 
-    private void subsetsHelper(int[] nums, int pos, List<Integer> list,
-            List<List<Integer>> result) {
-        // ! not result.add(list)
-        result.add(new ArrayList<>(list));
-        for (int i = pos; i < nums.length; i++) {
-            list.add(nums[i]);
-            // ! not (pos + 1)
-            subsetsHelper(nums, i + 1, list, result);
-            list.remove(list.size() - 1);
+        // push initial empty subset
+        res.add(new ArrayList<>());
+
+        for (int num : nums) {
+            int sz = res.size(); // we don't need temp list any more
+            for (int i = 0; i < sz; i++) {
+                List<Integer> list = new ArrayList<>(res.get(i));
+                list.add(num);
+                res.add(list);
+            }
         }
-        
+        return res;
+    }
+    
+    // we have to use temporary list
+    public List<List<Integer>> subsets2(int[] nums) {
+        List<List<Integer>> res = new ArrayList<List<Integer>>();
+        Arrays.sort(nums);
+
+        // push initial empty subset
+        res.add(new ArrayList<>());
+
+        for (int num : nums) {
+            // try insert num into all existing subsets
+            List<List<Integer>> temp = new ArrayList<>(); 
+            for (List<Integer> sub : res) {
+                List<Integer> list = new ArrayList<>(sub);
+                list.add(num);
+                temp.add(list);
+            }
+            res.addAll(temp);
+        }
+        return res;
     }
 
 }

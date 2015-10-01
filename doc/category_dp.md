@@ -13,7 +13,7 @@
     | 1 sequence : `max`/min(*) | 032 | [Longest Valid Parentheses](https://github.com/interviewcoder/leetcode/tree/master/src/_032_LongestValidParentheses) | global V.S. local |
     | 1 sequence : `max`/min(*) | 121 | Best Time to Buy and Sell Stock | |
     | 1 sequence : `max`/min(*) | 123 | Best Time to Buy and Sell Stock III | |
-    | 1 sequence : count(*) | 091 | Decode Ways | |
+    | 1 sequence : count(*) | 091 | [Decode Ways](https://github.com/interviewcoder/leetcode/tree/master/src/_091_DecodeWays) | |
     | 1 sequence : all(*) | 140 | Word Break II: dp + backtracking | |
 
 

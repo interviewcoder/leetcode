@@ -115,7 +115,7 @@ P.S.:
 | 075 | [Sort Colors](https://github.com/interviewcoder/leetcode/blob/master/src/_075_SortColors/Solution.java) | Medium | `Array` `Two Pointers` `Sort`  |  | 
 | 076 | [Minimum Window Substring](https://github.com/interviewcoder/leetcode/blob/master/src/_076_MinimumWindowSubstring/Solution.java) | Hard | `Hash Table` `Two Pointers` `String`  | `!`**[substring/sublist]** hashing + two pointers -> O(N) | 
 | 077 | [Combinations](https://github.com/interviewcoder/leetcode/blob/master/src/_077_Combinations/Solution.java) | Medium | `Backtracking`  |  | 
-| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets/Solution.java) | Medium | `Array` `Backtracking` `Bit Manipulation`  | backtrack template (see [README](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets)) | 
+| 078 | [Subsets](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets/) | Medium | `Array` `Backtracking` `Bit Manipulation`  | see [README](https://github.com/interviewcoder/leetcode/blob/master/src/_078_Subsets) | 
 | 079 | [Word Search](https://github.com/interviewcoder/leetcode/blob/master/src/_079_WordSearch/Solution.java) | Medium | `Array` `Backtracking`  |  | 
 | 080 | [Remove Duplicates from Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_080_RemoveDuplicatesFromSortedArrayII/) | Medium | `Array` `Two Pointers`  |  from 2 to k (general) | 
 | 081 | [Search in Rotated Sorted Array II](https://github.com/interviewcoder/leetcode/blob/master/src/_081_SearchInRotatedSortedArrayII/Solution.java) | Medium | `Array` `Binary Search`  |  | 
@@ -163,8 +163,8 @@ P.S.:
 | 123 | [Best Time to Buy and Sell Stock III](https://github.com/interviewcoder/leetcode/blob/master/src/_123_BestTimeToBuyAndSellStockIII/Solution.java) | Hard | `Array` `Dynamic Programming`  |  | 
 | 124 | [Binary Tree Maximum Path Sum](https://github.com/interviewcoder/leetcode/blob/master/src/_124_BinaryTreeMaximumPathSum/) | Hard | `Tree` `Depth-first Search`  | post-order, local and global , [README](https://github.com/interviewcoder/leetcode/tree/master/src/_124_BinaryTreeMaximumPathSum) | 
 | 125 | [Valid Palindrome](https://github.com/interviewcoder/leetcode/blob/master/src/_125_ValidPalindrome/Solution.java) | Easy | `Two Pointers` `String`  |  | 
-| 126 | [Word Ladder II](https://github.com/interviewcoder/leetcode/blob/master/src/_126_WordLadderII/Solution.java) | Hard | `Array` `Backtracking` `Breadth-first Search` `String`  |  | 
-| 127 | [Word Ladder](https://github.com/interviewcoder/leetcode/blob/master/src/_127_WordLadder/Solution.java) | Medium | `Breadth-first Search`  |  | 
+| 126 | [Word Ladder II](https://github.com/interviewcoder/leetcode/blob/master/src/_126_WordLadderII/) | Hard | `Array` `Backtracking` `Breadth-first Search` `String`  |  | 
+| 127 | [Word Ladder](https://github.com/interviewcoder/leetcode/blob/master/src/_127_WordLadder/) | Medium | `Breadth-first Search`  |  | 
 | 128 | [Longest Consecutive Sequence](https://github.com/interviewcoder/leetcode/blob/master/src/_128_LongestConsecutiveSequence/Solution.java) | Hard | `Array`  |  | 
 | 129 | [Sum Root to Leaf Numbers](https://github.com/interviewcoder/leetcode/blob/master/src/_129_SumRootToLeafNumbers/Solution.java) | Medium | `Tree` `Depth-first Search`  |  | 
 | 130 | [Surrounded Regions](https://github.com/interviewcoder/leetcode/blob/master/src/_130_SurroundedRegions/Solution.java) | Medium | `Breadth-first Search`  |  | 
@@ -198,6 +198,7 @@ P.S.:
 | 160 | [Intersection of Two Linked Lists](https://github.com/interviewcoder/leetcode/blob/master/src/_160_IntersectionOfTwoLinkedLists/Solution.java)  | Easy | `Linked List`  | two pointers on two lists; combine long and short lists into one  | 
 | 161 | [One Edit Distance](https://github.com/interviewcoder/leetcode/blob/master/src/_161_OneEditDistance/) | Medium | `String` |  |
 | 162 | [Find Peak Element](https://github.com/interviewcoder/leetcode/blob/master/src/_162_FindPeakElement/Solution.java)  | Medium | `Array` `Binary Search`  |  | 
+| 163 | [Missing Ranges](https://github.com/interviewcoder/leetcode/blob/master/src/_163_MissingRanges/Solution.java) | Medium | `Array` | |
 | 164 | [Maximum Gap](https://github.com/interviewcoder/leetcode/blob/master/src/_164_MaximumGap/Solution.java) | Hard | `Sort`  |  | 
 | 165 | [Compare Version Numbers](https://github.com/interviewcoder/leetcode/blob/master/src/_165_CompareVersionNumbers/Solution.java) | Easy | `String`  |  | 
 | 166 | [Fraction to Recurring Decimal](https://github.com/interviewcoder/leetcode/blob/master/src/_166_FractionToRecurringDecimal/Solution.java)  | Medium | `Hash Table` `Math`  |  | 
@@ -280,6 +281,7 @@ P.S.:
 | 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
 | 284 | Peeking Iterator | Medium | `Design`  |  | 
+| 285 | [Inorder Successor in BST](https://github.com/interviewcoder/leetcode/tree/master/src/_285_InorderSuccessorInBST) | Medium | `Tree` |  |
 | 286 | [Walls And Gates](https://github.com/interviewcoder/leetcode/tree/master/src/_286_WallsAndGates) | Medium | `BFS` |  |
 | 287 | Find the Duplicate Number | Hard | `Array` `Two Pointers` `Binary Search`  |  | 
 

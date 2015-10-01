@@ -21,3 +21,5 @@
 0. [Partition](https://github.com/interviewcoder/leetcode/blob/master/doc/category_partition.md)
 
 0. [Subarray Problem](https://github.com/interviewcoder/leetcode/blob/master/doc/category_subarray.md)
+
+0. [Similar Problems](https://github.com/interviewcoder/leetcode/blob/master/doc/category_similar.md)

@@ -14,43 +14,44 @@
  */
 package _023_MergeKSortedLists;
 
-import java.util.Comparator;
-import java.util.PriorityQueue;
-import java.util.Queue;
-
 import com.leetcode.ListNode;
 
 /** see test {@link _023_MergeKSortedLists.SolutionTest } */
 public class Solution {
 
+    // divide and conquer, merge two lists at one time
     public ListNode mergeKLists(ListNode[] lists) {  
+        return mergeKLists(lists, 0, lists.length - 1);
+    }
+
+    // divide and conquer
+    private ListNode mergeKLists(ListNode[] lists, int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            return mergeTwo(mergeKLists(lists, left, mid), mergeKLists(lists, mid + 1, right));
+        } else if (left == right) {
+            return lists[left];
+        } else {
+            return null;
+        }
+    }
+
+    // merge two lists
+    private ListNode mergeTwo(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(0);
-        ListNode node = dummy;
-        
-        Queue<ListNode> queue = new PriorityQueue<>(new Comparator<ListNode>() {
-            @Override
-            public int compare(ListNode o1, ListNode o2) {
-                return o1.val - o2.val;
+        ListNode cur = dummy;
+        while (list1 != null && list2 != null) {
+            if (list1.val < list2.val) {
+                cur.next = list1;
+                list1 = list1.next;
+            } else {
+                cur.next = list2;
+                list2 = list2.next;
             }
-        });
-        
-        // push all heads into queue
-        for (ListNode head : lists) {
-            if (head != null) {
-                queue.add(head);        
-            }
+            cur = cur.next;
         }
-        
-        // choose next node from k candidates
-        while (!queue.isEmpty()) {
-            ListNode cur = queue.poll();
-            node.next = cur;
-            if (cur.next != null) {
-                queue.add(cur.next);
-            }
-            node = node.next;
-        }
-        return dummy.next; 
+        cur.next = list1 != null ? list1 : list2;
+        return dummy.next;
     }
 
 }

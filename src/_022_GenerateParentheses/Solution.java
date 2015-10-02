@@ -32,7 +32,7 @@ public class Solution {
         return result;
     }
 
-    public void generateParenthesis(int n, int leftsUsed, int rightsUsed,
+    private void generateParenthesis(int n, int leftsUsed, int rightsUsed,
             String prefix, List<String> result) {
         // base case
         if (leftsUsed == n && rightsUsed == n) {
@@ -43,18 +43,15 @@ public class Solution {
         // recursive case
         if (leftsUsed == rightsUsed) {
             // next must be '("
-            generateParenthesis(n, leftsUsed + 1, rightsUsed, prefix + "(",
-                    result);
+            generateParenthesis(n, leftsUsed + 1, rightsUsed, prefix + "(", result);
         } else {
             // can either be "(" or ")"
             if (leftsUsed < n) {
                 // still has "(" left for use
-                generateParenthesis(n, leftsUsed + 1, rightsUsed, prefix + "(",
-                        result);
+                generateParenthesis(n, leftsUsed + 1, rightsUsed, prefix + "(", result);
             }
             if (rightsUsed < n) {
-                generateParenthesis(n, leftsUsed, rightsUsed + 1, prefix + ")",
-                        result);
+                generateParenthesis(n, leftsUsed, rightsUsed + 1, prefix + ")", result);
             }
         }
     }

@@ -1,5 +1,5 @@
 /**
- * Time : O(log(mn)) ; Space: O(1)
+ * Time : O(m + n) ; Space: O(1)
  * @tag : Divide and Conquer; Binary Search
  * @by  : Steven Cooks
  * @date: Aug 17, 2015
@@ -27,21 +27,22 @@ package _240_SearchA2DMatrixII;
 /** see test {@link _240_SearchA2DMatrixII.SolutionTest } */
 public class Solution {
 
+    // start from top right corner
     public boolean searchMatrix(int[][] matrix, int target) {
         if (matrix.length == 0 || matrix[0].length == 0) {
             return false;
         }
         int rows = matrix.length;
         int cols = matrix[0].length;
-        int j = 0;
-        int i = cols - 1;;
-        while (j < rows && i >= 0) {
-            if (matrix[j][i] == target) {
+        int i = 0;
+        int j = cols - 1;
+        while (i < rows && j >= 0) {
+            if (matrix[i][j] == target) {
                 return true;
-            } else if (matrix[j][i] < target) {
-                j++;
+            } else if (matrix[i][j] < target) {
+                i++;
             } else {
-                i--;
+                j--;
             }
         }
         return false;

@@ -4,16 +4,16 @@
 
     |  |  |  | |
     | ---------------------: |:---:| :-----:| :--- |
-    | 1 sequence : boolean(*) | 139 | [Word Break](https://github.com/interviewcoder/leetcode/tree/master/src/_139_WordBreak) |  |
+    | 1 sequence : boolean(*) | 139 | [Word Break](https://github.com/interviewcoder/leetcode/tree/master/src/_139_WordBreak) | O(2^n) -> O(N^2) |
     | 1 sequence : `max`/min(*) | 198 | House Robber |  |
     | 1 sequence : `max`/min(*) | 213 | [House Robber II](https://github.com/interviewcoder/leetcode/tree/master/src/_213_HouseRobberII) |  | 
-    | 1 sequence : `max`/min(*) | 053 | [Maximum Subarray](https://github.com/interviewcoder/leetcode/tree/master/src/_053_MaximumSubarray) | |
-    | 1 sequence : `max`/min(*) | 152 | [Maximum Product Subarray](https://github.com/interviewcoder/leetcode/blob/master/src/_152_MaximumProductSubarray/Solution.java) | global V.S. local |
+    | 1 sequence : `max`/min(*) | 053 | [Maximum Subarray](https://github.com/interviewcoder/leetcode/tree/master/src/_053_MaximumSubarray) | global V.S. local, O(N^3) -> O(N) |
+    | 1 sequence : `max`/min(*) | 152 | [Maximum Product Subarray](https://github.com/interviewcoder/leetcode/blob/master/src/_152_MaximumProductSubarray/Solution.java) | global V.S. local, O(N^3) -> O(N) |
     | 1 sequence : max/`min`(*) | 132 | [Palindrome Partitioning II](https://github.com/interviewcoder/leetcode/tree/master/src/_132_PalindromePartitioningII) | |
     | 1 sequence : `max`/min(*) | 032 | [Longest Valid Parentheses](https://github.com/interviewcoder/leetcode/tree/master/src/_032_LongestValidParentheses) | global V.S. local |
-    | 1 sequence : `max`/min(*) | 121 | Best Time to Buy and Sell Stock | |
+    | 1 sequence : `max`/min(*) | 121 | Best Time to Buy and Sell Stock | O(N^2) -> O(N) |
     | 1 sequence : `max`/min(*) | 123 | Best Time to Buy and Sell Stock III | |
-    | 1 sequence : count(*) | 091 | [Decode Ways](https://github.com/interviewcoder/leetcode/tree/master/src/_091_DecodeWays) | |
+    | 1 sequence : count(*) | 091 | [Decode Ways](https://github.com/interviewcoder/leetcode/tree/master/src/_091_DecodeWays) | O(N^2) -> O(N) |
     | 1 sequence : all(*) | 140 | Word Break II: dp + backtracking | |
 
 

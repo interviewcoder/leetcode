@@ -260,6 +260,7 @@ P.S.:
 | 240 | [Search a 2D Matrix II](https://github.com/interviewcoder/leetcode/blob/master/src/_240_SearchA2DMatrixII/Solution.java)  | Medium | `Divide and Conquer` `Binary Search`  | | 
 | 241 | Different Ways to Add Parentheses | Medium | `Divide and Conquer`  |  | 
 | 242 | [Valid Anagram](https://github.com/interviewcoder/leetcode/blob/master/src/_242_ValidAnagram/Solution.java) | Easy | `Hash Table` `Sort`  |  | 
+| 246 | [Strobogrammatic Number](https://github.com/interviewcoder/leetcode/blob/master/src/_246_StrobogrammaticNumber/Solution.java) | Easy | `Hash Table` `Math` |  |
 | 251 | [Flatten2DVector](https://github.com/interviewcoder/leetcode/tree/master/src/_251_Flatten2DVector) | Medium | `Design` | |
 | 252 | [Meeting Rooms](https://github.com/interviewcoder/leetcode/tree/master/src/_252_MeetingRooms) | Easy | `Sort` | |
 | 253 | [Meeting Rooms II](https://github.com/interviewcoder/leetcode/tree/master/src/_253_MeetingRoomsII) | Medium | `Heap` `Greedy` `Sort` | |

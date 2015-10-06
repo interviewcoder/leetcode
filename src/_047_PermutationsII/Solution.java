@@ -7,14 +7,14 @@
  * Description: 
  * 
  * Given a collection of numbers that might contain duplicates, return all 
- * possible unique permutations. 
+ * possible unique subs. 
  * 
  * For example, 
- * [1,1,2] have the following unique permutations: 
+ * [1,1,2] have the following unique subs: 
  * [1,1,2], [1,2,1], and [2,1,1].
  * 
  ***************************************************************************
- * {@link https://leetcode.com/problems/permutations-ii/ }
+ * {@link https://leetcode.com/problems/subs-ii/ }
  * P.S.: cannot skip duplicates using while (nums[i] == duplicate) because
  * after swapping, duplicates may be separated (one duplicate is swapped with
  * and goes to somewhere else disconnected with other duplicates)
@@ -37,18 +37,17 @@ public class Solution {
         }
         Arrays.sort(nums);
         int index = 0;
-        List<Integer> permutation = new ArrayList<Integer>();
-        permuteUnique(nums, index, permutation, result);
+        List<Integer> sub = new ArrayList<Integer>();
+        permuteUnique(nums, index, sub, result);
         return result;
     }
 
-    private void permuteUnique(int[] nums, int index,
-            List<Integer> permutation, List<List<Integer>> result) {
-
+    private void permuteUnique(int[] nums, int index, List<Integer> sub,
+            List<List<Integer>> result) {
         // base case
         if (index == nums.length) {
-            // one valid permutation found
-            result.add(permutation);
+            // one valid sub found
+            result.add(sub);
             return;
         }
 
@@ -56,25 +55,26 @@ public class Solution {
         // either use set or sort nums[index]:nums[end] to avoid duplicates
         Set<Integer> appearred = new HashSet<Integer>();
         for (int i = index; i < nums.length; i++) {
-            // try each number among nums[index],...,nums[end]
-            // as permutation[index], remember to skip duplicates!
-            if (appearred.contains(nums[i]) == false) {
-                // swap nums[i] with nums[index]
-                swap(nums, i, index);
-
-                // go on searching
-                List<Integer> copy = new ArrayList<Integer>(permutation);
-                copy.add(nums[index]);
-                permuteUnique(nums, index + 1, copy, result);
-
-                // swap back nums[i] with nums[index]
-                swap(nums, index, i);
-
-                appearred.add(nums[i]);
+            if (appearred.contains(nums[i])) {
+                // duplicates appear
+                continue;
             }
+            appearred.add(nums[i]);
+            // swap nums[i] with nums[index]
+            swap(nums, i, index);
+
+            // go on searching
+            List<Integer> copy = new ArrayList<Integer>(sub);
+            copy.add(nums[index]);
+            permuteUnique(nums, index + 1, copy, result);
+
+            // swap back nums[i] with nums[index]
+            swap(nums, index, i);
+
         }
     }
 
+    // swap two numbers in an array
     private void swap(int[] nums, int i, int index) {
         if (i < nums.length && index < nums.length) {
             int temp = nums[i];

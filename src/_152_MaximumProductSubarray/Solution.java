@@ -27,9 +27,9 @@ public class Solution {
         }
         // initialize
         int res = nums[0];
-        int max = nums[0];
-        int min = nums[0];
-        // dp
+        int max = nums[0];  // max product that ending at current index
+        int min = nums[0];  // min product that ending at current index
+
         for (int i = 1; i < n; i++) {
             int num = nums[i];
             int lmax = max * num;

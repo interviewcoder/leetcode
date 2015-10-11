@@ -1,5 +1,5 @@
 /**
- * Time : O() ; Space: O()
+ * Time : O(N) ; Space: O()
  * @tag : Array; Binary Search
  * @by  : Steven Cooks
  * @date: Aug 25, 2015

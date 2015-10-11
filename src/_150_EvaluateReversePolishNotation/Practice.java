@@ -13,6 +13,7 @@
  */
 package _150_EvaluateReversePolishNotation;
 
+/** see test {@link _150_EvaluateReversePolishNotation.PracticeTest } */
 public class Practice {
 
     public int evalRPN(String[] tokens) {

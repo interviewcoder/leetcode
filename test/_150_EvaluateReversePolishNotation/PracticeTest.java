@@ -2,8 +2,6 @@ package _150_EvaluateReversePolishNotation;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
@@ -12,6 +10,7 @@ import org.junit.rules.Timeout;
 
 public class PracticeTest {
 
+    /** Test method for {@link _150_EvaluateReversePolishNotation.Practice } */
     Practice solution;
     
     @Rule
@@ -32,7 +31,7 @@ public class PracticeTest {
         String[] tokens = { "2", "1", "+", "3", "*" };
         int actual = solution.evalRPN(tokens);
         int expected = 9;
-        assertEquals(Arrays.toString(tokens), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -40,7 +39,7 @@ public class PracticeTest {
         String[] tokens = { "4", "13", "5", "/", "+" };
         int actual = solution.evalRPN(tokens);
         int expected = 6;
-        assertEquals(Arrays.toString(tokens), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -48,7 +47,7 @@ public class PracticeTest {
         String[] tokens = { "4", "13", "+" };
         int actual = solution.evalRPN(tokens);
         int expected = 17;
-        assertEquals(Arrays.toString(tokens), expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -56,7 +55,23 @@ public class PracticeTest {
         String[] tokens = { "8", "4", "/" };
         int actual = solution.evalRPN(tokens);
         int expected = 2;
-        assertEquals(Arrays.toString(tokens), expected, actual);
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void Test5() {
+        String[] tokens = { "8", "4", "-" };
+        int actual = solution.evalRPN(tokens);
+        int expected = 4;
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void Test6() {
+        String[] tokens = { "8", "4", "-", "3", "+", "2", "*" };
+        int actual = solution.evalRPN(tokens);
+        int expected = 14;
+        assertEquals(expected, actual);
     }
 
 }

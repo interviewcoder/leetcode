@@ -1,5 +1,5 @@
 /**
- * Time : O() ; Space: O()
+ * Time : O(N) ; Space: O(N)
  * @tag : Hash Table; Two Pointers; String
  * @by  : Steven Cooks
  * @date: Sep 30, 2015

@@ -8,17 +8,17 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.Timeout;
 
-public class SolutionTest {
+public class SolutionTemplateTest {
     
-    /** Test method for {@link _153_FindMinimumInRotatedSortedArray.Solution } */
-    Solution solution;
+    /** Test method for {@link _153_FindMinimumInRotatedSortedArray.SolutionTemplate } */
+    SolutionTemplate solution;
 
     @Rule
     public Timeout globalTimeout = new Timeout(200);
 
     @Before
     public void setUp() throws Exception {
-        solution = new Solution();
+        solution = new SolutionTemplate();
     }
 
     @After

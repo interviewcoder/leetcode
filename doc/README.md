@@ -1,6 +1,6 @@
 #### Category
 
-1.  [DFS/Backtracking](https://github.com/interviewcoder/leetcode/blob/master/doc/category_dfs.md)  
+0.  [DFS/Backtracking](https://github.com/interviewcoder/leetcode/blob/master/doc/category_dfs.md)  
     -  Backtracking: `template` `skip duplicates` `prune siblings`
 
 0. [Dynamic Programming](https://github.com/interviewcoder/leetcode/blob/master/doc/category_dp.md)  

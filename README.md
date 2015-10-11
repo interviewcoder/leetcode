@@ -211,7 +211,7 @@ P.S.:
 | 179 | [Largest Number](https://github.com/interviewcoder/leetcode/blob/master/src/_179_LargestNumber/Solution.java) | Medium | `Sort`  |  | 
 | 186 | [Reverse words in a string II](https://github.com/interviewcoder/leetcode/blob/master/src/_186_ReverseWordsInAStringII/Solution.java) | Medium | `Array` | two pass + include last position trick |
 | 187 | Repeated DNA Sequences | Medium | `Hash Table` `Bit Manipulation`  |  | 
-| 188 | Best Time to Buy and Sell Stock IV | Hard | `Dynamic Programming`  |  | 
+| 188 | [Best Time to Buy and Sell Stock IV](https://github.com/interviewcoder/leetcode/blob/master/src/_188_BestTimeToBuyAndSellStockIV/Solution.java)  | Hard | `Dynamic Programming`  |  | 
 | 189 | [Rotate Array](https://github.com/interviewcoder/leetcode/blob/master/src/_189_RotateArray/Solution.java) | Easy | `Array`  |  | 
 | 190 | Reverse Bits | Easy | `Bit Manipulation`  |  | 
 | 191 | Number of 1 Bits | Easy | `Bit Manipulation`  |  | 
@@ -281,8 +281,10 @@ P.S.:
 | 279 | Perfect Squares | Medium | `Dynamic Programming` `Breadth-first Search` `Math`  |  | 
 | 282 | Expression Add Operators | Hard | `Divide and Conquer`  |  | 
 | 283 | [Move Zeroes](https://github.com/interviewcoder/leetcode/blob/master/src/_283_MoveZeroes/Solution.java)  | Easy | `Array` `Two Pointers`  |  | 
-| 284 | Peeking Iterator | Medium | `Design`  |  | 
+| 284 | [Peeking Iterator](https://github.com/interviewcoder/leetcode/blob/master/src/_284_PeekingIterator/Solution.java)  | Medium | `Design`  |  | 
 | 285 | [Inorder Successor in BST](https://github.com/interviewcoder/leetcode/tree/master/src/_285_InorderSuccessorInBST) | Medium | `Tree` |  |
 | 286 | [Walls And Gates](https://github.com/interviewcoder/leetcode/tree/master/src/_286_WallsAndGates) | Medium | `BFS` |  |
 | 287 | Find the Duplicate Number | Hard | `Array` `Two Pointers` `Binary Search`  |  | 
+| 289 | Game of Life | Medium | `Array`  |  | 
+| 290 | Word Pattern | Easy | `Hash Table`  |  | 
 

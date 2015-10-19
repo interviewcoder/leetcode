@@ -27,51 +27,11 @@
  */
 package _074_SearchA2DMatrix;
 
-/** see test {@link _074_SearchA2DMatrix.SolutionTest } */
+/** see test {@link _074_SearchA2DMatrix.PracticeTest } */
 public class Practice {
 
     public boolean searchMatrix(int[][] matrix, int target) {
-        if (matrix.length == 0 || matrix[0].length == 0) {
-            return false;
-        }
-        int rows = matrix.length;
-        int cols = matrix[0].length;
-        int startRow = 0;
-        int endRow = rows - 1;
-        while (startRow < endRow) {
-            int halfRow = (startRow + endRow) / 2;
-            int half = matrix[halfRow][cols - 1];
-            if (half == target) {
-                return true;
-            } else if (half < target) {
-                // go to lower rows to find target
-                startRow = halfRow + 1;
-            } else {
-                // !target can be in end row
-                endRow = halfRow;
-            }
-        }
-        // search in 1D array
-        return searchLine(matrix[startRow], target);
-    }
-
-    private boolean searchLine(int[] line, int target) {
-        if (line.length == 0) {
-            return false;
-        }
-        int left = 0;
-        int right = line.length - 1;
-        while (left <= right) {
-            int mid = (left + right) >> 1;
-            if (line[mid] == target) {
-                return true;
-            } else if (line[mid] < target) {
-                // go to right part
-                left = mid + 1;
-            } else {
-                right = mid - 1;
-            }
-        }
+        // TODO Auto-generated method stub
         return false;
     }
 

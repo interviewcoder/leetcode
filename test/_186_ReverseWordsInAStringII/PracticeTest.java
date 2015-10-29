@@ -42,4 +42,12 @@ public class PracticeTest {
         assertArrayEquals(expecteds, s);
     }
 
+    @Test
+    public void Test3() {
+        char[] s = "the sky".toCharArray();
+        solution.reverseWords(s);
+        char[] expecteds = "sky the".toCharArray();
+        assertArrayEquals(expecteds, s);
+    }
+
 }

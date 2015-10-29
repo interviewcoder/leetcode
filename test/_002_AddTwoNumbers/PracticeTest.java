@@ -31,43 +31,66 @@ public class PracticeTest {
     // 342 + 564 = 807
     @Test
     public void Test1() {
-        int[] nums1 = {2, 4, 3};
-        int[] nums2 = {5, 6, 4};
+        int[] nums1 = { 2, 4, 3 };
+        int[] nums2 = { 5, 6, 4 };
         ListNode a = ListNode.constructLinkedList(nums1);
         ListNode b = ListNode.constructLinkedList(nums2);
         ListNode actual = solution.addTwoNumbers(a, b);
-        int[] exps = {7, 0, 8};
+        int[] exps = { 7, 0, 8 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(actual, expected));
-        
     }
 
-    // 2 + 499 = 501 
+    // 2 + 499 = 501
     @Test
     public void Test2() {
-        int[] nums1 = {2};
-        int[] nums2 = {9, 9, 4};
+        int[] nums1 = { 2 };
+        int[] nums2 = { 9, 9, 4 };
         ListNode a = ListNode.constructLinkedList(nums1);
         ListNode b = ListNode.constructLinkedList(nums2);
         ListNode actual = solution.addTwoNumbers(a, b);
-        int[] exps = {1, 0, 5};
+        int[] exps = { 1, 0, 5 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(actual, expected));
-        
     }
 
     // 8 + 2 = 10
     @Test
     public void Test3() {
-        int[] nums1 = {2};
-        int[] nums2 = {8};
+        int[] nums1 = { 2 };
+        int[] nums2 = { 8 };
         ListNode a = ListNode.constructLinkedList(nums1);
         ListNode b = ListNode.constructLinkedList(nums2);
         ListNode actual = solution.addTwoNumbers(a, b);
-        int[] exps = {0, 1};
+        int[] exps = { 0, 1 };
         ListNode expected = ListNode.constructLinkedList(exps);
         assertTrue(ListNode.isSameList(actual, expected));
-        
+    }
+
+    // 499 + 3 = 502
+    @Test
+    public void Test4() {
+        int[] nums1 = { 9, 9, 4 };
+        int[] nums2 = { 3 };
+        ListNode a = ListNode.constructLinkedList(nums1);
+        ListNode b = ListNode.constructLinkedList(nums2);
+        ListNode actual = solution.addTwoNumbers(a, b);
+        int[] exps = { 2, 0, 5 };
+        ListNode expected = ListNode.constructLinkedList(exps);
+        assertTrue(ListNode.isSameList(actual, expected));
+    }
+
+    // 0 + 20 = 20
+    @Test
+    public void Test5() {
+        int[] nums1 = { 0 };
+        int[] nums2 = { 0, 2 };
+        ListNode a = ListNode.constructLinkedList(nums1);
+        ListNode b = ListNode.constructLinkedList(nums2);
+        ListNode actual = solution.addTwoNumbers(a, b);
+        int[] exps = { 0, 2 };
+        ListNode expected = ListNode.constructLinkedList(exps);
+        assertTrue(ListNode.isSameList(actual, expected));
     }
 
 }

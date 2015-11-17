@@ -32,43 +32,25 @@ public class SolutionTest {
     @Test
     public void Test1() {
         TreeNode t1 = new TreeNode(1);
-        TreeNode root = t1;
-        boolean actual = solution.isSymmetric(root);
-        assertEquals(true, actual);
+        assertTrue(solution.isSymmetric(t1));
     }
 
-    //          1
-    //        /   \
-    //       2     2
-    //        \   /
-    //         4 4
+    //     1
+    //   /   \
+    //  2     2
+    //   \   /
+    //   4   4
     @Test
     public void Test3() {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(2);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(4);
-        TreeNode.connect(t1, t2, t3);
-        TreeNode.connect(t2, null, t4);
-        TreeNode.connect(t3, t5, null);
-        TreeNode root = t1;
-        boolean actual = solution.isSymmetric(root);
-        assertEquals(true, actual);
+        assertTrue(solution.isSymmetric(TreeNode.getTree14()));
     }
 
-    //          1
-    //         / \
-    //        2   3
+    //      1 
+    //    /   \
+    //   2     3
     @Test
     public void Test4() {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(2);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode.connect(t1, t2, t3);
-        TreeNode root = t1;
-        boolean actual = solution.isSymmetric(root);
-        assertEquals(false, actual);
+        assertTrue(!solution.isSymmetric(TreeNode.getTree3()));
     }
 
     //   1
@@ -80,8 +62,7 @@ public class SolutionTest {
         TreeNode t2 = new TreeNode(3);
         TreeNode.connect(t1, null, t2);
         TreeNode root = t1;
-        boolean actual = solution.isSymmetric(root);
-        assertEquals(false, actual);
+        assertFalse(solution.isSymmetric(root));
     }
 
     //        1
@@ -91,17 +72,17 @@ public class SolutionTest {
     //   4     4
     @Test
     public void Test6() {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t2 = new TreeNode(3);
-        TreeNode t3 = new TreeNode(3);
-        TreeNode t4 = new TreeNode(4);
-        TreeNode t5 = new TreeNode(4);
-        TreeNode.connect(t1, t2, t3);
-        TreeNode.connect(t2, t4, null);
-        TreeNode.connect(t3, t5, null);
-        TreeNode root = t1;
-        boolean actual = solution.isSymmetric(root);
-        assertEquals(false, actual);
+        assertFalse(solution.isSymmetric(TreeNode.getTree15()));
+    }
+
+    //          1
+    //        /   \
+    //       2     2
+    //      / \   / \
+    //     8   4 4   8
+    @Test
+    public void Test7() {
+        assertTrue(solution.isSymmetric(TreeNode.getTree16()));
     }
 
 }

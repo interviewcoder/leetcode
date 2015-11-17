@@ -32,26 +32,23 @@ public class SolutionTest {
     public void Test0() {
         TreeNode p = null;
         TreeNode q = null;
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("null trees", actual);
+        assertTrue(solution.isSameTree(p, q));
     }
 
-    // 1 1
+    // 1  1
     @Test
     public void Test1() {
         TreeNode p = new TreeNode(1);
         TreeNode q = new TreeNode(1);
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("only-root trees", actual);
+        assertTrue(solution.isSameTree(p, q));
     }
 
-    // 1 2
+    // 1  2
     @Test
     public void Test2() {
         TreeNode p = new TreeNode(1);
         TreeNode q = new TreeNode(2);
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("only-root trees", !actual);
+        assertFalse(solution.isSameTree(p, q));
     }
 
     // 1 null
@@ -59,8 +56,7 @@ public class SolutionTest {
     public void Test3() {
         TreeNode p = new TreeNode(1);
         TreeNode q = null;
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("one-is-null-trees", !actual);
+        assertFalse(solution.isSameTree(p, q));
     }
 
     // null 1
@@ -68,8 +64,7 @@ public class SolutionTest {
     public void Test4() {
         TreeNode p = null;
         TreeNode q = new TreeNode(1);
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("one-is-null-trees", !actual);
+        assertTrue(!solution.isSameTree(p, q));
     }
 
     //   1      1
@@ -81,8 +76,7 @@ public class SolutionTest {
         TreeNode q = new TreeNode(1);
         TreeNode.connect(p, new TreeNode(2), new TreeNode(3));
         TreeNode.connect(q, new TreeNode(2), new TreeNode(3));
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("balanced-trees", actual);
+        assertTrue(solution.isSameTree(p, q));
     }
 
     //   1      1
@@ -94,8 +88,7 @@ public class SolutionTest {
         TreeNode q = new TreeNode(1);
         TreeNode.connect(p, new TreeNode(4), new TreeNode(3));
         TreeNode.connect(q, new TreeNode(2), new TreeNode(5));
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("balanced-trees", !actual);
+        assertTrue(!solution.isSameTree(p, q));
     }
 
     //   1       1
@@ -111,8 +104,7 @@ public class SolutionTest {
         TreeNode node2 = new TreeNode(2);
         TreeNode.connect(q, node2, new TreeNode(3));
         TreeNode.connect(node2, new TreeNode(4), null);
-        boolean actual = solution.isSameTree(p, q);
-        assertTrue("different depth", !actual);
+        assertTrue(!solution.isSameTree(p, q));
     }
 
 }

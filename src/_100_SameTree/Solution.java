@@ -1,7 +1,7 @@
 /**
  * Time : O(N); Space: O(1)
  * @tag : Tree; Depth-First-Search
- * @date: 04.27.2015 
+ * @date: Apr 27, 2015 
  *************************************************************************
  * Description: 
  * 
@@ -18,6 +18,7 @@ import com.leetcode.TreeNode;
 
 /** see test {@link _100_SameTree.SolutionTest } */
 public class Solution {
+
     public boolean isSameTree(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
@@ -30,4 +31,5 @@ public class Solution {
             return false;
         }
     }
+
 }

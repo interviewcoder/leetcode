@@ -110,32 +110,26 @@ public class PracticeTest {
     //     1 
     @Test
     public void Test5() {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree0();
         List<List<Integer>> actual = solution.levelOrder(root);
         List<List<Integer>> expected = new ArrayList<>();
         expected.add(Arrays.asList(1));
         assertEquals(expected, actual);
     }
 
-    //       3
-    //         \
-    //          20
-    //            \
-    //             15
+    //   1 
+    //    \
+    //     2
+    //      \
+    //       3 
     @Test
     public void Test6() {
-        TreeNode t1 = new TreeNode(3);
-        TreeNode t3 = new TreeNode(20);
-        TreeNode t4 = new TreeNode(15);
-        TreeNode.connect(t1, null, t3);
-        TreeNode.connect(t3, null, t4);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree1();
         List<List<Integer>> actual = solution.levelOrder(root);
         List<List<Integer>> expected = new ArrayList<>();
+        expected.add(Arrays.asList(1));
+        expected.add(Arrays.asList(2));
         expected.add(Arrays.asList(3));
-        expected.add(Arrays.asList(20));
-        expected.add(Arrays.asList(15));
         assertEquals(expected, actual);
     }
 
@@ -146,17 +140,50 @@ public class PracticeTest {
     //    3 
     @Test
     public void Test7() {
-        TreeNode t1 = new TreeNode(1);
-        TreeNode t3 = new TreeNode(2);
-        TreeNode t4 = new TreeNode(3);
-        TreeNode.connect(t1, t3, null);
-        TreeNode.connect(t3, t4, null);
-        TreeNode root = t1;
+        TreeNode root = TreeNode.getTree2();
         List<List<Integer>> actual = solution.levelOrder(root);
         List<List<Integer>> expected = new ArrayList<>();
         expected.add(Arrays.asList(1));
         expected.add(Arrays.asList(2));
         expected.add(Arrays.asList(3));
+        assertEquals(expected, actual);
+    }
+
+    //        5
+    //      /   \
+    //     4     8
+    //    /     /  \
+    //   11    13   4
+    //  /  \       / \
+    // 7    2     5   1
+    @Test
+    public void Test8() {
+        TreeNode root = TreeNode.getTree4();
+        List<List<Integer>> actual = solution.levelOrder(root);
+        List<List<Integer>> expected = new ArrayList<>();
+        expected.add(Arrays.asList(5));
+        expected.add(Arrays.asList(4, 8));
+        expected.add(Arrays.asList(11, 13, 4));
+        expected.add(Arrays.asList(7, 2, 5, 1));
+        assertEquals(expected, actual);
+    }
+
+    //      8
+    //        \     
+    //         6  
+    //      /     \
+    //     3       7
+    //    / \       \
+    //   2   4      10
+    @Test
+    public void Test9() {
+        TreeNode root = TreeNode.getTree13();
+        List<List<Integer>> actual = solution.levelOrder(root);
+        List<List<Integer>> expected = new ArrayList<>();
+        expected.add(Arrays.asList(8));
+        expected.add(Arrays.asList(6));
+        expected.add(Arrays.asList(3, 7));
+        expected.add(Arrays.asList(2, 4, 10));
         assertEquals(expected, actual);
     }
 

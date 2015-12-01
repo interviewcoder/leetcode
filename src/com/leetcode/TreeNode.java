@@ -526,6 +526,60 @@ public class TreeNode {
         return t1;
     }
 
+    //          1
+    //        /   \
+    //       2     2
+    //        \   /
+    //         4 4
+    public static TreeNode getTree14() {
+        TreeNode t1 = new TreeNode(1);
+        TreeNode t2 = new TreeNode(2);
+        TreeNode t3 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(4);
+        TreeNode t5 = new TreeNode(4);
+        TreeNode.connect(t1, t2, t3);
+        TreeNode.connect(t2, null, t4);
+        TreeNode.connect(t3, t5, null);
+        return t1;
+    }
+
+    //        1
+    //      /   \
+    //     3     3
+    //    /     /
+    //   4     4
+    public static TreeNode getTree15() {
+        TreeNode t1 = new TreeNode(1);
+        TreeNode t2 = new TreeNode(3);
+        TreeNode t3 = new TreeNode(3);
+        TreeNode t4 = new TreeNode(4);
+        TreeNode t5 = new TreeNode(4);
+        TreeNode.connect(t1, t2, t3);
+        TreeNode.connect(t2, t4, null);
+        TreeNode.connect(t3, t5, null);
+        TreeNode root = t1;
+        return root;
+    }
+
+    //          1
+    //        /   \
+    //       2     2
+    //      / \   / \
+    //     8   4 4   8
+    public static TreeNode getTree16() {
+        TreeNode t1 = new TreeNode(1);
+        TreeNode t2 = new TreeNode(2);
+        TreeNode t3 = new TreeNode(2);
+        TreeNode t4 = new TreeNode(4);
+        TreeNode t5 = new TreeNode(4);
+        TreeNode t6 = new TreeNode(8);
+        TreeNode t7 = new TreeNode(8);
+        TreeNode.connect(t1, t2, t3);
+        TreeNode.connect(t2, t6, t4);
+        TreeNode.connect(t3, t5, t7);
+        return t1;
+    }
+
     private boolean isTreeSame(TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             // base case: 1) root is null 2) reaching leaf's child

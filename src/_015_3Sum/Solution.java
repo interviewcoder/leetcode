@@ -52,7 +52,7 @@ public class Solution {
                     right--;
                 } else {
                     // found one combination
-                    result.add(new ArrayList<>(Arrays.asList(num, nums[left], nums[right])));
+                    result.add(Arrays.asList(num, nums[left], nums[right]));
                     while (left + 1 < right && nums[left] == nums[left + 1]) {
                         left++;
                     }
